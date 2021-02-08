@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeLeaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layout">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="https://img.icons8.com/bubbles/50/000000/r.png">
+<title> Revit Project Updater </title>
+</head>
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+
+.box {
+  border: 1px solid #333333;
+  width: 80%;
+  height: 650px;
+  overflow: scroll;
+}
+
+  </style>
+<body>
+	<div  layout:fragment="content1">
+	           <center> <strong><p>Views</p></strong></center>
+				<table class="table table-bordered table-striped ">
+					<thead class="thead-light">
+				<tr>
+				        <th>ACTION</th>
+				        <th>Id</th>
+						<th>Family</th>
+						<th>FamilyandType</th>
+						<th>PhaseFilter</th>
+						<th>PartsVisibility</th>
+						<th>DetailLevel</th>
+						<th>SunPath</th>
+						<th>DisplayName</th>
+						<th>SheetName</th>
+						<th>SheetNumber</th>
+						<th>Orientation</th>
+						<th>AssociatedLevel</th>
+						<th>Discipline</th>
+						<th>DisplayModel</th>
+						<th>ViewScale</th>
+                        <th>ScaleValue1</th>
+                        <th>TitleonSheet</th>
+						<th>ViewName</th>
+						<th>Phase</th>
+					</tr>
+				</thead>
+					<tr th:each="d:${listViews}">
+					    <td>
+							<a class="btn btn-danger"  th:href="@{/admin/editViews(id=${d.getId()})}">Editer</a>
+						</td>
+                        <td th:text="${d.Id}"></td>
+                        
+                        <td th:text="${d.Family}"></td>
+                        
+                        <td th:text="${d.FamilyandType}"></td>
+                        
+                        <td th:text="${d.PhaseFilter}"></td>
+                        
+                        <td th:text="${d.PartsVisibility}"></td>
+                        
+                        <td th:text="${d.DetailLevel}"></td>
+                        
+                        <td th:text="${d.SunPath}"></td>
+                        
+                        <td th:text="${d.DisplayName}"></td>
+                        
+                        <td th:text="${d.SheetName}"></td>
+                        
+                        <td th:text="${d.SheetNumber}"></td>
+                        
+                        <td th:text="${d.Orientation}"></td>
+                        
+                        <td th:text="${d.AssociatedLevel}"></td>
+                        
+                        <td th:text="${d.Discipline}"></td>
+                        
+                        <td th:text="${d.DisplayModel}"></td>
+                        
+                        <td th:text="${d.ViewScale}"></td>
+                        
+                        <td th:text="${d.ScaleValue1}"></td>
+                        
+                        <td th:text="${d.TitleonSheet}"></td>
+                        
+                        <td th:text="${d.ViewName}"></td>
+                        
+						<td th:text="${d.Phase}"></td>
+						</tr>
+					</table>
+					
+		
+	 
+	</div>	
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeLeaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layout">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="https://img.icons8.com/bubbles/50/000000/r.png">
+<title> Revit Project Updater </title>
+</head>
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+
+.box {
+  border: 1px solid #333333;
+  width: 80%;
+  height: 650px;
+  overflow: scroll;
+}
+
+  </style>
+<body>
+	<div  layout:fragment="content1">
+	           <center> <strong><p>Materials</p></strong></center>
+				<table class="table table-bordered table-striped ">
+                  <thead class="thead-light">
+				<tr>
+				        <th>ACTION</th>
+				        <th>Id</th>
+                        <th>Keynote</th>
+                        <th>Name</th>
+						<th>Model</th>
+						<th>Manufacturer</th>
+						<th>Comments</th>
+						<th>URL</th>
+                        <th>Description</th>
+                        <th>Cost</th>
+						<th>Mark</th>
+						<th>Grade</th>
+						<th>Species</th>
+						<th>Thermalexpansioncoefficient</th>
+						<th>Bending</th>
+						<th>Shearmodulus</th>
+                        <th>Poissonratio</th>
+                        <th>Tensionperpendiculartograin</th>
+                        <th>Shearparalleltograin</th>
+                        <th>Compressionperpendiculartograin</th>
+                        <th>Compressionparalleltograin</th>
+                        <th>Youngmodulus</th>
+                        <th>MaterialType</th>
+                        <th>Lightweight</th>
+                        <th>Behavior</th>
+                        <th>Resistancecalculationstrength</th>
+                        <th>Reductionfactorforshear</th>
+                        <th>Minimumtensilestrength</th>
+                        <th>Minimumyieldstress</th>
+                        <th>Shearstrengthmodification</th>
+                        <th>Shearreinforcementyieldstress</th>
+                        <th>Bendingreinforcement</th>
+                        <th>Concretecompression</th>
+                        <th>ThermalexpansioncoefficientX</th>
+                        <th>ThermalexpansioncoefficientY</th>
+                        <th>ThermalexpansioncoefficientZ</th>
+                        <th>Unitweight</th>
+                        <th>ShearmodulusX</th>
+                        <th>ShearmodulusY</th>
+                        <th>ShearmodulusZ</th>
+                        <th>PoissonratioX</th>
+                        <th>PoissonratioY</th>
+                        <th>PoissonratioZ</th>
+                        <th>YoungmodulusX</th>
+                        <th>YoungmodulusY</th>
+                        <th>YoungmodulusZ</th>
+                        <th>Shininess</th>
+                        <th>Smoothness</th>
+                        <th>Glow</th>
+                        <th>Transparency</th>
+                        <th>Color</th>
+                    </tr>
+                </thead>
+					<tr th:each="d:${listMaterials}">
+					    <td>
+							<a class="btn btn-danger"  th:href="@{/admin/editMaterials(id=${d.getId()})}">Editer</a>
+						</td>
+						<td th:text="${d.Id}"></td>
+                        <td th:text="${d.Keynote}"></td>
+                        <td th:text="${d.Name}"></td>
+						<td th:text="${d.Model}"></td>
+						<td th:text="${d.Manufacturer}"></td>
+						<td th:text="${d.Comments}"></td>
+						<td th:text="${d.URL}"></td>
+                        <td th:text="${d.Description}"></td>
+                        <td th:text="${d.Cost}"></td>
+						<td th:text="${d.Mark}"></td>
+						<td th:text="${d.Grade}"></td>
+						<td th:text="${d.Species}"></td>
+						<td th:text="${d.Thermalexpansioncoefficient}"></td>
+						<td th:text="${d.Bending}"></td>						
+						<td th:text="${d.Shearmodulus}"></td>
+                        <td th:text="${d.Poissonratio}"></td>
+                        <td th:text="${d.Tensionperpendiculartograin}"></td>
+                        <td th:text="${d.Shearparalleltograin}"></td>                      
+                        <td th:text="${d.Compressionperpendiculartograin}"></td>
+                        <td th:text="${d.Compressionparalleltograin}"></td>
+                        <td th:text="${d.Youngmodulus}"></td>
+                        <td th:text="${d.MaterialType}"></td>                    
+                        <td th:text="${d.Lightweight}"></td>
+                        <td th:text="${d.Behavior}"></td>
+                        <td th:text="${d.Resistancecalculationstrength}"></td>
+                        <td th:text="${d.Reductionfactorforshear}"></td>
+                        <td th:text="${d.Minimumtensilestrength}"></td>
+                        <td th:text="${d.Minimumyieldstress}"></td>
+                        <td th:text="${d.Shearstrengthmodification}"></td>
+                        <td th:text="${d.Shearreinforcementyieldstress}"></td>
+                        <td th:text="${d.Bendingreinforcement}"></td>
+                        <td th:text="${d.Concretecompression}"></td>
+                        <td th:text="${d.ThermalexpansioncoefficientX}"></td>
+                        <td th:text="${d.ThermalexpansioncoefficientY}"></td>
+                        <td th:text="${d.ThermalexpansioncoefficientZ}"></td>
+                        <td th:text="${d.Unitweight}"></td>
+                        <td th:text="${d.ShearmodulusX}"></td>
+                        <td th:text="${d.ShearmodulusY}"></td>
+                        <td th:text="${d.ShearmodulusZ}"></td>
+                        <td th:text="${d.PoissonratioX}"></td>
+                        <td th:text="${d.PoissonratioY}"></td>
+                        <td th:text="${d.PoissonratioZ}"></td>
+                        <td th:text="${d.YoungmodulusX}"></td>
+                        <td th:text="${d.YoungmodulusY}"></td>
+                        <td th:text="${d.YoungmodulusZ}"></td>
+                        <td th:text="${d.Shininess}"></td>
+                        <td th:text="${d.Smoothness}"></td>
+                        <td th:text="${d.Glow}"></td>
+                        <td th:text="${d.Transparency}"></td>
+						<td th:text="${d.Color}"></td>
+                        </tr>
+					</table>
+					
+		
+	 
+	</div>	
+</body>
+</html>

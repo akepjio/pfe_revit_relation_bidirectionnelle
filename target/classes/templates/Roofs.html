@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeLeaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layout">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="https://img.icons8.com/bubbles/50/000000/r.png">
+<title> Revit Project Updater </title>
+</head>
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+
+.box {
+  border: 1px solid #333333;
+  width: 80%;
+  height: 650px;
+  overflow: scroll;
+}
+
+  </style>
+<body>
+	<div  layout:fragment="content1">
+	           <center> <strong><p>Roofs</p></strong></center>
+				<table class="table table-bordered table-striped ">
+					<thead class="thead-light">
+				<tr>
+				        <th>ACTION</th>
+				        <th>Id</th>
+						<th>TypeId</th>
+						<th>PhaseCreated</th>
+						<th>PhaseDemolished</th>
+						<th>DesignOption</th>
+						<th>Volume</th>
+						<th>Area</th>
+						<th>Comments</th>
+						<th>RafterorTruss</th>
+						<th>FasciaDepth</th>
+						<th>RafterCut</th>
+						<th>BaseLevel</th>
+						<th>CutoffOffset</th>
+						<th>CutoffLevel</th>
+                        <th>BaseOffsetFromLevel</th>
+                        <th>Mark</th>
+					</tr>
+				</thead>
+					<tr th:each="d:${listRoofs}">
+					    <td>
+							<a class="btn btn-danger"  th:href="@{/admin/editRoofs(id=${d.getId()})}">Editer</a>
+						</td>
+						<td th:text="${d.Id}"></td>
+						<td th:text="${d.TypeId}"></td>
+						<td th:text="${d.PhaseCreated}"></td>
+						<td th:text="${d.PhaseDemolished}"></td>
+						<td th:text="${d.DesignOption}"></td>
+						<td th:text="${d.Volume}"></td>
+						<td th:text="${d.Area}"></td>
+						<td th:text="${d.Comments}"></td>
+						<td th:text="${d.RafterorTruss}"></td>
+						<td th:text="${d.FasciaDepth}"></td>
+						<td th:text="${d.RafterCut}"></td>
+						<td th:text="${d.BaseLevel}"></td>
+						<td th:text="${d.CutoffOffset}"></td>
+						<td th:text="${d.CutoffOffset}"></td>
+                        <td th:text="${d.BaseOffsetFromLevel}"></td>
+                        <td th:text="${d.Mark}"></td>
+
+						
+						</tr>
+					</table>
+					
+		
+	 
+	</div>	
+</body>
+</html>

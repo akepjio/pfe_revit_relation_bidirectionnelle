@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeLeaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layout">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="https://img.icons8.com/bubbles/50/000000/r.png">
+<title> Revit Project Updater </title>
+</head>
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+
+.box {
+  border: 1px solid #333333;
+  width: 80%;
+  height: 650px;
+  overflow: scroll;
+}
+
+  </style>
+<body>
+	<div  layout:fragment="content1">
+	           <center> <strong><p>WallTypes</p></strong></center>
+				<table class="table table-bordered table-striped ">
+          <thead class="thead-light">
+				<tr>
+                    <th>ACTION</th>
+                    <th>Id</th>
+                    <th>Keynote</th>
+                    <th>Model</th>
+                    <th>Manufacturer</th>
+                    <th>TypeComments</th>
+                    <th>URL</th>
+                    <th>Description</th>
+                    <th>OmniClassNumber</th>
+                    <th>AssemblyCode</th>
+                    <th>FamilyName</th>
+                    <th>TypeName</th>
+                    <th>TypeMark</th>
+                    <th>Cost</th>
+                    <th>FireRating</th>
+                    <th>Width</th>
+                    <th>Author</th>
+                    <th>BIMObjectName</th>
+                    <th>ManufacturerName</th>
+                    <th>ManufacturerURL</th>
+                    <th>ProductInformation</th>
+                    <th>Revision</th>
+                    <th>Uniclass2</th>
+                    <th>Version</th>
+                    <th>AcousticRating</th>
+                    <th>Combustible</th>
+                    <th>IsExternal</th>
+
+                    <th>Reference</th>
+                    <th>SurfaceSpreadOfFlame</th>
+                    <th>IfcExportAs</th>
+                    <th>IfcExportType</th>
+                    <th>AccessibilityPerformance</th>
+                    <th>AssetType</th>
+                    <th>Category</th>
+                    <th>CodePerformance</th>
+                    <th>Color</th>
+                    <th>Constituents</th>
+                    <th>DurationUnit</th>
+                    <th>ExpectedLife</th>
+                    <th>Features</th>
+                    <th>Finish</th>
+                    <th>Grade</th>
+                    <th>Material</th>
+                    <th>ModelNumber</th>
+                    <th>ModelReference</th>
+                    <th>Name</th>
+
+                    <th>NominalHeight</th>
+                    <th>NominalLength</th>
+                    <th>NominalWidth</th>
+                    <th>ReplacementCost</th>
+                    <th>Shape</th>
+                    <th>Size</th>
+                    <th>SustainabilityPerformance</th>
+                    <th>WarrantyDescription</th>
+                    <th>WarrantyDurationLabor</th>
+                    <th>WarrantyDurationParts</th>
+                    <th>WarrantyDurationUnit</th>
+                    <th>WarrantyGuarantorLabor</th>
+                    <th>WarrantyGuarantorParts</th>
+                    <th>FlammibilityRating</th>
+                    <th>FragilityRating</th>
+
+                    <th>CladdingType</th>
+                    <th>ApplicationOptions</th>
+                    <th>SpanningDirection</th>
+                    <th>ExternalSkinThicknessAndMaterial</th>
+                    <th>ExternalProfileReference</th>
+                    <th>ExternalProfileCrownWidth</th>
+                    <th>ExternalProfileDepth</th>
+
+                    <th>ExternalProfilePitch</th>
+                    <th>ExternalSkinFinish</th>
+                    <th>ExternalColourOptions</th>
+                    <th>CoreInsulation</th>
+                    <th>InternalLinerSkinThicknessAndMaterial</th>
+                    <th>InternalLinerFinishOptions</th>
+                    <th>InternalColourOptions</th>
+
+                    <th>PanelThickness</th>
+                    <th>LengthOptions</th>
+                    <th>CoverWidthManufacturingTolerance</th>
+                    <th>ThicknessManufacturingTolerance</th>
+                    <th>LengthManufacturingTolerance</th>
+                    <th>CutBacks</th>
+
+                    <th>EndSquareManufacturingTolerance</th>
+                    <th>FireResistanceOptions</th>
+                    <th>PanelEndJoints</th>
+                    <th>PanelEndLapArrangement</th>
+                    <th>PrimaryFasteners</th>
+                    <th>PanelJoints</th>
+                    <th>PanelSideLapArrangement</th>
+
+                    <th>CornerPanels</th>
+                    <th>Curvature</th>
+                    <th>IntegralAccessories</th>
+                    <th>Guarantees</th>
+                    <th>SpecialFeatures</th>
+                    <th>ThermalTransmittance</th>
+                    <th>TotalThickness</th>
+       
+          </tr>
+        </thead>
+					<tr th:each="d:${listWallTypes}">
+					    <td>
+							<a class="btn btn-danger"  th:href="@{/admin/editWallTypes(id=${d.getId()})}">Editer</a>
+						</td>
+						<td th:text="${d.Id}"></td>
+						<td th:text="${d.Keynote}"></td>
+						<td th:text="${d.Model}"></td>
+						<td th:text="${d.Manufacturer}"></td>
+						<td th:text="${d.TypeComments}"></td>
+						<td th:text="${d.URL}"></td>
+						<td th:text="${d.Description}"></td>
+						<td th:text="${d.OmniClassNumber}"></td>
+						<td th:text="${d.AssemblyCode}"></td>
+						<td th:text="${d.FamilyName}"></td>
+						<td th:text="${d.TypeName}"></td>
+						<td th:text="${d.TypeMark}"></td>
+                        <td th:text="${d.Cost}"></td> 
+                        <td th:text="${d.FireRating}"></td>
+                        <td th:text="${d.Width}"></td>
+
+                        <td th:text="${d.Author}"></td>
+                        <td th:text="${d.BIMObjectName}"></td>
+						<td th:text="${d.ManufacturerName}"></td>
+						
+                        <td th:text="${d.ManufacturerURL}"></td>
+                        <td th:text="${d.ProductInformation}"></td>
+						
+                        <td th:text="${d.Revision}"></td>
+                        <td th:text="${d.Uniclass2}"></td>
+						<td th:text="${d.Version}"></td>
+						<td th:text="${d.AcousticRating}"></td>
+                        <td th:text="${d.Combustible}"></td>
+                        <td th:text="${d.IsExternal}"></td>
+                        
+						
+                        <td th:text="${d.Reference}"></td>
+                        <td th:text="${d.SurfaceSpreadOfFlame}"></td>
+						<td th:text="${d.IfcExportAs}"></td>
+						<td th:text="${d.IfcExportType}"></td>
+						<td th:text="${d.AccessibilityPerformance}"></td>
+						<td th:text="${d.AssetType}"></td>
+						<td th:text="${d.Category}"></td>
+						<td th:text="${d.CodePerformance}"></td>
+						<td th:text="${d.Color}"></td>
+						<td th:text="${d.Constituents}"></td>
+						<td th:text="${d.DurationUnit}"></td>
+						<td th:text="${d.ExpectedLife}"></td>
+						<td th:text="${d.Features}"></td>
+                        <td th:text="${d.Finish}"></td>
+                        <td th:text="${d.Grade}"></td>
+						<td th:text="${d.Material}"></td>
+						<td th:text="${d.ModelNumber}"></td>
+                        <td th:text="${d.ModelReference}"></td>
+                        <td th:text="${d.Name}"></td>
+                        
+						<td th:text="${d.NominalHeight}"></td>
+						<td th:text="${d.NominalLength}"></td>
+						<td th:text="${d.NominalWidth}"></td>
+						<td th:text="${d.ReplacementCost}"></td>
+						<td th:text="${d.Shape}"></td>
+						<td th:text="${d.Size}"></td>
+						<td th:text="${d.SustainabilityPerformance}"></td>
+						<td th:text="${d.WarrantyDescription}"></td>
+                        <td th:text="${d.WarrantyDurationLabor}"></td>
+                        <td th:text="${d.WarrantyDurationParts}"></td>
+						<td th:text="${d.WarrantyDurationUnit}"></td>
+						<td th:text="${d.WarrantyGuarantorLabor}"></td>
+						<td th:text="${d.WarrantyGuarantorParts}"></td>
+						<td th:text="${d.FlammibilityRating}"></td>
+                        <td th:text="${d.FragilityRating}"></td>
+                        
+                        <td th:text="${d.CladdingType}"></td>
+						<td th:text="${d.ApplicationOptions}"></td>
+						<td th:text="${d.SpanningDirection}"></td>
+						<td th:text="${d.ExternalSkinThicknessAndMaterial}"></td>
+						<td th:text="${d.ExternalProfileReference}"></td>
+						<td th:text="${d.ExternalProfileCrownWidth}"></td>
+						<td th:text="${d.ExternalProfileDepth}"></td>
+						<td th:text="${d.ExternalProfilePitch}"></td>
+                        <td th:text="${d.ExternalSkinFinish}"></td>
+                        <td th:text="${d.ExternalColourOptions}"></td>
+						<td th:text="${d.CoreInsulation}"></td>
+						<td th:text="${d.InternalLinerSkinThicknessAndMaterial}"></td>
+						<td th:text="${d.InternalLinerFinishOptions}"></td>
+						<td th:text="${d.InternalColourOptions}"></td>
+                        <td th:text="${d.PanelThickness}"></td>
+                        
+                        <td th:text="${d.LengthOptions}"></td>
+						<td th:text="${d.CoverWidthManufacturingTolerance}"></td>
+						<td th:text="${d.ThicknessManufacturingTolerance}"></td>
+						<td th:text="${d.LengthManufacturingTolerance}"></td>
+						<td th:text="${d.CutBacks}"></td>
+						<td th:text="${d.EndSquareManufacturingTolerance}"></td>
+						<td th:text="${d.FireResistanceOptions}"></td>
+						<td th:text="${d.PanelEndJoints}"></td>
+                        <td th:text="${d.PanelEndLapArrangement}"></td>
+                        <td th:text="${d.PrimaryFasteners}"></td>
+						<td th:text="${d.PanelJoints}"></td>
+						<td th:text="${d.PanelSideLapArrangement}"></td>
+						<td th:text="${d.CornerPanels}"></td>
+						<td th:text="${d.Curvature}"></td>
+                        <td th:text="${d.IntegralAccessories}"></td>
+                        
+                        <td th:text="${d.Guarantees}"></td>
+                        <td th:text="${d.SpecialFeatures}"></td>
+						<td th:text="${d.ThermalTransmittance}"></td>
+						<td th:text="${d.TotalThickness}"></td>
+						</tr>
+					</table>
+					
+		
+	 
+	</div>	
+</body>
+</html>

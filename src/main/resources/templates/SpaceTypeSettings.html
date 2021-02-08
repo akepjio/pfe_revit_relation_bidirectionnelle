@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeLeaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layout">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="https://img.icons8.com/bubbles/50/000000/r.png">
+<title> Revit Project Updater </title>
+</head>
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+
+.box {
+  border: 1px solid #333333;
+  width: 80%;
+  height: 650px;
+  overflow: scroll;
+}
+
+  </style>
+<body>
+	<div  layout:fragment="content1">
+	           <center> <strong><p>SpaceTypeSettings</p></strong></center>
+				<table class="table table-bordered table-striped ">
+					<thead class="thead-light">
+				<tr>
+				        <th>ACTION</th>
+				        <th>Id</th>
+						<th>DesignOption</th>	
+					</tr>
+				</thead>
+					<tr th:each="d:${listSts}">
+					    <td>
+							<a class="btn btn-danger"  th:href="@{/admin/editSpaceTypeSettings(id=${d.getId()})}">Editer</a>
+						</td>
+						<td th:text="${d.Id}"></td>
+						<td th:text="${d.DesignOption}"></td>	
+						</tr>
+					</table>
+					
+		
+	 
+	</div>	
+</body>
+</html>

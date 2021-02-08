@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeLeaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layout">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="https://img.icons8.com/bubbles/50/000000/r.png">
+<title> Revit Project Updater </title>
+</head>
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+
+.box {
+  border: 1px solid #333333;
+  width: 80%;
+  height: 650px;
+  overflow: scroll;
+}
+
+  </style>
+<body>
+	<div  layout:fragment="content1">
+	           <center> <strong><p>DuctSystems</p></strong></center>
+				<table class="table table-bordered table-striped ">
+					<thead class="thead-light">
+				<tr>
+				        <th>ACTION</th>
+                        <th>Id</th>
+                        <th>DesignOption</th>
+						<th>TypeId</th>
+						<th>NumberofElements</th>
+						<th>SystemEquipment</th>	
+                        <th>SystemName</th>
+                        <th>Flow</th>
+						<th>Comments</th>
+					</tr>
+				</thead>
+					<tr th:each="d:${listDuctSystems}">
+					    <td>
+							<a class="btn btn-danger"  th:href="@{/admin/editDuctSystems(id=${d.getId()})}">Editer</a>
+						</td>
+                        <td th:text="${d.Id}"></td>
+                        <td th:text="${d.DesignOption}"></td>
+						<td th:text="${d.TypeId}"></td>
+						<td th:text="${d.NumberofElements}"></td>
+						<td th:text="${d.SystemEquipment}"></td>						
+						<td th:text="${d.SystemName}"></td>
+						<td th:text="${d.Flow}"></td>
+						<td th:text="${d.Comments}"></td>
+						</tr>
+					</table>
+					
+		
+	 
+	</div>	
+</body>
+</html>

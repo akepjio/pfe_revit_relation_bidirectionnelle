@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeLeaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layout">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="https://img.icons8.com/bubbles/50/000000/r.png">
+<title> Revit Project Updater </title>
+</head>
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+
+.box {
+  border: 1px solid #333333;
+  width: 80%;
+  height: 650px;
+  overflow: scroll;
+}
+
+  </style>
+<body>
+	<div  layout:fragment="content1">
+	           <center> <strong><p>Rooms</p></strong></center>
+				<table class="table table-bordered table-striped ">
+					<thead class="thead-light">
+				<tr>
+				        <th>ACTION</th>
+				        <th>Id</th>
+						<th>DesignOption</th>
+                        <th>PhaseId</th>
+                        <th>Comments</th>
+						<th>Volume</th>
+						<th>Perimeter</th>
+						<th>Level</th>
+						<th>Occupancy</th>
+						<th>Department</th>
+						<th>BaseFinish</th>
+						<th>CeilingFinish</th>
+						<th>WallFinish</th>
+						<th>FloorFinish</th>
+						<th>Area</th>
+						<th>Number</th>
+                        <th>Name</th>
+                        <th>UnboundedHeight</th>
+						<th>Occupant</th>
+						<th>ZONE</th>
+						<th>BATIMENT</th>
+					</tr>
+				</thead>
+					<tr th:each="d:${listRooms}">
+					    <td>
+							<a class="btn btn-danger"  th:href="@{/admin/editRooms(id=${d.getId()})}">Editer</a>
+						</td>
+						<td th:text="${d.Id}"></td>
+						<td th:text="${d.DesignOption}"></td>
+						<td th:text="${d.PhaseId}"></td>
+						<td th:text="${d.Comments}"></td>
+						<td th:text="${d.Volume}"></td>
+						<td th:text="${d.Perimeter}"></td>
+						<td th:text="${d.Level}"></td>
+						<td th:text="${d.Occupancy}"></td>
+						<td th:text="${d.Department}"></td>
+						<td th:text="${d.BaseFinish}"></td>
+						<td th:text="${d.CeilingFinish}"></td>
+						<td th:text="${d.WallFinish}"></td>
+						<td th:text="${d.FloorFinish}"></td>
+						<td th:text="${d.Area}"></td>
+						<td th:text="${d.Number}"></td>
+                        <td th:text="${d.Name}"></td>
+                        <td th:text="${d.UnboundedHeight}"></td>
+						<td th:text="${d.Occupant}"></td>
+						<td th:text="${d.ZONE}"></td>
+						<td th:text="${d.BATIMENT}"></td>
+						</tr>
+					</table>
+					
+		
+	 
+	</div>	
+</body>
+</html>

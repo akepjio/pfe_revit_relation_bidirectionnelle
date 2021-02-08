@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeLeaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layout">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="https://img.icons8.com/bubbles/50/000000/r.png">
+<title> Revit Project Updater </title>
+</head>
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+
+.box {
+  border: 1px solid #333333;
+  width: 80%;
+  height: 650px;
+  overflow: scroll;
+}
+
+  </style>
+<body>
+	<div layout:fragment="content1">
+	<div class="col-md-6"> 
+	<div class="panel panel-default">
+		<div class="panel-heading">Edit AirTerminalTypes</div>
+		<div class="panel-body">
+		<form  method="post">
+			<div class="form-group">
+				<label class="control-label">ID: </label><label th:text="${AirTerminalTypes.id}"> </label>
+				<input class="form-control" type="hidden" name="id" 
+				th:value="${AirTerminalTypes.id}"/>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Keynote: </label><label th:text="${AirTerminalTypes.Keynote}"> </label>
+				<input class="form-control" type="hidden" name="Keynote" 
+				th:value="${AirTerminalTypes.Keynote}"/>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Model:</label> 
+				<input class="form-control" type="text" name="Model"
+				th:value="${AirTerminalTypes.Model}"  />
+		   </div>
+			<div class="form-group">
+				<label class="control-label">Manufacturer:</label> 
+				<input class="form-control" type="text" name="Manufacturer" 
+				th:value="${AirTerminalTypes.Manufacturer}"/>
+		  </div>
+		  <div class="form-group">
+				<label class="control-label">TypeComments:</label> 
+				<input class="form-control" type="text" name="TypeComments" 
+				th:value="${AirTerminalTypes.TypeComments}"/>
+		  </div>
+		  
+		  <div class="form-group">
+				<label class="control-label">URL:</label> 
+				<input class="form-control" type="text" name="URL" 
+				th:value="${AirTerminalTypes.URL}"/>
+		  </div>
+		  <div class="form-group">
+				<label class="control-label">Description:</label> 
+				<input class="form-control" type="text" name="Description" 
+				th:value="${AirTerminalTypes.Description}"/>
+		  </div>
+		  <div class="form-group">
+				<label class="control-label">OmniClassNumber:</label> 
+				<input class="form-control" type="text" name="OmniClassNumber" 
+				th:value="${AirTerminalTypes.OmniClassNumber}"/>
+		  </div>
+		  <div class="form-group">
+				<label class="control-label">AssemblyCode:</label> 
+				<input class="form-control" type="text" name="AssemblyCode" 
+				th:value="${AirTerminalTypes.AssemblyCode}"/>
+		  </div>
+		   <div class="form-group">
+				<label class="control-label">FamilyName:</label> 
+				<input class="form-control" type="text" name="FamilyName" 
+				th:value="${AirTerminalTypes.FamilyName}"/>
+		  </div>
+		  <div class="form-group">
+				<label class="control-label">TypeName:</label> 
+				<input class="form-control" type="text" name="TypeName" 
+				th:value="${AirTerminalTypes.TypeName}"/>
+		  </div>
+		  <div class="form-group">
+				<label class="control-label">TypeMark:</label> 
+				<input class="form-control" type="text" name="TypeMark" 
+				th:value="${AirTerminalTypes.TypeMark}"/>
+		  </div>
+		  <div class="form-group">
+				<label class="control-label">Cost:</label> 
+				<input class="form-control" type="text" name="Cost" 
+				th:value="${AirTerminalTypes.Cost}"/>
+		  </div>
+		  <div class="form-group">
+				<label class="control-label">MaxFlow:</label> 
+				<input class="form-control" type="text" name="MaxFlow" 
+				th:value="${AirTerminalTypes.MaxFlow}"/>
+		  </div>
+		   <div class="form-group">
+				<label class="control-label">MinFlow:</label> 
+				<input class="form-control" type="text" name="MinFlow" 
+				th:value="${AirTerminalTypes.MinFlow}"/>
+		  </div>		
+		<button type="submit" class="btn btn-primary">Save</button>
+		</form>
+		</div>
+	</div>
+	</div>
+	</div>
+</body>
+</html>
