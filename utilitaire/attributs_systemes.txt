@@ -1,4 +1,7 @@
-﻿#Il s'agit des champs non-modifiables par table
+﻿#Il s'agit des champs non-modifiables depuis l'exterieur de REVIT
+# afin de ne pas porter atteinte à l'intégrité du dessin
+
+#Ces champs ont été obtenu moyennnant l'utilitaire BIMone en exportant les Nomenclature sur Excel
 
 
 
