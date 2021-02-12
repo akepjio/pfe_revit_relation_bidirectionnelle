@@ -1,0 +1,797 @@
+﻿#Il s'agit des champs non-modifiables par table
+
+
+
+Ceilings
+    Volume
+    Perimeter
+    PhaseCreated
+    PhaseDemolished
+    Level
+    Area
+
+CeilingTypes
+   FamilyName
+   TypeName
+    Materiel
+    BIMObjectName
+    Revision
+    Version
+    AcousticRating
+    Combustible
+    FireRating
+    Reference
+    SurfaceSpreadOfFlame
+    IfcExportAs
+    IfcExportType
+    AccessibilityPerformance
+    AssetType
+    Category
+    CodePerformance
+    Color
+    Constituents
+    DurationUnit
+    ExpectedLife
+    Features
+    Finish
+    Grade
+    Material
+    ModelNumber
+    ModelReference
+    NominalHeight
+    NominalLength
+    NominalWidth
+    ReplacementCost
+    Shape
+    Size
+    SustainabilityPerformance
+    WarrantyDescription
+    WarrantyDurationLabor
+    WarrantyDurationParts
+    WarrantyDurationUnit
+    WarrantyGuarantorLabor
+    WarrantyGuarantorParts
+    FlammibilityRating
+    FragilityRating
+
+CurtainWallMullions
+    Length
+    PhaseCreated
+    PhaseDemolished
+
+CurtainWallMullionTypes
+    FamilyName
+    TypeName
+
+StructuralFraming
+        Level
+        Length
+        Mark
+        PhaseCreated
+        PhaseDemolished
+        Volume
+        EstimatedReinforcementVolume
+        CutLength
+
+StructuralFramingTypes
+     FamilyName
+     TypeName
+
+Walls
+    Area
+    Length
+    PhaseCreated
+    PhaseDemolished
+    TopConstraint
+     Volume
+     EstimatedReinforcementVolume
+     UnconnectedHeight
+     TopOffset
+     StructuralUsage
+     BaseConstraint
+
+WallTypes
+     FamilyName
+     TypeName
+      Cost
+      FireRating
+      Width
+      Region Europe
+      Region Middle East
+      Region North America
+      Region Oceania
+      Region South America
+      Product SKU
+      Technical description
+      Uniclass 1.4 Code
+      Uniclass 1.4 Description
+      Uniclass 2015 Code
+      Uniclass 2015 Name
+      Uniclass 2.0 Code
+      Uniclass 2.0 Description
+      UNSPSC Code
+      Weight Net (Kg)
+      Nominal width
+      Author
+      BIMObjectName
+      ManufacturerName
+      ManufacturerURL
+      ProductInformation
+      Revision
+      Uniclass2
+      Version
+      AcousticRating
+      Combustible
+      IsExternal
+      Reference
+      SurfaceSpreadOfFlame
+      IfcExportAs
+      IfcExportType
+      AccessibilityPerformance
+      AssetType
+      Category
+      CodePerformance
+      Color
+      Constituents
+      DurationUnit
+      ExpectedLife
+      Features
+      Finish
+      Grade
+      Material
+      ModelNumber
+      ModelReference
+      Name
+      NominalHeight
+      NominalLength
+      NominalWidth
+      ReplacementCost
+      Shape
+      Size
+      SustainabilityPerformance
+      WarrantyDescription
+      WarrantyDurationLabor
+      WarrantyDurationParts
+      WarrantyDurationUnit
+      WarrantyGuarantorLabor
+      WarrantyGuarantorParts
+      FlammibilityRating
+      FragilityRating
+      CladdingType
+      ApplicationOptions
+      SpanningDirection
+      ExternalSkinThicknessAndMaterial
+      ExternalProfileReference
+      ExternalProfileCrownWidth
+      ExternalProfileDepth
+      ExternalProfilePitch
+      ExternalSkinFinish
+      ExternalColourOptions
+      CoreInsulation
+      InternalLinerSkinThicknessAndMaterial
+      InternalLinerFinishOptions
+      InternalColourOptions
+      PanelThickness
+      LengthOptions
+      CoverWidthManufacturingTolerance
+      ThicknessManufacturingTolerance
+      LengthManufacturingTolerance
+      CutBacks
+      EndSquareManufacturingTolerance
+      FireResistanceOptions
+      PanelEndJoints
+      PanelEndLapArrangement
+      PrimaryFasteners
+      PanelJoints
+      PanelSideLapArrangement
+      CornerPanels
+      Curvature
+      IntegralAccessories
+      Guarantees
+      SpecialFeatures
+      ThermalTransmittance
+      TotalThickness
+      Product data url
+      BIMobject category
+      COBIe Type Category
+      Design country
+      EAN code
+      Edition number
+      Nominal height
+      IFC Classification
+      Installation instructions
+      Youtube clip
+      Manufacturer country
+      Manufacturer name
+      Material main
+      Material secondary
+      OmniClass Code
+      OmniClass Description
+      Product certification
+      Product family
+      Product group
+      Product Guid
+      Product name
+      Date of publishing
+      QR code
+      Region Africa
+      Region Antarctica
+      Region Asia
+
+CurtainPanels
+     Area
+     Height
+    PhaseCreated
+    PhaseDemolished
+    Width
+
+CurtainPanelTypes
+     FamilyName
+     TypeName
+     OmniClassNumber
+
+Doors
+    Level
+    PhaseCreated
+    PhaseDemolished
+
+AirTerminals
+    PhaseCreated
+    PhaseDemolished
+    SystemClassification
+    SystemName
+
+AirTerminalTypes
+     FamilyName
+     TypeName
+     OmniClassNumber
+
+StructuralColumns
+    BaseLevel
+    EstimatedReinforcementVolume
+    Length
+    Mark
+    PhaseCreated
+    PhaseDemolished
+    TopLevel
+    Volume
+
+StructuralColumnTypes
+     FamilyName
+     TypeName
+     OmniClassNumber
+
+Grids
+   ScopeBox
+
+GridTypes
+     TypeName
+
+Windows
+    Level
+    PhaseCreated
+    PhaseDemolished
+
+
+WindowTypes
+     FamilyName
+     TypeName
+     OmniClassNumber
+    RoughWidth
+    RoughHeight
+
+PlumbingFixtures
+    SystemClassification
+    SystemName
+    Trap
+     Drain
+     SupplyPipe
+     SupplyFitting
+     PhaseCreated
+     PhaseDemolished
+     Level
+
+PlumbingFixtureTypes
+      FamilyName
+     TypeName
+     OmniClassNumber
+     CWConnection
+     HWConnection
+     VentConnection
+     WasteConnection
+    
+Roofs
+     Area
+     PhaseCreated
+     PhaseDemolished
+
+RoofTypes
+      FamilyName
+     TypeName
+     Author
+     BIMObjectName
+     ManufacturerName
+     ManufacturerURL
+     ProductInformation
+     Revision
+     Uniclass2
+     Version
+     AcousticRating
+     Combustible
+     FireRating
+     IsExternal
+     Reference
+     SurfaceSpreadOfFlame
+     IfcExportAs
+     IfcExportType
+     AccessibilityPerformance
+     AssetType
+     Category
+     CodePerformance
+     Color
+     Constituents
+     DurationUnit
+     ExpectedLife
+     Features
+     Finish
+     Grade
+     Material
+     ModelNumber
+     ModelReference
+     Name
+     NominalHeight
+     NominalLength
+     NominalWidth
+     ReplacementCost
+     Shape
+     Size
+     SustainabilityPerformance
+     WarrantyDescription
+     WarrantyDurationLabor
+     WarrantyDurationParts
+     WarrantyDurationUnit
+     WarrantyGuarantorLabor
+     WarrantyGuarantorParts
+     FlammibilityRating
+     FragilityRating
+     OmniClassNumber
+
+SpecialtyEquipment
+     CircuitNumber
+     Panel
+     PhaseCreated
+     PhaseDemolished
+     Level
+
+SpecialtyEquipmentTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+
+
+Floors
+    EstimatedReinforcementVolume
+     Area
+     Volume
+     Level
+     Perimeter
+     PhaseCreated
+     PhaseDemolished
+
+FloorTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+      Author
+      BIMObjectName
+      ManufacturerName
+      ManufacturerURL
+      ProductInformation
+      Revision
+      Uniclass2
+      Version
+      AcousticRating
+      Combustible
+      FireRating
+      IsExternal
+      Reference
+      SurfaceSpreadOfFlame
+      IfcExportAs
+      IfcExportType
+      AccessibilityPerformance
+      AssetType
+      Category
+      CodePerformance
+      Color
+      Constituents
+      DurationUnit
+      ExpectedLife
+      Features
+      Finish
+      Grade
+      Material
+      ModelNumber
+      ModelReference
+      Name
+      NominalHeight
+      NominalLength
+      NominalWidth
+      ReplacementCost
+      Shape
+      Size
+      SustainabilityPerformance
+      WarrantyDescription
+      WarrantyDurationLabor
+      WarrantyDurationParts
+      WarrantyDurationUnit
+      WarrantyGuarantorLabor
+      WarrantyGuarantorParts
+      FlammibilityRating
+      FragilityRating
+
+HVACZones
+  CalculatedAreaperCoolingLoad
+  CalculatedAreaperHeatingLoad
+  GrossArea
+  GrossVolume
+  CalculatedSupplyAirflowperarea
+  CalculatedCoolingLoadperarea
+  CalculatedHeatingLoadperarea
+  Level
+  CalculatedSupplyAirflow
+  CalculatedCoolingLoad
+  CalculatedHeatingLoad
+  OccupiedVolume
+  Perimeter
+  OccupiedArea
+  Name
+
+DuctSystems
+  NumberofElements
+  SystemEquipment
+  Flow
+
+DuctSystemTypes
+  SystemClassification
+
+DuctTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+
+MaterialQuantities
+    Volume
+    Area
+  
+ElementPhase
+
+Categories
+
+ElementLevel
+
+Materials
+      Grade
+      Species
+      Thermalexpansioncoefficient
+      Bending
+      Shearmodulus
+      Poissonratio
+      Tensionperpendiculartograin
+      Shearparalleltograin
+      Compressionperpendiculartograin
+      Compressionparalleltograin
+      Youngmodulus
+      MaterialType
+      Lightweight
+      Behavior
+      Resistancecalculationstrength
+      Reductionfactorforshear
+      Minimumtensilestrength
+      Minimumyieldstress
+      Shearstrengthmodification
+      Shearreinforcementyieldstress
+      Bendingreinforcement
+      Concretecompression
+      ThermalexpansioncoefficientX
+      ThermalexpansioncoefficientY
+      ThermalexpansioncoefficientZ
+      Unitweight
+      ShearmodulusX
+      ShearmodulusY
+      ShearmodulusZ
+      PoissonratioX
+      PoissonratioY
+      Poissonratio
+      YoungmodulusX
+      YoungmodulusY
+      YoungmodulusZ
+      Shininess
+      Smoothness
+      Glow
+      Transparency
+      Color
+      NUMERO MODULE
+
+SpaceTypeEnums
+
+SpaceTypeSettings
+
+ElectricalLoadClassificationParameterElement
+
+BuildingTypeSettings
+
+ServiceTypeEnums
+
+WireInsulationTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+
+HVACLoadSchedules
+
+RoomFromToAssociations
+
+DuctFittingTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+
+FluidTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+
+Views --
+
+RoomAssociations
+
+CurtainWallPanelOnWall
+
+RoomTags
+
+PipeSystemTypeEnums
+
+InstanceUsageEnums
+
+PipeSegments --
+
+PipingSystemTypes
+      Abbreviation
+      FluidDensity
+      FluidTemperature
+      FluidType
+      FluidDynamicViscosity
+      SingleLineDropSymbol
+      SingleLineRiseSymbol
+      SingleLineTeeDownSymbol
+      SingleLineTeeUpSymbol
+      SystemClassification
+      TwoLineDropSymbol
+      TwoLineRiseSymbol
+
+ElectricalSystemEnums
+
+PipeScheduleTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+
+Profiles
+      FamilyName
+      TypeName
+      OmniClassNumber
+
+AnalyzesAsTypeEnums
+
+PipeConnectionTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+
+PipeFittingTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+
+ConditionTypeEnums
+
+ElectricalLoadClassifications
+
+DuctSystemTypeEnums
+
+DoorTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+      RoughWidth
+      RoughHeight
+      Thickness
+      Width
+      Height
+      Operation
+      ConstructionType
+      FireRating
+
+LevelTypes
+
+PanelScheduleTemplatesDataPanel
+
+PanelScheduleTemplatesSwitchboard
+
+AssemblyCodes
+
+DistributionSystemTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+      LinetoLineVoltage
+      LinetoGroundVoltage
+      Phase
+      Configuration
+      Wires
+
+CoverTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+      Length
+
+CurtainSystemTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+
+GutterTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+      Profile
+      Material
+
+FasciaTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+      Profile
+      Material
+
+RampTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+
+RevitDBLinkInfo
+
+ProjectInformation
+
+PropertyLineTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+
+PipeTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+      Roughness
+      Material
+      ConnectionType
+      Schedule/Type
+
+WallSweepTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+      SubcategoryofWalls
+      Profile
+      Material
+
+VoltageTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+      ActualVoltage
+      MinimumVoltage
+      MaximumVoltage
+
+StructuralColumnTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+
+Sheets
+
+SlabEdgeTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+      Profile
+      Material
+
+FlexPipeTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+
+StructuralFoundationTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+
+WiringTypeEnums
+
+WireTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+      ShareNeutralConductor
+      ShareGroundConductor
+      Material
+      TemperatureRating
+      Insulation
+      MaxSize
+      NeutralMultiplier
+      NeutralIncludedinBalancedLoad
+      NeutralSize
+      ConduitType
+
+RebarStyleEnums
+
+RailingTypes
+        FamilyName
+      TypeName
+      OmniClassNumber
+
+PowerFactorStateTypeEnums
+
+GenericModelTypes
+        FamilyName
+      TypeName
+      OmniClassNumber
+
+FabricLocationEnums
+
+FlexDuctTypes
+        FamilyName
+      TypeName
+      OmniClassNumber
+
+CableTrayTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+
+AreaSchemes
+
+NeutralModeEnums
+
+EaveCutterTypeEnums
+
+ElectricalPhaseEnums
+
+ConduitTypes
+       FamilyName
+      TypeName
+      OmniClassNumber
+      Standard
+
+StairTypes
+      FamilyName
+      TypeName
+      OmniClassNumber
+      TreadThickness
+
+     
+
+
+    
+     
+
+
+
+   
+
+
+
+
+    
