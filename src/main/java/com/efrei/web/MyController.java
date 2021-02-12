@@ -4283,7 +4283,1646 @@ public class MyController {
 	
 	}
 	
-	
+
+	    @PostMapping("/admin/saveCeilings")
+		public String save1(Model model,  Ceilings Ceilings) {
+				String sqlUpdate = "UPDATE Ceilings set comments=? where Id=?";
+				jdbcTemplate.update(sqlUpdate,Ceilings.getComments(),Ceilings.getId());
+				
+				String sqlUpdate1 = "UPDATE Ceilings set DesignOption=? where Id=?";
+				jdbcTemplate.update(sqlUpdate1,Ceilings.getDesignOption(),Ceilings.getId());
+				
+				String sqlUpdate2 = "UPDATE Ceilings set Mark=? where Id=?";
+				jdbcTemplate.update(sqlUpdate2,Ceilings.getMark(),Ceilings.getId());
+				
+				String sqlUpdate3 = "UPDATE Ceilings set HeightOffsetFromLevel=? where Id=?";
+				jdbcTemplate.update(sqlUpdate3,Ceilings.getHeightOffsetFromLevel(),Ceilings.getId());
+
+				return "redirect:/";
+		}
+		
+
+
+
+	    @PostMapping("/admin/saveCeilingTypes")
+		public String save2(Model model,  CeilingTypes CeilingTypes) {
+				String sqlUpdate = "UPDATE CeilingTypes set TypeComments=? where Id=?";
+				jdbcTemplate.update(sqlUpdate,CeilingTypes.getTypeComments(),CeilingTypes.getId());
+				
+				String sqlUpdate1 = "UPDATE CeilingTypes set Keynote=? where Id=?";
+				jdbcTemplate.update(sqlUpdate1,CeilingTypes.getKeynote(),CeilingTypes.getId());
+				
+				String sqlUpdate2 = "UPDATE CeilingTypes set Model=? where Id=?";
+				jdbcTemplate.update(sqlUpdate2,CeilingTypes.getModel(),CeilingTypes.getId());
+				
+				String sqlUpdate3 = "UPDATE CeilingTypes set Manufacturer=? where Id=?";
+				jdbcTemplate.update(sqlUpdate3,CeilingTypes.getManufacturer(),CeilingTypes.getId());
+				
+				String sqlUpdate4 = "UPDATE CeilingTypes set URL=? where Id=?";
+				jdbcTemplate.update(sqlUpdate4,CeilingTypes.getURL(),CeilingTypes.getId());
+				
+				String sqlUpdate5 = "UPDATE CeilingTypes set Description=? where Id=?";
+				jdbcTemplate.update(sqlUpdate5,CeilingTypes.getDescription(),CeilingTypes.getId());	
+				
+
+	            String sqlUpdate6 = "UPDATE CeilingTypes set AssemblyCode=? where Id=?";
+				jdbcTemplate.update(sqlUpdate6,CeilingTypes.getAssemblyCode(),CeilingTypes.getId());
+
+				return "redirect:/";
+		}
+
+
+
+	    @PostMapping("/admin/saveCurtainWallMullions")
+		public String save3(Model model,  CurtainWallMullions cwm) {
+	        String sqlUpdate = "UPDATE CurtainWallMullions set comments=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate,cwm.getComments(),cwm.getId());
+	        
+	        String sqlUpdate1 = "UPDATE CurtainWallMullions set DesignOption=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate1,cwm.getDesignOption(),cwm.getId());
+	        
+	        String sqlUpdate2 = "UPDATE CurtainWallMullions set Mark=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate2,cwm.getMark(),cwm.getId());
+
+	        return "redirect:/";
+		}
+
+
+
+	    @PostMapping("/admin/saveCurtainWallMullionTypes")
+		public String save4(Model model,  CurtainWallMullionTypes cwmt) {
+				String sqlUpdate = "UPDATE CurtainWallMullionTypes set TypeComments=? where Id=?";
+				jdbcTemplate.update(sqlUpdate,cwmt.getTypeComments(),cwmt.getId());
+				
+				String sqlUpdate1 = "UPDATE CurtainWallMullionTypes set Keynote=? where Id=?";
+				jdbcTemplate.update(sqlUpdate1,cwmt.getKeynote(),cwmt.getId());
+				
+				String sqlUpdate2 = "UPDATE CurtainWallMullionTypes set Model=? where Id=?";
+				jdbcTemplate.update(sqlUpdate2,cwmt.getModel(),cwmt.getId());
+				
+				String sqlUpdate3 = "UPDATE CurtainWallMullionTypes set Manufacturer=? where Id=?";
+				jdbcTemplate.update(sqlUpdate3,cwmt.getManufacturer(),cwmt.getId());
+				
+				String sqlUpdate4 = "UPDATE CurtainWallMullionTypes set URL=? where Id=?";
+				jdbcTemplate.update(sqlUpdate4,cwmt.getURL(),cwmt.getId());
+				
+				String sqlUpdate5 = "UPDATE CurtainWallMullionTypes set Description=? where Id=?";
+				jdbcTemplate.update(sqlUpdate5,cwmt.getDescription(),cwmt.getId());	
+				
+
+	            String sqlUpdate6 = "UPDATE CurtainWallMullionTypes set AssemblyCode=? where Id=?";
+				jdbcTemplate.update(sqlUpdate6,cwmt.getAssemblyCode(),cwmt.getId());	
+				
+
+	            String sqlUpdate7 = "UPDATE CurtainWallMullionTypes set TypeMark=? where Id=?";
+				jdbcTemplate.update(sqlUpdate7,cwmt.getTypeMark(),cwmt.getId());	
+				
+
+	            String sqlUpdate8 = "UPDATE CurtainWallMullionTypes set Cost=? where Id=?";
+				jdbcTemplate.update(sqlUpdate8,cwmt.getCost(),cwmt.getId());	
+				
+
+	            String sqlUpdate9 = "UPDATE CurtainWallMullionTypes set OmniClassNumber=? where Id=?";
+				jdbcTemplate.update(sqlUpdate9,cwmt.getOmniClassNumber(),cwmt.getId());	
+
+				return "redirect:/";
+		}
+
+
+
+	    @PostMapping("/admin/saveStructuralFraming")
+		public String save5(Model model,  StructuralFraming sf) {
+	        String sqlUpdate = "UPDATE StructuralFraming set comments=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate,sf.getComments(),sf.getId());
+	        
+	        String sqlUpdate1 = "UPDATE StructuralFraming set DesignOption=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate1,sf.getDesignOption(),sf.getId());
+	        
+	        String sqlUpdate2 = "UPDATE StructuralFraming set Mark=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate2,sf.getMark(),sf.getId());
+
+	        String sqlUpdate3 = "UPDATE StructuralFraming set ReferenceLevel=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate3,sf.getReferenceLevel(),sf.getId());
+
+	        String sqlUpdate4 = "UPDATE StructuralFraming set StructuralUsage=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate4,sf.getStructuralUsage(),sf.getId());
+	        
+	        return "redirect:/";
+		}
+
+
+
+	    @PostMapping("/admin/saveCurtainWallMullionTypes")
+		public String save6(Model model,  StructuralFramingTypes sft) {
+				String sqlUpdate = "UPDATE StructuralFramingTypes set TypeComments=? where Id=?";
+				jdbcTemplate.update(sqlUpdate,sft.getTypeComments(),sft.getId());
+				
+				String sqlUpdate1 = "UPDATE StructuralFramingTypes set Keynote=? where Id=?";
+				jdbcTemplate.update(sqlUpdate1,sft.getKeynote(),sft.getId());
+				
+				String sqlUpdate2 = "UPDATE StructuralFramingTypes set Model=? where Id=?";
+				jdbcTemplate.update(sqlUpdate2,sft.getModel(),sft.getId());
+				
+				String sqlUpdate3 = "UPDATE StructuralFramingTypes set Manufacturer=? where Id=?";
+				jdbcTemplate.update(sqlUpdate3,sft.getManufacturer(),sft.getId());
+				
+				String sqlUpdate4 = "UPDATE StructuralFramingTypes set URL=? where Id=?";
+				jdbcTemplate.update(sqlUpdate4,sft.getURL(),sft.getId());
+				
+				String sqlUpdate5 = "UPDATE StructuralFramingTypes set Description=? where Id=?";
+				jdbcTemplate.update(sqlUpdate5,sft.getDescription(),sft.getId());	
+				
+
+	            String sqlUpdate6 = "UPDATE StructuralFramingTypes set AssemblyCode=? where Id=?";
+				jdbcTemplate.update(sqlUpdate6,sft.getAssemblyCode(),sft.getId());	
+				
+
+	            String sqlUpdate7 = "UPDATE StructuralFramingTypes set TypeMark=? where Id=?";
+				jdbcTemplate.update(sqlUpdate7,sft.getTypeMark(),sft.getId());	
+				
+
+	            String sqlUpdate8 = "UPDATE StructuralFramingTypes set Cost=? where Id=?";
+				jdbcTemplate.update(sqlUpdate8,sft.getCost(),sft.getId());	
+				
+
+	            String sqlUpdate9 = "UPDATE StructuralFramingTypes set OmniClassNumber=? where Id=?";
+				jdbcTemplate.update(sqlUpdate9,sft.getOmniClassNumber(),sft.getId());	
+
+				return "redirect:/";
+		}
+
+
+
+	    @PostMapping("/admin/saveWallTypes")
+		public String save7(Model model,  WallTypes WallTypes) {
+				String sqlUpdate = "UPDATE WallTypes set TypeComments=? where Id=?";
+				jdbcTemplate.update(sqlUpdate,WallTypes.getTypeComments(),WallTypes.getId());
+				
+				String sqlUpdate1 = "UPDATE WallTypes set Keynote=? where Id=?";
+				jdbcTemplate.update(sqlUpdate1,WallTypes.getKeynote(),WallTypes.getId());
+				
+				String sqlUpdate2 = "UPDATE WallTypes set Model=? where Id=?";
+				jdbcTemplate.update(sqlUpdate2,WallTypes.getModel(),WallTypes.getId());
+				
+				String sqlUpdate3 = "UPDATE WallTypes set Manufacturer=? where Id=?";
+				jdbcTemplate.update(sqlUpdate3,WallTypes.getManufacturer(),WallTypes.getId());
+				
+				String sqlUpdate4 = "UPDATE WallTypes set URL=? where Id=?";
+				jdbcTemplate.update(sqlUpdate4,WallTypes.getURL(),WallTypes.getId());
+				
+				String sqlUpdate5 = "UPDATE WallTypes set Description=? where Id=?";
+				jdbcTemplate.update(sqlUpdate5,WallTypes.getDescription(),WallTypes.getId());	
+				
+
+	            String sqlUpdate6 = "UPDATE WallTypes set AssemblyCode=? where Id=?";
+				jdbcTemplate.update(sqlUpdate6,WallTypes.getAssemblyCode(),WallTypes.getId());	
+				
+
+	            String sqlUpdate7 = "UPDATE WallTypes set TypeMark=? where Id=?";
+				jdbcTemplate.update(sqlUpdate7,WallTypes.getTypeMark(),WallTypes.getId());	
+				
+
+	            String sqlUpdate8 = "UPDATE WallTypes set OmniClassNumber=? where Id=?";
+				jdbcTemplate.update(sqlUpdate8,WallTypes.getOmniClassNumber(),WallTypes.getId());
+
+				return "redirect:/";
+		}
+
+
+	    @PostMapping("/admin/saveCurtainPanels")
+		public String save8(Model model, CurtainPanels CurtainPanels) {
+	        String sqlUpdate = "UPDATE CurtainPanels set comments=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate,CurtainPanels.getComments(),CurtainPanels.getId());
+	        
+	        String sqlUpdate1 = "UPDATE CurtainPanels set DesignOption=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate1,CurtainPanels.getDesignOption(),CurtainPanels.getId());
+	        
+	        String sqlUpdate2 = "UPDATE CurtainPanels set Mark=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate2,CurtainPanels.getMark(),CurtainPanels.getId());
+
+	        return "redirect:/";
+		}
+
+
+
+	    @PostMapping("/admin/saveCurtainPanelTypes")
+		public String save9(Model model,  CurtainPanelTypes cpt) {
+				String sqlUpdate = "UPDATE CurtainPanelTypes set TypeComments=? where Id=?";
+				jdbcTemplate.update(sqlUpdate,cpt.getTypeComments(),cpt.getId());
+				
+				String sqlUpdate1 = "UPDATE CurtainPanelTypes set Keynote=? where Id=?";
+				jdbcTemplate.update(sqlUpdate1,cpt.getKeynote(),cpt.getId());
+				
+				String sqlUpdate2 = "UPDATE CurtainPanelTypes set Model=? where Id=?";
+				jdbcTemplate.update(sqlUpdate2,cpt.getModel(),cpt.getId());
+				
+				String sqlUpdate3 = "UPDATE CurtainPanelTypes set Manufacturer=? where Id=?";
+				jdbcTemplate.update(sqlUpdate3,cpt.getManufacturer(),cpt.getId());
+				
+				String sqlUpdate4 = "UPDATE CurtainPanelTypes set URL=? where Id=?";
+				jdbcTemplate.update(sqlUpdate4,cpt.getURL(),cpt.getId());
+				
+				String sqlUpdate5 = "UPDATE CurtainPanelTypes set Description=? where Id=?";
+				jdbcTemplate.update(sqlUpdate5,cpt.getDescription(),cpt.getId());	
+				
+
+	            String sqlUpdate6 = "UPDATE CurtainPanelTypes set AssemblyCode=? where Id=?";
+				jdbcTemplate.update(sqlUpdate6,cpt.getAssemblyCode(),cpt.getId());	
+				
+
+	            String sqlUpdate7 = "UPDATE CurtainPanelTypes set TypeMark=? where Id=?";
+				jdbcTemplate.update(sqlUpdate7,cpt.getTypeMark(),cpt.getId());	
+				
+
+	            String sqlUpdate8 = "UPDATE CurtainPanelTypes set Cost=? where Id=?";
+				jdbcTemplate.update(sqlUpdate8,cpt.getCost(),cpt.getId());	
+				
+
+	            String sqlUpdate9 = "UPDATE CurtainPanelTypes set Finish=? where Id=?";
+				jdbcTemplate.update(sqlUpdate9,cpt.getFinish(),cpt.getId());	
+				
+
+	            String sqlUpdate10 = "UPDATE CurtainPanelTypes set ConstructionType=? where Id=?";
+				jdbcTemplate.update(sqlUpdate10,cpt.getConstructionType(),cpt.getId());	
+
+				return "redirect:/";
+		}
+
+
+
+	    @PostMapping("/admin/saveDoors")
+		public String save10(Model model, Doors Doors) {
+	        String sqlUpdate = "UPDATE Doors set comments=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate,Doors.getComments(),Doors.getId());
+	        
+	        String sqlUpdate1 = "UPDATE Doors set DesignOption=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate1,Doors.getDesignOption(),Doors.getId());
+	        
+	        String sqlUpdate2 = "UPDATE Doors set Mark=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate2,Doors.getMark(),Doors.getId());
+
+	        String sqlUpdate3 = "UPDATE Doors set HeadHeight=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate3,Doors.getHeadHeight(),Doors.getId());
+
+	        String sqlUpdate4 = "UPDATE Doors set SillHeight=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate4,Doors.getSillHeight(),Doors.getId());
+
+	        String sqlUpdate5 = "UPDATE Doors set FrameMaterial=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate5,Doors.getFrameMaterial(),Doors.getId());
+
+	        String sqlUpdate6 = "UPDATE Doors set FrameType=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate6,Doors.getFrameType(),Doors.getId());
+
+	        String sqlUpdate7 = "UPDATE Doors set Finish=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate7,Doors.getFinish(),Doors.getId());
+
+	        String sqlUpdate8 = "UPDATE Doors set Service=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate8,Doors.getService(),Doors.getId());
+
+	        String sqlUpdate9 = "UPDATE Doors set LOT=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate9,Doors.getLOT(),Doors.getId());
+
+	        return "redirect:/";
+		}
+
+
+
+	    @PostMapping("/admin/saveAirTerminals")
+		public String save11(Model model, AirTerminals AirTerminals) {
+	        String sqlUpdate = "UPDATE AirTerminals set comments=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate,AirTerminals.getComments(),AirTerminals.getId());
+	        
+	        String sqlUpdate1 = "UPDATE AirTerminals set DesignOption=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate1,AirTerminals.getDesignOption(),AirTerminals.getId());
+	        
+	        String sqlUpdate2 = "UPDATE AirTerminals set Mark=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate2,AirTerminals.getMark(),AirTerminals.getId());
+
+	        String sqlUpdate3 = "UPDATE AirTerminals set Flow=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate3,AirTerminals.getFlow(),AirTerminals.getId());
+
+	        return "redirect:/";
+		}
+
+
+
+	    @PostMapping("/admin/saveAirTerminalTypes")
+		public String save12(Model model, AirTerminalTypes atp) {
+				String sqlUpdate = "UPDATE AirTerminalTypes set TypeComments=? where Id=?";
+				jdbcTemplate.update(sqlUpdate,atp.getTypeComments(),atp.getId());
+				
+				String sqlUpdate1 = "UPDATE AirTerminalTypes set Keynote=? where Id=?";
+				jdbcTemplate.update(sqlUpdate1,atp.getKeynote(),atp.getId());
+				
+				String sqlUpdate2 = "UPDATE AirTerminalTypes set Model=? where Id=?";
+				jdbcTemplate.update(sqlUpdate2,atp.getModel(),atp.getId());
+				
+				String sqlUpdate3 = "UPDATE AirTerminalTypes set Manufacturer=? where Id=?";
+				jdbcTemplate.update(sqlUpdate3,atp.getManufacturer(),atp.getId());
+				
+				String sqlUpdate4 = "UPDATE AirTerminalTypes set URL=? where Id=?";
+				jdbcTemplate.update(sqlUpdate4,atp.getURL(),atp.getId());
+				
+				String sqlUpdate5 = "UPDATE AirTerminalTypes set Description=? where Id=?";
+				jdbcTemplate.update(sqlUpdate5,atp.getDescription(),atp.getId());	
+				
+
+	            String sqlUpdate6 = "UPDATE AirTerminalTypes set AssemblyCode=? where Id=?";
+				jdbcTemplate.update(sqlUpdate6,atp.getAssemblyCode(),atp.getId());	
+				
+
+	            String sqlUpdate7 = "UPDATE AirTerminalTypes set TypeMark=? where Id=?";
+				jdbcTemplate.update(sqlUpdate7,atp.getTypeMark(),atp.getId());	
+				
+
+	            String sqlUpdate8 = "UPDATE AirTerminalTypes set Cost=? where Id=?";
+				jdbcTemplate.update(sqlUpdate8,atp.getCost(),atp.getId());	
+				
+
+	            String sqlUpdate9 = "UPDATE AirTerminalTypes set MaxFlow=? where Id=?";
+				jdbcTemplate.update(sqlUpdate9,atp.getMaxFlow(),atp.getId());	
+				
+
+	            String sqlUpdate10 = "UPDATE AirTerminalTypes set MinFlow=? where Id=?";
+				jdbcTemplate.update(sqlUpdate10,atp.getMinFlow(),atp.getId());	
+
+				return "redirect:/";
+		}
+
+
+
+	    @PostMapping("/admin/saveStructuralColumns")
+		public String save13(Model model, StructuralColumns sc) {
+	        String sqlUpdate = "UPDATE StructuralColumns set comments=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate,sc.getComments(),sc.getId());
+	        
+	        String sqlUpdate1 = "UPDATE StructuralColumns set DesignOption=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate1,sc.getDesignOption(),sc.getId());
+	        
+	        String sqlUpdate2 = "UPDATE StructuralColumns set Mark=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate2,sc.getMark(),sc.getId());
+
+	        String sqlUpdate3 = "UPDATE StructuralColumns set LOT=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate3,sc.getLOT(),sc.getId());
+
+	        String sqlUpdate4 = "UPDATE StructuralColumns set TopOffset=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate4,sc.getTopOffset(),sc.getId());
+
+	        String sqlUpdate5 = "UPDATE StructuralColumns set AnalyzeAs=? where Id=?";
+	        jdbcTemplate.update(sqlUpdate5,sc.getAnalyzeAs(),sc.getId());
+
+	        return "redirect:/";
+		}
+
+
+
+	    @PostMapping("/admin/saveStructuralColumnTypes")
+		public String save14(Model model, StructuralColumnTypes sct) {
+				String sqlUpdate = "UPDATE StructuralColumnTypes set TypeComments=? where Id=?";
+				jdbcTemplate.update(sqlUpdate,sct.getTypeComments(),sct.getId());
+				
+				String sqlUpdate1 = "UPDATE StructuralColumnTypes set Keynote=? where Id=?";
+				jdbcTemplate.update(sqlUpdate1,sct.getKeynote(),sct.getId());
+				
+				String sqlUpdate2 = "UPDATE StructuralColumnTypes set Model=? where Id=?";
+				jdbcTemplate.update(sqlUpdate2,sct.getModel(),sct.getId());
+				
+				String sqlUpdate3 = "UPDATE StructuralColumnTypes set Manufacturer=? where Id=?";
+				jdbcTemplate.update(sqlUpdate3,sct.getManufacturer(),sct.getId());
+				
+				String sqlUpdate4 = "UPDATE StructuralColumnTypes set URL=? where Id=?";
+				jdbcTemplate.update(sqlUpdate4,sct.getURL(),sct.getId());
+				
+				String sqlUpdate5 = "UPDATE StructuralColumnTypes set Description=? where Id=?";
+				jdbcTemplate.update(sqlUpdate5,sct.getDescription(),sct.getId());	
+				
+
+	            String sqlUpdate6 = "UPDATE StructuralColumnTypes set AssemblyCode=? where Id=?";
+				jdbcTemplate.update(sqlUpdate6,sct.getAssemblyCode(),sct.getId());	
+				
+
+	            String sqlUpdate7 = "UPDATE StructuralColumnTypes set TypeMark=? where Id=?";
+				jdbcTemplate.update(sqlUpdate7,sct.getTypeMark(),sct.getId());	
+				
+
+	            String sqlUpdate8 = "UPDATE StructuralColumnTypes set Cost=? where Id=?";
+				jdbcTemplate.update(sqlUpdate8,sct.getCost(),sct.getId());	
+
+	            return "redirect:/";
+	        }
+
+
+
+	        @PostMapping("/admin/saveGrids")
+	        public String save15(Model model, Grids Grids) {
+	            String sqlUpdate = "UPDATE Grids set Name=? where Id=?";
+	            jdbcTemplate.update(sqlUpdate,Grids.getName(),Grids.getId());
+
+	            return "redirect:/";
+	        }
+
+
+
+	        @PostMapping("/admin/saveGridTypes")
+	        public String save16(Model model, GridTypes GridTypes) {
+	            String sqlUpdate = "UPDATE GridTypes set Symbol=? where Id=?";
+	            jdbcTemplate.update(sqlUpdate,GridTypes.getSymbol(),GridTypes.getId());
+	            
+	            String sqlUpdate1 = "UPDATE GridTypes set CenterSegment=? where Id=?";
+	            jdbcTemplate.update(sqlUpdate1,GridTypes.getCenterSegment(),GridTypes.getId());
+	            
+	            String sqlUpdate2 = "UPDATE GridTypes set CenterSegmentPattern=? where Id=?";
+	            jdbcTemplate.update(sqlUpdate2,GridTypes.getCenterSegmentPattern(),GridTypes.getId());
+	    
+	            String sqlUpdate3 = "UPDATE GridTypes set CenterSegmentColor=? where Id=?";
+	            jdbcTemplate.update(sqlUpdate3,GridTypes.getCenterSegmentColor(),GridTypes.getId());
+	    
+	            String sqlUpdate4 = "UPDATE GridTypes set CenterSegmentWeight? where Id=?";
+	            jdbcTemplate.update(sqlUpdate4,GridTypes.getCenterSegmentWeight(),GridTypes.getId());
+	    
+	            String sqlUpdate5 = "UPDATE GridTypes set EndSegmentsLength=? where Id=?";
+	            jdbcTemplate.update(sqlUpdate5,GridTypes.getEndSegmentsLength(),GridTypes.getId());
+	    
+	            String sqlUpdate6 = "UPDATE GridTypes set EndSegmentPattern=? where Id=?";
+	            jdbcTemplate.update(sqlUpdate6,GridTypes.getEndSegmentPattern(),GridTypes.getId());
+	    
+	            String sqlUpdate7 = "UPDATE GridTypes set EndSegmentColor=? where Id=?";
+	            jdbcTemplate.update(sqlUpdate7,GridTypes.getEndSegmentColor(),GridTypes.getId());
+	    
+	            String sqlUpdate8 = "UPDATE GridTypes set EndSegmentWeight=? where Id=?";
+	            jdbcTemplate.update(sqlUpdate8,GridTypes.getEndSegmentWeight(),GridTypes.getId());
+	    
+	            return "redirect:/";
+	        }
+
+
+
+	        @PostMapping("/admin/saveWindows")
+	        public String save17(Model model, Windows Windows) {
+	            String sqlUpdate = "UPDATE Windows set comments=? where Id=?";
+	            jdbcTemplate.update(sqlUpdate,Windows.getComments(),Windows.getId());
+	            
+	            String sqlUpdate1 = "UPDATE Windows set DesignOption=? where Id=?";
+	            jdbcTemplate.update(sqlUpdate1,Windows.getDesignOption(),Windows.getId());
+	            
+	            String sqlUpdate2 = "UPDATE Windows set Mark=? where Id=?";
+	            jdbcTemplate.update(sqlUpdate2,Windows.getMark(),Windows.getId());
+	    
+	            String sqlUpdate3 = "UPDATE Windows set HeadHeight=? where Id=?";
+	            jdbcTemplate.update(sqlUpdate3,Windows.getHeadHeight(),Windows.getId());
+	    
+	            String sqlUpdate4 = "UPDATE Windows set SillHeight=? where Id=?";
+	            jdbcTemplate.update(sqlUpdate4,Windows.getSillHeight(),Windows.getId());
+	    
+	            return "redirect:/";
+	        }
+
+
+
+	        @PostMapping("/admin/saveWindowTypes")
+	        public String save18(Model model, WindowTypes WindowTypes) {
+	                String sqlUpdate = "UPDATE WindowTypes set TypeComments=? where Id=?";
+	                jdbcTemplate.update(sqlUpdate,WindowTypes.getTypeComments(),WindowTypes.getId());
+	                
+	                String sqlUpdate1 = "UPDATE WindowTypes set Keynote=? where Id=?";
+	                jdbcTemplate.update(sqlUpdate1,WindowTypes.getKeynote(),WindowTypes.getId());
+	                
+	                String sqlUpdate2 = "UPDATE WindowTypes set Model=? where Id=?";
+	                jdbcTemplate.update(sqlUpdate2,WindowTypes.getModel(),WindowTypes.getId());
+	                
+	                String sqlUpdate3 = "UPDATE WindowTypes set Manufacturer=? where Id=?";
+	                jdbcTemplate.update(sqlUpdate3,WindowTypes.getManufacturer(),WindowTypes.getId());
+	                
+	                String sqlUpdate4 = "UPDATE WindowTypes set URL=? where Id=?";
+	                jdbcTemplate.update(sqlUpdate4,WindowTypes.getURL(),WindowTypes.getId());
+	                
+	                String sqlUpdate5 = "UPDATE WindowTypes set Description=? where Id=?";
+	                jdbcTemplate.update(sqlUpdate5,WindowTypes.getDescription(),WindowTypes.getId());	
+	                
+	    
+	                String sqlUpdate6 = "UPDATE WindowTypes set AssemblyCode=? where Id=?";
+	                jdbcTemplate.update(sqlUpdate6,WindowTypes.getAssemblyCode(),WindowTypes.getId());	
+	                
+	    
+	                String sqlUpdate7 = "UPDATE WindowTypes set TypeMark=? where Id=?";
+	                jdbcTemplate.update(sqlUpdate7,WindowTypes.getTypeMark(),WindowTypes.getId());	
+	                
+	    
+	                String sqlUpdate8 = "UPDATE WindowTypes set Cost=? where Id=?";
+	                jdbcTemplate.update(sqlUpdate8,WindowTypes.getCost(),WindowTypes.getId());	
+
+	                String sqlUpdate9 = "UPDATE WindowTypes set Width=? where Id=?";
+	                jdbcTemplate.update(sqlUpdate9,WindowTypes.getWidth(),WindowTypes.getId());
+
+	                String sqlUpdate10 = "UPDATE WindowTypes set Height=? where Id=?";
+	                jdbcTemplate.update(sqlUpdate10,WindowTypes.getHeight(),WindowTypes.getId());
+
+	                String sqlUpdate11 = "UPDATE WindowTypes set Operation=? where Id=?";
+	                jdbcTemplate.update(sqlUpdate11,WindowTypes.getOperation(),WindowTypes.getId());
+
+	                String sqlUpdate12 = "UPDATE WindowTypes set ConstructionType=? where Id=?";
+	                jdbcTemplate.update(sqlUpdate12,WindowTypes.getConstructionType(),WindowTypes.getId());
+	    
+	                return "redirect:/";
+	            }
+
+
+
+	            @PostMapping("/admin/savePlumbingFixtures")
+	            public String save19(Model model, PlumbingFixtures pb) {
+	                String sqlUpdate = "UPDATE PlumbingFixtures set comments=? where Id=?";
+	                jdbcTemplate.update(sqlUpdate,pb.getComments(),pb.getId());
+	                
+	                String sqlUpdate1 = "UPDATE PlumbingFixtures set DesignOption=? where Id=?";
+	                jdbcTemplate.update(sqlUpdate1,pb.getDesignOption(),pb.getId());
+	                
+	                String sqlUpdate2 = "UPDATE PlumbingFixtures set Mark=? where Id=?";
+	                jdbcTemplate.update(sqlUpdate2,pb.getMark(),pb.getId());
+	        
+	                return "redirect:/";
+	            }
+
+
+
+	            @PostMapping("/admin/savePlumbingFixtureTypes")
+	            public String save20(Model model, PlumbingFixtureTypes pft) {
+	                    String sqlUpdate = "UPDATE PlumbingFixtureTypes set TypeComments=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate,pft.getTypeComments(),pft.getId());
+	                    
+	                    String sqlUpdate1 = "UPDATE PlumbingFixtureTypes set Keynote=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate1,pft.getKeynote(),pft.getId());
+	                    
+	                    String sqlUpdate2 = "UPDATE PlumbingFixtureTypes set Model=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate2,pft.getModel(),pft.getId());
+	                    
+	                    String sqlUpdate3 = "UPDATE PlumbingFixtureTypes set Manufacturer=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate3,pft.getManufacturer(),pft.getId());
+	                    
+	                    String sqlUpdate4 = "UPDATE PlumbingFixtureTypes set URL=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate4,pft.getURL(),pft.getId());
+	                    
+	                    String sqlUpdate5 = "UPDATE PlumbingFixtureTypes set Description=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate5,pft.getDescription(),pft.getId());	
+	                    
+	        
+	                    String sqlUpdate6 = "UPDATE PlumbingFixtureTypes set AssemblyCode=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate6,pft.getAssemblyCode(),pft.getId());	
+	                    
+	        
+	                    String sqlUpdate7 = "UPDATE PlumbingFixtureTypes set TypeMark=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate7,pft.getTypeMark(),pft.getId());	
+	                    
+	        
+	                    String sqlUpdate8 = "UPDATE PlumbingFixtureTypes set Cost=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate8,pft.getCost(),pft.getId());	
+	    
+	                    String sqlUpdate9 = "UPDATE PlumbingFixtureTypes set WFU=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate9,pft.getWFU(),pft.getId());
+	    
+	                    String sqlUpdate10 = "UPDATE PlumbingFixtureTypes set HWFU=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate10,pft.getHWFU(),pft.getId());
+	    
+	                    String sqlUpdate11 = "UPDATE PlumbingFixtureTypes set CWFU=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate11,pft.getCWFU(),pft.getId());
+	        
+	                    return "redirect:/";
+	                }
+
+
+
+	                @PostMapping("/admin/saveRoofs")
+	                public String save21(Model model, Roofs Roofs) {
+	                    String sqlUpdate = "UPDATE Roofs set comments=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate,Roofs.getComments(),Roofs.getId());
+	                    
+	                    String sqlUpdate1 = "UPDATE Roofs set DesignOption=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate1,Roofs.getDesignOption(),Roofs.getId());
+	                    
+	                    String sqlUpdate2 = "UPDATE Roofs set Mark=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate2,Roofs.getMark(),Roofs.getId());
+	            
+	                    String sqlUpdate3 = "UPDATE Roofs set Volume=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate3,Roofs.getVolume(),Roofs.getId());
+	            
+	                    String sqlUpdate4 = "UPDATE Roofs set RafterorTruss=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate4,Roofs.getRafterorTruss(),Roofs.getId());
+
+	                    String sqlUpdate5 = "UPDATE Roofs set FasciaDepth=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate5,Roofs.getFasciaDepth(),Roofs.getId());
+
+	                    String sqlUpdate6 = "UPDATE Roofs set RafterCut=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate6,Roofs.getRafterCut(),Roofs.getId());
+
+	                    String sqlUpdate7 = "UPDATE Roofs set BaseLevel=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate7,Roofs.getBaseLevel(),Roofs.getId());
+
+	                    String sqlUpdate8 = "UPDATE Roofs set CutoffOffset=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate8,Roofs.getCutoffOffset(),Roofs.getId());
+
+	                    String sqlUpdate9 = "UPDATE Roofs set CutoffLevel=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate9,Roofs.getCutoffLevel(),Roofs.getId());
+
+	                    String sqlUpdate10 = "UPDATE Roofs set BaseOffsetFromLevel=? where Id=?";
+	                    jdbcTemplate.update(sqlUpdate10,Roofs.getBaseOffsetFromLevel(),Roofs.getId());
+	            
+	                    return "redirect:/";
+	                }
+
+
+
+	                @PostMapping("/admin/saveRoofTypes")
+	                public String save22(Model model, RoofTypes RoofTypes) {
+	                        String sqlUpdate = "UPDATE RoofTypes set TypeComments=? where Id=?";
+	                        jdbcTemplate.update(sqlUpdate,RoofTypes.getTypeComments(),RoofTypes.getId());
+	                        
+	                        String sqlUpdate1 = "UPDATE RoofTypes set Keynote=? where Id=?";
+	                        jdbcTemplate.update(sqlUpdate1,RoofTypes.getKeynote(),RoofTypes.getId());
+	                        
+	                        String sqlUpdate2 = "UPDATE RoofTypes set Model=? where Id=?";
+	                        jdbcTemplate.update(sqlUpdate2,RoofTypes.getModel(),RoofTypes.getId());
+	                        
+	                        String sqlUpdate3 = "UPDATE RoofTypes set Manufacturer=? where Id=?";
+	                        jdbcTemplate.update(sqlUpdate3,RoofTypes.getManufacturer(),RoofTypes.getId());
+	                        
+	                        String sqlUpdate4 = "UPDATE RoofTypes set URL=? where Id=?";
+	                        jdbcTemplate.update(sqlUpdate4,RoofTypes.getURL(),RoofTypes.getId());
+	                        
+	                        String sqlUpdate5 = "UPDATE RoofTypes set Description=? where Id=?";
+	                        jdbcTemplate.update(sqlUpdate5,RoofTypes.getDescription(),RoofTypes.getId());	
+	                        
+	            
+	                        String sqlUpdate6 = "UPDATE RoofTypes set AssemblyCode=? where Id=?";
+	                        jdbcTemplate.update(sqlUpdate6,RoofTypes.getAssemblyCode(),RoofTypes.getId());	
+	                        
+	            
+	                        String sqlUpdate7 = "UPDATE RoofTypes set TypeMark=? where Id=?";
+	                        jdbcTemplate.update(sqlUpdate7,RoofTypes.getTypeMark(),RoofTypes.getId());	
+	                        
+	            
+	                        String sqlUpdate8 = "UPDATE RoofTypes set Cost=? where Id=?";
+	                        jdbcTemplate.update(sqlUpdate8,RoofTypes.getCost(),RoofTypes.getId());	
+	            
+	                        return "redirect:/";
+	                    }
+
+
+
+	                    @PostMapping("/admin/saveSpecialtyEquipment")
+	                    public String save23(Model model, SpecialtyEquipment se) {
+	                        String sqlUpdate = "UPDATE SpecialtyEquipment set comments=? where Id=?";
+	                        jdbcTemplate.update(sqlUpdate,se.getComments(),se.getId());
+	                        
+	                        String sqlUpdate1 = "UPDATE SpecialtyEquipment set DesignOption=? where Id=?";
+	                        jdbcTemplate.update(sqlUpdate1,se.getDesignOption(),se.getId());
+	                        
+	                        String sqlUpdate2 = "UPDATE SpecialtyEquipment set Mark=? where Id=?";
+	                        jdbcTemplate.update(sqlUpdate2,se.getMark(),se.getId());
+	                
+	                        return "redirect:/";
+	                    }
+
+
+
+	                    @PostMapping("/admin/saveSpecialtyEquipmentTypes")
+	                    public String save24(Model model, SpecialtyEquipmentTypes set) {
+	                            String sqlUpdate = "UPDATE SpecialtyEquipmentTypes set TypeComments=? where Id=?";
+	                            jdbcTemplate.update(sqlUpdate,set.getTypeComments(),set.getId());
+	                            
+	                            String sqlUpdate1 = "UPDATE SpecialtyEquipmentTypes set Keynote=? where Id=?";
+	                            jdbcTemplate.update(sqlUpdate1,set.getKeynote(),set.getId());
+	                            
+	                            String sqlUpdate2 = "UPDATE SpecialtyEquipmentTypes set Model=? where Id=?";
+	                            jdbcTemplate.update(sqlUpdate2,set.getModel(),set.getId());
+	                            
+	                            String sqlUpdate3 = "UPDATE SpecialtyEquipmentTypes set Manufacturer=? where Id=?";
+	                            jdbcTemplate.update(sqlUpdate3,set.getManufacturer(),set.getId());
+	                            
+	                            String sqlUpdate4 = "UPDATE SpecialtyEquipmentTypes set URL=? where Id=?";
+	                            jdbcTemplate.update(sqlUpdate4,set.getURL(),set.getId());
+	                            
+	                            String sqlUpdate5 = "UPDATE SpecialtyEquipmentTypes set Description=? where Id=?";
+	                            jdbcTemplate.update(sqlUpdate5,set.getDescription(),set.getId());	
+	                            
+	                
+	                            String sqlUpdate6 = "UPDATE SpecialtyEquipmentTypes set AssemblyCode=? where Id=?";
+	                            jdbcTemplate.update(sqlUpdate6,set.getAssemblyCode(),set.getId());	
+	                            
+	                
+	                            String sqlUpdate7 = "UPDATE SpecialtyEquipmentTypes set TypeMark=? where Id=?";
+	                            jdbcTemplate.update(sqlUpdate7,set.getTypeMark(),set.getId());	
+	                            
+	                
+	                            String sqlUpdate8 = "UPDATE SpecialtyEquipmentTypes set Cost=? where Id=?";
+	                            jdbcTemplate.update(sqlUpdate8,set.getCost(),set.getId());	
+	                
+	                            return "redirect:/";
+	                        }
+
+
+
+	                        @PostMapping("/admin/saveFloors")
+	                        public String save25(Model model, Floors Floors) {
+	                            String sqlUpdate = "UPDATE Floors set comments=? where Id=?";
+	                            jdbcTemplate.update(sqlUpdate,Floors.getComments(),Floors.getId());
+	                            
+	                            String sqlUpdate1 = "UPDATE Floors set DesignOption=? where Id=?";
+	                            jdbcTemplate.update(sqlUpdate1,Floors.getDesignOption(),Floors.getId());
+	                            
+	                            String sqlUpdate2 = "UPDATE Floors set Mark=? where Id=?";
+	                            jdbcTemplate.update(sqlUpdate2,Floors.getMark(),Floors.getId());
+
+	                            String sqlUpdate3 = "UPDATE Floors set Structural=? where Id=?";
+	                            jdbcTemplate.update(sqlUpdate3,Floors.getStructural(),Floors.getId());
+
+	                            String sqlUpdate4 = "UPDATE Floors set HeightOffsetFromLevel=? where Id=?";
+	                            jdbcTemplate.update(sqlUpdate4,Floors.getHeightOffsetFromLevel(),Floors.getId());
+
+	                            String sqlUpdate5 = "UPDATE Floors set AnalyzeAs=? where Id=?";
+	                            jdbcTemplate.update(sqlUpdate5,Floors.getAnalyzeAs(),Floors.getId());
+
+	                            String sqlUpdate6 = "UPDATE Floors set LOT=? where Id=?";
+	                            jdbcTemplate.update(sqlUpdate6,Floors.getLOT(),Floors.getId());
+	                    
+	                            return "redirect:/";
+	                        }
+
+
+
+	                        @PostMapping("/admin/saveFloorTypes")
+	                        public String save26(Model model, FloorTypes FloorTypes) {
+	                                String sqlUpdate = "UPDATE FloorTypes set TypeComments=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate,FloorTypes.getTypeComments(),FloorTypes.getId());
+	                                
+	                                String sqlUpdate1 = "UPDATE FloorTypes set Keynote=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate1,FloorTypes.getKeynote(),FloorTypes.getId());
+	                                
+	                                String sqlUpdate2 = "UPDATE FloorTypes set Model=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate2,FloorTypes.getModel(),FloorTypes.getId());
+	                                
+	                                String sqlUpdate3 = "UPDATE FloorTypes set Manufacturer=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate3,FloorTypes.getManufacturer(),FloorTypes.getId());
+	                                
+	                                String sqlUpdate4 = "UPDATE FloorTypes set URL=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate4,FloorTypes.getURL(),FloorTypes.getId());
+	                                
+	                                String sqlUpdate5 = "UPDATE FloorTypes set Description=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate5,FloorTypes.getDescription(),FloorTypes.getId());	
+	                                
+	                    
+	                                String sqlUpdate6 = "UPDATE FloorTypes set AssemblyCode=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate6,FloorTypes.getAssemblyCode(),FloorTypes.getId());	
+	                                
+	                    
+	                                String sqlUpdate7 = "UPDATE FloorTypes set TypeMark=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate7,FloorTypes.getTypeMark(),FloorTypes.getId());	
+	                                
+	                    
+	                                String sqlUpdate8 = "UPDATE FloorTypes set Cost=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate8,FloorTypes.getCost(),FloorTypes.getId());	
+	                    
+	                                return "redirect:/";
+	                            }
+
+
+
+	                            @PostMapping("/admin/saveHVACZones")
+	                            public String save27(Model model, HVACZones HVACZones) {
+
+	                                String sqlUpdate = "UPDATE HVACZones set comments=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate,HVACZones.getComments(),HVACZones.getId());
+	                                
+	                                String sqlUpdate1 = "UPDATE HVACZones set DesignOption=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate1,HVACZones.getDesignOption(),HVACZones.getId());
+	                                
+	                                String sqlUpdate2 = "UPDATE HVACZones set UseAirChangesPerHour=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate2,HVACZones.getUseAirChangesPerHour(),HVACZones.getId());
+	    
+	                                String sqlUpdate3 = "UPDATE HVACZones set UseOutsideAirPerArea=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate3,HVACZones.getUseOutsideAirPerArea(),HVACZones.getId());
+	    
+	                                String sqlUpdate4 = "UPDATE HVACZones set UseOutsideAirPerPerson=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate4,HVACZones.getUseOutsideAirPerPerson(),HVACZones.getId());
+	    
+	                                String sqlUpdate5 = "UPDATE HVACZones set UseDehumidificationSetPoint=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate5,HVACZones.getUseDehumidificationSetPoint(),HVACZones.getId());
+	    
+	                                String sqlUpdate6 = "UPDATE HVACZones set UseHumidificationSetPoint=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate6,HVACZones.getUseHumidificationSetPoint(),HVACZones.getId());
+
+	                                String sqlUpdate7 = "UPDATE HVACZones set OutdoorAirperArea=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate7,HVACZones.getOutdoorAirperArea(),HVACZones.getId());
+
+	                                String sqlUpdate8 = "UPDATE HVACZones set OutdoorAirperPerson=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate8,HVACZones.getOutdoorAirperPerson(),HVACZones.getId());
+
+	                                String sqlUpdate9 = "UPDATE HVACZones set DehumidificationSetPoint=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate9,HVACZones.getDehumidificationSetPoint(),HVACZones.getId());
+
+	                                String sqlUpdate10 = "UPDATE HVACZones set HumidificationSetPoint=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate10,HVACZones.getHumidificationSetPoint(),HVACZones.getId());
+
+	                                String sqlUpdate11 = "UPDATE HVACZones set CoolingAirTemperature=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate11,HVACZones.getCoolingAirTemperature(),HVACZones.getId());
+
+	                                String sqlUpdate12 = "UPDATE HVACZones set HeatingAirTemperature=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate12,HVACZones.getHeatingAirTemperature(),HVACZones.getId());
+
+	                                String sqlUpdate13 = "UPDATE HVACZones set CoolingSetPoint=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate13,HVACZones.getCoolingSetPoint(),HVACZones.getId());
+
+	                                String sqlUpdate14 = "UPDATE HVACZones set HeatingSetPoint=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate14,HVACZones.getHeatingSetPoint(),HVACZones.getId());
+
+	                                String sqlUpdate15 = "UPDATE HVACZones set ServiceType=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate15,HVACZones.getServiceType(),HVACZones.getId());
+
+	                                String sqlUpdate16 = "UPDATE HVACZones set CoilBypass=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate16,HVACZones.getCoilBypass(),HVACZones.getId());
+	                        
+	                                return "redirect:/";
+	                            }
+
+
+
+	                            @PostMapping("/admin/saveDuctSystems")
+	                            public String save28(Model model, DuctSystems DuctSystems) {
+	                                String sqlUpdate = "UPDATE DuctSystems set comments=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate,DuctSystems.getComments(),DuctSystems.getId());
+	                                
+	                                String sqlUpdate1 = "UPDATE DuctSystems set DesignOption=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate1,DuctSystems.getDesignOption(),DuctSystems.getId());
+	                                
+	                                String sqlUpdate2 = "UPDATE DuctSystems set SystemName=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate2,DuctSystems.getSystemName(),DuctSystems.getId());
+
+	                                String sqlUpdate3 = "UPDATE DuctSystems set Flow=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate3,DuctSystems.getFlow(),DuctSystems.getId());
+	                        
+	                                return "redirect:/";
+	                            }
+
+
+
+	                            @PostMapping("/admin/saveDuctSystemTypes")
+	                            public String save29(Model model, DuctSystemTypes DuctSystemTypes) {
+	                                String sqlUpdate = "UPDATE DuctSystemTypes set TypeComments=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate,DuctSystemTypes.getTypeComments(),DuctSystemTypes.getId());
+	                                
+	                                String sqlUpdate1 = "UPDATE DuctSystemTypes set Abbreviation=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate1,DuctSystemTypes.getAbbreviation(),DuctSystemTypes.getId());
+	                                
+	                                String sqlUpdate2 = "UPDATE DuctSystemTypes set URL=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate2,DuctSystemTypes.getURL(),DuctSystemTypes.getId());
+
+	                                String sqlUpdate3 = "UPDATE DuctSystemTypes set Description=? where Id=?";
+	                                jdbcTemplate.update(sqlUpdate3,DuctSystemTypes.getDescription(),DuctSystemTypes.getId());
+	                        
+	                                return "redirect:/";
+	                            }
+
+
+
+	                            @PostMapping("/admin/saveDuctTypes")
+	                            public String save30(Model model, DuctTypes DuctTypes) {
+	                                    String sqlUpdate = "UPDATE DuctTypes set TypeComments=? where Id=?";
+	                                    jdbcTemplate.update(sqlUpdate,DuctTypes.getTypeComments(),DuctTypes.getId());
+	                                    
+	                                    String sqlUpdate1 = "UPDATE DuctTypes set Keynote=? where Id=?";
+	                                    jdbcTemplate.update(sqlUpdate1,DuctTypes.getKeynote(),DuctTypes.getId());
+	                                    
+	                                    String sqlUpdate2 = "UPDATE DuctTypes set Model=? where Id=?";
+	                                    jdbcTemplate.update(sqlUpdate2,DuctTypes.getModel(),DuctTypes.getId());
+	                                    
+	                                    String sqlUpdate3 = "UPDATE DuctTypes set Manufacturer=? where Id=?";
+	                                    jdbcTemplate.update(sqlUpdate3,DuctTypes.getManufacturer(),DuctTypes.getId());
+	                                    
+	                                    String sqlUpdate4 = "UPDATE DuctTypes set URL=? where Id=?";
+	                                    jdbcTemplate.update(sqlUpdate4,DuctTypes.getURL(),DuctTypes.getId());
+	                                    
+	                                    String sqlUpdate5 = "UPDATE DuctTypes set Description=? where Id=?";
+	                                    jdbcTemplate.update(sqlUpdate5,DuctTypes.getDescription(),DuctTypes.getId());	
+	                                    
+	                        
+	                                    String sqlUpdate6 = "UPDATE DuctTypes set AssemblyCode=? where Id=?";
+	                                    jdbcTemplate.update(sqlUpdate6,DuctTypes.getAssemblyCode(),DuctTypes.getId());	
+	                                    
+	                        
+	                                    String sqlUpdate7 = "UPDATE DuctTypes set TypeMark=? where Id=?";
+	                                    jdbcTemplate.update(sqlUpdate7,DuctTypes.getTypeMark(),DuctTypes.getId());	
+	                                    
+	                        
+	                                    String sqlUpdate8 = "UPDATE DuctTypes set Cost=? where Id=?";
+	                                    jdbcTemplate.update(sqlUpdate8,DuctTypes.getCost(),DuctTypes.getId());	
+	                        
+	                                    return "redirect:/";
+	                                }
+
+
+
+	                                @PostMapping("/admin/saveMaterialQuantities")
+	                                public String save31(Model model, MaterialQuantities mq) {
+	                                    String sqlUpdate = "UPDATE MaterialQuantities set AsPaint=? where ElementId=?";
+	                                    jdbcTemplate.update(sqlUpdate,mq.getAsPaint(),mq.getElementId());
+	                        
+	                                    return "redirect:/";
+	                                }
+
+
+
+	                                @PostMapping("/admin/saveDuctSystemTypes")
+	                                public String save32(Model model, DuctSystemTypes DuctSystemTypes) {
+	                                    String sqlUpdate = "UPDATE DuctSystemTypes set TypeComments=? where Id=?";
+	                                    jdbcTemplate.update(sqlUpdate,DuctSystemTypes.getTypeComments(),DuctSystemTypes.getId());
+	                                    
+	                                    String sqlUpdate1 = "UPDATE DuctSystemTypes set Abbreviation=? where Id=?";
+	                                    jdbcTemplate.update(sqlUpdate1,DuctSystemTypes.getAbbreviation(),DuctSystemTypes.getId());
+	                                    
+	                                    String sqlUpdate2 = "UPDATE DuctSystemTypes set URL=? where Id=?";
+	                                    jdbcTemplate.update(sqlUpdate2,DuctSystemTypes.getURL(),DuctSystemTypes.getId());
+	    
+	                                    String sqlUpdate3 = "UPDATE DuctSystemTypes set Description=? where Id=?";
+	                                    jdbcTemplate.update(sqlUpdate3,DuctSystemTypes.getDescription(),DuctSystemTypes.getId());
+	                            
+	                                    return "redirect:/";
+	                                }
+	    
+	    
+	    
+	                                @PostMapping("/admin/saveMaterials")
+	                                public String save33(Model model, Materials Materials) {
+	                                        String sqlUpdate = "UPDATE Materials set Comments=? where Id=?";
+	                                        jdbcTemplate.update(sqlUpdate,Materials.getComments(),Materials.getId());
+	                                        
+	                                        String sqlUpdate1 = "UPDATE Materials set Keynote=? where Id=?";
+	                                        jdbcTemplate.update(sqlUpdate1,Materials.getKeynote(),Materials.getId());
+	                                        
+	                                        String sqlUpdate2 = "UPDATE Materials set Model=? where Id=?";
+	                                        jdbcTemplate.update(sqlUpdate2,Materials.getModel(),Materials.getId());
+	                                        
+	                                        String sqlUpdate3 = "UPDATE Materials set Manufacturer=? where Id=?";
+	                                        jdbcTemplate.update(sqlUpdate3,Materials.getManufacturer(),Materials.getId());
+	                                        
+	                                        String sqlUpdate4 = "UPDATE Materials set URL=? where Id=?";
+	                                        jdbcTemplate.update(sqlUpdate4,Materials.getURL(),Materials.getId());
+	                                        
+	                                        String sqlUpdate5 = "UPDATE Materials set Description=? where Id=?";
+	                                        jdbcTemplate.update(sqlUpdate5,Materials.getDescription(),Materials.getId());	
+	                                        
+	                            
+	                                        String sqlUpdate6 = "UPDATE Materials set Name=? where Id=?";
+	                                        jdbcTemplate.update(sqlUpdate6,Materials.getName(),Materials.getId());	
+	                                        
+	                            
+	                                        String sqlUpdate7 = "UPDATE Materials set Cost=? where Id=?";
+	                                        jdbcTemplate.update(sqlUpdate7,Materials.getCost(),Materials.getId());	
+	                            
+	                                        return "redirect:/";
+	                                    }
+
+
+
+	                                    @PostMapping("/admin/saveWireInsulationTypes")
+	                                    public String save34(Model model, WireInsulationTypes wit) {
+	                                            String sqlUpdate = "UPDATE WireInsulationTypes set TypeComments=? where Id=?";
+	                                            jdbcTemplate.update(sqlUpdate,wit.getTypeComments(),wit.getId());
+	                                            
+	                                            String sqlUpdate1 = "UPDATE WireInsulationTypes set Keynote=? where Id=?";
+	                                            jdbcTemplate.update(sqlUpdate1,wit.getKeynote(),wit.getId());
+	                                            
+	                                            String sqlUpdate2 = "UPDATE WireInsulationTypes set Model=? where Id=?";
+	                                            jdbcTemplate.update(sqlUpdate2,wit.getModel(),wit.getId());
+	                                            
+	                                            String sqlUpdate3 = "UPDATE WireInsulationTypes set Manufacturer=? where Id=?";
+	                                            jdbcTemplate.update(sqlUpdate3,wit.getManufacturer(),wit.getId());
+	                                            
+	                                            String sqlUpdate4 = "UPDATE WireInsulationTypes set URL=? where Id=?";
+	                                            jdbcTemplate.update(sqlUpdate4,wit.getURL(),wit.getId());
+	                                            
+	                                            String sqlUpdate5 = "UPDATE WireInsulationTypes set Description=? where Id=?";
+	                                            jdbcTemplate.update(sqlUpdate5,wit.getDescription(),wit.getId());	
+	                                            
+	                                
+	                                            String sqlUpdate6 = "UPDATE WireInsulationTypes set AssemblyCode=? where Id=?";
+	                                            jdbcTemplate.update(sqlUpdate6,wit.getAssemblyCode(),wit.getId());	
+	                                            
+	                                
+	                                            String sqlUpdate7 = "UPDATE WireInsulationTypes set TypeMark=? where Id=?";
+	                                            jdbcTemplate.update(sqlUpdate7,wit.getTypeMark(),wit.getId());	
+	                                            
+	                                
+	                                            String sqlUpdate8 = "UPDATE WireInsulationTypes set Cost=? where Id=?";
+	                                            jdbcTemplate.update(sqlUpdate8,wit.getCost(),wit.getId());	
+	                                
+	                                            return "redirect:/";
+	                                        }
+
+
+
+	                                        @PostMapping("/admin/saveDuctFittingTypes")
+	                                        public String save35(Model model, DuctFittingTypes dft) {
+	                                                String sqlUpdate = "UPDATE DuctFittingTypes set TypeComments=? where Id=?";
+	                                                jdbcTemplate.update(sqlUpdate,dft.getTypeComments(),dft.getId());
+	                                                
+	                                                String sqlUpdate1 = "UPDATE DuctFittingTypes set Keynote=? where Id=?";
+	                                                jdbcTemplate.update(sqlUpdate1,dft.getKeynote(),dft.getId());
+	                                                
+	                                                String sqlUpdate2 = "UPDATE DuctFittingTypes set Model=? where Id=?";
+	                                                jdbcTemplate.update(sqlUpdate2,dft.getModel(),dft.getId());
+	                                                
+	                                                String sqlUpdate3 = "UPDATE DuctFittingTypes set Manufacturer=? where Id=?";
+	                                                jdbcTemplate.update(sqlUpdate3,dft.getManufacturer(),dft.getId());
+	                                                
+	                                                String sqlUpdate4 = "UPDATE DuctFittingTypes set URL=? where Id=?";
+	                                                jdbcTemplate.update(sqlUpdate4,dft.getURL(),dft.getId());
+	                                                
+	                                                String sqlUpdate5 = "UPDATE DuctFittingTypes set Description=? where Id=?";
+	                                                jdbcTemplate.update(sqlUpdate5,dft.getDescription(),dft.getId());	
+	                                                
+	                                    
+	                                                String sqlUpdate6 = "UPDATE DuctFittingTypes set AssemblyCode=? where Id=?";
+	                                                jdbcTemplate.update(sqlUpdate6,dft.getAssemblyCode(),dft.getId());	
+	                                                
+	                                    
+	                                                String sqlUpdate7 = "UPDATE DuctFittingTypes set TypeMark=? where Id=?";
+	                                                jdbcTemplate.update(sqlUpdate7,dft.getTypeMark(),dft.getId());	
+	                                                
+	                                    
+	                                                String sqlUpdate8 = "UPDATE DuctFittingTypes set Cost=? where Id=?";
+	                                                jdbcTemplate.update(sqlUpdate8,dft.getCost(),dft.getId());	
+	                                    
+	                                                return "redirect:/";
+	                                            }
+
+
+
+	                                            @PostMapping("/admin/saveFluidTypes")
+	                                            public String save36(Model model, FluidTypes FluidTypes) {
+	                                                    String sqlUpdate = "UPDATE FluidTypes set TypeComments=? where Id=?";
+	                                                    jdbcTemplate.update(sqlUpdate,FluidTypes.getTypeComments(),FluidTypes.getId());
+	                                                    
+	                                                    String sqlUpdate1 = "UPDATE FluidTypes set Keynote=? where Id=?";
+	                                                    jdbcTemplate.update(sqlUpdate1,FluidTypes.getKeynote(),FluidTypes.getId());
+	                                                    
+	                                                    String sqlUpdate2 = "UPDATE FluidTypes set Model=? where Id=?";
+	                                                    jdbcTemplate.update(sqlUpdate2,FluidTypes.getModel(),FluidTypes.getId());
+	                                                    
+	                                                    String sqlUpdate3 = "UPDATE FluidTypes set Manufacturer=? where Id=?";
+	                                                    jdbcTemplate.update(sqlUpdate3,FluidTypes.getManufacturer(),FluidTypes.getId());
+	                                                    
+	                                                    String sqlUpdate4 = "UPDATE FluidTypes set URL=? where Id=?";
+	                                                    jdbcTemplate.update(sqlUpdate4,FluidTypes.getURL(),FluidTypes.getId());
+	                                                    
+	                                                    String sqlUpdate5 = "UPDATE FluidTypes set Description=? where Id=?";
+	                                                    jdbcTemplate.update(sqlUpdate5,FluidTypes.getDescription(),FluidTypes.getId());	
+	                                                    
+	                                        
+	                                                    String sqlUpdate6 = "UPDATE FluidTypes set AssemblyCode=? where Id=?";
+	                                                    jdbcTemplate.update(sqlUpdate6,FluidTypes.getAssemblyCode(),FluidTypes.getId());	
+	                                                    
+	                                        
+	                                                    String sqlUpdate7 = "UPDATE FluidTypes set TypeMark=? where Id=?";
+	                                                    jdbcTemplate.update(sqlUpdate7,FluidTypes.getTypeMark(),FluidTypes.getId());	
+	                                                    
+	                                        
+	                                                    String sqlUpdate8 = "UPDATE FluidTypes set Cost=? where Id=?";
+	                                                    jdbcTemplate.update(sqlUpdate8,FluidTypes.getCost(),FluidTypes.getId());	
+	                                        
+	                                                    return "redirect:/";
+	                                                }
+
+
+
+	                                                @PostMapping("/admin/savePipingSystemTypes")
+	                                                public String save37(Model model, PipingSystemTypes pist) {
+	                                                        String sqlUpdate = "UPDATE PipingSystemTypes set TypeComments=? where Id=?";
+	                                                        jdbcTemplate.update(sqlUpdate,pist.getTypeComments(),pist.getId());
+	                                                        
+	                                                        String sqlUpdate4 = "UPDATE PipingSystemTypes set URL=? where Id=?";
+	                                                        jdbcTemplate.update(sqlUpdate4,pist.getURL(),pist.getId());
+	                                                        
+	                                                        String sqlUpdate5 = "UPDATE PipingSystemTypes set Description=? where Id=?";
+	                                                        jdbcTemplate.update(sqlUpdate5,pist.getDescription(),pist.getId());		
+	                                                    
+	                                                        return "redirect:/";
+	                                                    }
+
+
+
+	                                                    @PostMapping("/admin/savePipeScheduleTypes")
+	                                                    public String save38(Model model, PipeScheduleTypes pst) {
+	                                                            String sqlUpdate = "UPDATE PipeScheduleTypes set TypeComments=? where Id=?";
+	                                                            jdbcTemplate.update(sqlUpdate,pst.getTypeComments(),pst.getId());
+	                                                            
+	                                                            String sqlUpdate1 = "UPDATE PipeScheduleTypes set Keynote=? where Id=?";
+	                                                            jdbcTemplate.update(sqlUpdate1,pst.getKeynote(),pst.getId());
+	                                                            
+	                                                            String sqlUpdate2 = "UPDATE PipeScheduleTypes set Model=? where Id=?";
+	                                                            jdbcTemplate.update(sqlUpdate2,pst.getModel(),pst.getId());
+	                                                            
+	                                                            String sqlUpdate3 = "UPDATE PipeScheduleTypes set Manufacturer=? where Id=?";
+	                                                            jdbcTemplate.update(sqlUpdate3,pst.getManufacturer(),pst.getId());
+	                                                            
+	                                                            String sqlUpdate4 = "UPDATE PipeScheduleTypes set URL=? where Id=?";
+	                                                            jdbcTemplate.update(sqlUpdate4,pst.getURL(),pst.getId());
+	                                                            
+	                                                            String sqlUpdate5 = "UPDATE PipeScheduleTypes set Description=? where Id=?";
+	                                                            jdbcTemplate.update(sqlUpdate5,pst.getDescription(),pst.getId());	
+	                                                            
+	                                                
+	                                                            String sqlUpdate6 = "UPDATE PipeScheduleTypes set AssemblyCode=? where Id=?";
+	                                                            jdbcTemplate.update(sqlUpdate6,pst.getAssemblyCode(),pst.getId());	
+	                                                            
+	                                                
+	                                                            String sqlUpdate7 = "UPDATE PipeScheduleTypes set TypeMark=? where Id=?";
+	                                                            jdbcTemplate.update(sqlUpdate7,pst.getTypeMark(),pst.getId());	
+	                                                            
+	                                                
+	                                                            String sqlUpdate8 = "UPDATE PipeScheduleTypes set Cost=? where Id=?";
+	                                                            jdbcTemplate.update(sqlUpdate8,pst.getCost(),pst.getId());	
+	                                                
+	                                                            return "redirect:/";
+	                                                        }
+
+
+
+	                                                        @PostMapping("/admin/saveProfiles")
+	                                                        public String save39(Model model, Profiles Profiles) {
+	                                                                String sqlUpdate = "UPDATE Profiles set TypeComments=? where Id=?";
+	                                                                jdbcTemplate.update(sqlUpdate,Profiles.getTypeComments(),Profiles.getId());
+	                                                                
+	                                                                String sqlUpdate1 = "UPDATE Profiles set Keynote=? where Id=?";
+	                                                                jdbcTemplate.update(sqlUpdate1,Profiles.getKeynote(),Profiles.getId());
+	                                                                
+	                                                                String sqlUpdate2 = "UPDATE Profiles set Model=? where Id=?";
+	                                                                jdbcTemplate.update(sqlUpdate2,Profiles.getModel(),Profiles.getId());
+	                                                                
+	                                                                String sqlUpdate3 = "UPDATE Profiles set Manufacturer=? where Id=?";
+	                                                                jdbcTemplate.update(sqlUpdate3,Profiles.getManufacturer(),Profiles.getId());
+	                                                                
+	                                                                String sqlUpdate4 = "UPDATE Profiles set URL=? where Id=?";
+	                                                                jdbcTemplate.update(sqlUpdate4,Profiles.getURL(),Profiles.getId());
+	                                                                
+	                                                                String sqlUpdate5 = "UPDATE Profiles set Description=? where Id=?";
+	                                                                jdbcTemplate.update(sqlUpdate5,Profiles.getDescription(),Profiles.getId());	
+	                                                                
+	                                                    
+	                                                                String sqlUpdate6 = "UPDATE Profiles set AssemblyCode=? where Id=?";
+	                                                                jdbcTemplate.update(sqlUpdate6,Profiles.getAssemblyCode(),Profiles.getId());	
+	                                                                
+	                                                    
+	                                                                String sqlUpdate7 = "UPDATE Profiles set TypeMark=? where Id=?";
+	                                                                jdbcTemplate.update(sqlUpdate7,Profiles.getTypeMark(),Profiles.getId());	
+	                                                                
+	                                                    
+	                                                                String sqlUpdate8 = "UPDATE Profiles set Cost=? where Id=?";
+	                                                                jdbcTemplate.update(sqlUpdate8,Profiles.getCost(),Profiles.getId());	
+	                                                    
+	                                                                return "redirect:/";
+	                                                            }
+
+
+
+	                                                            @PostMapping("/admin/savePipeConnectionTypes")
+	                                                            public String save40(Model model, PipeConnectionTypes pct) {
+	                                                                    String sqlUpdate = "UPDATE PipeConnectionTypes set TypeComments=? where Id=?";
+	                                                                    jdbcTemplate.update(sqlUpdate,pct.getTypeComments(),pct.getId());
+	                                                                    
+	                                                                    String sqlUpdate1 = "UPDATE PipeConnectionTypes set Keynote=? where Id=?";
+	                                                                    jdbcTemplate.update(sqlUpdate1,pct.getKeynote(),pct.getId());
+	                                                                    
+	                                                                    String sqlUpdate2 = "UPDATE PipeConnectionTypes set Model=? where Id=?";
+	                                                                    jdbcTemplate.update(sqlUpdate2,pct.getModel(),pct.getId());
+	                                                                    
+	                                                                    String sqlUpdate3 = "UPDATE PipeConnectionTypes set Manufacturer=? where Id=?";
+	                                                                    jdbcTemplate.update(sqlUpdate3,pct.getManufacturer(),pct.getId());
+	                                                                    
+	                                                                    String sqlUpdate4 = "UPDATE PipeConnectionTypes set URL=? where Id=?";
+	                                                                    jdbcTemplate.update(sqlUpdate4,pct.getURL(),pct.getId());
+	                                                                    
+	                                                                    String sqlUpdate5 = "UPDATE PipeConnectionTypes set Description=? where Id=?";
+	                                                                    jdbcTemplate.update(sqlUpdate5,pct.getDescription(),pct.getId());	
+	                                                                    
+	                                                        
+	                                                                    String sqlUpdate6 = "UPDATE PipeConnectionTypes set AssemblyCode=? where Id=?";
+	                                                                    jdbcTemplate.update(sqlUpdate6,pct.getAssemblyCode(),pct.getId());	
+	                                                                    
+	                                                        
+	                                                                    String sqlUpdate7 = "UPDATE PipeConnectionTypes set TypeMark=? where Id=?";
+	                                                                    jdbcTemplate.update(sqlUpdate7,pct.getTypeMark(),pct.getId());	
+	                                                                    
+	                                                        
+	                                                                    String sqlUpdate8 = "UPDATE PipeConnectionTypes set Cost=? where Id=?";
+	                                                                    jdbcTemplate.update(sqlUpdate8,pct.getCost(),pct.getId());	
+	                                                        
+	                                                                    return "redirect:/";
+	                                                                }
+
+
+
+	                                                                @PostMapping("/admin/savePipeFittingTypes")
+	                                                                public String save41(Model model, PipeFittingTypes pft) {
+	                                                                        String sqlUpdate = "UPDATE PipeFittingTypes set TypeComments=? where Id=?";
+	                                                                        jdbcTemplate.update(sqlUpdate,pft.getTypeComments(),pft.getId());
+	                                                                        
+	                                                                        String sqlUpdate1 = "UPDATE PipeFittingTypes set Keynote=? where Id=?";
+	                                                                        jdbcTemplate.update(sqlUpdate1,pft.getKeynote(),pft.getId());
+	                                                                        
+	                                                                        String sqlUpdate2 = "UPDATE PipeFittingTypes set Model=? where Id=?";
+	                                                                        jdbcTemplate.update(sqlUpdate2,pft.getModel(),pft.getId());
+	                                                                        
+	                                                                        String sqlUpdate3 = "UPDATE PipeFittingTypes set Manufacturer=? where Id=?";
+	                                                                        jdbcTemplate.update(sqlUpdate3,pft.getManufacturer(),pft.getId());
+	                                                                        
+	                                                                        String sqlUpdate4 = "UPDATE PipeFittingTypes set URL=? where Id=?";
+	                                                                        jdbcTemplate.update(sqlUpdate4,pft.getURL(),pft.getId());
+	                                                                        
+	                                                                        String sqlUpdate5 = "UPDATE PipeFittingTypes set Description=? where Id=?";
+	                                                                        jdbcTemplate.update(sqlUpdate5,pft.getDescription(),pft.getId());	
+	                                                                        
+	                                                            
+	                                                                        String sqlUpdate6 = "UPDATE PipeFittingTypes set AssemblyCode=? where Id=?";
+	                                                                        jdbcTemplate.update(sqlUpdate6,pft.getAssemblyCode(),pft.getId());	
+	                                                                        
+	                                                            
+	                                                                        String sqlUpdate7 = "UPDATE PipeFittingTypes set TypeMark=? where Id=?";
+	                                                                        jdbcTemplate.update(sqlUpdate7,pft.getTypeMark(),pft.getId());	
+	                                                                        
+	                                                            
+	                                                                        String sqlUpdate8 = "UPDATE PipeFittingTypes set Cost=? where Id=?";
+	                                                                        jdbcTemplate.update(sqlUpdate8,pft.getCost(),pft.getId());	
+	                                                            
+	                                                                        return "redirect:/";
+	                                                                    }
+
+
+
+	                                                                    @PostMapping("/admin/saveDoorTypes")
+	                                                                    public String save42(Model model, DoorTypes DoorTypes) {
+	                                                                            String sqlUpdate = "UPDATE DoorTypes set TypeComments=? where Id=?";
+	                                                                            jdbcTemplate.update(sqlUpdate,DoorTypes.getTypeComments(),DoorTypes.getId());
+	                                                                            
+	                                                                            String sqlUpdate1 = "UPDATE DoorTypes set Keynote=? where Id=?";
+	                                                                            jdbcTemplate.update(sqlUpdate1,DoorTypes.getKeynote(),DoorTypes.getId());
+	                                                                            
+	                                                                            String sqlUpdate2 = "UPDATE DoorTypes set Model=? where Id=?";
+	                                                                            jdbcTemplate.update(sqlUpdate2,DoorTypes.getModel(),DoorTypes.getId());
+	                                                                            
+	                                                                            String sqlUpdate3 = "UPDATE DoorTypes set Manufacturer=? where Id=?";
+	                                                                            jdbcTemplate.update(sqlUpdate3,DoorTypes.getManufacturer(),DoorTypes.getId());
+	                                                                            
+	                                                                            String sqlUpdate4 = "UPDATE DoorTypes set URL=? where Id=?";
+	                                                                            jdbcTemplate.update(sqlUpdate4,DoorTypes.getURL(),DoorTypes.getId());
+	                                                                            
+	                                                                            String sqlUpdate5 = "UPDATE DoorTypes set Description=? where Id=?";
+	                                                                            jdbcTemplate.update(sqlUpdate5,DoorTypes.getDescription(),DoorTypes.getId());	
+	                                                                            
+	                                                                
+	                                                                            String sqlUpdate6 = "UPDATE DoorTypes set AssemblyCode=? where Id=?";
+	                                                                            jdbcTemplate.update(sqlUpdate6,DoorTypes.getAssemblyCode(),DoorTypes.getId());	
+	                                                                            
+	                                                                
+	                                                                            String sqlUpdate7 = "UPDATE DoorTypes set TypeMark=? where Id=?";
+	                                                                            jdbcTemplate.update(sqlUpdate7,DoorTypes.getTypeMark(),DoorTypes.getId());	
+	                                                                            
+	                                                                
+	                                                                            String sqlUpdate8 = "UPDATE DoorTypes set Cost=? where Id=?";
+	                                                                            jdbcTemplate.update(sqlUpdate8,DoorTypes.getCost(),DoorTypes.getId());	
+	                                                                
+	                                                                            return "redirect:/";
+	                                                                        }
+
+
+
+	                                                                        @PostMapping("/admin/saveDistributionSystemTypes")
+	                                                                        public String save43(Model model, DistributionSystemTypes dst) {
+	                                                                                String sqlUpdate = "UPDATE DistributionSystemTypes set TypeComments=? where Id=?";
+	                                                                                jdbcTemplate.update(sqlUpdate,dst.getTypeComments(),dst.getId());
+	                                                                                
+	                                                                                String sqlUpdate1 = "UPDATE DistributionSystemTypes set Keynote=? where Id=?";
+	                                                                                jdbcTemplate.update(sqlUpdate1,dst.getKeynote(),dst.getId());
+	                                                                                
+	                                                                                String sqlUpdate2 = "UPDATE DistributionSystemTypes set Model=? where Id=?";
+	                                                                                jdbcTemplate.update(sqlUpdate2,dst.getModel(),dst.getId());
+	                                                                                
+	                                                                                String sqlUpdate3 = "UPDATE DistributionSystemTypes set Manufacturer=? where Id=?";
+	                                                                                jdbcTemplate.update(sqlUpdate3,dst.getManufacturer(),dst.getId());
+	                                                                                
+	                                                                                String sqlUpdate4 = "UPDATE DistributionSystemTypes set URL=? where Id=?";
+	                                                                                jdbcTemplate.update(sqlUpdate4,dst.getURL(),dst.getId());
+	                                                                                
+	                                                                                String sqlUpdate5 = "UPDATE DistributionSystemTypes set Description=? where Id=?";
+	                                                                                jdbcTemplate.update(sqlUpdate5,dst.getDescription(),dst.getId());	
+	                                                                                
+	                                                                    
+	                                                                                String sqlUpdate6 = "UPDATE DistributionSystemTypes set AssemblyCode=? where Id=?";
+	                                                                                jdbcTemplate.update(sqlUpdate6,dst.getAssemblyCode(),dst.getId());	
+	                                                                                
+	                                                                    
+	                                                                                String sqlUpdate7 = "UPDATE DistributionSystemTypes set TypeMark=? where Id=?";
+	                                                                                jdbcTemplate.update(sqlUpdate7,dst.getTypeMark(),dst.getId());	
+	                                                                                
+	                                                                    
+	                                                                                String sqlUpdate8 = "UPDATE DistributionSystemTypes set Cost=? where Id=?";
+	                                                                                jdbcTemplate.update(sqlUpdate8,dst.getCost(),dst.getId());	
+	                                                                    
+	                                                                                return "redirect:/";
+	                                                                            }
+
+
+
+	                                                                            @PostMapping("/admin/saveCoverTypes")
+	                                                                            public String save44(Model model, CoverTypes CoverTypes) {
+	                                                                                    String sqlUpdate = "UPDATE CoverTypes set TypeComments=? where Id=?";
+	                                                                                    jdbcTemplate.update(sqlUpdate,CoverTypes.getTypeComments(),CoverTypes.getId());
+	                                                                                    
+	                                                                                    String sqlUpdate1 = "UPDATE CoverTypes set Keynote=? where Id=?";
+	                                                                                    jdbcTemplate.update(sqlUpdate1,CoverTypes.getKeynote(),CoverTypes.getId());
+	                                                                                    
+	                                                                                    String sqlUpdate2 = "UPDATE CoverTypes set Model=? where Id=?";
+	                                                                                    jdbcTemplate.update(sqlUpdate2,CoverTypes.getModel(),CoverTypes.getId());
+	                                                                                    
+	                                                                                    String sqlUpdate3 = "UPDATE CoverTypes set Manufacturer=? where Id=?";
+	                                                                                    jdbcTemplate.update(sqlUpdate3,CoverTypes.getManufacturer(),CoverTypes.getId());
+	                                                                                    
+	                                                                                    String sqlUpdate4 = "UPDATE CoverTypes set URL=? where Id=?";
+	                                                                                    jdbcTemplate.update(sqlUpdate4,CoverTypes.getURL(),CoverTypes.getId());
+	                                                                                    
+	                                                                                    String sqlUpdate5 = "UPDATE CoverTypes set Description=? where Id=?";
+	                                                                                    jdbcTemplate.update(sqlUpdate5,CoverTypes.getDescription(),CoverTypes.getId());	
+	                                                                                    
+	                                                                        
+	                                                                                    String sqlUpdate6 = "UPDATE CoverTypes set AssemblyCode=? where Id=?";
+	                                                                                    jdbcTemplate.update(sqlUpdate6,CoverTypes.getAssemblyCode(),CoverTypes.getId());	
+	                                                                                    
+	                                                                        
+	                                                                                    String sqlUpdate7 = "UPDATE CoverTypes set TypeMark=? where Id=?";
+	                                                                                    jdbcTemplate.update(sqlUpdate7,CoverTypes.getTypeMark(),CoverTypes.getId());	
+	                                                                                    
+	                                                                        
+	                                                                                    String sqlUpdate8 = "UPDATE CoverTypes set Cost=? where Id=?";
+	                                                                                    jdbcTemplate.update(sqlUpdate8,CoverTypes.getCost(),CoverTypes.getId());	
+
+	                                                                                    String sqlUpdate9 = "UPDATE CoverTypes set Name=? where Id=?";
+	                                                                                    jdbcTemplate.update(sqlUpdate9,CoverTypes.getName(),CoverTypes.getId());
+	                                                                        
+	                                                                                    return "redirect:/";
+	                                                                                }
+
+	                                                                                @PostMapping("/admin/saveCurtainSystemTypes")
+	                                                                                public String save45(Model model, CurtainSystemTypes cst) {
+	                                                                                        String sqlUpdate = "UPDATE CurtainSystemTypes set TypeComments=? where Id=?";
+	                                                                                        jdbcTemplate.update(sqlUpdate,cst.getTypeComments(),cst.getId());
+	                                                                                        
+	                                                                                        String sqlUpdate1 = "UPDATE CurtainSystemTypes set Keynote=? where Id=?";
+	                                                                                        jdbcTemplate.update(sqlUpdate1,cst.getKeynote(),cst.getId());
+	                                                                                        
+	                                                                                        String sqlUpdate2 = "UPDATE CurtainSystemTypes set Model=? where Id=?";
+	                                                                                        jdbcTemplate.update(sqlUpdate2,cst.getModel(),cst.getId());
+	                                                                                        
+	                                                                                        String sqlUpdate3 = "UPDATE CurtainSystemTypes set Manufacturer=? where Id=?";
+	                                                                                        jdbcTemplate.update(sqlUpdate3,cst.getManufacturer(),cst.getId());
+	                                                                                        
+	                                                                                        String sqlUpdate4 = "UPDATE CurtainSystemTypes set URL=? where Id=?";
+	                                                                                        jdbcTemplate.update(sqlUpdate4,cst.getURL(),cst.getId());
+	                                                                                        
+	                                                                                        String sqlUpdate5 = "UPDATE CurtainSystemTypes set Description=? where Id=?";
+	                                                                                        jdbcTemplate.update(sqlUpdate5,cst.getDescription(),cst.getId());	
+	                                                                                        
+	                                                                            
+	                                                                                        String sqlUpdate6 = "UPDATE CurtainSystemTypes set AssemblyCode=? where Id=?";
+	                                                                                        jdbcTemplate.update(sqlUpdate6,cst.getAssemblyCode(),cst.getId());	
+	                                                                                        
+	                                                                            
+	                                                                                        String sqlUpdate7 = "UPDATE CurtainSystemTypes set TypeMark=? where Id=?";
+	                                                                                        jdbcTemplate.update(sqlUpdate7,cst.getTypeMark(),cst.getId());	
+	                                                                                        
+	                                                                            
+	                                                                                        String sqlUpdate8 = "UPDATE CurtainSystemTypes set Cost=? where Id=?";
+	                                                                                        jdbcTemplate.update(sqlUpdate8,cst.getCost(),cst.getId());	
+	                                                                            
+	                                                                                        return "redirect:/";
+	                                                                                    }
+
+	                                                                                    @PostMapping("/admin/saveGutterTypes")
+	                                                                                    public String save46(Model model, GutterTypes GutterTypes) {
+	                                                                                            String sqlUpdate = "UPDATE GutterTypes set TypeComments=? where Id=?";
+	                                                                                            jdbcTemplate.update(sqlUpdate,GutterTypes.getTypeComments(),GutterTypes.getId());
+	                                                                                            
+	                                                                                            String sqlUpdate1 = "UPDATE GutterTypes set Keynote=? where Id=?";
+	                                                                                            jdbcTemplate.update(sqlUpdate1,GutterTypes.getKeynote(),GutterTypes.getId());
+	                                                                                            
+	                                                                                            String sqlUpdate2 = "UPDATE GutterTypes set Model=? where Id=?";
+	                                                                                            jdbcTemplate.update(sqlUpdate2,GutterTypes.getModel(),GutterTypes.getId());
+	                                                                                            
+	                                                                                            String sqlUpdate3 = "UPDATE GutterTypes set Manufacturer=? where Id=?";
+	                                                                                            jdbcTemplate.update(sqlUpdate3,GutterTypes.getManufacturer(),GutterTypes.getId());
+	                                                                                            
+	                                                                                            String sqlUpdate4 = "UPDATE GutterTypes set URL=? where Id=?";
+	                                                                                            jdbcTemplate.update(sqlUpdate4,GutterTypes.getURL(),GutterTypes.getId());
+	                                                                                            
+	                                                                                            String sqlUpdate5 = "UPDATE GutterTypes set Description=? where Id=?";
+	                                                                                            jdbcTemplate.update(sqlUpdate5,GutterTypes.getDescription(),GutterTypes.getId());	
+	                                                                                            
+	                                                                                
+	                                                                                            String sqlUpdate6 = "UPDATE GutterTypes set AssemblyCode=? where Id=?";
+	                                                                                            jdbcTemplate.update(sqlUpdate6,GutterTypes.getAssemblyCode(),GutterTypes.getId());	
+	                                                                                            
+	                                                                                
+	                                                                                            String sqlUpdate7 = "UPDATE GutterTypes set TypeMark=? where Id=?";
+	                                                                                            jdbcTemplate.update(sqlUpdate7,GutterTypes.getTypeMark(),GutterTypes.getId());	
+	                                                                                            
+	                                                                                
+	                                                                                            String sqlUpdate8 = "UPDATE GutterTypes set Cost=? where Id=?";
+	                                                                                            jdbcTemplate.update(sqlUpdate8,GutterTypes.getCost(),GutterTypes.getId());	
+	                                                                                
+	                                                                                            return "redirect:/";
+	                                                                                        }
+
+
+
+	                                                                                        @PostMapping("/admin/saveFasciaTypes")
+	                                                                                        public String save47(Model model, FasciaTypes FasciaTypes) {
+	                                                                                                String sqlUpdate = "UPDATE FasciaTypes set TypeComments=? where Id=?";
+	                                                                                                jdbcTemplate.update(sqlUpdate,FasciaTypes.getTypeComments(),FasciaTypes.getId());
+	                                                                                                
+	                                                                                                String sqlUpdate1 = "UPDATE FasciaTypes set Keynote=? where Id=?";
+	                                                                                                jdbcTemplate.update(sqlUpdate1,FasciaTypes.getKeynote(),FasciaTypes.getId());
+	                                                                                                
+	                                                                                                String sqlUpdate2 = "UPDATE FasciaTypes set Model=? where Id=?";
+	                                                                                                jdbcTemplate.update(sqlUpdate2,FasciaTypes.getModel(),FasciaTypes.getId());
+	                                                                                                
+	                                                                                                String sqlUpdate3 = "UPDATE FasciaTypes set Manufacturer=? where Id=?";
+	                                                                                                jdbcTemplate.update(sqlUpdate3,FasciaTypes.getManufacturer(),FasciaTypes.getId());
+	                                                                                                
+	                                                                                                String sqlUpdate4 = "UPDATE FasciaTypes set URL=? where Id=?";
+	                                                                                                jdbcTemplate.update(sqlUpdate4,FasciaTypes.getURL(),FasciaTypes.getId());
+	                                                                                                
+	                                                                                                String sqlUpdate5 = "UPDATE FasciaTypes set Description=? where Id=?";
+	                                                                                                jdbcTemplate.update(sqlUpdate5,FasciaTypes.getDescription(),FasciaTypes.getId());	
+	                                                                                                
+	                                                                                    
+	                                                                                                String sqlUpdate6 = "UPDATE FasciaTypes set AssemblyCode=? where Id=?";
+	                                                                                                jdbcTemplate.update(sqlUpdate6,FasciaTypes.getAssemblyCode(),FasciaTypes.getId());	
+	                                                                                                
+	                                                                                    
+	                                                                                                String sqlUpdate7 = "UPDATE FasciaTypes set TypeMark=? where Id=?";
+	                                                                                                jdbcTemplate.update(sqlUpdate7,FasciaTypes.getTypeMark(),FasciaTypes.getId());	
+	                                                                                                
+	                                                                                    
+	                                                                                                String sqlUpdate8 = "UPDATE FasciaTypes set Cost=? where Id=?";
+	                                                                                                jdbcTemplate.update(sqlUpdate8,FasciaTypes.getCost(),FasciaTypes.getId());	
+	                                                                                    
+	                                                                                                return "redirect:/";
+	                                                                                            }
+
+
+
+	                                                                                            @PostMapping("/admin/saveRampTypes")
+	                                                                                            public String save48(Model model, RampTypes RampTypes) {
+	                                                                                                    String sqlUpdate = "UPDATE RampTypes set TypeComments=? where Id=?";
+	                                                                                                    jdbcTemplate.update(sqlUpdate,RampTypes.getTypeComments(),RampTypes.getId());
+	                                                                                                    
+	                                                                                                    String sqlUpdate1 = "UPDATE RampTypes set Keynote=? where Id=?";
+	                                                                                                    jdbcTemplate.update(sqlUpdate1,RampTypes.getKeynote(),RampTypes.getId());
+	                                                                                                    
+	                                                                                                    String sqlUpdate2 = "UPDATE RampTypes set Model=? where Id=?";
+	                                                                                                    jdbcTemplate.update(sqlUpdate2,RampTypes.getModel(),RampTypes.getId());
+	                                                                                                    
+	                                                                                                    String sqlUpdate3 = "UPDATE RampTypes set Manufacturer=? where Id=?";
+	                                                                                                    jdbcTemplate.update(sqlUpdate3,RampTypes.getManufacturer(),RampTypes.getId());
+	                                                                                                    
+	                                                                                                    String sqlUpdate4 = "UPDATE RampTypes set URL=? where Id=?";
+	                                                                                                    jdbcTemplate.update(sqlUpdate4,RampTypes.getURL(),RampTypes.getId());
+	                                                                                                    
+	                                                                                                    String sqlUpdate5 = "UPDATE RampTypes set Description=? where Id=?";
+	                                                                                                    jdbcTemplate.update(sqlUpdate5,RampTypes.getDescription(),RampTypes.getId());	
+	                                                                                                    
+	                                                                                        
+	                                                                                                    String sqlUpdate6 = "UPDATE RampTypes set AssemblyCode=? where Id=?";
+	                                                                                                    jdbcTemplate.update(sqlUpdate6,RampTypes.getAssemblyCode(),RampTypes.getId());	
+	                                                                                                    
+	                                                                                        
+	                                                                                                    String sqlUpdate7 = "UPDATE RampTypes set TypeMark=? where Id=?";
+	                                                                                                    jdbcTemplate.update(sqlUpdate7,RampTypes.getTypeMark(),RampTypes.getId());	
+	                                                                                                    
+	                                                                                        
+	                                                                                                    String sqlUpdate8 = "UPDATE RampTypes set Cost=? where Id=?";
+	                                                                                                    jdbcTemplate.update(sqlUpdate8,RampTypes.getCost(),RampTypes.getId());	
+	                                                                                        
+	                                                                                                    return "redirect:/";
+	                                                                                                }
+
+
+
+
+
+
+
+
+	        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	                        
+
+
+
+
+
+
+
+
+	        
+
+
+
+
+
+
+
+
+	    
+
+
+
+
+	    
+
+
+
+
+
+
+
+
+
+
+
+
+	    
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    
+
+
+
+
+
+		
+
+
+
+
+		
+
+
+
+	  
+		
+		
 		
     //Delete Some information
 	/*@GetMapping(value="/admin/delete")
