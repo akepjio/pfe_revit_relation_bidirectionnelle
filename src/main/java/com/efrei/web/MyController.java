@@ -4412,7 +4412,7 @@ public class MyController {
 
 
 
-	    @PostMapping("/admin/saveCurtainWallMullionTypes")
+	    @PostMapping("/admin/saveStructuralFramingTypes")
 		public String save6(Model model,  StructuralFramingTypes sft) {
 				String sqlUpdate = "UPDATE StructuralFramingTypes set TypeComments=? where Id=?";
 				jdbcTemplate.update(sqlUpdate,sft.getTypeComments(),sft.getId());
@@ -5229,24 +5229,28 @@ public class MyController {
 
 
 
-	                                @PostMapping("/admin/saveDuctSystemTypes")
-	                                public String save32(Model model, DuctSystemTypes DuctSystemTypes) {
-	                                    String sqlUpdate = "UPDATE DuctSystemTypes set TypeComments=? where Id=?";
-	                                    jdbcTemplate.update(sqlUpdate,DuctSystemTypes.getTypeComments(),DuctSystemTypes.getId());
-	                                    
-	                                    String sqlUpdate1 = "UPDATE DuctSystemTypes set Abbreviation=? where Id=?";
-	                                    jdbcTemplate.update(sqlUpdate1,DuctSystemTypes.getAbbreviation(),DuctSystemTypes.getId());
-	                                    
-	                                    String sqlUpdate2 = "UPDATE DuctSystemTypes set URL=? where Id=?";
-	                                    jdbcTemplate.update(sqlUpdate2,DuctSystemTypes.getURL(),DuctSystemTypes.getId());
-	    
-	                                    String sqlUpdate3 = "UPDATE DuctSystemTypes set Description=? where Id=?";
-	                                    jdbcTemplate.update(sqlUpdate3,DuctSystemTypes.getDescription(),DuctSystemTypes.getId());
-	                            
-	                                    return "redirect:/";
-	                                }
-	    
-	    
+	/*
+	 * @PostMapping("/admin/saveDuctSystemTypes") public String save32(Model model,
+	 * DuctSystemTypes DuctSystemTypes) { String sqlUpdate =
+	 * "UPDATE DuctSystemTypes set TypeComments=? where Id=?";
+	 * jdbcTemplate.update(sqlUpdate,DuctSystemTypes.getTypeComments(),
+	 * DuctSystemTypes.getId());
+	 * 
+	 * String sqlUpdate1 = "UPDATE DuctSystemTypes set Abbreviation=? where Id=?";
+	 * jdbcTemplate.update(sqlUpdate1,DuctSystemTypes.getAbbreviation(),
+	 * DuctSystemTypes.getId());
+	 * 
+	 * String sqlUpdate2 = "UPDATE DuctSystemTypes set URL=? where Id=?";
+	 * jdbcTemplate.update(sqlUpdate2,DuctSystemTypes.getURL(),DuctSystemTypes.getId
+	 * ());
+	 * 
+	 * String sqlUpdate3 = "UPDATE DuctSystemTypes set Description=? where Id=?";
+	 * jdbcTemplate.update(sqlUpdate3,DuctSystemTypes.getDescription(),
+	 * DuctSystemTypes.getId());
+	 * 
+	 * return "redirect:/"; }
+	 * 
+	 */
 	    
 	                                @PostMapping("/admin/saveMaterials")
 	                                public String save33(Model model, Materials Materials) {
@@ -5924,13 +5928,7 @@ public class MyController {
 		
 		
 		
-    //Delete Some information
-	/*@GetMapping(value="/admin/delete")
-	public String delete(Long id) {
-		
-		return "redirect:/user/index";
-	
-	}*/
+    
 	
 
 }
