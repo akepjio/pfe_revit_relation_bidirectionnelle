@@ -5957,74 +5957,77 @@ public String save52(Model model,  VoltageTypes VoltageTypes) {
 
 
 
-@PostMapping("/admin/saveStructuralColumnTypes")
-public String save53(Model model, StructuralColumnTypes ssct) {
-		String sqlUpdate = "UPDATE StructuralColumnTypes set TypeComments=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,ssct.getTypeComments(),ssct.getId());
-		
-		String sqlUpdate1 = "UPDATE StructuralColumnTypes set Keynote=? where Id=?";
-		jdbcTemplate.update(sqlUpdate1,ssct.getKeynote(),ssct.getId());
-		
-		String sqlUpdate2 = "UPDATE StructuralColumnTypes set Model=? where Id=?";
-		jdbcTemplate.update(sqlUpdate2,ssct.getModel(),ssct.getId());
-		
-		String sqlUpdate3 = "UPDATE StructuralColumnTypes set Manufacturer=? where Id=?";
-		jdbcTemplate.update(sqlUpdate3,ssct.getManufacturer(),ssct.getId());
-		
-		String sqlUpdate4 = "UPDATE StructuralColumnTypes set URL=? where Id=?";
-		jdbcTemplate.update(sqlUpdate4,ssct.getURL(),ssct.getId());
-		
-		String sqlUpdate5 = "UPDATE StructuralColumnTypes set Description=? where Id=?";
-		jdbcTemplate.update(sqlUpdate5,ssct.getDescription(),ssct.getId());	
-		
+	/*
+	 * @PostMapping("/admin/saveStructuralColumnTypes") public String save53(Model
+	 * model, StructuralColumnTypes ssct) { String sqlUpdate =
+	 * "UPDATE StructuralColumnTypes set TypeComments=? where Id=?";
+	 * jdbcTemplate.update(sqlUpdate,ssct.getTypeComments(),ssct.getId());
+	 * 
+	 * String sqlUpdate1 = "UPDATE StructuralColumnTypes set Keynote=? where Id=?";
+	 * jdbcTemplate.update(sqlUpdate1,ssct.getKeynote(),ssct.getId());
+	 * 
+	 * String sqlUpdate2 = "UPDATE StructuralColumnTypes set Model=? where Id=?";
+	 * jdbcTemplate.update(sqlUpdate2,ssct.getModel(),ssct.getId());
+	 * 
+	 * String sqlUpdate3 =
+	 * "UPDATE StructuralColumnTypes set Manufacturer=? where Id=?";
+	 * jdbcTemplate.update(sqlUpdate3,ssct.getManufacturer(),ssct.getId());
+	 * 
+	 * String sqlUpdate4 = "UPDATE StructuralColumnTypes set URL=? where Id=?";
+	 * jdbcTemplate.update(sqlUpdate4,ssct.getURL(),ssct.getId());
+	 * 
+	 * String sqlUpdate5 =
+	 * "UPDATE StructuralColumnTypes set Description=? where Id=?";
+	 * jdbcTemplate.update(sqlUpdate5,ssct.getDescription(),ssct.getId());
+	 * 
+	 * 
+	 * String sqlUpdate6 =
+	 * "UPDATE StructuralColumnTypes set AssemblyCode=? where Id=?";
+	 * jdbcTemplate.update(sqlUpdate6,ssct.getAssemblyCode(),ssct.getId());
+	 * 
+	 * String sqlUpdate7 = "UPDATE StructuralColumnTypes set Cost=? where Id=?";
+	 * jdbcTemplate.update(sqlUpdate7,ssct.getCost(),ssct.getId());
+	 * 
+	 * String sqlUpdate8 = "UPDATE StructuralColumnTypes set TypeMark=? where Id=?";
+	 * jdbcTemplate.update(sqlUpdate8,ssct.getTypeMark(),ssct.getId());
+	 * 
+	 * return "redirect:/"; }
+	 */
 
-        String sqlUpdate6 = "UPDATE StructuralColumnTypes set AssemblyCode=? where Id=?";
-		jdbcTemplate.update(sqlUpdate6,ssct.getAssemblyCode(),ssct.getId());
 
-        String sqlUpdate7 = "UPDATE StructuralColumnTypes set Cost=? where Id=?";
-		jdbcTemplate.update(sqlUpdate7,ssct.getCost(),ssct.getId());
-
-        String sqlUpdate8 = "UPDATE StructuralColumnTypes set TypeMark=? where Id=?";
-		jdbcTemplate.update(sqlUpdate8,ssct.getTypeMark(),ssct.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveSlabEdgeTypes")
-public String save54(Model model, SlabEdgeTypes slet) {
-		String sqlUpdate = "UPDATE SlabEdgeTypes set TypeComments=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,slet.getTypeComments(),slet.getId());
-		
-		String sqlUpdate1 = "UPDATE SlabEdgeTypes set Keynote=? where Id=?";
-		jdbcTemplate.update(sqlUpdate1,slet.getKeynote(),slet.getId());
-		
-		String sqlUpdate2 = "UPDATE SlabEdgeTypes set Model=? where Id=?";
-		jdbcTemplate.update(sqlUpdate2,slet.getModel(),slet.getId());
-		
-		String sqlUpdate3 = "UPDATE SlabEdgeTypes set Manufacturer=? where Id=?";
-		jdbcTemplate.update(sqlUpdate3,slet.getManufacturer(),slet.getId());
-		
-		String sqlUpdate4 = "UPDATE SlabEdgeTypes set URL=? where Id=?";
-		jdbcTemplate.update(sqlUpdate4,slet.getURL(),slet.getId());
-		
-		String sqlUpdate5 = "UPDATE SlabEdgeTypes set Description=? where Id=?";
-		jdbcTemplate.update(sqlUpdate5,slet.getDescription(),slet.getId());	
-		
-
-        String sqlUpdate6 = "UPDATE SlabEdgeTypes set AssemblyCode=? where Id=?";
-		jdbcTemplate.update(sqlUpdate6,slet.getAssemblyCode(),slet.getId());
-
-        String sqlUpdate7 = "UPDATE SlabEdgeTypes set Cost=? where Id=?";
-		jdbcTemplate.update(sqlUpdate7,slet.getCost(),slet.getId());
-
-        String sqlUpdate8 = "UPDATE SlabEdgeTypes set TypeMark=? where Id=?";
-		jdbcTemplate.update(sqlUpdate8,slet.getTypeMark(),slet.getId());
-
-		return "redirect:/";
-}
-
+	
+	  @PostMapping("/admin/saveSlabEdgeTypes") public String save54(Model model,
+	  SlabEdgeTypes slet) { String sqlUpdate =
+	  "UPDATE SlabEdgeTypes set TypeComments=? where Id=?";
+	  jdbcTemplate.update(sqlUpdate,slet.getTypeComments(),slet.getId());
+	  
+	  String sqlUpdate1 = "UPDATE SlabEdgeTypes set Keynote=? where Id=?";
+	  jdbcTemplate.update(sqlUpdate1,slet.getKeynote(),slet.getId());
+	  
+	  String sqlUpdate2 = "UPDATE SlabEdgeTypes set Model=? where Id=?";
+	  jdbcTemplate.update(sqlUpdate2,slet.getModel(),slet.getId());
+	  
+	  String sqlUpdate3 = "UPDATE SlabEdgeTypes set Manufacturer=? where Id=?";
+	  jdbcTemplate.update(sqlUpdate3,slet.getManufacturer(),slet.getId());
+	  
+	  String sqlUpdate4 = "UPDATE SlabEdgeTypes set URL=? where Id=?";
+	  jdbcTemplate.update(sqlUpdate4,slet.getURL(),slet.getId());
+	  
+	  String sqlUpdate5 = "UPDATE SlabEdgeTypes set Description=? where Id=?";
+	  jdbcTemplate.update(sqlUpdate5,slet.getDescription(),slet.getId());
+	  
+	  
+	  String sqlUpdate6 = "UPDATE SlabEdgeTypes set AssemblyCode=? where Id=?";
+	  jdbcTemplate.update(sqlUpdate6,slet.getAssemblyCode(),slet.getId());
+	  
+	  String sqlUpdate7 = "UPDATE SlabEdgeTypes set Cost=? where Id=?";
+	  jdbcTemplate.update(sqlUpdate7,slet.getCost(),slet.getId());
+	  
+	  String sqlUpdate8 = "UPDATE SlabEdgeTypes set TypeMark=? where Id=?";
+	  jdbcTemplate.update(sqlUpdate8,slet.getTypeMark(),slet.getId());
+	  
+	  return "redirect:/"; }
+	 
 
 
 @PostMapping("/admin/saveFlexPipeTypes")
