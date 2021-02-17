@@ -1,0 +1,3857 @@
+﻿
+
+LightingFixtureOnCeiling
+  	private Integer Id;
+	private String Name;
+	private String HostName;
+
+
+Ramps
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private Integer MultistoryTopLevel;
+	private Float  TopOffset;
+	private Float BaseOffset;
+	private Float Width;
+	private Integer TopLevel;
+	private Integer BaseLevel;
+	private String Mark;
+	private String NUMERO MODULE;
+
+WireInsulationTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+DistributionSystemTypes
+	private Integer Id;
+	private String Keynote;+
+	private String Model;+
+	private String Manufacturer;+
+	private String TypeComments;+
+	private String URL;+
+	private String Description;+
+	private String OmniClassNumber;-
+	private String AssemblyCode;+
+	private String FamilyName;-
+	private String TypeName;-
+	private String TypeMark;+
+	private Float Cost;+
+	private Integer LinetoLineVoltage;-
+	private Integer LinetoGroundVoltage;-
+	private Integer Phase;-
+	private Integer Configuration;-
+	private Integer Wires;-
+
+LightingDeviceTypes
+ 	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+RailingTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+WireInsulations
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private String Mark;
+
+DistributionSystems
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private String Mark;
+
+LightingDevices
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String SwitchID;
+	private String Panel;
+	private String CircuitNumber;
+	private String ElectricalData;
+	private String Comments;
+	private Integer HostId;
+	private Integer Level;
+	private String Mark;
+	private String NUMERO MODULE;
+
+Railings
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private Float BaseOffset;
+	private Integer BaseLevel;
+	private Float Length;
+	private String Mark;
+	private String NUMERO MODULE;
+
+WindowWall
+	private Integer WindowId;
+	private String WindowName;
+	private Integer WallId;
+	private String WallName;
+
+DesignOptionSets
+	private Integer Id;
+	private Integer PrimaryOptionId;
+	private String Name;
+
+LevelTypes
+ private Integer Id;
+
+PropertyLineTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+WindowTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Float RoughWidth;
+	private Float RoughHeight;
+	private Float Width;
+	private Float Height;
+	private String Operation;
+	private String ConstructionType;
+
+DesignOptions
+	private Integer Id;
+	private Integer DesignOptionSetId;
+	private String Name;
+
+Levels
+	private Integer Id;
+	private Integer TypeId;
+	private Integer DesignOption;
+	private String Name;
+	private Float Elevation;
+	private String NUMERO MODULE;
+
+PropertyLines
+	private Integer Id;
+	private Integer TypeId;
+	private Integer DesignOption;
+	private Float Area;
+	private String Comments;
+	private String Name;
+	private String Mark;
+
+Windows
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private Integer HostId;
+	private Integer Level;
+	private Float HeadHeight;
+	private Float SillHeight;
+	private String Mark;
+	private String NUMERO MODULE;
+
+DemandFactorTypes
+ 	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Integer LoadClassification;
+	private Float  ConnectedLoad;
+	private Float  EstimatedDemandLoad;
+
+InternalPointLoads
+	private Integer Id;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Description;
+	private String Comments;
+	private Integer Nature;
+	private String Allnon0loads;
+	private Float Mz;
+	private Float My;
+	private Float Mx;
+	private Float Fz;
+	private Float Fy;
+	private Float Fx;
+	private Integer IsReaction;
+	private Integer LoadCase;
+
+ProjectInformation
+	private Integer Id;
+	private String ProjectIssueDate;
+	private String ProjectStatus;
+	private String ClientName;
+	private String ProjectAddress;
+	private String ProjectName;
+	private String ProjectNumber;
+	private String NUMERO MODULE;
+
+WallUsageEnums
+                  private Integer Id;
+	private String Name;
+
+DemandFactors
+                  private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private String Mark;
+
+InternalLineLoads
+	private Integer Id;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Description;
+	private String Comments;
+	private Integer Nature;
+	private String Allnon0loads;
+	private Float Length;
+	private Float Mz2;
+	private Float My2;
+	private Float Mx2;
+	private Float Mz1;
+	private Float My1;
+	private Float Mx1;
+	private Float Fz2;
+	private Float Fy2;
+	private Float Fx2;
+	private Float Fz1;
+	private Float Fy1;
+	private Float Fx1;
+	private Integer IsReaction;
+	private Integer UniformLoad;
+	private Integer LoadCase;
+
+Profiles
+	private Integer Id;
+	private String Keynote;+
+	private String Model;+
+	private String Manufacturer;+
+	private String TypeComments;+
+	private String URL;+
+	private String Description;+
+	private String OmniClassNumber;-
+	private String AssemblyCode;+
+	private String FamilyName;-
+	private String TypeName;-
+	private String TypeMark;+
+	private Float Cost;+
+
+
+WallTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private String FireRating;
+	private Float Width;
+	private String Region Europe;
+	private String Region Middle East;
+	private String Region North America;
+	private String Region Oceania;
+	private String Region South America;
+	private String Product SKU;
+	private String Technical description;
+	private String Uniclass 1.4 Code;
+	private String Uniclass 1.4 Description;
+	private String Uniclass 2015 Code;
+	private String Uniclass 2015 Name;
+	private String Uniclass 2.0 Code;
+	private String Uniclass 2.0 Description;
+	private String UNSPSC Code;
+	private Float Weight Net (Kg);
+	private Float Nominal width;
+	private String Author;
+	private String BIMObjectName;
+	private String ManufacturerName;
+	private String ManufacturerURL;
+	private String ProductInformation;
+	private String Revision;
+	private String Uniclass2;
+	private String Version;
+	private String AcousticRating;
+	private Integer Combustible;
+	private Integer IsExternal;
+	private String Reference;
+	private String SurfaceSpreadOfFlame;
+	private String IfcExportAs;
+	private String IfcExportType;
+	private String AccessibilityPerformance;
+	private String AssetType;
+	private String Category;
+	private String CodePerformance;
+	private String Color;
+	private String Constituents;
+	private String DurationUnit;
+	private String ExpectedLife;
+	private String Features;
+	private String Finish;
+	private String Grade;
+	private String Material;
+	private String ModelNumber;
+	private String ModelReference;
+	private String Name;
+	private Float NominalHeight;
+	private Float NominalLength;
+	private Float NominalWidth;
+	private String ReplacementCost;
+	private String Shape;
+	private String Size;
+	private String SustainabilityPerformance;
+	private String WarrantyDescription;
+	private String WarrantyDurationLabor;
+	private String WarrantyDurationParts;
+	private String WarrantyDurationUnit;
+	private String WarrantyGuarantorLabor;
+	private String WarrantyGuarantorParts;
+	private String FlammibilityRating;
+	private String FragilityRating;
+	private String CladdingType;
+	private String ApplicationOptions;
+	private String SpanningDirection;
+	private String ExternalSkinThicknessAndMaterial;
+	private String ExternalProfileReference;
+	private String ExternalProfileCrownWidth;
+	private String ExternalProfileDepth;
+	private String ExternalProfilePitch;
+	private String ExternalSkinFinish;
+	private String ExternalColourOptions;
+	private String CoreInsulation;
+	private String InternalLinerSkinThicknessAndMaterial;
+	private String InternalLinerFinishOptions;
+	private String InternalColourOptions;
+	private String PanelThickness;
+	private String LengthOptions;
+	private String CoverWidthManufacturingTolerance;
+	private String ThicknessManufacturingTolerance;
+	private String LengthManufacturingTolerance;
+	private String CutBacks;
+	private String EndSquareManufacturingTolerance;
+	private String FireResistanceOptions;
+	private String PanelEndJoints;
+	private String PanelEndLapArrangement;
+	private String PrimaryFasteners;
+	private String PanelJoints;
+	private String PanelSideLapArrangement;
+	private String CornerPanels;
+	private String Curvature;
+	private String IntegralAccessories;
+	private String Guarantees;
+	private String SpecialFeatures;
+	private String ThermalTransmittance;
+	private String TotalThickness;
+	private String Product data url;
+	private String BIMobject category;
+	private String COBIe Type Category;
+	private String Design country;
+	private String EAN code;
+	private Integer Edition number;
+	private Float Nominal height;
+	private String IFC Classification;
+	private String Installation instructions;
+	private String Youtube clip;
+	private String Manufacturer country;
+	private String Manufacturer name;
+	private String Material main;
+	private String Material secondary;
+	private String OmniClass Code;
+	private String OmniClass Description;
+	private String Product certification;
+	private String Product family;
+	private String Product group;
+	private String Product Guid;
+	private String Product name;
+	private String Date of publishing;
+	private String QR code;
+	private String Region Africa;
+	private String Region Antarctica;
+	private String Region Asia;
+
+DataDeviceTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+
+InternalAreaLoads
+	private Integer Id;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Description;
+	private String Comments;
+	private Integer Nature;
+	private String Allnon0loads;
+	private Float Area;
+	private Float Fz3;
+	private Float Fy3;
+	private Float Fx3;
+	private Float Fz2;
+	private Float Fy2;
+	private Float Fx2;
+	private Float Fz1;
+	private Float Fy1;
+	private Float Fx1;
+	private Integer IsReaction;
+	private Integer LoadCase;
+
+PowerFactorStateTypeEnums
+	private Integer Id;
+	private String Name;
+
+WallSweepTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Integer SubcategoryofWalls;
+	private Integer Profile;
+	private Integer Material;
+
+
+DataDevices
+                  private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Panel;
+	private String CircuitNumber;
+	private String ElectricalData;
+	private String Comments;
+	private Integer HostId;
+	private Integer Level;
+	private String Mark;
+	private String NUMERO MODULE;
+
+InstanceUsageEnums
+	private Integer Id;
+	private String Name;
+
+PointLoads
+	private Integer Id;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Description;
+	private String Comments;
+	private Integer Nature;
+	private String Allnon0loads;
+	private Float Mz;
+	private Float My;
+	private Float Mx;
+	private Float Fz;
+	private Float Fy;
+	private Float Fx;
+	private Float IsReaction;
+	private Float LoadCase;
+
+WallSweeps
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private Float Length;
+	private String Mark;
+
+CurtainWallPanelOnWall
+	private Integer Id;
+	private String Name;
+	private Integer HostId;
+	private String HostName;
+
+HVACZones
+	private Integer Id;
+	private Integer DesignOption;
+	private Float CalculatedAreaperCoolingLoad;
+	private Float CalculatedAreaperHeatingLoad;
+	private Integer UseAirChangesPerHour;
+	private Integer UseOutsideAirPerArea;
+	private Integer UseOutsideAirPerPerson;
+	private Integer UseDehumidificationSetPoint;
+	private Integer UseHumidificationSetPoint;
+	private Float GrossArea;
+	private Float GrossVolume;
+	private Integer PhaseId;
+	private Float CalculatedSupplyAirflowperarea;
+	private Float CalculatedCoolingLoadperarea;
+	private Float CalculatedHeatingLoadperarea;
+	private Integer Level;
+	private Float  OutdoorAirRate/AirChangesperHour;
+	private Float  OutdoorAirperArea;
+	private Float  OutdoorAirperPerson;
+	private Float  DehumidificationSetPoint;
+	private Float  HumidificationSetPoint;
+	private Float  CoolingAirTemperature;
+	private Float  HeatingAirTemperature;
+	private Float  CoolingSetPoint;
+	private Float  HeatingSetPoint;
+	private Float  CalculatedSupplyAirflow;
+	private Float  CalculatedCoolingLoad;
+	private Float  CalculatedHeatingLoad;
+	private Integer ServiceType;
+	private Float OccupiedVolume;
+	private Float Perimeter;
+	private Float OccupiedArea;
+	private Float CoilBypass;
+	private String Name;
+	private String Comments;
+	private String NUMERO MODULE;
+
+PlumbingFixtureTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Float WFU;
+	private Float HWFU;
+	private Float CWFU;
+	private Integer VentConnection;
+	private Integer WasteConnection;
+	private Integer CWConnection;
+	private Integer HWConnection;
+
+Walls
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Float EstimatedReinforcementVolume;
+	private Float Volume;
+	private Float Area;
+	private String Comments;
+	private Float Length;
+	private String Mark;
+	private Integer StructuralUsage;
+	private Float TopOffset;
+	private Float BaseOffset;
+	private Integer BaseConstraint;
+	private Float UnconnectedHeight;
+	private Integer TopConstraint;
+	private Integer RoomBounding;
+	private String LOT;
+	private String NUMERO MODULE;
+
+CurtainWallPanelOnRoof
+                 private Integer Id;
+                 private String Name;
+                 private Integer HostId;
+                 private String HostName;
+
+HVACLoadSchedules
+ 	 private Integer Id;
+	 private Integer DesignOption;
+
+PlumbingFixtures
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String SystemClassification;
+	private String SystemName;
+	private String Trap;
+	private String Drain;
+	private String SupplyPipe;
+	private String SupplyFitting;
+	private String Comments;
+	private Integer Level;
+	private String Mark;
+	private String NUMERO MODULE;
+
+VoltageTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Float ActualVoltage;
+	private Float MinimumVoltage;
+	private Float MaximumVoltage;
+
+CurtainWallMullionTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+GutterTypes
+	private Integer Id;
+	private String Keynote;+
+	private String Model;+
+	private String Manufacturer;+
+	private String TypeComments;+
+	private String URL;+
+	private String Description;+
+	private String OmniClassNumber;-
+	private String AssemblyCode;+
+	private String FamilyName;-
+	private String TypeName;-
+	private String TypeMark;+
+	private Float Cost;+
+                  private Integer Profile;-
+	private Integer Material;-
+
+PlumbingFixtureOnWall
+                 private Integer Id;
+                 private String Name;
+                 private Integer HostId;
+                 private String HostName;
+
+Voltages
+	 private Integer Id;
+	 private Integer TypeId;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	 private String Comments;
+	 private String Mark;
+
+CurtainWallMullions
+   	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private Float Length;
+	private String Mark;
+                  private String NUMERO MODULE;
+
+Gutters
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private Float Length;
+	private String Mark;
+
+PlantingTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+Views
+	private Integer Id;
+	private String Family;
+	private String FamilyandType;
+	private Integer PhaseFilter;
+	private Integer PartsVisibility;
+	private Integer DetailLevel;
+	private Integer SunPath;
+	private String DisplayName;
+	private String SheetName;
+	private String SheetNumber;
+	private Integer Orientation;
+	private String AssociatedLevel;
+	private Integer Discipline;
+	private Integer DisplayModel;
+	private Integer ViewScale;
+	private Integer ScaleValue1;
+	private String TitleonSheet;
+	private String ViewName;
+	private Integer Phase;
+	private String NUMERO MODULE;
+
+CurtainSystemTypes
+	private Integer Id;
+	private String Keynote;+
+	private String Model;+
+	private String Manufacturer;+
+	private String TypeComments;+
+	private String URL;+
+	private String Description;+
+	private String OmniClassNumber;-
+	private String AssemblyCode;+
+	private String FamilyName;-
+	private String TypeName;-
+	private String TypeMark;+
+	private Float Cost;+
+
+GridTypes
+	private Integer Id;
+	private String TypeName;
+	private Integer Symbol;
+	private Integer CenterSegment;
+	private Integer CenterSegmentPattern;
+	private Integer CenterSegmentColor;
+	private Integer CenterSegmentWeight;
+	private Float EndSegmentsLength;
+	private Integer EndSegmentPattern;
+	private Integer EndSegmentColor;
+	private Integer EndSegmentWeight;
+	private Integer PlanViewSymbolsEnd1(Default);
+	private Integer PlanViewSymbolsEnd2(Default);
+	private Integer Non-PlanViewSymbols(Default);
+
+Planting
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private String Mark;
+                 private String NUMERO MODULE;
+
+TopographyTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+CurtainSystems
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private String Mark;
+                 private String NUMERO MODULE;
+
+Grids
+	private Integer Id;
+	private Integer TypeId;
+	private String Name;
+	private Integer ScopeBox;
+	private String NUMERO MODULE;
+
+PipingSystemTypes
+	private Integer Id;
+	private String Abbreviation;-
+	private String Description;+
+	private Float FluidDensity;-
+	private Float FluidTemperature;-
+	private Integer FluidType;-
+	private Float FluidDynamicViscosity;-
+	private Integer SingleLineDropSymbol;-
+	private Integer SingleLineRiseSymbol;-
+	private Integer SingleLineTeeDownSymbol;-
+	private Integer SingleLineTeeUpSymbol;-
+	private String SystemClassification;-
+	private Integer TwoLineDropSymbol;-
+	private Integer TwoLineRiseSymbol;-
+	private String TypeComments;+
+	private String URL;+
+
+Topography
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Float Netcut/fill;
+	private Float ProjectedArea;
+	private Float Fill;
+	private Float Cut;
+	private Float SurfaceArea;
+	private String Comments;
+	private String Name;
+	private String Mark;
+	private String NUMERO MODULE;
+
+CurtainPanelTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private String Finish;
+	private String ConstructionType;
+
+GenericModelTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+PipingSystems
+	private Integer Id;
+	private Integer DesignOption;
+	private Integer NumberofElements;
+	private String SystemEquipment;
+	private String SystemName;
+	private Float FixtureUnits;
+	private Float Volume;
+	private Float Flow;
+	private Integer TypeId;
+	private String Comments;
+	private String NUMERO MODULE;
+
+TelephoneDeviceTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+CurtainPanels
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Float Area;
+	private Integer HostId;
+	private Float Width;
+	private Float Height;
+	private String Comments;
+	private String Mark;
+	private String NUMERO MODULE;
+
+GenericModels
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private Integer HostId;
+	private Integer Level;
+	private String Mark;
+                  private String Service;
+	private String NUMERO MODULE;
+
+PipeTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Float Roughness;
+	private Integer Material;
+	private Integer ConnectionType;
+	private Integer Schedule/Type;
+
+TelephoneDevices
+                  private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Panel;
+	private String CircuitNumber;
+	private String ElectricalData;
+	private String Comments;
+	private Integer HostId;
+	private Integer Level;
+	private String Mark;
+	private String NUMERO MODULE;
+
+CoverTypes
+	private Integer Id;
+	private String Keynote;+
+	private String Model;+
+	private String Manufacturer;+
+	private String TypeComments;+
+	private String URL;+
+	private String Description;+
+	private String OmniClassNumber;-
+	private String AssemblyCode;+
+	private String FamilyName;-
+	private String TypeName;-
+	private String TypeMark;+
+	private Float Cost;+
+	private Float Length;-
+	private String Name;+
+
+GenericModelOnWall
+                 private Integer Id;
+                 private String Name;
+                 private Integer HostId;
+                 private String HostName;
+
+PipeSystemTypeEnums
+	private Integer Id;
+	private String Name;
+
+SwitchSystem
+	private Integer Id;
+	private Integer DesignOption;
+	private String SwitchID;
+	private String Comments;
+	private String NUMERO MODULE;
+
+ConstructionTypes
+	private Integer Id;
+
+GenericModelOnRoof
+	private Integer Id;
+                 private String Name;
+                 private Integer HostId;
+                 private String HostName;
+
+PipeSegments
+	private Integer Id;
+	private Integer DesignOption;
+	private String SegmentDescription;
+	private String ConnectionType;
+	private Float Roughness;
+	private Integer Schedule/Type;
+	private Integer Material;
+
+StructuralTrussTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+Constructions
+ 	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+
+FurnitureTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+PipeScheduleTypes
+	private Integer Id;
+	private String Keynote;+
+	private String Model;+
+	private String Manufacturer;+
+	private String TypeComments;+
+	private String URL;+
+	private String Description;+
+	private String OmniClassNumber;-
+	private String AssemblyCode;+
+	private String FamilyName;-
+	private String TypeName;-
+	private String TypeMark;+
+	private Float Cost;+
+
+StructuralTrusses
+                  private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private String Mark;
+	private String NUMERO MODULE;
+
+ConduitTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Integer Standard;
+
+FurnitureSystemTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+PipeSchedules
+                 private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private String Mark;
+
+StructuralStiffenerTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+
+Conduits
+	private Integer Id;
+	private Integer DesignOption;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer TypeId;
+	private String ServiceType;
+	private String Comments;
+	private String Mark;
+	private Float OutsideDiameter;
+	private Float InsideDiameter;
+	private Float BottomElevation;
+	private Float TopElevation;
+	private Float Diameter(TradeSize);
+	private Float Length;
+	private String Size;
+	private String NUMERO MODULE;
+
+FurnitureSystems
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private Float Level;
+	private String Mark;
+                  private String NUMERO MODULE;
+
+Pipes
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Integer SystemType;
+	private String SystemClassification;
+	private String SystemName;
+	private Float FixtureUnits;
+	private Float OutsideDiameter;
+	private Float AdditionalFlow;
+	private Float Diameter;
+	private Float Flow;
+	private Float InsideDiameter;
+	private Float ReynoldsNumber;
+	private Float RelativeRoughness;
+	private Integer FlowState;
+	private Float FrictionFactor;
+	private Float Velocity;
+	private Float Friction;
+	private Float PressureDrop;
+	private Integer Section;
+	private String Comments;
+	private Float Length;
+	private String Mark;
+	private Float InsulationThickness;
+	private String InsulationType;
+	private String OverallSize;
+	private String NUMERO MODULE;
+
+StructuralStiffeners
+                   private Integer Id;
+	 private Integer TypeId;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	 private String Comments;
+                   private Float Level;
+	 private String Mark;
+	private String NUMERO MODULE;
+
+
+ConduitFittingType
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+Furniture
+                   private Integer Id;
+	 private Integer TypeId;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	 private String Comments;
+                   private Float Level;
+	 private String Mark;
+	private String NUMERO MODULE;
+
+PipePlaceholders
+	 private Integer Id;
+	 private Integer TypeId;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	 private Integer SystemType;
+	 private String SystemClassification;
+	 private Float InsulationThickness;
+	 private String InsulationType;
+	 private String OverallSize;
+	 private String SystemName;
+	private Float FixtureUnits;
+	private Float OutsideDiameter;
+	private Float InvertElevation;
+	private Float AdditionalFlow;
+	private Float Diameter;
+	private Float Flow;
+	private Float InsideDiameter;
+	private Float ReynoldsNumber;
+	private Float RelativeRoughness;
+	 private Integer FlowState;
+	private Float FrictionFactor;
+	private Float Velocity;
+	private Float Friction;
+	private Float PressureDrop;
+	 private String Size;
+	private Integer Section;
+	private String Comments;
+	private Float Length;
+	private String Mark;
+	private String NUMERO MODULE;
+
+StructuralRebarShapes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Integer Material;
+	private Integer HookAtEnd;
+	private Integer HookAtStart;
+	private Integer Style;
+	private Integer HookOrientationAtEnd;
+	private Integer HookOrientationAtStart;
+	private Integer BaseFinishingTurns;
+	private Integer TopFinishingTurns;
+	private Float Height;
+	private Float Pitch;
+
+ConduitFittings
+	private Integer Id;
+	private Integer TypeId;
+                  private Integer DesignOption;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private String ServiceType;
+	private String Size;
+	private String Comments;
+	private String Mark;
+                  private String NUMERO MODULE;
+
+FluidTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+PipeMaterialTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Float Roughness;
+
+StructuralRebarHookTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Integer Material;
+	private Integer Style;
+	private Float ExtensionMultiplier;
+	private Float HookAngle;
+
+ConditionTypeEnums
+	private Integer Id;
+	private String Name;
+
+Fluids
+   	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private String Mark;
+
+PipeMaterials
+   	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private String Mark;
+
+StructuralRebarBarTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Integer Material;
+	private Float StandardHookBendDiameter;
+	private Float MaximumBendRadius;
+	private Float Stirrup/TieBendDiameter;
+	private Float StandardBendDiameter;
+	private Integer Subcategory;
+	private Float  BarDiameter;
+
+CommunicationDeviceTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+
+FloorTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private String Author;
+	private String BIMObjectName;
+	private String ManufacturerName;
+	private String ManufacturerURL;
+	private String ProductInformation;
+	private String Revision;
+	private String Uniclass2;
+	private String Version;
+	private String AcousticRating;
+	private Integer Combustible;
+	private String FireRating;
+	private Integer IsExternal;
+	private String Reference;
+	private String SurfaceSpreadOfFlame;
+	private String IfcExportAs;
+	private String IfcExportType;
+	private String AccessibilityPerformance;
+	private String AssetType;
+	private String Category;
+	private String CodePerformance;
+	private String Color;
+	private String Constituents;
+	private String DurationUnit;
+	private String ExpectedLife;
+	private String Features;
+	private String Finish;
+	private String Grade;
+	private String Material;
+	private String ModelNumber;
+	private String ModelReference;
+	private String Name;
+	private Float NominalHeight;
+	private Float NominalLength;
+	private Float NominalWidth;
+	private String ReplacementCost;
+	private String Shape;
+	private String Size;
+	private String SustainabilityPerformance;
+	private String WarrantyDescription;
+	private String WarrantyDurationLabor;
+	private String WarrantyDurationParts;
+	private String WarrantyDurationUnit;
+	private String WarrantyGuarantorLabor;
+	private String WarrantyGuarantorParts;
+	private String FlammibilityRating;
+	private String FragilityRating;
+
+PipeInsulationTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+
+StructuralRebar
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Float EstimatedReinforcementVolume;
+	private Float StandardBendDiameter;
+	private String ScheduleMark;
+	private Integer Style;
+	private Float  BarLength;
+	private Integer  Shape;
+	private Float  Spacing;
+	private Integer Quantity;
+	private Integer LayoutRule;
+	private Integer HookAtEnd;
+	private Integer HookAtStart;
+	private Float TotalBarLength;
+	private Float BarDiameter;
+	private String Comments;
+	private String Mark;
+	private String NUMERO MODULE;
+
+CommunicationDevices
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Panel;
+	private String CircuitNumber;
+	private String ElectricalData;
+	private String Comments;
+	private Integer HostId;
+	private Integer Level;
+	private String Mark;
+	private String NUMERO MODULE;
+
+Floors
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Float EstimatedReinforcementVolume;
+	private Float Volume;
+	private Float Area;
+	private String Comments;
+	private Integer Level;
+	private Integer Structural;
+	private Float Perimeter;
+	private Float HeightOffsetFromLevel;
+	private Integer AnalyzeAs;
+	private String Mark;
+	private String LOT;
+	private String NUMERO MODUL;
+
+PipeInsulations
+   	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private String Mark;
+	private String NUMERO MODUL;
+
+StructuralFramingTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+ColumnTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+FlexPipeTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+PipeFlowStateEnums
+	private Integer Id;
+	private String Name;
+
+StructuralFraming
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Float EstimatedReinforcementVolume;
+	private Float Volume;
+	private String Comments;
+	private Integer Level;
+	private Float  CutLength;
+	private Integer ReferenceLevel;
+	private Integer StructuralUsage;
+	private Float Length;
+	private String Mark;
+	private String NUMERO MODULE;
+
+Columns1
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private Float TopOffset;
+	private Float BaseOffset;
+	private Integer TopLevel;
+	private Integer BaseLevel;
+	private String Mark;
+	private String NUMERO MODULE;
+
+FlexPipes
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Integer SystemType;
+	private String SystemClassification;
+	private String SystemName;
+	private Float FixtureUnits;
+	private Float OutsideDiameter;
+	private Float AdditionalFlow;
+	private Float Diameter;
+	private Float Flow;
+	private Float InsideDiameter;
+	private Float ReynoldsNumber;
+	private Float RelativeRoughness;
+	private Integer FlowState;
+	private Float  FrictionFactor;
+	private Float  Velocity;
+	private Float  Friction;
+	private Float  PressureDrop;
+	private Integer Section;
+	private String Comments;
+	private Float Length;
+	private String Mark;
+	private Float InsulationThickness;
+	private String InsulationType;
+	private String OverallSize;
+	private String NUMERO MODULE;
+
+PipeFittingTypes
+	private Integer Id;
+	private String Keynote;+
+	private String Model;+
+	private String Manufacturer;+
+	private String TypeComments;+
+	private String URL;+
+	private String Description;+
+	private String OmniClassNumber;-
+	private String AssemblyCode;+
+	private String FamilyName;-
+	private String TypeName;-
+	private String TypeMark;+
+	private Float Cost;+
+
+StructuralFoundationTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+CeilingTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Integer Current Revision;
+	private String Official website;
+	private String Catalogue - information;
+	private String Installation instructions;
+	private String Technical information;
+	private String Object created by;
+	private String Suspension System;
+	private String Board type;
+	private String Materiel;
+	private String Edge profile - détail du Bord;
+	private String Polants website;
+	private Float Length;
+	private Float Width;
+	private Float Height;
+	private String BIMObjectName;
+	private String Revision;
+	private String Version;
+	private String AcousticRating;
+	private Integer Combustible;
+	private String FireRating;
+	private String Reference;
+	private String SurfaceSpreadOfFlame;
+	private String IfcExportAs;
+	private String IfcExportType;
+	private String AccessibilityPerformance;
+	private String AssetType;
+	private String Category;
+	private String CodePerformance;
+	private String Color;
+	private String Constituents;
+	private String DurationUnit;
+	private String ExpectedLife;
+	private String Features;
+	private String Finish;
+	private String Grade;
+	private String Material;
+	private String ModelNumber;
+	private String ModelReference;
+	private Float NominalHeight;
+	private Float NominalLength;
+	private Float NominalWidth;
+	private String ReplacementCost;
+	private String Shape;
+	private String Size;
+	private String SustainabilityPerformance;
+	private String WarrantyDescription;
+	private String WarrantyDurationLabor;
+	private String WarrantyDurationParts;
+	private String WarrantyDurationUnit;
+	private String WarrantyGuarantorLabor;
+	private String WarrantyGuarantorParts;
+	private String FlammibilityRating;
+	private String FragilityRating;
+
+FlexDuctTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+PipeFittings
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String SystemClassification;
+	private Float  InsulationThickness;
+	private String InsulationType;
+	private String OverallSize;
+	private String SystemName;
+	private String Size;
+	private Float Volume;
+	private Float Area;
+	private String Comments;
+	private String Mark;
+	private String NUMERO MODULE;
+
+StructuralFoundations
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Float EstimatedReinforcementVolume;
+	private Float Volume;
+	private String Comments;
+	private Float Length;
+	private Float ElevationatBottom;
+	private Float Width;
+	private String Mark;
+	private String NUMERO MODULE;
+
+Ceilings
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Float Volume;
+	private Float Area;
+	private String Comments;
+	private Float HeightOffsetFromLevel;
+	private Integer Level;
+	private Float Perimeter;
+	private String Mark;
+	private String NUMERO MODULE;
+
+FlexDucts
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Integer SystemType;
+	private String SystemClassification;
+	private String SystemName;
+	private Integer SizeLock;
+	private Float AdditionalFlow;
+	private Float HydraulicDiameter;
+	private Float Reynoldsnumber;
+	private Float EquivalentDiameter;
+	private Integer Section;
+	private Float LossCoefficient;
+	private Float VelocityPressure;
+	private Float Friction;
+	private Float PressureDrop;
+	private Float Velocity;
+	private Float Diameter;
+	private Float Height;
+	private Float Width;
+	private Float Flow;
+	private String Comments;
+	private Float Length;
+	private String Mark;
+	private String FreeSize;
+	private Float InsulationThickness;
+	private String InsulationType;
+	private Float LiningThickness;
+	private String LiningType;
+	private String OverallSize;
+	private String NUMERO MODULE;
+
+PipeConnectionTypes
+	private Integer Id;
+	private String Keynote;+
+	private String Model;+
+	private String Manufacturer;+
+	private String TypeComments;+
+	private String URL;+
+	private String Description;+
+	private String OmniClassNumber;-
+	private String AssemblyCode;+
+	private String FamilyName;-
+	private String TypeName;-
+	private String TypeMark;+
+	private Float Cost;+
+
+StructuralFabricReinforcementTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Float SheetMassperUnitArea;
+	private Float MinorReinforcementArea;
+	private Float MajorReinforcementArea;
+	private Float SheetMas;
+	private Float MinorSpacing;
+	private Float private Float MinorNumberofWires;
+	private Float MinorEndOverhang;
+	private Float MinorStartOverhang;
+	private Float Width;
+	private Float MajorSpacing;
+	private Float MajorNumberofWires;
+	private Float MajorEndOverhang;
+	private Float Length;
+	private Float OverallLength;
+	private Float MinorDirectionWireType;
+	private Float MajorDirectionWireType;
+	private String PhysicalMaterialAsset;
+	Integer Material;
+
+Categories
+	private Integer Id;
+	private String Name;
+	private Integer MaterialId;
+
+FireAlarmDeviceTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+PipeConnections
+                  private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private String Mark;
+
+StructuralFabricReinforcement
+	 private Integer Id;
+	 private Integer TypeId;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	private String FabricNumber;
+	private String Partition;
+	private Float CutSheetMass;
+	private Float CutOverallLength;
+	private Float CutOverallWidth;
+	private Float MinorLapSpliceLength;
+	private Float MajorLapSpliceLength;
+	private String Comments;
+	private String Mark;
+	 private Integer Location;
+	private String NUMERO MODULE;
+
+CaseworkTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Float Depth;
+	private Float Width;
+	private Float Height;
+	private String Finish;
+	private String ConstructionType;
+
+FireAlarmDevices
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Panel;
+	private String CircuitNumber;
+	private String ElectricalData;
+	private String Comments;
+	private Integer HostId;
+	private Integer Level;
+	private String Mark;
+	private String NUMERO MODULE;
+
+PipeAccessoryTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+StructuralColumnTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+CaseworkOnWall
+                 private Integer Id;
+                 private String Name;
+                 private Integer HostId;
+                 private String HostName;
+
+FasciaTypes
+	private Integer Id;
+	private String Keynote;+
+	private String Model;+
+	private String Manufacturer;+
+	private String TypeComments;+
+	private String URL;+
+	private String Description;+
+	private String OmniClassNumber;-
+	private String AssemblyCode;+
+	private String FamilyName;-
+	private String TypeName;-
+	private String TypeMark;+
+	private Float Cost;+
+                  private Integer Profile;-
+	private Integer Material;-
+
+PipeAccessories
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String SystemClassification;
+	private Float InsulationThickness;
+	private String InsulationType;
+	private String OverallSize;
+	private String SystemName;
+	private String Size;
+	private String Comments;
+	private String Mark;
+	private String NUMERO MODULE;
+
+StructuralColumns
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Float EstimatedReinforcementVolume;
+	private Float Volume;
+	private String Comments;
+	private Float TopOffset;
+	private Float BaseOffset;
+	private Integer TopLevel;
+	private Integer BaseLevel;
+	private Integer AnalyzeAs;
+	private Float Length;
+	private String Mark;
+	private String LOT;
+	private String NUMERO MODULE;
+
+Casework
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private Integer HostId;
+	private Integer Level;
+	private String Mark;
+	private String NUMERO MODULE;
+
+Fascias
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private String Length;
+	private String Mark;
+
+Phases
+	private Integer Id;
+	private Integer SequenceNumber;
+	private String Name;
+
+StairTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Float TreadThickness;
+
+CableTrayTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Float BendRadiusMultiplier;
+
+FabricLocationEnums
+	private Integer Id;
+	private String Name;
+
+ParkingTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+
+Stairs
+                   private Integer Id;
+	 private Integer TypeId;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	private String Comments;
+	 private Integer ActualNumberofRisers;
+	 private Integer MultistoryTopLevel;
+	private Float TopOffset;
+	private Float BaseOffset;
+	private Float ActualRiserHeight;
+	private Float Width;
+	 private Integer TopLevel;
+	 private Integer BaseLevel;
+	private String Mark;
+	private String NUMERO MODULE;
+
+CableTrays
+                   private Integer Id;
+	 private Integer TypeId;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	private String ServiceType;
+	private String Comments;
+	private String Mark;
+	private Float BottomElevation;
+	private Float TopElevation;
+	private Float Width;
+	private Float Height;
+	private String Size;
+	private Float Length;
+	private String NUMERO MODULE;
+
+ElementPhase
+	 private Integer ElementId;
+	private String ElementName;
+	private Integer PhaseCreatedId;
+	private String PhaseName;
+
+Parking
+                  private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private Float Level;
+	private String Mark;
+                 private String NUMERO MODULE;
+
+
+SprinklerTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Float OrificeSize;
+	private Float TemperatureRating;
+	private Float K-Factor;
+	private Integer PressureClass;
+	private Integer Orifice;
+	private Integer Coverage;
+	private Integer Response;
+	private Float Diameter;
+
+CableTrayFittingType
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+
+ElementLevel
+	private Integer ElementId;
+	private String ElementName;
+	private Integer LevelId;
+	private String LevelName;
+
+PanelScheduleTemplatesSwitchboard
+ 	 private Integer Id;
+	 private Integer DesignOption;
+
+Sprinklers
+                  private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String SystemClassification;
+	private String SystemName;
+	private Float Flow;
+	private Float PressureDrop;
+	private String Comments;
+	private Integer HostId;
+	private Integer Level;
+	private String Mark;
+	private String NUMERO MODULE;
+
+CableTrayFittings
+                  private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String ServiceType;
+	private String Size;
+	private String Comments;
+	private String Mark;
+	private String NUMERO MODULE;
+
+ElectricalSystemEnums
+	private Integer Id;
+	private String Name;
+
+PanelScheduleTemplatesDataPanel
+  	 private Integer Id;
+	 private Integer DesignOption;
+
+SpecialtyEquipmentTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+BuildingTypeSettings
+  	 private Integer Id;
+	 private Integer DesignOption;
+
+ElectricalPhaseEnums
+	private Integer Id;
+	private String Name;
+
+PanelScheduleTemplatesBranchPanel
+ 	 private Integer Id;
+	 private Integer DesignOption;
+
+SpecialtyEquipment
+                  private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Panel;
+	private String CircuitNumber;
+	private String Comments;
+	 private Integer HostId;
+	 private Integer Level;
+	private String Mark;
+	private String NUMERO MODULE;
+
+AssemblyTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+
+ElectricalPhaseConfigurationEnums
+	private Integer Id;
+	private String Name;
+
+Openings
+	private Integer Id;
+                 private String Name;
+                 private Integer LevelId;
+                  private Integer HostID;
+
+SpaceTypeSettings
+  	 private Integer Id;
+	 private Integer DesignOption;
+
+AssemblyCodes
+	private String AssemblyCode;
+	private String AssemblyDescription;
+
+ElectricalLoadClassifications
+ 	 private Integer Id;
+	 private Integer DesignOption;
+	
+
+OpeningOnWall
+	private Integer Id;
+                 private String Name;
+                 private Integer HostId;
+                 private String HostName;
+
+SpaceTypeEnums
+	private Integer Id;
+	private String Name;
+
+Assemblies
+                  private Integer Id;
+	 private Integer TypeId;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	 private String Comments;
+	 private String Mark;
+	private Integer NamingCategory;
+	private String NUMERO MODULE;
+
+ElectricalLoadClassificationParameterElement
+  	 private Integer Id;
+	 private Integer DesignOption;
+
+OpeningOnFloor
+	private Integer Id;
+                 private String Name;
+                 private Integer HostId;
+                 private String HostName;
+
+Spaces
+ 	private Integer Id;
+	private Integer DesignOption;
+	private Float RoomCavityRatio;
+	private Float AverageEstimatedIllumination;
+	private Float FloorReflectance;
+	private Float WallReflectance;
+	private Float CeilingReflectance;
+	private Float LightingCalculationWorkplane;
+	private Integer Plenum;
+	private Integer Occupiable;
+	private String RoomNumber;
+	private String RoomName;
+	private Float CalculatedSupplyAirflowperarea;
+	private Float CalculatedCoolingLoadperarea;
+	private Float CalculatedHeatingLoadperarea;
+	private Float ActualLightingLoadperarea;
+	private Float ActualPowerLoadperarea;
+	private Float private Integer HeatLoadValues;
+	private Float DesignCoolingLoad;
+	private Float CalculatedCoolingLoad;
+	private Float DesignHeatingLoad;
+	private Float CalculatedHeatingLoad;
+	private Integer ConstructionType;
+	private Float SensibleHeatGainperperson;
+	private Float SpecifiedLightingLoad;
+	private Float SpecifiedPowerLoad;
+	private Float ActualLightingLoad;
+	private Float ActualPowerLoad;
+	private Float DesignOtherLoadperarea;
+	private Float DesignHVACLoadperarea;
+	private Float SpecifiedLightingLoadperarea;
+	private Float SpecifiedPowerLoadperarea;
+	private Float ActualExhaustAirflow;
+	private Float ActualReturnAirflow;
+	private Float ActualSupplyAirflow;
+	private Float LatentHeatGainperperson;
+	private Float TotalHeatGainperperson;
+	private Float CalculatedSupplyAirflow;
+	private Float SpecifiedExhaustAirflow;
+	private Float SpecifiedReturnAirflow;
+	private Float SpecifiedSupplyAirflow;
+	private Float AreaperPerson;
+	private Float NumberofPeople;
+	private Integer SpaceType;
+	private Integer ConditionType;
+	private Integer PhaseId;
+	private String Comments;
+	private Float Volume;
+	private Float Perimeter;
+	private Integer Level;
+	private Float Area;
+	private String Number;
+	private String Name;
+	private Float UnboundedHeight;
+	private String NUMERO MODULE;
+
+AreaSchemes
+	private Integer Id;
+	private String Name;
+
+ElectricalFixtureTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+OmniClassNumbers
+	private String OmniClassNumber;
+	private String OmniClassTitle;
+
+SpaceAssociations
+	private Integer Id;
+	private Integer PhaseId;
+	private Integer DesignOptionId;
+	private Integer SpaceId;
+
+Areas
+	private Integer Id;
+	private Integer AreaSchemeId;
+	private String AreaType;
+	private String Comments;
+	private Float Perimeter;
+	private Integer Level;
+	private Float Area;
+	private String Number;
+	private String Name;
+	private String NUMERO MODULE;
+
+ElectricalFixtures
+   	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Panel;
+	private String CircuitNumber;
+	private String ElectricalData;
+	private String Comments;
+	private Integer HostId;
+	private Integer Level;
+	private String Mark;
+	private String NUMERO MODULE;
+
+NurseCallDeviceTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+SlabEdgeTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Integer Profile;
+	private Integer Material;
+
+AreaLoads
+                  private Integer Id;
+	 private Integer TypeId;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	private String Description;
+	 private String Comments;
+	private Integer Nature;
+	private String Allnon0loads;
+	private Float Area;
+	private Float Fz3;
+	private Float Fy3;
+	private Float Fx3;
+	private Float Fz2;
+	private Float Fy2;
+	private Float Fx2;
+	private Float Fz1;
+	private Float Fy1;
+	private Float Fx1;
+	private Integer IsReaction;
+	private Integer LoadCase;
+
+ElectricalEquipmentTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private String Voltage;
+	private String Wattage;
+	private String Bussing;
+	private Integer GroundBus;
+	private String MainsType;
+	private Float MCBRating;
+	private Integer NeutralBus;
+	private Float NeutralRating;
+	private Integer SubFeedLugs;
+
+NurseCallDevices
+                  private Integer Id;
+	 private Integer TypeId;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	private String Panel;
+	private String CircuitNumber;
+	private String ElectricalData;
+	private String Comments;
+	private Integer HostId;
+	private Integer Level;
+	private String Mark;
+	private String NUMERO MODULE;
+
+SlabEdges
+                  private Integer Id;
+	 private Integer TypeId;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	private Float Volume;
+	private String Comments;
+	private Float Length;
+	private String Mark;
+
+AreaLoadOnSlab
+	 private Integer AreaLoadId;
+	 private Integer SlabId;
+
+ElectricalEquipment
+	 private Integer Id;
+	 private Integer TypeId;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	private String Modifications;
+	private String Enclosure;
+	private Float Mains;
+	private String Mounting;
+	private String ShortCircuitRating;
+	 private Integer MaxNumberofSinglePoleBreakers;
+	private String PanelName;
+	private Float TotalEstimatedDemand;
+	private Float TotalConnected;
+	private Float ApparentLoadPhaseA;
+	private Float ApparentLoadPhaseB;
+	private Float ApparentLoadPhaseC;
+	private String ElectricalData;
+	private String Comments;
+	 private Integer HostId;
+	 private Integer Level;
+	private String Mark;
+	private Float CurrentPhaseA;
+	private Float CurrentPhaseB;
+	private Float CurrentPhaseC;
+	private String Feed;
+	private String Location;
+	 private Integer NumberofWires;
+	 private Integer NumberofPhases;
+	private String SupplyFrom;
+	private Float TotalConnectedCurrent;
+	private Float TotalDemandFactor;
+	private Float TotalEstimatedDemandCurrent;
+	private String NUMERO MODULE;
+
+NeutralModeEnums
+	private Integer Id;
+	private String Name;
+
+SiteTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+AnalyzesAsTypeEnums
+	private Integer Id;
+	private String Name;
+
+ElectricalDemandFactorDefinitions
+ 	 private Integer Id;
+	 private Integer DesignOption;
+
+
+MechanicalEquipmentTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+Site
+                 private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private String Mark;
+                  private String NUMERO MODULE;
+
+AirTerminalTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Float MaxFlow;
+	private Float MinFlow;
+
+ElectricalCircuits
+	private Integer Id;
+	private Integer DesignOption;
+	private String Panel;
+	private String CircuitNumber;
+	private Integer ofRuns;
+	private Integer ofHotConductors;
+	private Integer ofNeutralConductors;
+	private Integer ofGroundConductors;
+	private String LoadName;
+	private Float ApparentLoadPhaseC;
+	private Float ApparentLoadPhaseB;
+	private Float ApparentLoadPhaseA;
+	private Float TrueLoadPhaseC;
+	private Float TrueLoadPhaseB;
+	private Float TrueLoadPhaseA;
+	private Float TrueCurrent;
+	private Float TrueCurrentPhaseA;
+	private Float TrueCurrentPhaseB;
+	private Float TrueCurrentPhaseC;
+	private Float ApparentCurrent;
+	private Float ApparentCurrentPhaseA;
+	private Float ApparentCurrentPhaseB;
+	private Float ApparentCurrentPhaseC;
+	private Float VoltageDrop;
+	private Float Length;
+	private Float Rating;
+	private String WireSize;
+	private Integer WireType;
+	private Integer SystemType;
+	private String LoadClassification;
+	private Float TrueLoad;
+	private Integer PowerFactorState;
+	private Float PowerFactor;
+	private Float ApparentLoad;
+	private Integer BalancedLoad;
+	private Float Voltage;
+	private Integer NumberofPoles;
+	private String Comments;
+	private Float Frame;
+	private Integer NumberofElements;
+	private String NUMERO MODULE;
+
+MechanicalEquipmentOnWall
+                 private Integer Id;
+                 private String Name;
+                 private Integer HostId;
+                 private String HostName;
+
+Sheets
+	private Integer Id;
+	private String Assembly:Keynote;
+	private String Assembly:AssemblyDescription;
+	private Float Assembly:Cost;
+	private String Assembly:TypeMark;
+	private String Assembly:AssemblyCode;
+	private String Assembly:Description;
+	private String Assembly:URL;
+	private String Assembly:TypeComments;
+	private String Assembly:Manufacturer;
+	private String Assembly:Model;
+	private String Assembly:Name;
+	private Integer GuideGrid;
+	private Integer CurrentRevisionIssued;
+	private String CurrentRevisionIssuedBy;
+	private String CurrentRevisionIssuedTo;
+	private String CurrentRevisionDate;
+	private String CurrentRevisionDescription;
+	private String CurrentRevision;
+	private String FilePath;
+	private String ApprovedBy;
+	private String DesignedBy;
+	private Integer AppearsInSheetList;
+	private String CheckedBy;
+	private String DrawnBy;
+	private String Scale;
+	private String SheetNumber;
+	private String SheetName;
+	private String SheetIssueDate;
+	private String Dependency;
+	private String ReferencingDetail;
+	private String ReferencingSheet;
+	private Integer LeftClipActive;
+	private String NUMERO MODULE;
+
+AirTerminals
+                 private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String SystemClassification;
+	private String SystemName;
+	private Float Flow;
+	private String Comments;
+	private String Mark;
+	private String NUMERO MODULE;
+
+EaveCutterTypeEnums
+	private Integer Id;
+	private String Name;
+
+MechanicalEquipment
+                 private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String SystemClassification;
+	private String SystemName;
+	private String Comments;
+	private Integer HostId;
+	private Integer Level;
+	private String Mark;
+	private String CircuitNumber;
+	private String Panel;
+	private String NUMERO MODULE;
+
+ServiceTypeEnums
+	private Integer Id;
+	private String Name;
+
+DuctTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+Materials
+	private Integer Id;
+	private String Keynote;+
+	private String Name;+
+	private String Model;+
+	private String Manufacturer;+
+	private String Comments;+
+	private String URL;+
+	private String Description;+
+	private Float Cost;+
+	private String Mark;+
+	private String Grade;
+	private String Species;
+	private Float Thermalexpansioncoefficient;
+	private Float Bending;
+	private Float Shearmodulus;
+	private Float Poissonratio;
+	private Float Tensionperpendiculartograin;
+	private Float Shearparalleltograin;
+	private Float Compressionperpendiculartograin;
+	private Float Compressionparalleltograin;
+	private Float Youngmodulus;
+	private Integer MaterialType;
+	private Integer Lightweight;
+	private Integer Behavior;
+	private Float Resistancecalculationstrength;
+	private Float Reductionfactorforshear;
+	private Float Minimumtensilestrength;
+	private Float Minimumyieldstress;
+	private Float Shearstrengthmodification;
+	private Float Shearreinforcementyieldstress;
+	private Float Bendingreinforcement;
+	private Float Concretecompression;
+	private Float ThermalexpansioncoefficientX;
+	private Float ThermalexpansioncoefficientY;
+	private Float ThermalexpansioncoefficientZ;
+	private Float Unitweight;
+	private Float ShearmodulusX;
+	private Float ShearmodulusY;
+	private Float ShearmodulusZ;
+	private Float PoissonratioX;
+	private Float PoissonratioY;
+	private Float PoissonratioZ;
+	private Float YoungmodulusX;
+	private Float YoungmodulusY;
+	private Float YoungmodulusZ;
+	private Integer Shininess;
+	private Integer Smoothness;
+	private Integer Glow;
+	private Integer Transparency;
+	private Integer Color;
+	private String NUMERO MODULE;
+
+SecurityDeviceTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+DuctSystemTypes
+	private Integer Id;
+	private Integer Rise/DropSymbol;
+	private String Abbreviation;
+	private String SystemClassification;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+
+MaterialQuantities
+	private Integer ElementId;
+	private Integer MaterialId;
+	private Integer AsPaint;
+	private Float Area;
+	private Float Volume;
+
+SecurityDevices
+                   private Integer Id;
+	 private Integer TypeId;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	private String Panel;
+	private String CircuitNumber;
+	private String ElectricalData;
+	private String Comments;
+	private Integer HostId;
+	private Integer Level;
+	private Integer ScheduleLevel;
+	private String Mark;
+	private String NUMERO MODULE;
+
+DuctSystemTypeEnums
+	private Integer Id;
+	private String Name;
+
+MassTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+RoomTags
+	private Integer Id;
+	private String RoomTagType;
+	private Integer RoomId;
+	private Integer ViewId;
+
+DuctSystems
+	private Integer Id;
+	private Integer DesignOption;
+	private Integer TypeId;
+	private Integer NumberofElements;
+	private String SystemEquipment;
+	private String SystemName;
+	private Float Flow;
+	private String Comments;
+	private String NUMERO MODULE;
+
+MassSkylight
+                   private Integer Id;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	private Float MassSkylightArea;
+	private Integer ConceptualTypes;
+	private Integer GraphicalAppearance;
+	private String Mass:Comments;
+	private String Mass:TypeComments;
+	private String Mass:FamilyandType;
+	private String Mass:Family;
+	private String Mass:Type;
+	private String Comments;
+	private String Mark;
+
+Rooms
+	private Integer Id;
+	private Integer DesignOption;
+	private Integer PhaseId;
+	private String Comments;
+	private Float Volume;
+	private Float Perimeter;
+	private Integer Level;
+	private String Occupancy;
+	private String Department;
+	private String BaseFinish;
+	private String CeilingFinish;
+	private String WallFinish;
+	private String FloorFinish;
+	private Float Area;
+	private String Number;
+	private String Name;
+	private Float UnboundedHeight;
+	private String Occupant;
+	private String ZONE;
+	private String NUMERO MODULE;
+	private String BATIMENT;
+
+Ducts
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Integer SystemType;
+	private String SystemClassification;
+	private String SystemName;
+	private Float BottomElevation;
+	private Float TopElevation;
+	private String Size;
+	private Integer SizeLock;
+	private Float AdditionalFlow;
+	private Float HydraulicDiameter;
+	private Float Reynoldsnumber;
+	private Float EquivalentDiameter;
+	private Integer Section;
+	private Float LossCoefficient;
+	private Float VelocityPressure;
+	private Float Area;
+	private Float LiningThickness;
+	private Float InsulationThickness;
+	private Float Friction;
+	private Float PressureDrop;
+	private Float Velocity;
+	private Float Diameter;
+	private Float Height;
+	private Float Width;
+	private Float Flow;
+	private String Comments;
+	private Float Length;
+	private String Mark;
+	private String FreeSize;
+	private String InsulationType;
+	private String LiningType;
+	private String OverallSize;
+	private String NUMERO MODULE;
+
+MassRoof
+	private Integer Id;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Integer Values;
+	private Float SkylightWidth&Depth;
+	private Float TargetPercentageSkylights;
+	private Integer Underground;
+	private Float MassRoofArea;
+	private Integer Subcategory;
+	private Integer ConceptualTypes;
+	private Integer GraphicalAppearance;
+	private String Mass:Comments;
+	private String Mass:TypeComments;
+	private String Mass:FamilyandType;
+	private String Mass:Family;
+	private String Mass:Type;
+	private String Comments;
+	private String Mark;
+
+RoomFromToAssociations
+	private Integer Id;
+	private Integer PhaseId;
+	private Integer DesignOptionId;
+	private Integer FromRoom;
+	private Integer ToRoom;
+
+DuctPlaceholders
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Integer SystemType;
+	private String SystemClassification;
+	private String SystemName;
+	private Float BottomElevation;
+	private Float TopElevation;
+	private String Size;
+	private Integer SizeLock;
+	private Float AdditionalFlow;
+	private Float HydraulicDiameter;
+	private Float Reynoldsnumber;
+	private Float EquivalentDiameter;
+	private Integer Section;
+	private Float LossCoefficient;
+	private Float VelocityPressure;
+	private Float Area;
+	private Float LiningThickness;
+	private Float InsulationThickness;
+	private Float Friction;
+	private Float PressureDrop;
+	private Float Velocity;
+	private Float Diameter;
+	private Float Height;
+	private Float Width;
+	private Float Flow;
+	private String Comments;
+	private Float Length;
+	private String Mark;
+	private String FreeSize;
+	private String InsulationType;
+	private String LiningType;
+	private String OverallSize;
+	private String NUMERO MODULE;
+
+MassOpening
+	private Integer Id;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Float MassOpeningArea;
+	private Integer ConceptualTypes;
+	private Integer GraphicalAppearance;
+	private String Mass:Comments;
+	private String Mass:TypeComments;
+	private String Mass:FamilyandType;
+	private String Mass:Family;
+	private String Mass:Type;
+	private String Comments;
+	private String Mark;
+
+RoomAssociations
+	private Integer Id;
+	private Integer PhaseId;
+	private Integer DesignOptionId;
+	private Integer RoomId;
+
+DuctLiningTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+MassInteriorWall
+	private Integer Id;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Float MassInteriorWallArea;
+	private Integer ConceptualTypes;
+	private Integer GraphicalAppearance;
+	private String Mass:Comments;
+	private String Mass:TypeComments;
+	private String Mass:FamilyandType;
+	private String Mass:Family;
+	private String Mass:Type;
+
+RoofTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private String Author;
+	private String BIMObjectName;
+	private String ManufacturerName;
+	private String ManufacturerURL;
+	private String ProductInformation;
+	private String Revision;
+	private String Uniclass2;
+	private String Version;
+	private String AcousticRating;
+	private Integer Combustible;
+	private String FireRating;
+	private Integer IsExternal;
+	private String Reference;
+	private String SurfaceSpreadOfFlame;
+	private String IfcExportAs;
+	private String IfcExportType;
+	private String AccessibilityPerformance;
+	private String AssetType;
+	private String Category;
+	private String CodePerformance;
+	private String Color;
+	private String Constituents;
+	private String DurationUnit;
+	private String ExpectedLife;
+	private String Features;
+	private String Finish;
+	private String Grade;
+	private String Material;
+	private String ModelNumber;
+	private String ModelReference;
+	private String Name;
+	private Float NominalHeight;
+	private Float NominalLength;
+	private Float NominalWidth;
+	private String ReplacementCost;
+	private String Shape;
+	private String Size;
+	private String SustainabilityPerformance;
+	private String WarrantyDescription;
+	private String WarrantyDurationLabor;
+	private String WarrantyDurationParts;
+	private String WarrantyDurationUnit;
+	private String WarrantyGuarantorLabor;
+	private String WarrantyGuarantorParts;
+	private String FlammibilityRating;
+	private String FragilityRating;
+
+DuctLinings
+                  private Integer Id;
+	 private Integer TypeId;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	 private String Comments;
+	 private String Mark;
+                   private String NUMERO MODULE;
+
+MassGlazing
+	 private Integer Id;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	private Float MassWindowArea;
+	 private Integer ConceptualTypes;
+	 private Integer GraphicalAppearance;
+	private String Mass:Comments;
+	private String Mass:TypeComments;
+	private String Mass:FamilyandType;
+	private String Mass:Family;
+	private String Mass:Type;
+	private String Comments;
+	private String Mark;
+
+Roofs
+                 private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Float Volume;
+	private Float Area;
+	private String Comments;
+	private Integer RafterorTruss;
+	private Float FasciaDepth;
+	private Integer RafterCut;
+	private Integer BaseLevel;
+	private Float CutoffOffset;
+	private Integer CutoffLevel;
+	private Float BaseOffsetFromLevel;
+	private String Mark;
+	private String NUMERO MODULE;
+
+DuctInsulationTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+MassFloor
+	private Integer Id;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Integer Slab;
+	private Integer ConceptualTypes;
+	private Integer GraphicalAppearance;
+	private String Mass:Description;
+	private String Mass:Comments;
+	private String Mass:TypeComments;
+	private String Mass:FamilyandType;
+	private String Mass:Family;
+	private String Mass:Type;
+	private String Usage;
+	private String Level;
+	private Float FloorVolume;
+	private Float ExteriorSurfaceArea;
+	private Float FloorArea;
+	private Float FloorPerimeter;
+	private String Comments;
+	private String Mark;
+
+RevitDBLinkInfo
+	private String Name;
+	private String Value;
+
+DuctInsulations
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private String Mark;
+                  private String NUMERO MODULE;
+
+MassExteriorWall
+	private Integer Id;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Integer Values;
+	private Float TargetSillHeight;
+	private Float ShadeDepth;
+	private Integer GlazingisShaded;
+	private Float TargetPercentageGlazing;
+	private Integer Underground;
+	private Float MassExteriorWallArea;
+	private Integer Subcategory;
+	private Integer ConceptualTypes;
+	private Integer GraphicalAppearance;
+	 private String Mass:Comments;
+	 private String Mass:TypeComments;
+	 private String Mass:FamilyandType;
+	 private String Mass:Family;
+	 private String Mass:Type;
+
+RebarStyleEnums
+	private Integer Id;
+	private String Name;
+
+DuctFittingTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+Mass
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private Float GrossVolume;
+	private Float GrossSurfaceArea;
+	private Float GrossFloorArea;
+	private String Comments;
+	private Integer BaseLevel;
+	private String Mark;
+	private String NUMERO MODULE;
+
+RebarOnWall
+                 private Integer Id;
+                 private String Name;
+                 private Integer HostId;
+                 private String HostName;
+
+WiringTypeEnums
+	private Integer Id;
+	private String Name;
+
+DuctFittings
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String SystemClassification;
+	private String SystemName;
+	private String Size;
+	private Float Volume;
+	private Float Area;
+	private String Comments;
+	private String Mark;
+	private String FreeSize;
+	private Float InsulationThickness;
+	private String InsulationType;
+	private Float  LiningThickness;
+	private String LiningType;
+	private String OverallSize;
+	private String NUMERO MODULE;
+
+LoadClassificationTypeEnums
+	private Integer Id;
+	private String Name;
+
+RebarOnFraming
+                 private Integer Id;
+                 private String Name;
+                 private Integer HostId;
+                 private String HostName;
+
+WireTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Integer ShareNeutralConductor;
+	private Integer ShareGroundConductor;
+	private Integer Material;
+	private Integer TemperatureRating;
+	private Integer Insulation;
+	private String MaxSize;
+	private Float NeutralMultiplier;
+	private Integer NeutralIncludedinBalancedLoad;
+	private Integer NeutralSize;
+	private String ConduitType;
+
+DuctAccessoryTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+LineLoads
+	private Integer Id;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Description;
+	private String Comments;
+	private Integer Nature;
+	private String Allnon0loads;
+	private Float Length;
+	private Float Mz2;
+	private Float My2;
+	private Float Mx2;
+	private Float Mz1;
+	private Float My1;
+	private Float Mx1;
+	private Float Fz2;
+	private Float Fy2;
+	private Float Fx2;
+	private Float Fz1;
+	private Float Fy1;
+	private Float Fx1;
+	private Integer IsReaction;
+	private Integer UniformLoad;
+	private Integer LoadCase;
+
+RebarOnFoundation
+                 private Integer Id;
+                 private String Name;
+                 private Integer HostId;
+                 private String HostName;
+
+WireTemperatureRatingTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+DuctAccessories
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String SystemClassification;
+	private String SystemName;
+	private String Size;
+	private String Comments;
+	private String Mark;
+	private String FreeSize;
+	private Float InsulationThickness;
+	private String InsulationType;
+	private Float LiningThickness;
+	private String LiningType;
+	private String OverallSize;
+	private String NUMERO MODULE;
+
+LineLoadOnBeam
+ 	  private Integer LineLoadId;
+	  private Integer BeamId;
+
+RebarOnFloor
+                 private Integer Id;
+                 private String Name;
+                 private Integer HostId;
+                 private String HostName;
+
+WireTemperatureRatings
+                  private Integer Id;
+	 private Integer TypeId;
+	 private Integer PhaseCreated;
+	 private Integer PhaseDemolished;
+	 private Integer DesignOption;
+	 private String Comments;
+	 private String Mark;
+
+DoorWall
+	private Integer DoorId;
+	private String DoorName;
+	private Integer WallId;
+	private String WallName;
+
+LightingFixtureTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+	private Float LightSourceSymbolLength;
+	private Float LightSourceSymbolSize;
+	private Float EmitfromCircleDiameter;
+	private Float EmitfromRectangleLength;
+	private Float EmitfromRectangleWidth;
+	private Float EmitfromLineLength;
+	private Integer EmitShapeVisibleinRendering;
+	private Integer DimmingLampColorTemperatureShift;
+	private Float LuminaireDirtDepreciation;
+	private Float LampLumenDepreciation;
+	private Float SurfaceDepreciationLoss;
+	private Float LampTiltLoss;
+	private Float VoltageLoss;
+	private Float TemperatureLoss;
+	private Float InitialColorTemperature;
+	private Float Illuminance;
+	private Float LuminousIntensity;
+	private Float Efficacy;
+	private Float Wattage;
+	private String PhotometricWebFile;
+	private Float ApparentLoad;
+	private Float BallastLoss;
+	private Float TotalLightLossFactor;
+	private Float SpotFieldAngle;
+	private Float SpotBeamAngle;
+	private Float TiltAngle;
+	private Float LuminousFlux;
+	private String Lamp;
+	private String WattageComments;
+
+RebarOnColumn
+                 private Integer Id;
+                 private String Name;
+                 private Integer HostId;
+                 private String HostName;
+
+Wires
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	 private String CircuitDescription;
+	 private String CircuitLoadName;
+	private Integer NumberofConductors;
+	private Integer TickMarks;
+	 private String Panel;
+	 private String Circuits;
+	private Integer Type;
+	private Integer HotConductors;
+	private Integer NeutralConductors;
+	private Integer GroundConductors;
+	 private String WireSize;
+	 private String Comments;
+	 private String Mark;
+	 private String NUMERO MODULE;
+
+DoorTypes
+	private Integer Id;
+	private String Keynote;+
+	private String Model;+
+	private String Manufacturer;+
+	private String TypeComments;+
+	private String URL;+
+	private String Description;+
+	private String OmniClassNumber;-
+	private String AssemblyCode;+
+	private String FamilyName;-
+	private String TypeName;-
+	private String TypeMark;+
+	private Float Cost;+
+	private Float RoughWidth;-
+	private Float RoughHeight;-
+	private Float Thickness;-
+	private Float Width;-
+	private Float Height;-
+	private String Operation;-
+	private String ConstructionType;-
+	private String FireRating;-
+
+LightingFixtures
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String SwitchID;
+	private String Panel;
+	private String CircuitNumber;
+	private String ElectricalData;
+	private Float CoefficientofUtilization;
+	private String Comments;
+	private Integer HostId;
+	private Integer Level;
+	private String Mark;
+	private String NUMERO MODULE;
+
+RebarLayoutEnums
+	private Integer Id;
+	private String Name;
+
+WireMaterialTypes
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+Doors
+	private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	 private String Comments;
+	private Integer HostId;
+	private Integer Level;
+	private Float HeadHeight;
+	private Float SillHeight;
+	 private String FrameMaterial;
+	 private String FrameType;
+	 private String Finish;
+	 private String Mark;
+	 private String Service;
+	 private String LOT;
+	 private String NUMERO MODULE;
+
+LightingFixtureOnWall
+                 private Integer Id;
+                 private String Name;
+                 private Integer HostId;
+                 private String HostName;
+
+RampTypes
+	private Integer Id;
+	private String Keynote;+
+	private String Model;+
+	private String Manufacturer;+
+	private String TypeComments;+
+	private String URL;+
+	private String Description;+
+	private String OmniClassNumber;-
+	private String AssemblyCode;+
+	private String FamilyName;-
+	private String TypeName;-
+	private String TypeMark;+
+	private Float Cost;+
+
+WireMaterials
+                 private Integer Id;
+	private Integer TypeId;
+	private Integer PhaseCreated;
+	private Integer PhaseDemolished;
+	private Integer DesignOption;
+	private String Comments;
+	private String Mark;
+   
+
+DivisionProfiles
+	private Integer Id;
+	private String Keynote;
+	private String Model;
+	private String Manufacturer;
+	private String TypeComments;
+	private String URL;
+	private String Description;
+	private String OmniClassNumber;
+	private String AssemblyCode;
+	private String FamilyName;
+	private String TypeName;
+	private String TypeMark;
+	private Float Cost;
+
+ 
