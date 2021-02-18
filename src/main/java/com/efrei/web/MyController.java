@@ -4177,7 +4177,7 @@ jdbcTemplate.update(sqlUpdate,SpecialtyEquipment.getComments(),SpecialtyEquipmen
 String sqlUpdate2 = "UPDATE SpecialtyEquipment set Mark=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,SpecialtyEquipment.getMark(),SpecialtyEquipment.getId());
 
-return "redirect:/Ceilings";
+return "redirect:/SpecialtyEquipment";
 }
     
 
