@@ -25,61 +25,61 @@
 	<div layout:fragment="content1">
 	<div class="col-md-6"> 
 	<div class="panel panel-default">
-		<div class="panel-heading">Edit SpecialtyEquipementTypes</div>
+		<div class="panel-heading">Edit SpecialtyEquipmentTypes</div>
 		<div class="panel-body">
 		<form th:action="@{/admin/saveSpecialtyEquipementTypes}" method="post">
 			<div class="form-group">
-				<label class="control-label">ID: </label><label th:text="${SpecialtyEquipementTypes.id}"> </label>
+				<label class="control-label">ID: </label><label th:text="${SpecialtyEquipmentTypes.id}"> </label>
 				<input class="form-control" type="hidden" name="id" 
-				th:value="${SpecialtyEquipementTypes.id}"/>
+				th:value="${SpecialtyEquipmentTypes.id}"/>
 			</div>
 			
 			<div class="form-group">
 				<label class="control-label">Keynote: </label>
 				<input class="form-control" type="text" name="Keynote" 
-				th:value="${SpecialtyEquipementTypes.Keynote}"/>
+				th:value="${SpecialtyEquipmentTypes.Keynote}"/>
 			</div>
 
 			<div class="form-group">
 				<label class="control-label">Model:</label> 
 				<input class="form-control" type="text" name="Model"
-				th:value="${SpecialtyEquipementTypes.Model}"  />
+				th:value="${SpecialtyEquipmentTypes.Model}"  />
 		   </div>
 
 			<div class="form-group">
 				<label class="control-label">Manufacturer:</label> 
 				<input class="form-control" type="text" name="Manufacturer" 
-				th:value="${SpecialtyEquipementTypes.Manufacturer}"/>
+				th:value="${SpecialtyEquipmentTypes.Manufacturer}"/>
 		  </div>
 
 		  <div class="form-group">
 				<label class="control-label">TypeComments:</label> 
 				<input class="form-control" type="text" name="TypeComments" 
-				th:value="${SpecialtyEquipementTypes.TypeComments}"/>
+				th:value="${SpecialtyEquipmentTypes.TypeComments}"/>
 		  </div>
 		  
 		  <div class="form-group">
 				<label class="control-label">URL:</label> 
 				<input class="form-control" type="text" name="URL" 
-				th:value="${SpecialtyEquipementTypes.URL}"/>
+				th:value="${SpecialtyEquipmentTypes.URL}"/>
 		  </div>
 
 		  <div class="form-group">
 				<label class="control-label">Description:</label> 
 				<input class="form-control" type="text" name="Description" 
-				th:value="${SpecialtyEquipementTypes.Description}"/>
+				th:value="${SpecialtyEquipmentTypes.Description}"/>
 		  </div>
 
 		  <div class="form-group">
 				<label class="control-label">TypeMark:</label> 
 				<input class="form-control" type="text" name="TypeMark" 
-				th:value="${SpecialtyEquipementTypes.TypeMark}"/>
+				th:value="${SpecialtyEquipmentTypes.TypeMark}"/>
 		  </div>
 
 		  <div class="form-group">
 				<label class="control-label">Cost:</label> 
 				<input class="form-control" type="text" name="Cost" 
-				th:value="${SpecialtyEquipementTypes.Cost}"/>
+				th:value="${SpecialtyEquipmentTypes.Cost}"/>
 		  </div>
 			
 		<button type="submit" class="btn btn-primary">Save</button>
