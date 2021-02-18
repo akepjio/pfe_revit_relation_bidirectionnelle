@@ -4132,7 +4132,7 @@ return "editWiringTypeEnums";
 ////
 ////////////////////////////////////////Save Requests//////////////////////////////////////////////////////////////////
 @PostMapping("/admin/saveWalls")
-public String save(Model model,  Walls walls) {
+public String save(Walls walls) {
 
 String sqlUpdate = "UPDATE Walls set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,walls.getComments(),walls.getId());
@@ -4155,7 +4155,7 @@ return "redirect:/";
 
 
     @PostMapping("/admin/saveCeilings")
-public String save1(Model model,  Ceilings Ceilings) {
+public String save1(Ceilings Ceilings) {
 		String sqlUpdate = "UPDATE Ceilings set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,Ceilings.getComments(),Ceilings.getId());
 
@@ -4170,7 +4170,7 @@ return "redirect:/Ceilings";
     
 
     @PostMapping("/admin/saveSpecialtyEquipment")
-public String save120(Model model,  SpecialtyEquipment SpecialtyEquipment) {
+public String save120(SpecialtyEquipment SpecialtyEquipment) {
 String sqlUpdate = "UPDATE SpecialtyEquipment set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,SpecialtyEquipment.getComments(),SpecialtyEquipment.getId());
 
@@ -4182,7 +4182,7 @@ return "redirect:/Ceilings";
     
 
     @PostMapping("/admin/saveWallSweeps")
-public String save97(Model model,  WallSweeps WallSweeps) {
+public String save97(WallSweeps WallSweeps) {
 String sqlUpdate = "UPDATE WallSweeps set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,WallSweeps.getComments(),WallSweeps.getId());
 
@@ -4196,7 +4196,7 @@ return "redirect:/WallSweeps";
 
 
 @PostMapping("/admin/saveCeilingTypes")
-public String save2(Model model,  CeilingTypes CeilingTypes) {
+public String save2(CeilingTypes CeilingTypes) {
 String sqlUpdate = "UPDATE CeilingTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,CeilingTypes.getTypeComments(),CeilingTypes.getId());
 
@@ -4233,7 +4233,7 @@ return "redirect:/CeilingTypes";
 
 
 @PostMapping("/admin/saveCurtainWallMullions")
-public String save3(Model model,  CurtainWallMullions cwm) {
+public String save3(CurtainWallMullions cwm) {
     String sqlUpdate = "UPDATE CurtainWallMullions set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,cwm.getComments(),cwm.getId());
 
@@ -4246,7 +4246,7 @@ return "redirect:/CurtainWallMullions";
 
 
 @PostMapping("/admin/saveCurtainWallMullionTypes")
-public String save4(Model model,  CurtainWallMullionTypes cwmt) {
+public String save4(CurtainWallMullionTypes cwmt) {
 		String sqlUpdate = "UPDATE CurtainWallMullionTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,cwmt.getTypeComments(),cwmt.getId());
 
@@ -4277,7 +4277,7 @@ return "redirect:/CurtainWallMullionTypes";
 
 
 @PostMapping("/admin/saveStructuralFraming")
-public String save5(Model model,  StructuralFraming sf) {
+public String save5(StructuralFraming sf) {
 String sqlUpdate = "UPDATE StructuralFraming set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,sf.getComments(),sf.getId());
 
@@ -4296,7 +4296,7 @@ return "redirect:/StructuralFraming";
 
 
 @PostMapping("/admin/saveStructuralFramingTypes")
-public String save6(Model model,  StructuralFramingTypes sft) {
+public String save6(StructuralFramingTypes sft) {
 String sqlUpdate = "UPDATE StructuralFramingTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,sft.getTypeComments(),sft.getId());
 
@@ -4327,7 +4327,7 @@ return "redirect:/StructuralFramingTypes";
 
 
 @PostMapping("/admin/saveWallTypes")
-public String save7(Model model,  WallTypes WallTypes) {
+public String save7(WallTypes WallTypes) {
 String sqlUpdate = "UPDATE WallTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,WallTypes.getTypeComments(),WallTypes.getId());
 
@@ -4357,7 +4357,7 @@ return "redirect:/WallTypes";
 
 
 @PostMapping("/admin/saveCurtainPanels")
-public String save8(Model model, CurtainPanels CurtainPanels) {
+public String save8(CurtainPanels CurtainPanels) {
     String sqlUpdate = "UPDATE CurtainPanels set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,CurtainPanels.getComments(),CurtainPanels.getId());
 
@@ -4370,7 +4370,7 @@ return "redirect:/CurtainPanels";
 
 
 @PostMapping("/admin/saveCurtainPanelTypes")
-public String save9(Model model,  CurtainPanelTypes cpt) {
+public String save9(CurtainPanelTypes cpt) {
 String sqlUpdate = "UPDATE CurtainPanelTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,cpt.getTypeComments(),cpt.getId());
 
@@ -4407,7 +4407,7 @@ return "redirect:/CurtainPanelTypes";
 
 
 @PostMapping("/admin/saveDoors")
-public String save10(Model model, Doors Doors) {
+public String save10(Doors Doors) {
 String sqlUpdate = "UPDATE Doors set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,Doors.getComments(),Doors.getId());
 
@@ -4441,7 +4441,7 @@ return "redirect:/Doors";
 
 
 @PostMapping("/admin/saveAirTerminals")
-public String save11(Model model, AirTerminals AirTerminals) {
+public String save11(AirTerminals AirTerminals) {
 String sqlUpdate = "UPDATE AirTerminals set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,AirTerminals.getComments(),AirTerminals.getId());
 
@@ -4457,7 +4457,7 @@ return "redirect:/AirTerminals";
 
 
 @PostMapping("/admin/saveAirTerminalTypes")
-public String save12(Model model, AirTerminalTypes atp) {
+public String save12(AirTerminalTypes atp) {
 		String sqlUpdate = "UPDATE AirTerminalTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,atp.getTypeComments(),atp.getId());
 
@@ -4494,7 +4494,7 @@ return "redirect:/AirTerminalTypes";
 
 
 @PostMapping("/admin/saveStructuralColumns")
-public String save13(Model model, StructuralColumns sc) {
+public String save13(StructuralColumns sc) {
     String sqlUpdate = "UPDATE StructuralColumns set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,sc.getComments(),sc.getId());
 
@@ -4516,7 +4516,7 @@ return "redirect:/StructuralColumns";
 
 
 @PostMapping("/admin/saveStructuralColumnTypes")
-public String save14(Model model, StructuralColumnTypes sct) {
+public String save14(StructuralColumnTypes sct) {
 		String sqlUpdate = "UPDATE StructuralColumnTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,sct.getTypeComments(),sct.getId());
 
@@ -4547,7 +4547,7 @@ return "redirect:/StructuralColumnTypes";
 
 
 @PostMapping("/admin/saveGrids")
-public String save15(Model model, Grids Grids) {
+public String save15(Grids Grids) {
 String sqlUpdate = "UPDATE Grids set Name=? where Id=?";
 jdbcTemplate.update(sqlUpdate,Grids.getName(),Grids.getId());
 
@@ -4557,7 +4557,7 @@ return "redirect:/Grids";
 
 
 @PostMapping("/admin/saveGridTypes")
-public String save16(Model model, GridTypes GridTypes) {
+public String save16(GridTypes GridTypes) {
     String sqlUpdate = "UPDATE GridTypes set Symbol=? where Id=?";
 jdbcTemplate.update(sqlUpdate,GridTypes.getSymbol(),GridTypes.getId());
 
@@ -4591,7 +4591,7 @@ return "redirect:/GridTypes";
 
 
 @PostMapping("/admin/saveWindows")
-public String save17(Model model, Windows Windows) {
+public String save17(Windows Windows) {
     String sqlUpdate = "UPDATE Windows set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,Windows.getComments(),Windows.getId());
 
@@ -4610,7 +4610,7 @@ return "redirect:/Windows";
 
 
 @PostMapping("/admin/saveWindowTypes")
-public String save18(Model model, WindowTypes WindowTypes) {
+public String save18(WindowTypes WindowTypes) {
 String sqlUpdate = "UPDATE WindowTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,WindowTypes.getTypeComments(),WindowTypes.getId());
 
@@ -4653,7 +4653,7 @@ return "redirect:/WindowTypes";
 
 
 @PostMapping("/admin/savePlumbingFixtures")
-public String save19(Model model, PlumbingFixtures pb) {
+public String save19(PlumbingFixtures pb) {
     String sqlUpdate = "UPDATE PlumbingFixtures set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,pb.getComments(),pb.getId());
 
@@ -4666,7 +4666,7 @@ return "redirect:/PlumbingFixtures";
 
 
 @PostMapping("/admin/savePlumbingFixtureTypes")
-public String save20(Model model, PlumbingFixtureTypes pft) {
+public String save20(PlumbingFixtureTypes pft) {
 String sqlUpdate = "UPDATE PlumbingFixtureTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,pft.getTypeComments(),pft.getId());
 
@@ -4706,7 +4706,7 @@ return "redirect:/PlumbingFixtureTypes";
 
 
 @PostMapping("/admin/saveRoofs")
-public String save21(Model model, Roofs Roofs) {
+public String save21(Roofs Roofs) {
     String sqlUpdate = "UPDATE Roofs set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,Roofs.getComments(),Roofs.getId());
 
@@ -4743,7 +4743,7 @@ return "redirect:/Roofs";
 
 
 @PostMapping("/admin/saveRoofTypes")
-public String save22(Model model, RoofTypes RoofTypes) {
+public String save22(RoofTypes RoofTypes) {
         String sqlUpdate = "UPDATE RoofTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,RoofTypes.getTypeComments(),RoofTypes.getId());
 
@@ -4773,22 +4773,9 @@ return "redirect:/RoofTypes";
 
 
 
-/*@PostMapping("/admin/saveSpecialtyEquipment")
-public String save23(Model model, SpecialtyEquipment se) {
-    String sqlUpdate = "UPDATE SpecialtyEquipment set comments=? where Id=?";
-jdbcTemplate.update(sqlUpdate,se.getComments(),se.getId());
-
-String sqlUpdate2 = "UPDATE SpecialtyEquipment set Mark=? where Id=?";
-jdbcTemplate.update(sqlUpdate2,se.getMark(),se.getId());
-
-return "redirect:/SpecialtyEquipment";
-}
-*/
-
-
 @PostMapping("/admin/saveSpecialtyEquipmentTypes")
-public String save24(Model model, SpecialtyEquipmentTypes set) {
-        String sqlUpdate = "UPDATE SpecialtyEquipmentTypes set TypeComments=? where Id=?";
+public String save24(SpecialtyEquipmentTypes set) {
+String sqlUpdate = "UPDATE SpecialtyEquipmentTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,set.getTypeComments(),set.getId());
 
 String sqlUpdate1 = "UPDATE SpecialtyEquipmentTypes set Keynote=? where Id=?";
@@ -4818,7 +4805,7 @@ return "redirect:/SpecialtyEquipmentTypes";
 
 
 @PostMapping("/admin/saveFloors")
-public String save25(Model model, Floors Floors) {
+public String save25(Floors Floors) {
     String sqlUpdate = "UPDATE Floors set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,Floors.getComments(),Floors.getId());
 
@@ -4843,7 +4830,7 @@ return "redirect:/Floors";
 
 
 @PostMapping("/admin/saveFloorTypes")
-public String save26(Model model, FloorTypes FloorTypes) {
+public String save26(FloorTypes FloorTypes) {
         String sqlUpdate = "UPDATE FloorTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,FloorTypes.getTypeComments(),FloorTypes.getId());
 
@@ -4872,66 +4859,9 @@ return "redirect:/FloorTypes";
 }
 
 
-/*
-@PostMapping("/admin/saveHVACZones")
-public String save27(Model model, HVACZones HVACZones) {
-
-String sqlUpdate = "UPDATE HVACZones set comments=? where Id=?";
-jdbcTemplate.update(sqlUpdate,HVACZones.getComments(),HVACZones.getId());
-
-String sqlUpdate2 = "UPDATE HVACZones set UseAirChangesPerHour=? where Id=?";
-jdbcTemplate.update(sqlUpdate2,HVACZones.getUseAirChangesPerHour(),HVACZones.getId());
-
-String sqlUpdate3 = "UPDATE HVACZones set UseOutsideAirPerArea=? where Id=?";
-jdbcTemplate.update(sqlUpdate3,HVACZones.getUseOutsideAirPerArea(),HVACZones.getId());
-
-String sqlUpdate4 = "UPDATE HVACZones set UseOutsideAirPerPerson=? where Id=?";
-jdbcTemplate.update(sqlUpdate4,HVACZones.getUseOutsideAirPerPerson(),HVACZones.getId());
-
-String sqlUpdate5 = "UPDATE HVACZones set UseDehumidificationSetPoint=? where Id=?";
-jdbcTemplate.update(sqlUpdate5,HVACZones.getUseDehumidificationSetPoint(),HVACZones.getId());
-
-String sqlUpdate6 = "UPDATE HVACZones set UseHumidificationSetPoint=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,HVACZones.getUseHumidificationSetPoint(),HVACZones.getId());
-
-String sqlUpdate7 = "UPDATE HVACZones set OutdoorAirperArea=? where Id=?";
-jdbcTemplate.update(sqlUpdate7,HVACZones.getOutdoorAirperArea(),HVACZones.getId());
-
-String sqlUpdate8 = "UPDATE HVACZones set OutdoorAirperPerson=? where Id=?";
-jdbcTemplate.update(sqlUpdate8,HVACZones.getOutdoorAirperPerson(),HVACZones.getId());
-
-String sqlUpdate9 = "UPDATE HVACZones set DehumidificationSetPoint=? where Id=?";
-jdbcTemplate.update(sqlUpdate9,HVACZones.getDehumidificationSetPoint(),HVACZones.getId());
-
-String sqlUpdate10 = "UPDATE HVACZones set HumidificationSetPoint=? where Id=?";
-jdbcTemplate.update(sqlUpdate10,HVACZones.getHumidificationSetPoint(),HVACZones.getId());
-
-String sqlUpdate11 = "UPDATE HVACZones set CoolingAirTemperature=? where Id=?";
-jdbcTemplate.update(sqlUpdate11,HVACZones.getCoolingAirTemperature(),HVACZones.getId());
-
-String sqlUpdate12 = "UPDATE HVACZones set HeatingAirTemperature=? where Id=?";
-jdbcTemplate.update(sqlUpdate12,HVACZones.getHeatingAirTemperature(),HVACZones.getId());
-
-String sqlUpdate13 = "UPDATE HVACZones set CoolingSetPoint=? where Id=?";
-jdbcTemplate.update(sqlUpdate13,HVACZones.getCoolingSetPoint(),HVACZones.getId());
-
-String sqlUpdate14 = "UPDATE HVACZones set HeatingSetPoint=? where Id=?";
-jdbcTemplate.update(sqlUpdate14,HVACZones.getHeatingSetPoint(),HVACZones.getId());
-
-String sqlUpdate15 = "UPDATE HVACZones set ServiceType=? where Id=?";
-jdbcTemplate.update(sqlUpdate15,HVACZones.getServiceType(),HVACZones.getId());
-
-String sqlUpdate16 = "UPDATE HVACZones set CoilBypass=? where Id=?";
-jdbcTemplate.update(sqlUpdate16,HVACZones.getCoilBypass(),HVACZones.getId());
-
-return "redirect:/HVACZones";
-}
-*/
-
-
 
 @PostMapping("/admin/saveDuctSystems")
-public String save28(Model model, DuctSystems DuctSystems) {
+public String save28(DuctSystems DuctSystems) {
     String sqlUpdate = "UPDATE DuctSystems set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,DuctSystems.getComments(),DuctSystems.getId());
 
@@ -4947,7 +4877,7 @@ return "redirect:/DuctSystems";
 
 
 @PostMapping("/admin/saveDuctSystemTypes")
-public String save29(Model model, DuctSystemTypes DuctSystemTypes) {
+public String save29(DuctSystemTypes DuctSystemTypes) {
 String sqlUpdate = "UPDATE DuctSystemTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,DuctSystemTypes.getTypeComments(),DuctSystemTypes.getId());
 
@@ -4966,7 +4896,7 @@ return "redirect:/DuctSystemTypes";
 
 
 @PostMapping("/admin/saveDuctTypes")
-public String save30(Model model, DuctTypes DuctTypes) {
+public String save30(DuctTypes DuctTypes) {
         String sqlUpdate = "UPDATE DuctTypes set TypeComments=? where Id=?";
     jdbcTemplate.update(sqlUpdate,DuctTypes.getTypeComments(),DuctTypes.getId());
     
@@ -4995,42 +4925,9 @@ public String save30(Model model, DuctTypes DuctTypes) {
 }
 
 
-/*
-@PostMapping("/admin/saveMaterialQuantities")
-public String save31(Model model, MaterialQuantities mq) {
-    String sqlUpdate = "UPDATE MaterialQuantities set AsPaint=? where ElementId=?";
-    jdbcTemplate.update(sqlUpdate,mq.getAsPaint(),mq.getElementId());
-
-    return "redirect:/";
-}
-*/
-
-
-/*
- * @PostMapping("/admin/saveDuctSystemTypes") public String save32(Model model,
- * DuctSystemTypes DuctSystemTypes) { String sqlUpdate =
- * "UPDATE DuctSystemTypes set TypeComments=? where Id=?";
- * jdbcTemplate.update(sqlUpdate,DuctSystemTypes.getTypeComments(),
- * DuctSystemTypes.getId());
- * 
- * String sqlUpdate1 = "UPDATE DuctSystemTypes set Abbreviation=? where Id=?";
- * jdbcTemplate.update(sqlUpdate1,DuctSystemTypes.getAbbreviation(),
- * DuctSystemTypes.getId());
- * 
- * String sqlUpdate2 = "UPDATE DuctSystemTypes set URL=? where Id=?";
- * jdbcTemplate.update(sqlUpdate2,DuctSystemTypes.getURL(),DuctSystemTypes.getId
- * ());
- * 
- * String sqlUpdate3 = "UPDATE DuctSystemTypes set Description=? where Id=?";
- * jdbcTemplate.update(sqlUpdate3,DuctSystemTypes.getDescription(),
- * DuctSystemTypes.getId());
- * 
- * return "redirect:/"; }
- * 
- */
 
 @PostMapping("/admin/saveMaterials")
-public String save33(Model model, Materials Materials) {
+public String save33(Materials Materials) {
         String sqlUpdate = "UPDATE Materials set Comments=? where Id=?";
         jdbcTemplate.update(sqlUpdate,Materials.getComments(),Materials.getId());
         
@@ -5061,7 +4958,7 @@ public String save33(Model model, Materials Materials) {
 
 
 @PostMapping("/admin/saveWireInsulationTypes")
-public String save34(Model model, WireInsulationTypes wit) {
+public String save34(WireInsulationTypes wit) {
 String sqlUpdate = "UPDATE WireInsulationTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,wit.getTypeComments(),wit.getId());
 
@@ -5092,7 +4989,7 @@ return "redirect:/WireInsulationTypes";
 
 
 @PostMapping("/admin/saveDuctFittingTypes")
-public String save35(Model model, DuctFittingTypes dft) {
+public String save35(DuctFittingTypes dft) {
         String sqlUpdate = "UPDATE DuctFittingTypes set TypeComments=? where Id=?";
     jdbcTemplate.update(sqlUpdate,dft.getTypeComments(),dft.getId());
     
@@ -5123,7 +5020,7 @@ public String save35(Model model, DuctFittingTypes dft) {
 
 
 @PostMapping("/admin/saveFluidTypes")
-public String save36(Model model, FluidTypes FluidTypes) {
+public String save36(FluidTypes FluidTypes) {
         String sqlUpdate = "UPDATE FluidTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,FluidTypes.getTypeComments(),FluidTypes.getId());
 
@@ -5154,7 +5051,7 @@ return "redirect:/FluidTypes";
 
 
 @PostMapping("/admin/savePipingSystemTypes")
-public String save37(Model model, PipingSystemTypes pist) {
+public String save37(PipingSystemTypes pist) {
 String sqlUpdate = "UPDATE PipingSystemTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,pist.getTypeComments(),pist.getId());
 
@@ -5185,8 +5082,9 @@ jdbcTemplate.update(sqlUpdate11,pist.getSystemClassification(),pist.getId());
 return "redirect:/PipingSystemTypes";
 }
 
+
 @PostMapping("/admin/saveLevels")
-public String save100(Model model, Levels Levels) {
+public String save100(Levels Levels) {
         String sqlUpdate = "UPDATE Levels set Name=? where Id=?";
 jdbcTemplate.update(sqlUpdate,Levels.getName(),Levels.getId());
 
@@ -5198,7 +5096,7 @@ return "redirect:/Levels";
 
 
 @PostMapping("/admin/saveRooms")
-public String save101(Model model, Rooms Rooms) {
+public String save101(Rooms Rooms) {
 String sqlUpdate = "UPDATE Rooms set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,Rooms.getComments(),Rooms.getId());
 
@@ -5255,7 +5153,7 @@ return "redirect:/Rooms";
 
 
 @PostMapping("/admin/savePipeScheduleTypes")
-public String save38(Model model, PipeScheduleTypes pst) {
+public String save38(PipeScheduleTypes pst) {
         String sqlUpdate = "UPDATE PipeScheduleTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,pst.getTypeComments(),pst.getId());
 
@@ -5286,7 +5184,7 @@ return "redirect:/PipeScheduleTypes";
 
 
 @PostMapping("/admin/saveProfiles")
-public String save39(Model model, Profiles Profiles) {
+public String save39(Profiles Profiles) {
         String sqlUpdate = "UPDATE Profiles set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,Profiles.getTypeComments(),Profiles.getId());
 
@@ -5317,7 +5215,7 @@ return "redirect:/Profiles";
 
 
 @PostMapping("/admin/savePipeConnectionTypes")
-public String save40(Model model, PipeConnectionTypes pct) {
+public String save40(PipeConnectionTypes pct) {
         String sqlUpdate = "UPDATE PipeConnectionTypes set TypeComments=? where Id=?";
     jdbcTemplate.update(sqlUpdate,pct.getTypeComments(),pct.getId());
     
@@ -5348,7 +5246,7 @@ public String save40(Model model, PipeConnectionTypes pct) {
 
 
 @PostMapping("/admin/savePipeFittingTypes")
-public String save41(Model model, PipeFittingTypes pft) {
+public String save41(PipeFittingTypes pft) {
         String sqlUpdate = "UPDATE PipeFittingTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,pft.getTypeComments(),pft.getId());
 
@@ -5379,7 +5277,7 @@ return "redirect:/PipeFittingTypes";
 
 
 @PostMapping("/admin/saveDoorTypes")
-public String save42(Model model, DoorTypes DoorTypes) {
+public String save42(DoorTypes DoorTypes) {
 String sqlUpdate = "UPDATE DoorTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,DoorTypes.getTypeComments(),DoorTypes.getId());
 
@@ -5425,7 +5323,7 @@ return "redirect:/DoorTypes";
 
 
 @PostMapping("/admin/saveDistributionSystemTypes")
-public String save43(Model model, DistributionSystemTypes dst) {
+public String save43(DistributionSystemTypes dst) {
         String sqlUpdate = "UPDATE DistributionSystemTypes set TypeComments=? where Id=?";
     jdbcTemplate.update(sqlUpdate,dst.getTypeComments(),dst.getId());
     
@@ -5456,7 +5354,7 @@ public String save43(Model model, DistributionSystemTypes dst) {
 
 
 @PostMapping("/admin/saveCoverTypes")
-public String save44(Model model, CoverTypes CoverTypes) {
+public String save44(CoverTypes CoverTypes) {
         String sqlUpdate = "UPDATE CoverTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,CoverTypes.getTypeComments(),CoverTypes.getId());
 
@@ -5487,8 +5385,9 @@ jdbcTemplate.update(sqlUpdate9,CoverTypes.getName(),CoverTypes.getId());
 return "redirect:/CoverTypes";
 }
 
+
 @PostMapping("/admin/saveCurtainSystemTypes")
-public String save45(Model model, CurtainSystemTypes cst) {
+public String save45(CurtainSystemTypes cst) {
         String sqlUpdate = "UPDATE CurtainSystemTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,cst.getTypeComments(),cst.getId());
 
@@ -5517,7 +5416,7 @@ return "redirect:/CurtainSystemTypes";
 }
 
 @PostMapping("/admin/saveGutterTypes")
-public String save46(Model model, GutterTypes GutterTypes) {
+public String save46(GutterTypes GutterTypes) {
         String sqlUpdate = "UPDATE GutterTypes set TypeComments=? where Id=?";
     jdbcTemplate.update(sqlUpdate,GutterTypes.getTypeComments(),GutterTypes.getId());
     
@@ -5547,7 +5446,7 @@ public String save46(Model model, GutterTypes GutterTypes) {
 
 
 @PostMapping("/admin/savePipeMaterialTypes")
-public String save45(Model model, PipeMaterialTypes cst) {
+public String save45(PipeMaterialTypes cst) {
         String sqlUpdate = "UPDATE PipeMaterialTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,cst.getTypeComments(),cst.getId());
 
@@ -5581,7 +5480,7 @@ return "redirect:/PipeMaterialTypes";
 
 
 @PostMapping("/admin/saveFasciaTypes")
-public String save47(Model model, FasciaTypes FasciaTypes) {
+public String save47(FasciaTypes FasciaTypes) {
         String sqlUpdate = "UPDATE FasciaTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,FasciaTypes.getTypeComments(),FasciaTypes.getId());
 
@@ -5612,7 +5511,7 @@ return "redirect:/FasciaTypes";
 
 
 @PostMapping("/admin/saveRampTypes")
-public String save48(Model model, RampTypes RampTypes) {
+public String save48(RampTypes RampTypes) {
         String sqlUpdate = "UPDATE RampTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,RampTypes.getTypeComments(),RampTypes.getId());
 
@@ -5642,7 +5541,7 @@ return "redirect:/RampTypes";
 
 
 @PostMapping("/admin/savePropertyLineTypes")
-public String save49(Model model,  PropertyLineTypes plt) {
+public String save49(PropertyLineTypes plt) {
 		String sqlUpdate = "UPDATE PropertyLineTypes set TypeComments=? where Id=?";
 		jdbcTemplate.update(sqlUpdate,plt.getTypeComments(),plt.getId());
 		
@@ -5673,7 +5572,7 @@ public String save49(Model model,  PropertyLineTypes plt) {
 
 
 @PostMapping("/admin/savePipeTypes")
-public String save50(Model model,  PipeTypes PipeTypes) {
+public String save50(PipeTypes PipeTypes) {
 		String sqlUpdate = "UPDATE PipeTypes set TypeComments=? where Id=?";
 		jdbcTemplate.update(sqlUpdate,PipeTypes.getTypeComments(),PipeTypes.getId());
 		
@@ -5713,7 +5612,7 @@ public String save50(Model model,  PipeTypes PipeTypes) {
 
 
 @PostMapping("/admin/saveWallSweepTypes")
-public String save51(Model model,  WallSweepTypes WallSweepTypes) {
+public String save51(WallSweepTypes WallSweepTypes) {
 		String sqlUpdate = "UPDATE WallSweepTypes set TypeComments=? where Id=?";
 		jdbcTemplate.update(sqlUpdate,WallSweepTypes.getTypeComments(),WallSweepTypes.getId());
 		
@@ -5753,7 +5652,7 @@ public String save51(Model model,  WallSweepTypes WallSweepTypes) {
 
 
 @PostMapping("/admin/saveVoltageTypes")
-public String save52(Model model,  VoltageTypes VoltageTypes) {
+public String save52(VoltageTypes VoltageTypes) {
 		String sqlUpdate = "UPDATE VoltageTypess set TypeComments=? where Id=?";
 		jdbcTemplate.update(sqlUpdate,VoltageTypes.getTypeComments(),VoltageTypes.getId());
 		
@@ -5792,49 +5691,9 @@ public String save52(Model model,  VoltageTypes VoltageTypes) {
 }
 
 
-
-	/*
-	 * @PostMapping("/admin/saveStructuralColumnTypes") public String save53(Model
-	 * model, StructuralColumnTypes ssct) { String sqlUpdate =
-	 * "UPDATE StructuralColumnTypes set TypeComments=? where Id=?";
-	 * jdbcTemplate.update(sqlUpdate,ssct.getTypeComments(),ssct.getId());
-	 * 
-	 * String sqlUpdate1 = "UPDATE StructuralColumnTypes set Keynote=? where Id=?";
-	 * jdbcTemplate.update(sqlUpdate1,ssct.getKeynote(),ssct.getId());
-	 * 
-	 * String sqlUpdate2 = "UPDATE StructuralColumnTypes set Model=? where Id=?";
-	 * jdbcTemplate.update(sqlUpdate2,ssct.getModel(),ssct.getId());
-	 * 
-	 * String sqlUpdate3 =
-	 * "UPDATE StructuralColumnTypes set Manufacturer=? where Id=?";
-	 * jdbcTemplate.update(sqlUpdate3,ssct.getManufacturer(),ssct.getId());
-	 * 
-	 * String sqlUpdate4 = "UPDATE StructuralColumnTypes set URL=? where Id=?";
-	 * jdbcTemplate.update(sqlUpdate4,ssct.getURL(),ssct.getId());
-	 * 
-	 * String sqlUpdate5 =
-	 * "UPDATE StructuralColumnTypes set Description=? where Id=?";
-	 * jdbcTemplate.update(sqlUpdate5,ssct.getDescription(),ssct.getId());
-	 * 
-	 * 
-	 * String sqlUpdate6 =
-	 * "UPDATE StructuralColumnTypes set AssemblyCode=? where Id=?";
-	 * jdbcTemplate.update(sqlUpdate6,ssct.getAssemblyCode(),ssct.getId());
-	 * 
-	 * String sqlUpdate7 = "UPDATE StructuralColumnTypes set Cost=? where Id=?";
-	 * jdbcTemplate.update(sqlUpdate7,ssct.getCost(),ssct.getId());
-	 * 
-	 * String sqlUpdate8 = "UPDATE StructuralColumnTypes set TypeMark=? where Id=?";
-	 * jdbcTemplate.update(sqlUpdate8,ssct.getTypeMark(),ssct.getId());
-	 * 
-	 * return "redirect:/"; }
-	 */
-
-
-	
-	  @PostMapping("/admin/saveSlabEdgeTypes") public String save54(Model model,
-	  SlabEdgeTypes slet) { String sqlUpdate =
-	  "UPDATE SlabEdgeTypes set TypeComments=? where Id=?";
+	  @PostMapping("/admin/saveSlabEdgeTypes") 
+	  public String save54(SlabEdgeTypes slet) { 
+	String sqlUpdate ="UPDATE SlabEdgeTypes set TypeComments=? where Id=?";
 	  jdbcTemplate.update(sqlUpdate,slet.getTypeComments(),slet.getId());
 	  
 	  String sqlUpdate1 = "UPDATE SlabEdgeTypes set Keynote=? where Id=?";
@@ -5863,7 +5722,7 @@ public String save52(Model model,  VoltageTypes VoltageTypes) {
 
 
 @PostMapping("/admin/saveFlexPipeTypes")
-public String save55(Model model, FlexPipeTypes fpt) {
+public String save55(FlexPipeTypes fpt) {
 		String sqlUpdate = "UPDATE FlexPipeTypes set TypeComments=? where Id=?";
 		jdbcTemplate.update(sqlUpdate,fpt.getTypeComments(),fpt.getId());
 		
@@ -5894,7 +5753,7 @@ public String save55(Model model, FlexPipeTypes fpt) {
 
 
 @PostMapping("/admin/saveStructuralFoundationTypes")
-public String save56(Model model, StructuralFoundationTypes sft) {
+public String save56(StructuralFoundationTypes sft) {
 		String sqlUpdate = "UPDATE StructuralFoundationTypes set TypeComments=? where Id=?";
 		jdbcTemplate.update(sqlUpdate,sft.getTypeComments(),sft.getId());
 		
@@ -5925,7 +5784,7 @@ public String save56(Model model, StructuralFoundationTypes sft) {
 
 
 @PostMapping("/admin/saveWireTypes")
-public String save57(Model model, WireTypes WireTypes) {
+public String save57(WireTypes WireTypes) {
 		String sqlUpdate = "UPDATE WireTypes set TypeComments=? where Id=?";
 		jdbcTemplate.update(sqlUpdate,WireTypes.getTypeComments(),WireTypes.getId());
 		
@@ -5956,7 +5815,7 @@ public String save57(Model model, WireTypes WireTypes) {
 
 
 @PostMapping("/admin/saveRailingTypes")
-public String save58(Model model, RailingTypes RailingTypes) {
+public String save58(RailingTypes RailingTypes) {
 		String sqlUpdate = "UPDATE RailingTypes set TypeComments=? where Id=?";
 		jdbcTemplate.update(sqlUpdate,RailingTypes.getTypeComments(),RailingTypes.getId());
 		
@@ -5987,7 +5846,7 @@ public String save58(Model model, RailingTypes RailingTypes) {
 
 
 @PostMapping("/admin/saveGenericModelTypes")
-public String save59(Model model, GenericModelTypes gmt) {
+public String save59(GenericModelTypes gmt) {
 		String sqlUpdate = "UPDATE GenericModelTypes set TypeComments=? where Id=?";
 		jdbcTemplate.update(sqlUpdate,gmt.getTypeComments(),gmt.getId());
 		
@@ -6018,7 +5877,7 @@ public String save59(Model model, GenericModelTypes gmt) {
 
 
 @PostMapping("/admin/saveFlexDuctTypes")
-public String save60(Model model, FlexDuctTypes fdt) {
+public String save60(FlexDuctTypes fdt) {
 		String sqlUpdate = "UPDATE FlexDuctTypes set TypeComments=? where Id=?";
 		jdbcTemplate.update(sqlUpdate,fdt.getTypeComments(),fdt.getId());
 		
@@ -6049,7 +5908,7 @@ public String save60(Model model, FlexDuctTypes fdt) {
 
 
 @PostMapping("/admin/saveCableTrayTypes")
-public String save61(Model model, CableTrayTypes ctt) {
+public String save61(CableTrayTypes ctt) {
 		String sqlUpdate = "UPDATE CableTrayTypes set TypeComments=? where Id=?";
 		jdbcTemplate.update(sqlUpdate,ctt.getTypeComments(),ctt.getId());
 		
@@ -6081,39 +5940,9 @@ public String save61(Model model, CableTrayTypes ctt) {
 }
 
 
-@PostMapping("/admin/saveSpecialtyEquipementTypes")
-public String save115(Model model, SpecialtyEquipmentTypes ctt) {
-		String sqlUpdate = "UPDATE SpecialtyEquipementTypes set TypeComments=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,ctt.getTypeComments(),ctt.getId());
-		
-		String sqlUpdate1 = "UPDATE SpecialtyEquipmentTypes set Keynote=? where Id=?";
-		jdbcTemplate.update(sqlUpdate1,ctt.getKeynote(),ctt.getId());
-		
-		String sqlUpdate2 = "UPDATE SpecialtyEquipmentTypes set Model=? where Id=?";
-		jdbcTemplate.update(sqlUpdate2,ctt.getModel(),ctt.getId());
-		
-		String sqlUpdate3 = "UPDATE SpecialtyEquipmentTypes set Manufacturer=? where Id=?";
-		jdbcTemplate.update(sqlUpdate3,ctt.getManufacturer(),ctt.getId());
-		
-		String sqlUpdate4 = "UPDATE SpecialtyEquipmentTypes set URL=? where Id=?";
-		jdbcTemplate.update(sqlUpdate4,ctt.getURL(),ctt.getId());
-		
-		String sqlUpdate5 = "UPDATE SpecialtyEquipmentTypes Description=? where Id=?";
-		jdbcTemplate.update(sqlUpdate5,ctt.getDescription(),ctt.getId());	
-
-        String sqlUpdate7 = "UPDATE SpecialtyEquipmentTypes set Cost=? where Id=?";
-		jdbcTemplate.update(sqlUpdate7,ctt.getCost(),ctt.getId());
-
-        String sqlUpdate8 = "UPDATE SpecialtyEquipmentTypes set TypeMark=? where Id=?";
-		jdbcTemplate.update(sqlUpdate8,ctt.getTypeMark(),ctt.getId());
-
-		return "redirect:/CableTrayTypes";
-}
-
-
 
 @PostMapping("/admin/saveConduitTypes")
-public String save62(Model model, ConduitTypes ConduitTypes) {
+public String save62(ConduitTypes ConduitTypes) {
 		String sqlUpdate = "UPDATE ConduitTypes set TypeComments=? where Id=?";
 		jdbcTemplate.update(sqlUpdate,ConduitTypes.getTypeComments(),ConduitTypes.getId());
 		
@@ -6147,7 +5976,7 @@ public String save62(Model model, ConduitTypes ConduitTypes) {
 
 
 @PostMapping("/admin/saveStairTypes")
-public String save63(Model model, StairTypes StairTypes) {
+public String save63(StairTypes StairTypes) {
 		String sqlUpdate = "UPDATE StairTypes set TypeComments=? where Id=?";
 		jdbcTemplate.update(sqlUpdate,StairTypes.getTypeComments(),StairTypes.getId());
 		
@@ -6178,366 +6007,5 @@ public String save63(Model model, StairTypes StairTypes) {
 		return "redirect:/StairTypes";
 }
 
-
-/*
-@PostMapping("/admin/saveElectricalPhaseEnums")
-public String save64(Model model, ElectricalPhaseEnums epe) {
-		String sqlUpdate = "UPDATE ElectricalPhaseEnums set Name=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,epe.getName(),epe.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveEaveCutterTypeEnums")
-public String save65(Model model, EaveCutterTypeEnums ecte) {
-		String sqlUpdate = "UPDATE EaveCutterTypeEnums set Name=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,ecte.getName(),ecte.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveNeutralModeEnums")
-public String save66(Model model, NeutralModeEnums NeutralModeEnums) {
-		String sqlUpdate = "UPDATE NeutralModeEnums set Name=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,NeutralModeEnums.getName(),NeutralModeEnums.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveAreaSchemes")
-public String save67(Model model, AreaSchemes AreaSchemes) {
-		String sqlUpdate = "UPDATE AreaSchemes set Name=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,AreaSchemes.getName(),AreaSchemes.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveFabricLocationEnums")
-public String save68(Model model, FabricLocationEnums fle) {
-		String sqlUpdate = "UPDATE FabricLocationEnums set Name=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,fle.getName(),fle.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/savePowerFactorStateTypeEnums")
-public String save69(Model model, PowerFactorStateTypeEnums pfst) {
-		String sqlUpdate = "UPDATE PowerFactorStateTypeEnums set Name=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,pfst.getName(),pfst.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveRebarStyleEnums")
-public String save70(Model model, RebarStyleEnums rse) {
-		String sqlUpdate = "UPDATE RebarStyleEnums set Name=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,rse.getName(),rse.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveWiringTypeEnums")
-public String save71(Model model, WiringTypeEnums wte) {
-		String sqlUpdate = "UPDATE WiringTypeEnums set Name=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,wte.getName(),wte.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveAssemblyCodes")
-public String save72(Model model, AssemblyCodes AssemblyCodes) {
-		String sqlUpdate = "UPDATE AssemblyCodes set AssemblyCode=? where AssemblyDescription=?";
-		jdbcTemplate.update(sqlUpdate,AssemblyCodes.getAssemblyCode(),AssemblyCodes.getAssemblyDescription());
-
-        String sqlUpdate1 = "UPDATE AssemblyCodes set AssemblyDescription=? where AssemblyCode=?";
-		jdbcTemplate.update(sqlUpdate1,AssemblyCodes.getAssemblyDescription(),AssemblyCodes.getAssemblyCode());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/savePanelScheduleTemplatesSwitchboard")
-public String save73(Model model, PanelScheduleTemplatesSwitchboard psts) {
-        String sqlUpdate = "UPDATE PanelScheduleTemplatesSwitchboard set DesignOption=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,psts.getDesignOption(),psts.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/savePanelScheduleTemplatesDataPanel")
-public String save74(Model model, PanelScheduleTemplatesDataPanel pstdp) {
-        String sqlUpdate = "UPDATE PanelScheduleTemplatesDataPanel set DesignOption=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,pstdp.getDesignOption(),pstdp.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveDuctSystemTypeEnums")
-public String save75(Model model, DuctSystemTypeEnums dst) {
-		String sqlUpdate = "UPDATE DuctSystemTypeEnums set Name=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,dst.getName(),dst.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveElectricalLoadClassifications")
-public String save76(Model model, ElectricalLoadClassifications elc) {
-        String sqlUpdate = "UPDATE ElectricalLoadClassifications set DesignOption=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,elc.getDesignOption(),elc.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveConditionTypeEnums")
-public String save77(Model model, ConditionTypeEnums cte) {
-		String sqlUpdate = "UPDATE ConditionTypeEnums set Name=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,cte.getName(),cte.getId());
-
-		return "redirect:/";
-}
-
-
-@PostMapping("/admin/saveElectricalSystemEnums")
-public String save78(Model model, ElectricalSystemEnums ese) {
-		String sqlUpdate = "UPDATE ElectricalSystemEnums set Name=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,ese.getName(),ese.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveInstanceUsageEnums")
-public String save79(Model model, InstanceUsageEnums iue) {
-		String sqlUpdate = "UPDATE InstanceUsageEnums set Name=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,iue.getName(),iue.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/savePipeSystemTypeEnums")
-public String save80(Model model, PipeSystemTypeEnums pse) {
-		String sqlUpdate = "UPDATE PipeSystemTypeEnums set Name=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,pse.getName(),pse.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveRoomTags")
-public String save81(Model model, RoomTags RoomTags) {
-		String sqlUpdate = "UPDATE RoomTags set RoomTagType=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,RoomTags.getRoomTagType(),RoomTags.getId());
-
-		return "redirect:/";
-}
-
-
-@PostMapping("/admin/saveHVACLoadSchedules")
-public String save82(Model model, HVACLoadSchedules hvals) {
-        String sqlUpdate = "UPDATE HVACLoadSchedules set DesignOption=? where Id=?";
-		jdbcTemplate.update(sqlUpdate, hvals.getDesignOption(), hvals.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveServiceTypeEnums")
-public String save83(Model model, ServiceTypeEnums ste) {
-        String sqlUpdate = "UPDATE ServiceTypeEnums set Name=? where Id=?";
-		jdbcTemplate.update(sqlUpdate, ste.getName(), ste.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveBuildingTypeSettings")
-public String save84(Model model, BuildingTypeSettings bts) {
-        String sqlUpdate = "UPDATE BuildingTypeSettings set DesignOption=? where Id=?";
-		jdbcTemplate.update(sqlUpdate, bts.getDesignOption(), bts.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveElectricalLoadClassificationParameterElement")
-public String save85(Model model, ElectricalLoadClassificationParameterElement elcpe) {
-        String sqlUpdate = "UPDATE ElectricalLoadClassificationParameterElement set DesignOption=? where Id=?";
-		jdbcTemplate.update(sqlUpdate, elcpe.getDesignOption(), elcpe.getId());
-
-		return "redirect:/";
-}
-
-
-
-@PostMapping("/admin/saveSpaceTypeSettings")
-public String save86(Model model, SpaceTypeSettings sts) {
-        String sqlUpdate = "UPDATE SpaceTypeSettings set DesignOption=? where Id=?";
-		jdbcTemplate.update(sqlUpdate, sts.getDesignOption(), sts.getId());
-
-		return "redirect:/";
-}
-
-
-@PostMapping("/admin/saveCategories")
-public String save87(Model model, Categories Categories) {
-		String sqlUpdate = "UPDATE Categories set Name=? where Id=?";
-		jdbcTemplate.update(sqlUpdate,Categories.getName(),Categories.getId());
-
-		return "redirect:/";
-}
-*/
-                            
-                            
-	                                                                               
-	                                                                        
-
-            
-
-
-
-
-
-
-
-
-	        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	                        
-
-
-
-
-
-
-
-
-	        
-
-
-
-
-
-
-
-
-	    
-
-
-
-
-	    
-
-
-
-
-
-
-
-
-
-
-
-
-	    
-
-
-
-
-
-
-
-
-
-
-
-
-
-	    
-
-
-
-
-
-		
-
-
-
-
-		
-
-
-
-	  
-		
-		
-		
-    
-	
 
 }
