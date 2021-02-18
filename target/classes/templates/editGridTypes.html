@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeLeaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layout">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="https://img.icons8.com/bubbles/50/000000/r.png">
+<title> Revit Project Updater </title>
+</head>
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+
+.box {
+  border: 1px solid #333333;
+  width: 80%;
+  height: 650px;
+  overflow: scroll;
+}
+
+  </style>
+<body>
+	<div layout:fragment="content1">
+	<div class="col-md-6"> 
+	<div class="panel panel-default">
+		<div class="panel-heading">Edit GridTypes</div>
+		<div class="panel-body">
+		<form th:action="@{/admin/saveGridTypes}" method="post">
+			<div class="form-group">
+				<label class="control-label">ID: </label><label th:text="${GridTypes.id}"> </label>
+				<input class="form-control" type="hidden" name="id" 
+				th:value="${GridTypes.id}"/>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label">Symbol: </label> 
+				<input class="form-control" type="text" name="Symbol" 
+				th:value="${GridTypes.Symbol}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">CenterSegment: </label> 
+				<input class="form-control" type="text" name="CenterSegment" 
+				th:value="${GridTypes.CenterSegment}"/>
+		  </div>
+		  
+		   <div class="form-group">
+				<label class="control-label">CenterSegmentColor: </label> 
+				<input class="form-control" type="text" name="CenterSegmentColor" 
+				th:value="${GridTypes.CenterSegmentColor}"/>
+		  </div>
+
+		  		  <div class="form-group">
+				<label class="control-label">CenterSegmentWeight: </label> 
+				<input class="form-control" type="text" name="CenterSegmentWeight" 
+				th:value="${GridTypes.CenterSegmentWeight}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">EndSegmentsLength: </label> 
+				<input class="form-control" type="text" name="EndSegmentsLength" 
+				th:value="${GridTypes.EndSegmentsLength}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">EndSegmentPattern: </label> 
+				<input class="form-control" type="text" name="EndSegmentPattern" 
+				th:value="${GridTypes.EndSegmentPattern}"/>
+		  </div>
+
+		   <div class="form-group">
+				<label class="control-label">EndSegmentColor: </label> 
+				<input class="form-control" type="text" name="EndSegmentColor" 
+				th:value="${GridTypes.EndSegmentColor}"/>
+		  </div>
+		  
+		   <div class="form-group">
+				<label class="control-label">EndSegmentWeight: </label> 
+				<input class="form-control" type="text" name="EndSegmentWeight" 
+				th:value="${GridTypes.EndSegmentWeight}"/>
+		  </div>
+			
+		<button type="submit" class="btn btn-primary">Save</button>
+		</form>
+		</div>
+	</div>
+	</div>
+	</div>
+</body>
+</html>

@@ -25,15 +25,74 @@
 	<div layout:fragment="content1">
 	<div class="col-md-6"> 
 	<div class="panel panel-default">
-		<div class="panel-heading">Edit CurtainsPanelTypes</div>
+		<div class="panel-heading">Edit CurtainPanelTypes</div>
 		<div class="panel-body">
-		<form th:action="@{/admin/saveCurtainsPanelTypes}" method="post">
+		<form th:action="@{/admin/saveCurtainPanelTypes}" method="post">
 			<div class="form-group">
-				<label class="control-label">ID: </label><label th:text="${CurtainsPanelTypes.id}"> </label>
+				<label class="control-label">ID: </label><label th:text="${CurtainPanelTypes.id}"> </label>
 				<input class="form-control" type="hidden" name="id" 
-				th:value="${CurtainsPanelTypes.id}"/>
+				th:value="${CurtainPanelTypes.id}"/>
 			</div>
 			
+			<div class="form-group">
+				<label class="control-label">Keynote: </label>
+				<input class="form-control" type="text" name="Keynote" 
+				th:value="${CurtainPanelTypes.Keynote}"/>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label">Model:</label> 
+				<input class="form-control" type="text" name="Model"
+				th:value="${CurtainPanelTypes.Model}"  />
+		   </div>
+
+			<div class="form-group">
+				<label class="control-label">Manufacturer:</label> 
+				<input class="form-control" type="text" name="Manufacturer" 
+				th:value="${CurtainPanelTypes.Manufacturer}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">TypeComments:</label> 
+				<input class="form-control" type="text" name="TypeComments" 
+				th:value="${CurtainPanelTypes.TypeComments}"/>
+		  </div>
+		  
+		  <div class="form-group">
+				<label class="control-label">URL:</label> 
+				<input class="form-control" type="text" name="URL" 
+				th:value="${CurtainPanelTypes.URL}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">Description:</label> 
+				<input class="form-control" type="text" name="Description" 
+				th:value="${CurtainPanelTypes.Description}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">TypeMark:</label> 
+				<input class="form-control" type="text" name="TypeMark" 
+				th:value="${CurtainPanelTypes.TypeMark}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">Cost:</label> 
+				<input class="form-control" type="text" name="Cost" 
+				th:value="${CurtainPanelTypes.Cost}"/>
+		  </div>
+
+		  <div class="form-group">
+			<label class="control-label">Finish:</label> 
+			<input class="form-control" type="text" name="Finish" 
+			th:value="${CurtainPanelTypes.Finish}"/>
+	  </div>
+
+	  <div class="form-group">
+			<label class="control-label">ConstructionType:</label> 
+			<input class="form-control" type="text" name="ConstructionType" 
+			th:value="${CurtainPanelTypes.ConstructionType}"/>
+	  </div>
 			
 		<button type="submit" class="btn btn-primary">Save</button>
 		</form>

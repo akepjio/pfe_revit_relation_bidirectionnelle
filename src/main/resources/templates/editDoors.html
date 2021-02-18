@@ -27,13 +27,66 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">Edit Doors</div>
 		<div class="panel-body">
-		<form th:action="@{/admin/saveWalls}" method="post">
+		<form th:action="@{/admin/saveDoors}" method="post">
 			<div class="form-group">
 				<label class="control-label">ID: </label><label th:text="${Doors.id}"> </label>
 				<input class="form-control" type="hidden" name="id" 
 				th:value="${Doors.id}"/>
 			</div>
 			
+			<div class="form-group">
+				<label class="control-label">Comments: </label>
+				<input class="form-control" type="text" name="Comments" 
+				th:value="${Doors.Comments}"/>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label">Mark:</label> 
+				<input class="form-control" type="text" name="Mark"
+				th:value="${Doors.Mark}"  />
+		   </div>
+
+			<div class="form-group">
+				<label class="control-label">HeadHeight:</label> 
+				<input class="form-control" type="text" name="HeadHeight" 
+				th:value="${Doors.HeadHeight}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">SillHeight:</label> 
+				<input class="form-control" type="text" name="SillHeight" 
+				th:value="${Doors.SillHeight}"/>
+		  </div>
+		  
+		  <div class="form-group">
+				<label class="control-label">FrameMaterial:</label> 
+				<input class="form-control" type="text" name="FrameMaterial" 
+				th:value="${Doors.FrameMaterial}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">FrameType:</label> 
+				<input class="form-control" type="text" name="FrameType" 
+				th:value="${Doors.FrameType}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">Finish:</label> 
+				<input class="form-control" type="text" name="Finish" 
+				th:value="${Doors.Finish}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">Service:</label> 
+				<input class="form-control" type="text" name="Service" 
+				th:value="${Doors.Service}"/>
+		  </div>
+
+		  <div class="form-group">
+			<label class="control-label">LOT:</label> 
+			<input class="form-control" type="text" name="LOT" 
+			th:value="${Doors.LOT}"/>
+	  </div>
 			
 		<button type="submit" class="btn btn-primary">Save</button>
 		</form>

@@ -25,7 +25,7 @@
 	<div layout:fragment="content1">
 	<div class="col-md-6"> 
 	<div class="panel panel-default">
-		<div class="panel-heading">Edit Walls</div>
+		<div class="panel-heading">Edit WireMaterialTypes</div>
 		<div class="panel-body">
 		<form th:action="@{/admin/saveWireMaterialTypes}" method="post">
 			<div class="form-group">
@@ -34,6 +34,53 @@
 				th:value="${WireMaterialTypes.id}"/>
 			</div>
 			
+			<div class="form-group">
+				<label class="control-label">Keynote: </label>
+				<input class="form-control" type="text" name="Keynote" 
+				th:value="${WireMaterialTypes.Keynote}"/>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label">Model:</label> 
+				<input class="form-control" type="text" name="Model"
+				th:value="${WireMaterialTypes.Model}"  />
+		   </div>
+
+			<div class="form-group">
+				<label class="control-label">Manufacturer:</label> 
+				<input class="form-control" type="text" name="Manufacturer" 
+				th:value="${WireMaterialTypes.Manufacturer}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">TypeComments:</label> 
+				<input class="form-control" type="text" name="TypeComments" 
+				th:value="${WireMaterialTypes.TypeComments}"/>
+		  </div>
+		  
+		  <div class="form-group">
+				<label class="control-label">URL:</label> 
+				<input class="form-control" type="text" name="URL" 
+				th:value="${WireMaterialTypes.URL}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">Description:</label> 
+				<input class="form-control" type="text" name="Description" 
+				th:value="${WireMaterialTypes.Description}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">TypeMark:</label> 
+				<input class="form-control" type="text" name="TypeMark" 
+				th:value="${WireMaterialTypes.TypeMark}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">Cost:</label> 
+				<input class="form-control" type="text" name="Cost" 
+				th:value="${WireMaterialTypes.Cost}"/>
+		  </div>
 			
 		<button type="submit" class="btn btn-primary">Save</button>
 		</form>

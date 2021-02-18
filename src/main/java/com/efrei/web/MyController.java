@@ -29,22 +29,19 @@ public class MyController {
 	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
-	
-	
-	// @GetMapping("/")
-//public String def(Model model) {
 
-//return "redirect:/user/index";
-//}
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////                                                                                   
+//                                                                                                                  //
+//                                                                                                                  //
+//                                                                                                                  //
+//                                                                                                                  //
+//                                                                                                                  //
+////////////////////////////////////////Requests used to display entities information/////////////////////////////////
 @GetMapping("/")
 public String chercher(Model model) {
 	
 	String sql="SELECT * FROM Walls";
 List<Walls> listWalls=jdbcTemplate.query(sql, BeanPropertyRowMapper.newInstance(Walls.class));
-
-//String sql4="SELECT * FROM AirTerminals";
-//List<AirTerminals> listAirTerminals=jdbcTemplate.query(sql4, BeanPropertyRowMapper.newInstance(AirTerminals.class));
 
 String sql2="SELECT * FROM INFORMATION_SCHEMA.TABLES";
 
@@ -65,7 +62,7 @@ model.addAttribute("listWalls",listWalls);
 return "Walls";
 }
 
-//View entity information
+
 @GetMapping("AirTerminals")
 public String chercherairter(Model model1) {
 	
@@ -83,11 +80,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model1.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model1.addAttribute("listAirTerminals",listAirTerminals);
-//go to AirTerminals view
+
 return "AirTerminals";
 }
 
@@ -108,11 +105,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model2.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model2.addAttribute("listAirTerminalTypes",listAirTerminalTypes);
-//go to AirTerminals view
+
 return "AirTerminalTypes";
 }
 
@@ -133,11 +130,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listAnalyzesAsTypeEnums",listAnalyzesAsTypeEnums);
-//go to AirTerminals view
+
 return "AnalyzesAsTypeEnums";
 }
 
@@ -158,11 +155,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listAreaSchemes",listAreaSchemes);
-//go to AirTerminals view
+
 return "AreaSchemes";
 }
 
@@ -183,11 +180,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listAssemblyCodes",listAssemblyCodes);
-//go to AirTerminals view
+
 return "AssemblyCodes";
 }
 
@@ -208,11 +205,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listBuildingTypeSettings",listBuildingTypeSettings);
-//go to AirTerminals view
+
 return "BuildingTypeSettings";
 }
 
@@ -233,11 +230,10 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listCableTrayTypes", listCableTrayTypes);
-//go to AirTerminals view
+
 return "CableTrayTypes";
 }
 
@@ -258,11 +254,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listCategories",  listCategories);
-//go to AirTerminals view
+
 return "Categories";
 }
 
@@ -283,11 +279,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listCeilings", listCeilings);
-//go to AirTerminals view
+
 return "Ceilings";
 }
 
@@ -308,11 +304,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listCeilingTypes", listCeilingTypes);
-//go to AirTerminals view
+
 return "CeilingTypes";
 }
 
@@ -333,11 +329,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listConditionTypeEnums", listConditionTypeEnums);
-//go to AirTerminals view
+
 return "ConditionTypeEnums";
 }
 
@@ -358,11 +354,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listConduitTypes", listConduitTypes);
-//go to AirTerminals view
+
 return "ConduitTypes";
 }
 
@@ -383,11 +379,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listCoverTypes", listCoverTypes);
-//go to AirTerminals view
+
 return "CoverTypes";
 }
 
@@ -408,11 +404,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listCurtainPanels", listCurtainPanels);
-//go to AirTerminals view
+
 return "CurtainPanels";
 }
 
@@ -433,11 +429,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listCurtainPanelTypes", listCurtainPanelTypes);
-//go to AirTerminals view
+
 return "CurtainPanelTypes";
 }
 
@@ -458,11 +454,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listCurtainSystemTypes", listCurtainSystemTypes);
-//go to AirTerminals view
+
 return "CurtainSystemTypes";
 }
 
@@ -483,11 +479,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listCurtainWallMullions", listCurtainWallMullions);
-//go to AirTerminals view
+
 return "CurtainWallMullions";
 }
 
@@ -508,11 +504,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listCurtainWallMullionTypes", listCurtainWallMullionTypes);
-//go to AirTerminals view
+
 return "CurtainWallMullionTypes";
 }
 
@@ -533,11 +529,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listCurtainWallPanelOnWall", listCurtainWallPanelOnWall);
-//go to AirTerminals view
+
 return "CurtainWallPanelOnWall";
 }
 
@@ -558,11 +554,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listDistributionSystemTypes", listDistributionSystemTypes);
-//go to AirTerminals view
+
 return "DistributionSystemTypes";
 }
 
@@ -583,11 +579,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listDoors", listDoors);
-//go to AirTerminals view
+
 return "Doors";
 }
 
@@ -608,11 +604,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listDoorTypes", listDoorTypes);
-//go to AirTerminals view
+
 return "DoorTypes";
 }
 
@@ -633,11 +629,10 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listDoorWall", listDoorWall);
-//go to AirTerminals view
+
 return "DoorWall";
 }
 
@@ -658,11 +653,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listDuctFittingTypes", listDuctFittingTypes);
-//go to AirTerminals view
+
 return "DuctFittingTypes";
 }
 
@@ -683,11 +678,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listDuctSystems", listDuctSystems);
-//go to AirTerminals view
+
 return "DuctSystems";
 }
 
@@ -708,11 +703,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listDuctSystemTypeEnums", listDuctSystemTypeEnums);
-//go to AirTerminals view
+
 return "DuctSystemTypeEnums";
 }
 
@@ -733,11 +728,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listDuctSystemTypes", listDuctSystemTypes);
-//go to AirTerminals view
+
 return "DuctSystemTypes";
 }
 
@@ -758,11 +753,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listDuctTypes", listDuctTypes);
-//go to AirTerminals view
+
 return "DuctTypes";
 }
 
@@ -783,11 +778,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listEaveCutterTypeEnums", listEaveCutterTypeEnums);
-//go to AirTerminals view
+
 return "EaveCutterTypeEnums";
 }
 
@@ -808,11 +803,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listEdfd", listEdfd);
-//go to AirTerminals view
+
 return "ElectricalDemandFactorDefinitions";
 }
 
@@ -833,11 +828,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listElcpe", listElcpe);
-//go to AirTerminals view
+
 return "ElectricalLoadClassificationParameterElement";
 }
 
@@ -858,11 +853,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listElc", listElc);
-//go to AirTerminals view
+
 return "ElectricalLoadClassifications";
 }
 
@@ -883,11 +878,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listEpc", listEpc);
-//go to AirTerminals view
+
 return "ElectricalPhaseConfigurationEnums";
 }
 
@@ -908,11 +903,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listEpe", listEpe);
-//go to AirTerminals view
+
 return "ElectricalPhaseEnums";
 }
 
@@ -933,11 +928,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listEse", listEse);
-//go to AirTerminals view
+
 return "ElectricalSystemEnums";
 }
 
@@ -958,11 +953,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listElementLevel", listElementLevel);
-//go to AirTerminals view
+
 return "ElementLevel";
 }
 
@@ -983,11 +978,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listElementPhase", listElementPhase);
-//go to AirTerminals view
+
 return "ElementPhase";
 }
 
@@ -1008,11 +1003,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listFle", listFle);
-//go to AirTerminals view
+
 return "FabricLocationEnums";
 }
 
@@ -1033,11 +1028,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listFasciaTypes", listFasciaTypes);
-//go to AirTerminals view
+
 return "FasciaTypes";
 }
 
@@ -1058,11 +1053,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listFdt", listFdt);
-//go to AirTerminals view
+
 return "FlexDuctTypes";
 }
 
@@ -1083,11 +1078,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listFpt", listFpt);
-//go to AirTerminals view
+
 return "FlexPipeTypes";
 }
 
@@ -1108,11 +1103,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listFloors", listFloors);
-//go to AirTerminals view
+
 return "Floors";
 }
 
@@ -1133,11 +1128,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listFloorTypes", listFloorTypes);
-//go to AirTerminals view
+
 return "FloorTypes";
 }
 
@@ -1158,11 +1153,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listFluidTypes", listFluidTypes);
-//go to AirTerminals view
+
 return "FluidTypes";
 }
 
@@ -1183,11 +1178,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listGmt", listGmt);
-//go to AirTerminals view
+
 return "GenericModelTypes";
 }
 
@@ -1208,11 +1203,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listGrids", listGrids);
-//go to AirTerminals view
+
 return "Grids";
 }
 
@@ -1233,11 +1228,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listGridTypes", listGridTypes);
-//go to AirTerminals view
+
 return "GridTypes";
 }
 
@@ -1258,11 +1253,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listGutterTypes", listGutterTypes);
-//go to AirTerminals view
+
 return "GutterTypes";
 }
 
@@ -1283,11 +1278,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listHls", listHls);
-//go to AirTerminals view
+
 return "HVACLoadSchedules";
 }
 
@@ -1308,11 +1303,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listHVACZones", listHVACZones);
-//go to AirTerminals view
+
 return "HVACZones";
 }
 
@@ -1333,11 +1328,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listIue", listIue);
-//go to AirTerminals view
+
 return "InstanceUsageEnums";
 }
 
@@ -1358,11 +1353,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listLevels", listLevels);
-//go to AirTerminals view
+
 return "Levels";
 }
 
@@ -1383,11 +1378,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listLevelTypes", listLevelTypes);
-//go to AirTerminals view
+
 return "LevelTypes";
 }
 
@@ -1408,11 +1403,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listLcte", listLcte);
-//go to AirTerminals view
+
 return "LoadClassificationTypeEnums";
 }
 
@@ -1433,11 +1428,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listMq", listMq);
-//go to AirTerminals view
+
 return "MaterialQuantities";
 }
 
@@ -1458,11 +1453,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listMaterials", listMaterials);
-//go to AirTerminals view
+
 return "Materials";
 }
 
@@ -1483,11 +1478,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listNme", listNme);
-//go to AirTerminals view
+
 return "NeutralModeEnums";
 }
 
@@ -1508,11 +1503,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listOcn", listOcn);
-//go to AirTerminals view
+
 return "OmniClassNumbers";
 }
 
@@ -1533,11 +1528,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPstbp", listPstbp);
-//go to AirTerminals view
+
 return "PanelScheduleTemplatesBranchPanel";
 }
 
@@ -1558,11 +1553,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPstdp", listPstdp);
-//go to AirTerminals view
+
 return "PanelScheduleTemplatesDataPanel";
 }
 
@@ -1583,11 +1578,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPstsb", listPstsb);
-//go to AirTerminals view
+
 return "PanelScheduleTemplatesSwitchboard";
 }
 
@@ -1609,11 +1604,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPhases", listPhases);
-//go to AirTerminals view
+
 return "Phases";
 }
 
@@ -1635,11 +1630,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPct", listPct);
-//go to AirTerminals view
+
 return "PipeConnectionTypes";
 }
 
@@ -1661,11 +1656,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPift", listPift);
-//go to AirTerminals view
+
 return "PipeFittingTypes";
 }
 
@@ -1687,11 +1682,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPfse", listPfse);
-//go to AirTerminals view
+
 return "PipeFlowStateEnums";
 }
 
@@ -1713,11 +1708,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPmt", listPmt);
-//go to AirTerminals view
+
 return "PipeMaterialTypes";
 }
 
@@ -1739,11 +1734,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPst", listPst);
-//go to AirTerminals view
+
 return "PipeScheduleTypes";
 }
 
@@ -1765,11 +1760,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPipeSegments", listPipeSegments);
-//go to AirTerminals view
+
 return "PipeSegments";
 }
 
@@ -1791,11 +1786,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPste", listPste);
-//go to AirTerminals view
+
 return "PipeSystemTypeEnums";
 }
 
@@ -1817,11 +1812,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPipeTypes", listPipeTypes);
-//go to AirTerminals view
+
 return "PipeTypes";
 }
 
@@ -1843,11 +1838,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPist", listPist);
-//go to AirTerminals view
+
 return "PipingSystemTypes";
 }
 
@@ -1869,11 +1864,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPfow", listPfow);
-//go to AirTerminals view
+
 return "PlumbingFixtureOnWall";
 }
 
@@ -1895,11 +1890,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPf", listPf);
-//go to AirTerminals view
+
 return "PlumbingFixtures";
 }
 
@@ -1921,11 +1916,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPft", listPft);
-//go to AirTerminals view
+
 return "PlumbingFixtureTypes";
 }
 
@@ -1947,11 +1942,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPfste", listPfste);
-//go to AirTerminals view
+
 return "PowerFactorStateTypeEnums";
 }
 
@@ -1973,11 +1968,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listProfiles", listProfiles);
-//go to AirTerminals view
+
 return "Profiles";
 }
 
@@ -1999,11 +1994,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPi", listPi);
-//go to AirTerminals view
+
 return "ProjectInformation";
 }
 
@@ -2025,11 +2020,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listPlt", listPlt);
-//go to AirTerminals view
+
 return "PropertyLineTypes";
 }
 
@@ -2051,11 +2046,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listRailingTypes", listRailingTypes);
-//go to AirTerminals view
+
 return "RailingTypes";
 }
 
@@ -2077,11 +2072,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listRampTypes", listRampTypes);
-//go to AirTerminals view
+
 return "RampTypes";
 }
 
@@ -2103,11 +2098,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listRle", listRle);
-//go to AirTerminals view
+
 return "RebarLayoutEnums";
 }
 
@@ -2129,11 +2124,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listRse", listRse);
-//go to AirTerminals view
+
 return "RebarStyleEnums";
 }
 
@@ -2155,11 +2150,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listRdbli", listRdbli);
-//go to AirTerminals view
+
 return "RevitDBLinkInfo";
 }
 
@@ -2181,11 +2176,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listRoofs", listRoofs);
-//go to AirTerminals view
+
 return "Roofs";
 }
 
@@ -2207,11 +2202,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listRoofTypes", listRoofTypes);
-//go to AirTerminals view
+
 return "RoofTypes";
 }
 
@@ -2233,11 +2228,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listRa", listRa);
-//go to AirTerminals view
+
 return "RoomAssociations";
 }
 
@@ -2259,11 +2254,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listRfta", listRfta);
-//go to AirTerminals view
+
 return "RoomFromToAssociations";
 }
 
@@ -2285,11 +2280,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listRooms", listRooms);
-//go to AirTerminals view
+
 return "Rooms";
 }
 
@@ -2311,11 +2306,10 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listRoomTags", listRoomTags);
-//go to AirTerminals view
+
 return "RoomTags";
 }
 
@@ -2337,11 +2331,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listSte", listSte);
-//go to AirTerminals view
+
 return "ServiceTypeEnums";
 }
 
@@ -2363,11 +2357,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listSheets", listSheets);
-//go to AirTerminals view
+
 return "Sheets";
 }
 
@@ -2389,11 +2383,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listSet", listSet);
-//go to AirTerminals view
+
 return "SlabEdgeTypes";
 }
 
@@ -2415,11 +2409,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listSpte", listSpte);
-//go to AirTerminals view
+
 return "SpaceTypeEnums";
 }
 
@@ -2441,11 +2435,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listSts", listSts);
-//go to AirTerminals view
+
 return "SpaceTypeSettings";
 }
 
@@ -2467,11 +2461,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listSe", listSe);
-//go to AirTerminals view
+
 return "SpecialtyEquipment";
 }
 
@@ -2493,11 +2487,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listSpeet", listSpeet);
-//go to AirTerminals view
+
 return "SpecialtyEquipmentTypes";
 }
 
@@ -2519,11 +2513,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listStairTypes", listStairTypes);
-//go to AirTerminals view
+
 return "StairTypes";
 }
 
@@ -2545,11 +2539,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listSc", listSc);
-//go to AirTerminals view
+
 return "StructuralColumns";
 }
 
@@ -2571,11 +2565,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listSct", listSct);
-//go to AirTerminals view
+
 return "StructuralColumnTypes";
 }
 
@@ -2597,11 +2591,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listSft", listSft);
-//go to AirTerminals view
+
 return "StructuralFoundationTypes";
 }
 
@@ -2623,11 +2617,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listSf", listSf);
-//go to AirTerminals view
+
 return "StructuralFraming";
 }
 
@@ -2649,11 +2643,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listStft", listStft);
-//go to AirTerminals view
+
 return "StructuralFramingTypes";
 }
 
@@ -2675,11 +2669,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listViews", listViews);
-//go to AirTerminals view
+
 return "Views";
 }
 
@@ -2701,11 +2695,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listVoltageTypes", listVoltageTypes);
-//go to AirTerminals view
+
 return "VoltageTypes";
 }
 
@@ -2727,11 +2721,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listWalls", listWalls);
-//go to AirTerminals view
+
 return "Walls";
 }
 
@@ -2753,11 +2747,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listWallSweeps", listWallSweeps);
-//go to AirTerminals view
+
 return "WallSweeps";
 }
 
@@ -2779,11 +2773,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listWst", listWst);
-//go to AirTerminals view
+
 return "WallSweepTypes";
 }
 
@@ -2805,11 +2799,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listWallTypes", listWallTypes);
-//go to AirTerminals view
+
 return "WallTypes";
 }
 
@@ -2831,11 +2825,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listWue", listWue);
-//go to AirTerminals view
+
 return "WallUsageEnums";
 }
 
@@ -2857,11 +2851,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listWindows", listWindows);
-//go to AirTerminals view
+
 return "Windows";
 }
 
@@ -2883,11 +2877,10 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listWindowTypes", listWindowTypes);
-//go to AirTerminals view
+
 return "WindowTypes";
 }
 
@@ -2909,11 +2902,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listWindowWall", listWindowWall);
-//go to AirTerminals view
+
 return "WindowWall";
 }
 
@@ -2935,11 +2928,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listWit", listWit);
-//go to AirTerminals view
+
 return "WireInsulationTypes";
 }
 
@@ -2961,11 +2954,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listWmt", listWmt);
-//go to AirTerminals view
+
 return "WireMaterialTypes";
 }
 
@@ -2987,11 +2980,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listWtrt", listWtrt);
-//go to AirTerminals view
+
 return "WireTemperatureRatingTypes";
 }
 
@@ -3013,11 +3006,11 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listWireTypes", listWireTypes);
-//go to AirTerminals view
+
 return "WireTypes";
 }
 
@@ -3039,24 +3032,28 @@ String sql3="SELECT 'TABLE_NAME'=convert(char(255),t.TABLE_NAME),\r\n" +
 "HAVING max(i.rows)>0\r\n" + 
 "ORDER BY 'Total_Record_Count' DESC";
 List<Not_Empty_Table> tables=jdbcTemplate.query(sql3, BeanPropertyRowMapper.newInstance(Not_Empty_Table.class));
-//once received tables, save them inside the Model
+
 model.addAttribute("not_empty_tables",tables);
-//once received listWalls, save them inside the Model
+
 model.addAttribute("listWiringTypeEnums", listWiringTypeEnums);
-//go to AirTerminals view
+
 return "WiringTypeEnums";
 }
 
 
-
-
-//view edit form 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////                                                                                   
+//                                                                                                                   //
+//                                                                                                                   //
+//                                                                                                                   //
+//                                                                                                                   //
+//                                                                                                                   //
+////////////////////////////////////////Edit Requests//////////////////////////////////////////////////////////////////
 @GetMapping("/admin/editWalls")
 public String edit(Model model, Integer id ) {
 	String sql1="SELECT * FROM Walls where id="+id;
 List<Walls> walls=jdbcTemplate.query(sql1, BeanPropertyRowMapper.newInstance(Walls.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("Walls", walls.get(0));
 return "editWalls";	
 }
@@ -3066,7 +3063,7 @@ public String edit1(Model model, Integer id ) {
 	String sql1="SELECT * FROM AirTerminals where id="+id;
 List<AirTerminals> airterminals=jdbcTemplate.query(sql1, BeanPropertyRowMapper.newInstance(AirTerminals.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("AirTerminals", airterminals.get(0));
 return "editAirTerminals";
 }
@@ -3076,7 +3073,7 @@ public String edit2(Model model, Integer id ) {
 	String sql1="SELECT * FROM AirTerminalTypes where id="+id;
 List<AirTerminalTypes> airterminaltypes=jdbcTemplate.query(sql1, BeanPropertyRowMapper.newInstance(AirTerminalTypes.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("AirTerminalTypes", airterminaltypes.get(0));
 return "editAirTerminalTypes";
 }
@@ -3086,7 +3083,7 @@ public String edit3(Model model, Integer id ) {
 	String sql1="SELECT * FROM AnalyzesAsTypeEnums where id="+id;
 List<AnalyzesAsTypeEnums> analyzesastypeEnums=jdbcTemplate.query(sql1, BeanPropertyRowMapper.newInstance(AnalyzesAsTypeEnums.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("AnalyzesAsTypeEnums", analyzesastypeEnums.get(0));
 return "editAnalyzesAsTypeEnums";
 }
@@ -3096,7 +3093,7 @@ public String edit4(Model model, Integer id ) {
 	String sql1="SELECT * FROM AreaSchemes where id="+id;
 List<AreaSchemes> areaschemes=jdbcTemplate.query(sql1, BeanPropertyRowMapper.newInstance(AreaSchemes.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("AreaSchemes", areaschemes.get(0));
 return "editAreaSchemes";
 }
@@ -3106,7 +3103,7 @@ public String edit5(Model model, String AssemblyCode ) {
 	String sql1="SELECT * FROM AssemblyCodes where AssemblyCode=+AssemblyCode";
 List<AssemblyCodes> assemblycodes=jdbcTemplate.query(sql1, BeanPropertyRowMapper.newInstance(AssemblyCodes.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("AssemblyCodes", assemblycodes.get(0));
 return "editAssemblyCodes";
 }
@@ -3116,7 +3113,7 @@ public String edit6(Model model, Integer id ) {
 	String sql1="SELECT * FROM BuildingTypeSettings where id="+id;
 List<BuildingTypeSettings> buildingtypesettings=jdbcTemplate.query(sql1, BeanPropertyRowMapper.newInstance(BuildingTypeSettings.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("BuildingTypeSettings", buildingtypesettings.get(0));
 return "editBuildingTypeSettings";
 }
@@ -3126,7 +3123,7 @@ public String edit7(Model model, Integer id ) {
 	String sql1="SELECT * FROM CableTrayTypes where id="+id;
 List<CableTrayTypes> cabletraytypes=jdbcTemplate.query(sql1, BeanPropertyRowMapper.newInstance(CableTrayTypes.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("CableTrayTypes", cabletraytypes.get(0));
 return "editCableTrayTypes";
 }
@@ -3136,7 +3133,7 @@ public String edit8(Model model, Integer id ) {
 	String sql1="SELECT * FROM Categories where id="+id;
 List<Categories> categories=jdbcTemplate.query(sql1, BeanPropertyRowMapper.newInstance(Categories.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("Categories", categories.get(0));
 return "editCategories";
 }
@@ -3146,7 +3143,7 @@ public String edit9(Model model, Integer id ) {
     String sql1="SELECT * FROM Ceilings where id="+id;
 List<Ceilings> Ceilings=jdbcTemplate.query(sql1, BeanPropertyRowMapper.newInstance(Ceilings.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("Ceilings", Ceilings.get(0));
 return "editCeilings";
 }
@@ -3156,7 +3153,7 @@ public String edit10(Model model, Integer id ) {
     String sql5="SELECT * FROM CeilingTypes where id="+id;
 List<CeilingTypes> CeilingTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(CeilingTypes.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("CeilingTypes", CeilingTypes.get(0));
 return "editCeilingTypes";
 }
@@ -3166,7 +3163,7 @@ public String edit11(Model model, Integer id ) {
     String sql5="SELECT * FROM ConditionTypeEnums where id="+id;
 List<ConditionTypeEnums> ConditionTypeEnums=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(ConditionTypeEnums.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("ConditionTypeEnums", ConditionTypeEnums.get(0));
 return "editConditionTypeEnums";
 }
@@ -3176,7 +3173,7 @@ public String edit12(Model model, Integer id ) {
     String sql5="SELECT * FROM ConduitTypes where id="+id;
 List<ConduitTypes> ConduitTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(ConduitTypes.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("ConduitTypes", ConduitTypes.get(0));
 return "editConduitTypes";
 }
@@ -3186,7 +3183,7 @@ public String edit13(Model model, Integer id ) {
     String sql5="SELECT * FROM CoverTypes where id="+id;
 List<CoverTypes> CoverTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(CoverTypes.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("CoverTypes", CoverTypes.get(0));
 return "editCoverTypes";
 }
@@ -3196,7 +3193,7 @@ public String edit14(Model model, Integer id ) {
     String sql5="SELECT * FROM CurtainPanels where id="+id;
 List<CurtainPanels> CurtainPanels=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(CurtainPanels.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("CurtainPanels", CurtainPanels.get(0));
 return "editCurtainPanels";
 }
@@ -3206,7 +3203,7 @@ public String edit15(Model model, Integer id ) {
     String sql5="SELECT * FROM CurtainPanelTypes where id="+id;
 List<CurtainPanelTypes> CurtainPanelTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(CurtainPanelTypes.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("CurtainPanelTypes", CurtainPanelTypes.get(0));
 return "editCurtainPanelTypes";
 }
@@ -3216,7 +3213,7 @@ public String edit16(Model model, Integer id ) {
     String sql5="SELECT * FROM CurtainSystemTypes where id="+id;
 List<CurtainSystemTypes> CurtainSystemTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(CurtainSystemTypes.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("CurtainSystemTypes", CurtainSystemTypes.get(0));
 return "editCurtainSystemTypes";
 }
@@ -3226,7 +3223,7 @@ public String edit17(Model model, Integer id ) {
     String sql5="SELECT * FROM CurtainWallMullions where id="+id;
 List<CurtainWallMullions> CurtainWallMullions=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(CurtainWallMullions.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("CurtainWallMullions", CurtainWallMullions.get(0));
 return "editCurtainWallMullions";
 }
@@ -3236,7 +3233,7 @@ public String edit18(Model model, Integer id ) {
     String sql5="SELECT * FROM CurtainWallMullionTypes where id="+id;
 List<CurtainWallMullionTypes> CurtainWallMullionTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(CurtainWallMullionTypes.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("CurtainWallMullionTypes", CurtainWallMullionTypes.get(0));
 return "editCurtainWallMullionTypes";
 }
@@ -3246,7 +3243,7 @@ public String edit19(Model model, Integer id ) {
     String sql5="SELECT * FROM CurtainWallPanelOnWall where id="+id;
 List<CurtainWallPanelOnWall> CurtainWallPanelOnWall=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(CurtainWallPanelOnWall.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("CurtainWallPanelOnWall", CurtainWallPanelOnWall.get(0));
 return "editCurtainWallPanelOnWall";
 }
@@ -3256,7 +3253,7 @@ public String edit20(Model model, Integer id ) {
     String sql5="SELECT * FROM DistributionSystemTypes where id="+id;
 List<DistributionSystemTypes> DistributionSystemTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(DistributionSystemTypes.class));
 
-//il faut stocker le produit dans le modele
+
 model.addAttribute("DistributionSystemTypes", DistributionSystemTypes.get(0));
 return "editDistributionSystemTypes";
 }
@@ -3266,7 +3263,6 @@ public String edit21(Model model, Integer id ) {
     String sql5="SELECT * FROM Doors where id="+id;
 List<Doors> Doors=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(Doors.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("Doors", Doors.get(0));
 return "editDoors";
 }
@@ -3276,7 +3272,6 @@ public String edit22(Model model, Integer id ) {
     String sql5="SELECT * FROM DoorTypes where id="+id;
 List<DoorTypes> DoorTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(DoorTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("DoorTypes", DoorTypes.get(0));
 return "editDoorTypes";
 }
@@ -3286,7 +3281,6 @@ public String edit23(Model model, Integer doorid ) {
     String sql5="SELECT * FROM DoorWall where doorid="+doorid;
 List<DoorWall> DoorWall=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(DoorWall.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("DoorWall", DoorWall.get(0));
 return "editDoorWall";
 }
@@ -3296,7 +3290,6 @@ public String edit24(Model model, Integer id ) {
     String sql5="SELECT * FROM DuctFittingTypes where id="+id;
 List<DuctFittingTypes> DuctFittingTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(DuctFittingTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("DuctFittingTypes", DuctFittingTypes.get(0));
 return "editDuctFittingTypes";
 }
@@ -3306,7 +3299,6 @@ public String edit25(Model model, Integer id ) {
     String sql5="SELECT * FROM DuctSystems where id="+id;
 List<DuctSystems> DuctSystems=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(DuctSystems.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("DuctSystems", DuctSystems.get(0));
 return "editDuctSystems";
 }
@@ -3316,7 +3308,6 @@ public String edit26(Model model, Integer id ) {
     String sql5="SELECT * FROM DuctSystemTypeEnums where id="+id;
 List<DuctSystemTypeEnums> DuctSystemTypeEnums=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(DuctSystemTypeEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("DuctSystemTypeEnums", DuctSystemTypeEnums.get(0));
 return "editDuctSystemTypeEnums";
 }
@@ -3326,7 +3317,6 @@ public String edit27(Model model, Integer id ) {
     String sql5="SELECT * FROM DuctSystemTypes where id="+id;
 List<DuctSystemTypes> DuctSystemTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(DuctSystemTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("DuctSystemTypes", DuctSystemTypes.get(0));
 return "editDuctSystemTypes";
 }
@@ -3336,7 +3326,6 @@ public String edit28(Model model, Integer id ) {
     String sql5="SELECT * FROM DuctTypes where id="+id;
 List<DuctTypes> DuctTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(DuctTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("DuctTypes", DuctTypes.get(0));
 return "editDuctTypes";
 }
@@ -3346,7 +3335,6 @@ public String edit29(Model model, Integer id ) {
     String sql5="SELECT * FROM EaveCutterTypeEnums where id="+id;
 List<EaveCutterTypeEnums> EaveCutterTypeEnums=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(EaveCutterTypeEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("EaveCutterTypeEnums", EaveCutterTypeEnums.get(0));
 return "editEaveCutterTypeEnums";
 }
@@ -3356,7 +3344,6 @@ public String edit30(Model model, Integer id ) {
     String sql5="SELECT * FROM ElectricalDemandFactorDefinitions where id="+id;
 List<ElectricalDemandFactorDefinitions> Edfd=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(ElectricalDemandFactorDefinitions.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("ElectricalDemandFactorDefinitions", Edfd.get(0));
 return "editElectricalDemandFactorDefinitions";
 }
@@ -3366,7 +3353,6 @@ public String edit31(Model model, Integer id ) {
     String sql5="SELECT * FROM ElectricalLoadClassificationParameterElement where id="+id;
 List<ElectricalLoadClassificationParameterElement> Elcpe=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(ElectricalLoadClassificationParameterElement.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("ElectricalLoadClassificationParameterElement", Elcpe.get(0));
 return "editElectricalLoadClassificationParameterElement";
 }
@@ -3376,7 +3362,6 @@ public String edit32(Model model, Integer id ) {
     String sql5="SELECT * FROM ElectricalLoadClassifications where id="+id;
 List<ElectricalLoadClassifications> Elc=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(ElectricalLoadClassifications.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("ElectricalLoadClassifications", Elc.get(0));
 return "editElectricalLoadClassifications";
 }
@@ -3386,7 +3371,6 @@ public String edit33(Model model, Integer id ) {
     String sql5="SELECT * FROM ElectricalPhaseConfigurationEnums where id="+id;
 List<ElectricalPhaseConfigurationEnums> Epc=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(ElectricalPhaseConfigurationEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("ElectricalPhaseConfigurationEnums", Epc.get(0));
 return "editElectricalPhaseConfigurationEnums";
 }
@@ -3396,7 +3380,6 @@ public String edit34(Model model, Integer id ) {
     String sql5="SELECT * FROM ElectricalPhaseEnums where id="+id;
 List<ElectricalPhaseEnums> Epe=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(ElectricalPhaseEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("ElectricalPhaseEnums", Epe.get(0));
 return "editElectricalPhaseEnums";
 }
@@ -3406,7 +3389,6 @@ public String edit35(Model model, Integer id ) {
     String sql5="SELECT * FROM ElectricalSystemEnums where id="+id;
 List<ElectricalSystemEnums> Ese=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(ElectricalSystemEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("ElectricalSystemEnums",  Ese.get(0));
 return "editElectricalSystemEnums";
 }
@@ -3416,7 +3398,6 @@ public String edit36(Model model, Integer elementid ) {
     String sql5="SELECT * FROM ElementLevel where elementid="+elementid;
 List<ElementLevel> ElementLevel=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(ElementLevel.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("ElementLevel",ElementLevel.get(0));
 return "editElementLevel";
 }
@@ -3426,7 +3407,6 @@ public String edit37(Model model, Integer elementid ) {
     String sql5="SELECT * FROM ElementPhase where elementid="+elementid;
 List<ElementPhase> ElementPhase=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(ElementPhase.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("ElementPhase", ElementPhase.get(0));
 return "editElementPhase";
 }
@@ -3436,7 +3416,6 @@ public String edit38(Model model, Integer id ) {
     String sql5="SELECT * FROM FabricLocationEnums where id="+id;
 List<FabricLocationEnums> Fle=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(FabricLocationEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("FabricLocationEnums", Fle.get(0));
 return "editFabricLocationEnums";
 }
@@ -3446,7 +3425,6 @@ public String edit39(Model model, Integer id ) {
     String sql5="SELECT * FROM FasciaTypes where id="+id;
 List<FasciaTypes> FasciaTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(FasciaTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("FasciaTypes", FasciaTypes.get(0));
 return "editFasciaTypes";
 }
@@ -3456,7 +3434,6 @@ public String edit40(Model model, Integer id ) {
     String sql5="SELECT * FROM FlexDuctTypes where id="+id;
 List<FlexDuctTypes> Fdt=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(FlexDuctTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("FlexDuctTypes", Fdt.get(0));
 return "editFlexDuctTypes";
 }
@@ -3466,7 +3443,6 @@ public String edit41(Model model, Integer id ) {
     String sql5="SELECT * FROM FlexPipeTypes where id="+id;
 List<FlexPipeTypes> Fpt=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(FlexPipeTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("FlexPipeTypes", Fpt.get(0));
 return "editFlexPipeTypes";
 }
@@ -3476,7 +3452,6 @@ public String edit42(Model model, Integer id ) {
     String sql5="SELECT * FROM Floors where id="+id;
 List<Floors> Floors=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(Floors.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("Floors", Floors.get(0));
 return "editFloors";
 }
@@ -3486,7 +3461,6 @@ public String edit43(Model model, Integer id ) {
     String sql5="SELECT * FROM FloorTypes where id="+id;
 List<FloorTypes> FloorTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(FloorTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("FloorTypes", FloorTypes.get(0));
 return "editFloorTypes";
 }
@@ -3496,7 +3470,6 @@ public String edit44(Model model, Integer id ) {
     String sql5="SELECT * FROM FluidTypes where id="+id;
 List<FluidTypes> FluidTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(FluidTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("FluidTypes", FluidTypes.get(0));
 return "editFluidTypes";
 }
@@ -3506,7 +3479,6 @@ public String edit45(Model model, Integer id ) {
     String sql5="SELECT * FROM GenericModelTypes where id="+id;
 List<GenericModelTypes> Gmt=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(GenericModelTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("GenericModelTypes", Gmt.get(0));
 return "editGenericModelTypes";
 }
@@ -3516,7 +3488,6 @@ public String edit46(Model model, Integer id ) {
     String sql5="SELECT * FROM Grids where id="+id;
 List<Grids> Grids=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(Grids.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("Grids", Grids.get(0));
 return "editGrids";
 }
@@ -3526,7 +3497,6 @@ public String edit47(Model model, Integer id ) {
     String sql5="SELECT * FROM GridTypes where id="+id;
 List<GridTypes> GridTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(GridTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("GridTypes", GridTypes.get(0));
 return "editGridTypes";
 }
@@ -3536,7 +3506,6 @@ public String edit48(Model model, Integer id ) {
     String sql5="SELECT * FROM GutterTypes where id="+id;
 List<GutterTypes> GutterTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(GutterTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("GutterTypes", GutterTypes.get(0));
 return "editGutterTypes";
 }
@@ -3546,7 +3515,6 @@ public String edit49(Model model, Integer id ) {
     String sql5="SELECT * FROM HVACLoadSchedules where id="+id;
 List<HVACLoadSchedules> Hls=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(HVACLoadSchedules.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("HVACLoadSchedules", Hls.get(0));
 return "editHVACLoadSchedules";
 }
@@ -3556,7 +3524,6 @@ public String edit50(Model model, Integer id ) {
     String sql5="SELECT * FROM HVACZones where id="+id;
 List<HVACZones> HVACZones=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(HVACZones.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("HVACZones", HVACZones.get(0));
 return "editHVACZones";
 }
@@ -3566,7 +3533,6 @@ public String edit51(Model model, Integer id ) {
     String sql5="SELECT * FROM InstanceUsageEnums where id="+id;
 List<InstanceUsageEnums> Iue=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(InstanceUsageEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("InstanceUsageEnums", Iue.get(0));
 return "editInstanceUsageEnums";
 }
@@ -3576,7 +3542,6 @@ public String edit52(Model model, Integer id ) {
     String sql5="SELECT * FROM Levels where id="+id;
 List<Levels> Levels=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(Levels.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("Levels", Levels.get(0));
 return "editLevels";
 }
@@ -3586,7 +3551,6 @@ public String edit53(Model model, Integer id ) {
     String sql5="SELECT * FROM LevelTypes where id="+id;
 List<LevelTypes> LevelTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(LevelTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("LevelTypes", LevelTypes.get(0));
 return "editLevelTypes";
 }
@@ -3596,7 +3560,6 @@ public String edit54(Model model, Integer id ) {
     String sql5="SELECT * FROM LoadClassificationTypeEnums where id="+id;
 List<LoadClassificationTypeEnums> Lcte=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(LoadClassificationTypeEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("LoadClassificationTypeEnums", Lcte.get(0));
 return "editLoadClassificationTypeEnums";
 }
@@ -3606,7 +3569,6 @@ public String edit55(Model model, Integer elementid ) {
     String sql5="SELECT * FROM MaterialQuantities where elementid="+elementid;
 List<MaterialQuantities> Mq=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(MaterialQuantities.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("MaterialQuantities", Mq.get(0));
 return "editMaterialQuantities";
 }
@@ -3616,7 +3578,6 @@ public String edit56(Model model, Integer id ) {
     String sql5="SELECT * FROM Materials where id="+id;
 List<Materials> Materials=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(Materials.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("Materials", Materials.get(0));
 return "editMaterials";
 }
@@ -3626,7 +3587,6 @@ public String edit57(Model model, Integer id ) {
     String sql5="SELECT * FROM NeutralModeEnums where id="+id;
 List<NeutralModeEnums> Nme=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(NeutralModeEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("NeutralModeEnums", Nme.get(0));
 return "editNeutralModeEnums";
 }
@@ -3636,7 +3596,6 @@ public String edit58(Model model, String omniclassnumber ) {
     String sql5="SELECT * FROM OmniClassNumbers where omniclassnumber=+omniclassnumber";
 List<OmniClassNumbers> Ocn=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(OmniClassNumbers.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("OmniClassNumbers", Ocn.get(0));
 return "editOmniClassNumbers";
 }
@@ -3646,7 +3605,6 @@ public String edit59(Model model, Integer id ) {
     String sql5="SELECT * FROM PanelScheduleTemplatesBranchPanel where id="+id;
 List<PanelScheduleTemplatesBranchPanel> Pstbp=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PanelScheduleTemplatesBranchPanel.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PanelScheduleTemplatesBranchPanel", Pstbp.get(0));
 return "editPanelScheduleTemplatesBranchPanel";
 }
@@ -3656,7 +3614,6 @@ public String edit60(Model model, Integer id ) {
     String sql5="SELECT * FROM PanelScheduleTemplatesDataPanel where id="+id;
 List<PanelScheduleTemplatesDataPanel> Pstdp=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PanelScheduleTemplatesDataPanel.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PanelScheduleTemplatesDataPanel", Pstdp.get(0));
 return "editPanelScheduleTemplatesDataPanel";
 }
@@ -3666,7 +3623,6 @@ public String edit61(Model model, Integer id ) {
     String sql5="SELECT * FROM PanelScheduleTemplatesSwitchboard where id="+id;
 List<PanelScheduleTemplatesSwitchboard> Pstsb=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PanelScheduleTemplatesSwitchboard.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PanelScheduleTemplatesSwitchboard", Pstsb.get(0));
 return "editPanelScheduleTemplatesSwitchboard";
 }
@@ -3676,7 +3632,6 @@ public String edit62(Model model, Integer id ) {
     String sql5="SELECT * FROM Phases where id="+id;
 List<Phases> Phases=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(Phases.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("Phases", Phases.get(0));
 return "editPhases";
 }
@@ -3686,7 +3641,6 @@ public String edit63(Model model, Integer id ) {
     String sql5="SELECT * FROM PipeConnectionTypes where id="+id;
 List<PipeConnectionTypes> Pct=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PipeConnectionTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PipeConnectionTypes", Pct.get(0));
 return "editPipeConnectionTypes";
 }
@@ -3696,7 +3650,6 @@ public String edit64(Model model, Integer id ) {
     String sql5="SELECT * FROM PipeFittingTypes where id="+id;
 List<PipeFittingTypes> Pift=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PipeFittingTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PipeFittingTypes", Pift.get(0));
 return "editPipeFittingTypes";
 }
@@ -3706,7 +3659,6 @@ public String edit65(Model model, Integer id ) {
     String sql5="SELECT * FROM PipeFlowStateEnums where id="+id;
 List<PipeFlowStateEnums> Pfse=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PipeFlowStateEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PipeFlowStateEnums", Pfse.get(0));
 return "editPipeFlowStateEnums";
 }
@@ -3716,7 +3668,6 @@ public String edit66(Model model, Integer id ) {
     String sql5="SELECT * FROM PipeMaterialTypes where id="+id;
 List<PipeMaterialTypes> Pmt=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PipeMaterialTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PipeMaterialTypes", Pmt.get(0));
 return "editPipeMaterialTypes";
 }
@@ -3726,7 +3677,6 @@ public String edit67(Model model, Integer id ) {
     String sql5="SELECT * FROM PipeScheduleTypes where id="+id;
 List<PipeScheduleTypes> Pst=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PipeScheduleTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PipeScheduleTypes", Pst.get(0));
 return "editPipeScheduleTypes";
 }
@@ -3736,7 +3686,6 @@ public String edit68(Model model, Integer id ) {
     String sql5="SELECT * FROM PipeSegments where id="+id;
 List<PipeSegments> PipeSegments=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PipeSegments.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PipeSegments", PipeSegments.get(0));
 return "editPipeSegments";
 }
@@ -3746,7 +3695,6 @@ public String edit69(Model model, Integer id ) {
     String sql5="SELECT * FROM PipeSystemTypeEnums where id="+id;
 List<PipeSystemTypeEnums> Pste=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PipeSystemTypeEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PipeSystemTypeEnums", Pste.get(0));
 return "editPipeSystemTypeEnums";
 }
@@ -3756,7 +3704,6 @@ public String edit70(Model model, Integer id ) {
     String sql5="SELECT * FROM PipeTypes where id="+id;
 List<PipeTypes> PipeTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PipeTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PipeTypes", PipeTypes.get(0));
 return "editPipeTypes";
 }
@@ -3766,7 +3713,6 @@ public String edit71(Model model, Integer id ) {
     String sql5="SELECT * FROM PipingSystemTypes where id="+id;
 List<PipingSystemTypes> Pist=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PipingSystemTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PipingSystemTypes", Pist.get(0));
 return "editPipingSystemTypes";
 }
@@ -3776,7 +3722,6 @@ public String edit72(Model model, Integer id ) {
     String sql5="SELECT * FROM PlumbingFixtureOnWall where id="+id;
 List<PlumbingFixtureOnWall> Pfow=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PlumbingFixtureOnWall.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PlumbingFixtureOnWall", Pfow.get(0));
 return "editPlumbingFixtureOnWall";
 }
@@ -3786,7 +3731,6 @@ public String edit73(Model model, Integer id ) {
     String sql5="SELECT * FROM PlumbingFixtures where id="+id;
 List<PlumbingFixtures> Pf=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PlumbingFixtures.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PlumbingFixtures", Pf.get(0));
 return "editPlumbingFixtures";
 }
@@ -3796,7 +3740,6 @@ public String edit74(Model model, Integer id ) {
     String sql5="SELECT * FROM PlumbingFixtureTypes where id="+id;
 List<PlumbingFixtureTypes> Pft=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PlumbingFixtureTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PlumbingFixtureTypes", Pft.get(0));
 return "editPlumbingFixtureTypes";
 }
@@ -3806,7 +3749,6 @@ public String edit75(Model model, Integer id ) {
     String sql5="SELECT * FROM PowerFactorStateTypeEnums where id="+id;
 List<PowerFactorStateTypeEnums> Pfste=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PowerFactorStateTypeEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PowerFactorStateTypeEnums", Pfste.get(0));
 return "editPowerFactorStateTypeEnums";
 }
@@ -3816,7 +3758,6 @@ public String edit76(Model model, Integer id ) {
     String sql5="SELECT * FROM Profiles where id="+id;
 List<Profiles> Profiles=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(Profiles.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("Profiles", Profiles.get(0));
 return "editProfiles";
 }
@@ -3826,7 +3767,6 @@ public String edit77(Model model, Integer id ) {
     String sql5="SELECT * FROM ProjectInformation where id="+id;
 List<ProjectInformation> Pi=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(ProjectInformation.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("ProjectInformation", Pi.get(0));
 return "editProjectInformation";
 }
@@ -3836,7 +3776,6 @@ public String edit78(Model model, Integer id ) {
     String sql5="SELECT * FROM PropertyLineTypes where id="+id;
 List<PropertyLineTypes> Plt=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(PropertyLineTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("PropertyLineTypes", Plt.get(0));
 return "editPropertyLineTypes";
 }
@@ -3846,7 +3785,6 @@ public String edit79(Model model, Integer id ) {
     String sql5="SELECT * FROM RailingTypes where id="+id;
 List<RailingTypes> RailingTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(RailingTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("RailingTypes", RailingTypes.get(0));
 return "editRailingTypes";
 }
@@ -3856,7 +3794,6 @@ public String edit80(Model model, Integer id ) {
     String sql5="SELECT * FROM RampTypes where id="+id;
 List<RampTypes> RampTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(RampTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("RampTypes", RampTypes.get(0));
 return "editRampTypes";
 }
@@ -3866,7 +3803,6 @@ public String edit81(Model model, Integer id ) {
     String sql5="SELECT * FROM RebarLayoutEnums where id="+id;
 List<RebarLayoutEnums> Rle=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(RebarLayoutEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("RebarLayoutEnums", Rle.get(0));
 return "editRebarLayoutEnums";
 }
@@ -3876,7 +3812,6 @@ public String edit82(Model model, Integer id ) {
     String sql5="SELECT * FROM RebarStyleEnums where id="+id;
 List<RebarStyleEnums> Rse=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(RebarStyleEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("RebarStyleEnums", Rse.get(0));
 return "editRebarStyleEnums";
 }
@@ -3886,7 +3821,6 @@ public String edit83(Model model, String name ) {
     String sql5="SELECT * FROM RevitDBLinkInfo where name=+name";
 List<RevitDBLinkInfo> Rdbli=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(RevitDBLinkInfo.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("RevitDBLinkInfo", Rdbli.get(0));
 return "editRevitDBLinkInfo";
 }
@@ -3896,7 +3830,6 @@ public String edit84(Model model, Integer id ) {
     String sql5="SELECT * FROM Roofs where id="+id;
 List<Roofs> Roofs=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(Roofs.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("Roofs", Roofs.get(0));
 return "editRoofs";
 }
@@ -3906,7 +3839,6 @@ public String edit85(Model model, Integer id ) {
     String sql5="SELECT * FROM RoofTypes where id="+id;
 List<RoofTypes> RoofTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(RoofTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("RoofTypes", RoofTypes.get(0));
 return "editRoofTypes";
 }
@@ -3916,7 +3848,6 @@ public String edit86(Model model, Integer id ) {
     String sql5="SELECT * FROM RoomAssociations where id="+id;
 List<RoomAssociations> Ra=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(RoomAssociations.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("RoomAssociations", Ra.get(0));
 return "editRoomAssociations";
 }
@@ -3926,7 +3857,6 @@ public String edit87(Model model, Integer id ) {
     String sql5="SELECT * FROM RoomFromToAssociations where id="+id;
 List<RoomFromToAssociations> Rfta=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(RoomFromToAssociations.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("RoomFromToAssociations", Rfta.get(0));
 return "editRoomFromToAssociations";
 }
@@ -3936,7 +3866,6 @@ public String edit88(Model model, Integer id ) {
     String sql5="SELECT * FROM Rooms where id="+id;
 List<Rooms> Rooms=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(Rooms.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("Rooms", Rooms.get(0));
 return "editRooms";
 }
@@ -3946,7 +3875,6 @@ public String edit89(Model model, Integer id ) {
     String sql5="SELECT * FROM RoomTags where id="+id;
 List<RoomTags> RoomTags=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(RoomTags.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("RoomTags", RoomTags.get(0));
 return "editRoomTags";
 }
@@ -3956,7 +3884,6 @@ public String edit90(Model model, Integer id ) {
     String sql5="SELECT * FROM ServiceTypeEnums where id="+id;
 List<ServiceTypeEnums> Ste=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(ServiceTypeEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("ServiceTypeEnums", Ste.get(0));
 return "editServiceTypeEnums";
 }
@@ -3966,7 +3893,6 @@ public String edit91(Model model, Integer id ) {
     String sql5="SELECT * FROM Sheets where id="+id;
 List<Sheets> Sheets=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(Sheets.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("Sheets", Sheets.get(0));
 return "editSheets";
 }
@@ -3976,7 +3902,6 @@ public String edit92(Model model, Integer id ) {
     String sql5="SELECT * FROM SlabEdgeTypes where id="+id;
 List<SlabEdgeTypes> Set=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(SlabEdgeTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("SlabEdgeTypes", Set.get(0));
 return "editSlabEdgeTypes";
 }
@@ -3986,7 +3911,6 @@ public String edit93(Model model, Integer id ) {
     String sql5="SELECT * FROM SpaceTypeEnums where id="+id;
 List<SpaceTypeEnums> Spte=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(SpaceTypeEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("SpaceTypeEnums", Spte.get(0));
 return "editSpaceTypeEnums";
 }
@@ -3996,7 +3920,6 @@ public String edit94(Model model, Integer id ) {
     String sql5="SELECT * FROM SpaceTypeSettings where id="+id;
 List<SpaceTypeSettings> Sts=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(SpaceTypeSettings.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("SpaceTypeSettings", Sts.get(0));
 return "editSpaceTypeSettings";
 }
@@ -4006,7 +3929,6 @@ public String edit95(Model model, Integer id ) {
     String sql5="SELECT * FROM SpecialtyEquipment where id="+id;
 List<SpecialtyEquipment> Se=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(SpecialtyEquipment.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("SpecialtyEquipment", Se.get(0));
 return "editSpecialtyEquipment";
 }
@@ -4016,7 +3938,6 @@ public String edit96(Model model, Integer id ) {
     String sql5="SELECT * FROM SpecialtyEquipmentTypes where id="+id;
 List<SpecialtyEquipmentTypes> Speet=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(SpecialtyEquipmentTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("SpecialtyEquipmentTypes", Speet.get(0));
 return "editSpecialtyEquipmentTypes";
 }
@@ -4026,7 +3947,6 @@ public String edit97(Model model, Integer id ) {
     String sql5="SELECT * FROM StairTypes where id="+id;
 List<StairTypes> StairTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(StairTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("StairTypes", StairTypes.get(0));
 return "editStairTypes";
 }
@@ -4036,7 +3956,6 @@ public String edit98(Model model, Integer id ) {
     String sql5="SELECT * FROM StructuralColumns where id="+id;
 List<StructuralColumns> Sc=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(StructuralColumns.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("StructuralColumns", Sc.get(0));
 return "editStructuralColumns";
 }
@@ -4046,7 +3965,6 @@ public String edit99(Model model, Integer id ) {
     String sql5="SELECT * FROM StructuralColumnTypes where id="+id;
 List<StructuralColumnTypes> Sct=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(StructuralColumnTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("StructuralColumnTypes", Sct.get(0));
 return "editStructuralColumnTypes";
 }
@@ -4056,7 +3974,6 @@ public String edit100(Model model, Integer id ) {
     String sql5="SELECT * FROM StructuralFoundationTypes where id="+id;
 List<StructuralFoundationTypes> Sft=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(StructuralFoundationTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("StructuralFoundationTypes", Sft.get(0));
 return "editStructuralFoundationTypes";
 }
@@ -4066,7 +3983,6 @@ public String edit101(Model model, Integer id ) {
     String sql5="SELECT * FROM StructuralFraming where id="+id;
 List<StructuralFraming> Sf=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(StructuralFraming.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("StructuralFraming", Sf.get(0));
 return "editStructuralFraming";
 }
@@ -4076,7 +3992,6 @@ public String edit102(Model model, Integer id ) {
     String sql5="SELECT * FROM StructuralFramingTypes where id="+id;
 List<StructuralFramingTypes> Stft=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(StructuralFramingTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("StructuralFramingTypes", Stft.get(0));
 return "editStructuralFramingTypes";
 }
@@ -4086,7 +4001,6 @@ public String edit103(Model model, Integer id ) {
     String sql5="SELECT * FROM Views where id="+id;
 List<Views> Views=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(Views.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("Views", Views.get(0));
 return "editViews";
 }
@@ -4096,7 +4010,6 @@ public String edit104(Model model, Integer id ) {
     String sql5="SELECT * FROM VoltageTypes where id="+id;
 List<VoltageTypes> VoltageTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(VoltageTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("VoltageTypes", VoltageTypes.get(0));
 return "editVoltageTypes";
 }
@@ -4106,7 +4019,6 @@ public String edit105(Model model, Integer id ) {
     String sql5="SELECT * FROM WallSweeps where id="+id;
 List<WallSweeps> WallSweeps=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(WallSweeps.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("WallSweeps", WallSweeps.get(0));
 return "editWallSweeps";
 }
@@ -4116,7 +4028,6 @@ public String edit106(Model model, Integer id ) {
     String sql5="SELECT * FROM WallSweepTypes where id="+id;
 List<WallSweepTypes> Wst=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(WallSweepTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("WallSweepTypes", Wst.get(0));
 return "editWallSweepTypes";
 }
@@ -4126,7 +4037,6 @@ public String edit107(Model model, Integer id ) {
     String sql5="SELECT * FROM WallTypes where id="+id;
 List<WallTypes> WallTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(WallTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("WallTypes", WallTypes.get(0));
 return "editWallTypes";
 }
@@ -4136,7 +4046,6 @@ public String edit108(Model model, Integer id ) {
     String sql5="SELECT * FROM WallUsageEnums where id="+id;
 List<WallUsageEnums> Wue=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(WallUsageEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("WallUsageEnums", Wue.get(0));
 return "editWallUsageEnums";
 }
@@ -4146,7 +4055,6 @@ public String edit109(Model model, Integer id ) {
     String sql5="SELECT * FROM Windows where id="+id;
 List<Windows> Windows=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(Windows.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("Windows", Windows.get(0));
 return "editWindows";
 }
@@ -4156,7 +4064,6 @@ public String edit110(Model model, Integer id ) {
     String sql5="SELECT * FROM WindowTypes where id="+id;
 List<WindowTypes> WindowTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(WindowTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("WindowTypes", WindowTypes.get(0));
 return "editWindowTypes";
 }
@@ -4166,7 +4073,6 @@ public String edit111(Model model, Integer windowid ) {
     String sql5="SELECT * FROM WindowWall where windowid="+windowid;
 List<WindowWall> WindowWall=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(WindowWall.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("WindowWall", WindowWall.get(0));
 return "editWindowWall";
 }
@@ -4176,7 +4082,6 @@ public String edit112(Model model, Integer id ) {
     String sql5="SELECT * FROM WireInsulationTypes where id="+id;
 List<WireInsulationTypes> Wit=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(WireInsulationTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("WireInsulationTypes", Wit.get(0));
 return "editWireInsulationTypes";
 }
@@ -4186,7 +4091,6 @@ public String edit113(Model model, Integer id ) {
     String sql5="SELECT * FROM WireMaterialTypes where id="+id;
 List<WireMaterialTypes> Wmt=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(WireMaterialTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("WireMaterialTypes", Wmt.get(0));
 return "editWireMaterialTypes";
 }
@@ -4196,7 +4100,6 @@ public String edit114(Model model, Integer id ) {
     String sql5="SELECT * FROM WireTemperatureRatingTypes where id="+id;
 List<WireTemperatureRatingTypes> Wtrt=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(WireTemperatureRatingTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("WireTemperatureRatingTypes", Wtrt.get(0));
 return "editWireTemperatureRatingTypes";
 }
@@ -4206,7 +4109,6 @@ public String edit115(Model model, Integer id ) {
     String sql5="SELECT * FROM WireTypes where id="+id;
 List<WireTypes> WireTypes=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(WireTypes.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("WireTypes", WireTypes.get(0));
 return "editWireTypes";
 }
@@ -4216,25 +4118,24 @@ public String edit116(Model model, Integer id ) {
     String sql5="SELECT * FROM WiringTypeEnums where id="+id;
 List<WiringTypeEnums> WiringTypeEnums=jdbcTemplate.query(sql5, BeanPropertyRowMapper.newInstance(WiringTypeEnums.class));
 
-//il faut stocker le produit dans le modele
 model.addAttribute("WiringTypeEnums", WiringTypeEnums.get(0));
 return "editWiringTypeEnums";
 }
 
 
 
-//Save modify information
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////                                                                                   
+////
+////
+////
+////
+////
+////////////////////////////////////////Save Requests//////////////////////////////////////////////////////////////////
 @PostMapping("/admin/saveWalls")
 public String save(Model model,  Walls walls) {
-		//String sql1="SELECT * FROM Walls where id="+id;
-//List<Walls> wallsList=jdbcTemplate.query(sql1, BeanPropertyRowMapper.newInstance(Walls.class));
-//Walls walls=wallsList.get(0);	
-//String sql2="INSERT into  Walls where id=";	
+
 String sqlUpdate = "UPDATE Walls set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,walls.getComments(),walls.getId());
-
-String sqlUpdate1 = "UPDATE Walls set DesignOption=? where Id=?";
-jdbcTemplate.update(sqlUpdate1,walls.getDesignOption(),walls.getId());
 
 String sqlUpdate2 = "UPDATE Walls set Mark=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,walls.getMark(),walls.getId());
@@ -4248,37 +4149,6 @@ jdbcTemplate.update(sqlUpdate4,walls.getRoomBounding(),walls.getId());
 String sqlUpdate5 = "UPDATE Walls set LOT=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,walls.getLOT(),walls.getId());
 
-/*	String sql1="INSERT INTO Walls (Id,TypeId,PhaseCreated,PhaseDemolished,DesignOption,EstimatedReinforcementVolume,"
-			+ "Volume,Area,Comments,Length,Mark,StructuralUsage,TopOffset,BaseOffset,BaseConstraint,UnconnectedHeight,TopConstraint,"
-			+ "RoomBounding,LOT,'') VALUES"
-			+ "("+walls.getId()
-			+ ","+walls.getTypeId()
-			+ ","+walls.getPhaseCreated()
-			+ ","+walls.getPhaseDemolished()
-			+ ","+walls.getDesignOption()
-			+ ","+walls.getEstimatedReinforcementVolume()
-			+ ","+walls.getVolume()
-			+ ","+walls.getArea()
-			+ ","+walls.getComments()
-			+ ","+walls.getLength()
-			+ ","+walls.getMark()
-			+ ","+walls.getStructuralUsage()
-			+ ","+walls.getTopOffset()
-			+ ","+walls.getBaseOffset()
-			+ ","+walls.getBaseConstraint()
-			+ ","+walls.getUnconnectedHeight()
-			+ ","+walls.getTopConstraint()
-			+ ","+walls.getRoomBounding()
-			+ ","+walls.getLOT()
-			//+","
-			+ ")";
-	System.out.println(sql1);*/
-
-//jdbcTemplate.execute(sql1);
-
-//il faut stocker le produit dans le modele
-//model.addAttribute("Walls", walls.get(0));
-
 return "redirect:/";
 
 }
@@ -4289,16 +4159,37 @@ public String save1(Model model,  Ceilings Ceilings) {
 		String sqlUpdate = "UPDATE Ceilings set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,Ceilings.getComments(),Ceilings.getId());
 
-String sqlUpdate1 = "UPDATE Ceilings set DesignOption=? where Id=?";
-jdbcTemplate.update(sqlUpdate1,Ceilings.getDesignOption(),Ceilings.getId());
-
 String sqlUpdate2 = "UPDATE Ceilings set Mark=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,Ceilings.getMark(),Ceilings.getId());
 
 String sqlUpdate3 = "UPDATE Ceilings set HeightOffsetFromLevel=? where Id=?";
 jdbcTemplate.update(sqlUpdate3,Ceilings.getHeightOffsetFromLevel(),Ceilings.getId());
 
-return "redirect:/";
+return "redirect:/Ceilings";
+}
+    
+
+    @PostMapping("/admin/saveSpecialtyEquipment")
+public String save120(Model model,  SpecialtyEquipment SpecialtyEquipment) {
+String sqlUpdate = "UPDATE SpecialtyEquipment set comments=? where Id=?";
+jdbcTemplate.update(sqlUpdate,SpecialtyEquipment.getComments(),SpecialtyEquipment.getId());
+
+String sqlUpdate2 = "UPDATE SpecialtyEquipment set Mark=? where Id=?";
+jdbcTemplate.update(sqlUpdate2,SpecialtyEquipment.getMark(),SpecialtyEquipment.getId());
+
+return "redirect:/Ceilings";
+}
+    
+
+    @PostMapping("/admin/saveWallSweeps")
+public String save97(Model model,  WallSweeps WallSweeps) {
+String sqlUpdate = "UPDATE WallSweeps set comments=? where Id=?";
+jdbcTemplate.update(sqlUpdate,WallSweeps.getComments(),WallSweeps.getId());
+
+String sqlUpdate2 = "UPDATE WallSweeps set Mark=? where Id=?";
+jdbcTemplate.update(sqlUpdate2,WallSweeps.getMark(),WallSweeps.getId());
+
+return "redirect:/WallSweeps";
 }
 
 
@@ -4306,7 +4197,7 @@ return "redirect:/";
 
 @PostMapping("/admin/saveCeilingTypes")
 public String save2(Model model,  CeilingTypes CeilingTypes) {
-		String sqlUpdate = "UPDATE CeilingTypes set TypeComments=? where Id=?";
+String sqlUpdate = "UPDATE CeilingTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,CeilingTypes.getTypeComments(),CeilingTypes.getId());
 
 String sqlUpdate1 = "UPDATE CeilingTypes set Keynote=? where Id=?";
@@ -4324,11 +4215,19 @@ jdbcTemplate.update(sqlUpdate4,CeilingTypes.getURL(),CeilingTypes.getId());
 String sqlUpdate5 = "UPDATE CeilingTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,CeilingTypes.getDescription(),CeilingTypes.getId());	
 
+String sqlUpdate6 = "UPDATE CeilingTypes set Materiel=? where Id=?";
+jdbcTemplate.update(sqlUpdate6,CeilingTypes.getMateriel(),CeilingTypes.getId());
 
-String sqlUpdate6 = "UPDATE CeilingTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,CeilingTypes.getAssemblyCode(),CeilingTypes.getId());
+String sqlUpdate7 = "UPDATE CeilingTypes set Length=? where Id=?";
+jdbcTemplate.update(sqlUpdate7,CeilingTypes.getLength(),CeilingTypes.getId());
 
-return "redirect:/";
+String sqlUpdate8 = "UPDATE CeilingTypes set Width=? where Id=?";
+jdbcTemplate.update(sqlUpdate8,CeilingTypes.getWidth(),CeilingTypes.getId());
+
+String sqlUpdate9 = "UPDATE CeilingTypes set Height=? where Id=?";
+jdbcTemplate.update(sqlUpdate9,CeilingTypes.getHeight(),CeilingTypes.getId());	
+
+return "redirect:/CeilingTypes";
 }
 
 
@@ -4338,13 +4237,10 @@ public String save3(Model model,  CurtainWallMullions cwm) {
     String sqlUpdate = "UPDATE CurtainWallMullions set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,cwm.getComments(),cwm.getId());
 
-String sqlUpdate1 = "UPDATE CurtainWallMullions set DesignOption=? where Id=?";
-jdbcTemplate.update(sqlUpdate1,cwm.getDesignOption(),cwm.getId());
-
 String sqlUpdate2 = "UPDATE CurtainWallMullions set Mark=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,cwm.getMark(),cwm.getId());
 
-return "redirect:/";
+return "redirect:/CurtainWallMullions";
 }
 
 
@@ -4369,34 +4265,21 @@ jdbcTemplate.update(sqlUpdate4,cwmt.getURL(),cwmt.getId());
 String sqlUpdate5 = "UPDATE CurtainWallMullionTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,cwmt.getDescription(),cwmt.getId());	
 
-
-String sqlUpdate6 = "UPDATE CurtainWallMullionTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,cwmt.getAssemblyCode(),cwmt.getId());	
-
-
 String sqlUpdate7 = "UPDATE CurtainWallMullionTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,cwmt.getTypeMark(),cwmt.getId());	
-
 
 String sqlUpdate8 = "UPDATE CurtainWallMullionTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,cwmt.getCost(),cwmt.getId());	
 
-
-String sqlUpdate9 = "UPDATE CurtainWallMullionTypes set OmniClassNumber=? where Id=?";
-jdbcTemplate.update(sqlUpdate9,cwmt.getOmniClassNumber(),cwmt.getId());	
-
-return "redirect:/";
+return "redirect:/CurtainWallMullionTypes";
 }
 
 
 
 @PostMapping("/admin/saveStructuralFraming")
 public String save5(Model model,  StructuralFraming sf) {
-    String sqlUpdate = "UPDATE StructuralFraming set comments=? where Id=?";
+String sqlUpdate = "UPDATE StructuralFraming set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,sf.getComments(),sf.getId());
-
-String sqlUpdate1 = "UPDATE StructuralFraming set DesignOption=? where Id=?";
-jdbcTemplate.update(sqlUpdate1,sf.getDesignOption(),sf.getId());
 
 String sqlUpdate2 = "UPDATE StructuralFraming set Mark=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,sf.getMark(),sf.getId());
@@ -4407,14 +4290,14 @@ jdbcTemplate.update(sqlUpdate3,sf.getReferenceLevel(),sf.getId());
 String sqlUpdate4 = "UPDATE StructuralFraming set StructuralUsage=? where Id=?";
 jdbcTemplate.update(sqlUpdate4,sf.getStructuralUsage(),sf.getId());
 
-return "redirect:/";
+return "redirect:/StructuralFraming";
 }
 
 
 
 @PostMapping("/admin/saveStructuralFramingTypes")
 public String save6(Model model,  StructuralFramingTypes sft) {
-		String sqlUpdate = "UPDATE StructuralFramingTypes set TypeComments=? where Id=?";
+String sqlUpdate = "UPDATE StructuralFramingTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,sft.getTypeComments(),sft.getId());
 
 String sqlUpdate1 = "UPDATE StructuralFramingTypes set Keynote=? where Id=?";
@@ -4432,30 +4315,20 @@ jdbcTemplate.update(sqlUpdate4,sft.getURL(),sft.getId());
 String sqlUpdate5 = "UPDATE StructuralFramingTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,sft.getDescription(),sft.getId());	
 
-
-String sqlUpdate6 = "UPDATE StructuralFramingTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,sft.getAssemblyCode(),sft.getId());	
-
-
 String sqlUpdate7 = "UPDATE StructuralFramingTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,sft.getTypeMark(),sft.getId());	
-
 
 String sqlUpdate8 = "UPDATE StructuralFramingTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,sft.getCost(),sft.getId());	
 
-
-String sqlUpdate9 = "UPDATE StructuralFramingTypes set OmniClassNumber=? where Id=?";
-jdbcTemplate.update(sqlUpdate9,sft.getOmniClassNumber(),sft.getId());	
-
-return "redirect:/";
+return "redirect:/StructuralFramingTypes";
 }
 
 
 
 @PostMapping("/admin/saveWallTypes")
 public String save7(Model model,  WallTypes WallTypes) {
-		String sqlUpdate = "UPDATE WallTypes set TypeComments=? where Id=?";
+String sqlUpdate = "UPDATE WallTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,WallTypes.getTypeComments(),WallTypes.getId());
 
 String sqlUpdate1 = "UPDATE WallTypes set Keynote=? where Id=?";
@@ -4473,19 +4346,13 @@ jdbcTemplate.update(sqlUpdate4,WallTypes.getURL(),WallTypes.getId());
 String sqlUpdate5 = "UPDATE WallTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,WallTypes.getDescription(),WallTypes.getId());	
 
-
-String sqlUpdate6 = "UPDATE WallTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,WallTypes.getAssemblyCode(),WallTypes.getId());	
-
-
 String sqlUpdate7 = "UPDATE WallTypes set TypeMark=? where Id=?";
-jdbcTemplate.update(sqlUpdate7,WallTypes.getTypeMark(),WallTypes.getId());	
+jdbcTemplate.update(sqlUpdate7,WallTypes.getTypeMark(),WallTypes.getId());
 
+String sqlUpdate8 = "UPDATE WallTypes set Cost=? where Id=?";
+jdbcTemplate.update(sqlUpdate8,WallTypes.getCost(),WallTypes.getId());
 
-String sqlUpdate8 = "UPDATE WallTypes set OmniClassNumber=? where Id=?";
-jdbcTemplate.update(sqlUpdate8,WallTypes.getOmniClassNumber(),WallTypes.getId());
-
-return "redirect:/";
+return "redirect:/WallTypes";
 }
 
 
@@ -4494,20 +4361,17 @@ public String save8(Model model, CurtainPanels CurtainPanels) {
     String sqlUpdate = "UPDATE CurtainPanels set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,CurtainPanels.getComments(),CurtainPanels.getId());
 
-String sqlUpdate1 = "UPDATE CurtainPanels set DesignOption=? where Id=?";
-jdbcTemplate.update(sqlUpdate1,CurtainPanels.getDesignOption(),CurtainPanels.getId());
-
 String sqlUpdate2 = "UPDATE CurtainPanels set Mark=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,CurtainPanels.getMark(),CurtainPanels.getId());
 
-return "redirect:/";
+return "redirect:/CurtainPanels";
 }
 
 
 
 @PostMapping("/admin/saveCurtainPanelTypes")
 public String save9(Model model,  CurtainPanelTypes cpt) {
-		String sqlUpdate = "UPDATE CurtainPanelTypes set TypeComments=? where Id=?";
+String sqlUpdate = "UPDATE CurtainPanelTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,cpt.getTypeComments(),cpt.getId());
 
 String sqlUpdate1 = "UPDATE CurtainPanelTypes set Keynote=? where Id=?";
@@ -4525,38 +4389,27 @@ jdbcTemplate.update(sqlUpdate4,cpt.getURL(),cpt.getId());
 String sqlUpdate5 = "UPDATE CurtainPanelTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,cpt.getDescription(),cpt.getId());	
 
-
-String sqlUpdate6 = "UPDATE CurtainPanelTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,cpt.getAssemblyCode(),cpt.getId());	
-
-
 String sqlUpdate7 = "UPDATE CurtainPanelTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,cpt.getTypeMark(),cpt.getId());	
-
 
 String sqlUpdate8 = "UPDATE CurtainPanelTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,cpt.getCost(),cpt.getId());	
 
-
 String sqlUpdate9 = "UPDATE CurtainPanelTypes set Finish=? where Id=?";
 jdbcTemplate.update(sqlUpdate9,cpt.getFinish(),cpt.getId());	
-
 
 String sqlUpdate10 = "UPDATE CurtainPanelTypes set ConstructionType=? where Id=?";
 jdbcTemplate.update(sqlUpdate10,cpt.getConstructionType(),cpt.getId());	
 
-return "redirect:/";
+return "redirect:/CurtainPanelTypes";
 }
 
 
 
 @PostMapping("/admin/saveDoors")
 public String save10(Model model, Doors Doors) {
-    String sqlUpdate = "UPDATE Doors set comments=? where Id=?";
+String sqlUpdate = "UPDATE Doors set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,Doors.getComments(),Doors.getId());
-
-String sqlUpdate1 = "UPDATE Doors set DesignOption=? where Id=?";
-jdbcTemplate.update(sqlUpdate1,Doors.getDesignOption(),Doors.getId());
 
 String sqlUpdate2 = "UPDATE Doors set Mark=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,Doors.getMark(),Doors.getId());
@@ -4582,18 +4435,15 @@ jdbcTemplate.update(sqlUpdate8,Doors.getService(),Doors.getId());
 String sqlUpdate9 = "UPDATE Doors set LOT=? where Id=?";
 jdbcTemplate.update(sqlUpdate9,Doors.getLOT(),Doors.getId());
 
-return "redirect:/";
+return "redirect:/Doors";
 }
 
 
 
 @PostMapping("/admin/saveAirTerminals")
 public String save11(Model model, AirTerminals AirTerminals) {
-    String sqlUpdate = "UPDATE AirTerminals set comments=? where Id=?";
+String sqlUpdate = "UPDATE AirTerminals set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,AirTerminals.getComments(),AirTerminals.getId());
-
-String sqlUpdate1 = "UPDATE AirTerminals set DesignOption=? where Id=?";
-jdbcTemplate.update(sqlUpdate1,AirTerminals.getDesignOption(),AirTerminals.getId());
 
 String sqlUpdate2 = "UPDATE AirTerminals set Mark=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,AirTerminals.getMark(),AirTerminals.getId());
@@ -4601,7 +4451,7 @@ jdbcTemplate.update(sqlUpdate2,AirTerminals.getMark(),AirTerminals.getId());
 String sqlUpdate3 = "UPDATE AirTerminals set Flow=? where Id=?";
 jdbcTemplate.update(sqlUpdate3,AirTerminals.getFlow(),AirTerminals.getId());
 
-return "redirect:/";
+return "redirect:/AirTerminals";
 }
 
 
@@ -4626,27 +4476,19 @@ jdbcTemplate.update(sqlUpdate4,atp.getURL(),atp.getId());
 String sqlUpdate5 = "UPDATE AirTerminalTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,atp.getDescription(),atp.getId());	
 
-
-String sqlUpdate6 = "UPDATE AirTerminalTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,atp.getAssemblyCode(),atp.getId());	
-
-
 String sqlUpdate7 = "UPDATE AirTerminalTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,atp.getTypeMark(),atp.getId());	
-
 
 String sqlUpdate8 = "UPDATE AirTerminalTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,atp.getCost(),atp.getId());	
 
-
 String sqlUpdate9 = "UPDATE AirTerminalTypes set MaxFlow=? where Id=?";
 jdbcTemplate.update(sqlUpdate9,atp.getMaxFlow(),atp.getId());	
-
 
 String sqlUpdate10 = "UPDATE AirTerminalTypes set MinFlow=? where Id=?";
 jdbcTemplate.update(sqlUpdate10,atp.getMinFlow(),atp.getId());	
 
-return "redirect:/";
+return "redirect:/AirTerminalTypes";
 }
 
 
@@ -4655,9 +4497,6 @@ return "redirect:/";
 public String save13(Model model, StructuralColumns sc) {
     String sqlUpdate = "UPDATE StructuralColumns set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,sc.getComments(),sc.getId());
-
-String sqlUpdate1 = "UPDATE StructuralColumns set DesignOption=? where Id=?";
-jdbcTemplate.update(sqlUpdate1,sc.getDesignOption(),sc.getId());
 
 String sqlUpdate2 = "UPDATE StructuralColumns set Mark=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,sc.getMark(),sc.getId());
@@ -4671,7 +4510,7 @@ jdbcTemplate.update(sqlUpdate4,sc.getTopOffset(),sc.getId());
 String sqlUpdate5 = "UPDATE StructuralColumns set AnalyzeAs=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,sc.getAnalyzeAs(),sc.getId());
 
-return "redirect:/";
+return "redirect:/StructuralColumns";
 }
 
 
@@ -4696,29 +4535,23 @@ jdbcTemplate.update(sqlUpdate4,sct.getURL(),sct.getId());
 String sqlUpdate5 = "UPDATE StructuralColumnTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,sct.getDescription(),sct.getId());	
 
-
-String sqlUpdate6 = "UPDATE StructuralColumnTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,sct.getAssemblyCode(),sct.getId());	
-
-
 String sqlUpdate7 = "UPDATE StructuralColumnTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,sct.getTypeMark(),sct.getId());	
-
 
 String sqlUpdate8 = "UPDATE StructuralColumnTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,sct.getCost(),sct.getId());	
 
-return "redirect:/";
+return "redirect:/StructuralColumnTypes";
 }
 
 
 
 @PostMapping("/admin/saveGrids")
 public String save15(Model model, Grids Grids) {
-    String sqlUpdate = "UPDATE Grids set Name=? where Id=?";
+String sqlUpdate = "UPDATE Grids set Name=? where Id=?";
 jdbcTemplate.update(sqlUpdate,Grids.getName(),Grids.getId());
 
-return "redirect:/";
+return "redirect:/Grids";
 }
 
 
@@ -4752,7 +4585,7 @@ jdbcTemplate.update(sqlUpdate7,GridTypes.getEndSegmentColor(),GridTypes.getId())
 String sqlUpdate8 = "UPDATE GridTypes set EndSegmentWeight=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,GridTypes.getEndSegmentWeight(),GridTypes.getId());
 
-return "redirect:/";
+return "redirect:/GridTypes";
 }
 
 
@@ -4761,9 +4594,6 @@ return "redirect:/";
 public String save17(Model model, Windows Windows) {
     String sqlUpdate = "UPDATE Windows set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,Windows.getComments(),Windows.getId());
-
-String sqlUpdate1 = "UPDATE Windows set DesignOption=? where Id=?";
-jdbcTemplate.update(sqlUpdate1,Windows.getDesignOption(),Windows.getId());
 
 String sqlUpdate2 = "UPDATE Windows set Mark=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,Windows.getMark(),Windows.getId());
@@ -4774,14 +4604,14 @@ jdbcTemplate.update(sqlUpdate3,Windows.getHeadHeight(),Windows.getId());
 String sqlUpdate4 = "UPDATE Windows set SillHeight=? where Id=?";
 jdbcTemplate.update(sqlUpdate4,Windows.getSillHeight(),Windows.getId());
 
-return "redirect:/";
+return "redirect:/Windows";
 }
 
 
 
 @PostMapping("/admin/saveWindowTypes")
 public String save18(Model model, WindowTypes WindowTypes) {
-        String sqlUpdate = "UPDATE WindowTypes set TypeComments=? where Id=?";
+String sqlUpdate = "UPDATE WindowTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,WindowTypes.getTypeComments(),WindowTypes.getId());
 
 String sqlUpdate1 = "UPDATE WindowTypes set Keynote=? where Id=?";
@@ -4799,14 +4629,8 @@ jdbcTemplate.update(sqlUpdate4,WindowTypes.getURL(),WindowTypes.getId());
 String sqlUpdate5 = "UPDATE WindowTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,WindowTypes.getDescription(),WindowTypes.getId());	
 
-
-String sqlUpdate6 = "UPDATE WindowTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,WindowTypes.getAssemblyCode(),WindowTypes.getId());	
-
-
 String sqlUpdate7 = "UPDATE WindowTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,WindowTypes.getTypeMark(),WindowTypes.getId());	
-
 
 String sqlUpdate8 = "UPDATE WindowTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,WindowTypes.getCost(),WindowTypes.getId());	
@@ -4823,7 +4647,7 @@ jdbcTemplate.update(sqlUpdate11,WindowTypes.getOperation(),WindowTypes.getId());
 String sqlUpdate12 = "UPDATE WindowTypes set ConstructionType=? where Id=?";
 jdbcTemplate.update(sqlUpdate12,WindowTypes.getConstructionType(),WindowTypes.getId());
 
-return "redirect:/";
+return "redirect:/WindowTypes";
 }
 
 
@@ -4833,20 +4657,17 @@ public String save19(Model model, PlumbingFixtures pb) {
     String sqlUpdate = "UPDATE PlumbingFixtures set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,pb.getComments(),pb.getId());
 
-String sqlUpdate1 = "UPDATE PlumbingFixtures set DesignOption=? where Id=?";
-jdbcTemplate.update(sqlUpdate1,pb.getDesignOption(),pb.getId());
-
 String sqlUpdate2 = "UPDATE PlumbingFixtures set Mark=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,pb.getMark(),pb.getId());
 
-return "redirect:/";
+return "redirect:/PlumbingFixtures";
 }
 
 
 
 @PostMapping("/admin/savePlumbingFixtureTypes")
 public String save20(Model model, PlumbingFixtureTypes pft) {
-        String sqlUpdate = "UPDATE PlumbingFixtureTypes set TypeComments=? where Id=?";
+String sqlUpdate = "UPDATE PlumbingFixtureTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,pft.getTypeComments(),pft.getId());
 
 String sqlUpdate1 = "UPDATE PlumbingFixtureTypes set Keynote=? where Id=?";
@@ -4864,14 +4685,8 @@ jdbcTemplate.update(sqlUpdate4,pft.getURL(),pft.getId());
 String sqlUpdate5 = "UPDATE PlumbingFixtureTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,pft.getDescription(),pft.getId());	
 
-
-String sqlUpdate6 = "UPDATE PlumbingFixtureTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,pft.getAssemblyCode(),pft.getId());	
-
-
 String sqlUpdate7 = "UPDATE PlumbingFixtureTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,pft.getTypeMark(),pft.getId());	
-
 
 String sqlUpdate8 = "UPDATE PlumbingFixtureTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,pft.getCost(),pft.getId());	
@@ -4885,7 +4700,7 @@ jdbcTemplate.update(sqlUpdate10,pft.getHWFU(),pft.getId());
 String sqlUpdate11 = "UPDATE PlumbingFixtureTypes set CWFU=? where Id=?";
 jdbcTemplate.update(sqlUpdate11,pft.getCWFU(),pft.getId());
 
-return "redirect:/";
+return "redirect:/PlumbingFixtureTypes";
 }
 
 
@@ -4894,9 +4709,6 @@ return "redirect:/";
 public String save21(Model model, Roofs Roofs) {
     String sqlUpdate = "UPDATE Roofs set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,Roofs.getComments(),Roofs.getId());
-
-String sqlUpdate1 = "UPDATE Roofs set DesignOption=? where Id=?";
-jdbcTemplate.update(sqlUpdate1,Roofs.getDesignOption(),Roofs.getId());
 
 String sqlUpdate2 = "UPDATE Roofs set Mark=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,Roofs.getMark(),Roofs.getId());
@@ -4925,7 +4737,7 @@ jdbcTemplate.update(sqlUpdate9,Roofs.getCutoffLevel(),Roofs.getId());
 String sqlUpdate10 = "UPDATE Roofs set BaseOffsetFromLevel=? where Id=?";
 jdbcTemplate.update(sqlUpdate10,Roofs.getBaseOffsetFromLevel(),Roofs.getId());
 
-return "redirect:/";
+return "redirect:/Roofs";
 }
 
 
@@ -4950,37 +4762,28 @@ jdbcTemplate.update(sqlUpdate4,RoofTypes.getURL(),RoofTypes.getId());
 String sqlUpdate5 = "UPDATE RoofTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,RoofTypes.getDescription(),RoofTypes.getId());	
 
-
-String sqlUpdate6 = "UPDATE RoofTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,RoofTypes.getAssemblyCode(),RoofTypes.getId());	
-
-
 String sqlUpdate7 = "UPDATE RoofTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,RoofTypes.getTypeMark(),RoofTypes.getId());	
-
 
 String sqlUpdate8 = "UPDATE RoofTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,RoofTypes.getCost(),RoofTypes.getId());	
 
-return "redirect:/";
+return "redirect:/RoofTypes";
 }
 
 
 
-@PostMapping("/admin/saveSpecialtyEquipment")
+/*@PostMapping("/admin/saveSpecialtyEquipment")
 public String save23(Model model, SpecialtyEquipment se) {
     String sqlUpdate = "UPDATE SpecialtyEquipment set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,se.getComments(),se.getId());
 
-String sqlUpdate1 = "UPDATE SpecialtyEquipment set DesignOption=? where Id=?";
-jdbcTemplate.update(sqlUpdate1,se.getDesignOption(),se.getId());
-
 String sqlUpdate2 = "UPDATE SpecialtyEquipment set Mark=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,se.getMark(),se.getId());
 
-return "redirect:/";
+return "redirect:/SpecialtyEquipment";
 }
-
+*/
 
 
 @PostMapping("/admin/saveSpecialtyEquipmentTypes")
@@ -5003,19 +4806,13 @@ jdbcTemplate.update(sqlUpdate4,set.getURL(),set.getId());
 String sqlUpdate5 = "UPDATE SpecialtyEquipmentTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,set.getDescription(),set.getId());	
 
-
-String sqlUpdate6 = "UPDATE SpecialtyEquipmentTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,set.getAssemblyCode(),set.getId());	
-
-
 String sqlUpdate7 = "UPDATE SpecialtyEquipmentTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,set.getTypeMark(),set.getId());	
-
 
 String sqlUpdate8 = "UPDATE SpecialtyEquipmentTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,set.getCost(),set.getId());	
 
-return "redirect:/";
+return "redirect:/SpecialtyEquipmentTypes";
 }
 
 
@@ -5024,9 +4821,6 @@ return "redirect:/";
 public String save25(Model model, Floors Floors) {
     String sqlUpdate = "UPDATE Floors set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,Floors.getComments(),Floors.getId());
-
-String sqlUpdate1 = "UPDATE Floors set DesignOption=? where Id=?";
-jdbcTemplate.update(sqlUpdate1,Floors.getDesignOption(),Floors.getId());
 
 String sqlUpdate2 = "UPDATE Floors set Mark=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,Floors.getMark(),Floors.getId());
@@ -5043,7 +4837,7 @@ jdbcTemplate.update(sqlUpdate5,Floors.getAnalyzeAs(),Floors.getId());
 String sqlUpdate6 = "UPDATE Floors set LOT=? where Id=?";
 jdbcTemplate.update(sqlUpdate6,Floors.getLOT(),Floors.getId());
 
-return "redirect:/";
+return "redirect:/Floors";
 }
 
 
@@ -5068,31 +4862,22 @@ jdbcTemplate.update(sqlUpdate4,FloorTypes.getURL(),FloorTypes.getId());
 String sqlUpdate5 = "UPDATE FloorTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,FloorTypes.getDescription(),FloorTypes.getId());	
 
-
-String sqlUpdate6 = "UPDATE FloorTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,FloorTypes.getAssemblyCode(),FloorTypes.getId());	
-
-
 String sqlUpdate7 = "UPDATE FloorTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,FloorTypes.getTypeMark(),FloorTypes.getId());	
-
 
 String sqlUpdate8 = "UPDATE FloorTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,FloorTypes.getCost(),FloorTypes.getId());	
 
-return "redirect:/";
+return "redirect:/FloorTypes";
 }
 
 
-
+/*
 @PostMapping("/admin/saveHVACZones")
 public String save27(Model model, HVACZones HVACZones) {
 
-    String sqlUpdate = "UPDATE HVACZones set comments=? where Id=?";
+String sqlUpdate = "UPDATE HVACZones set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,HVACZones.getComments(),HVACZones.getId());
-
-String sqlUpdate1 = "UPDATE HVACZones set DesignOption=? where Id=?";
-jdbcTemplate.update(sqlUpdate1,HVACZones.getDesignOption(),HVACZones.getId());
 
 String sqlUpdate2 = "UPDATE HVACZones set UseAirChangesPerHour=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,HVACZones.getUseAirChangesPerHour(),HVACZones.getId());
@@ -5139,8 +4924,9 @@ jdbcTemplate.update(sqlUpdate15,HVACZones.getServiceType(),HVACZones.getId());
 String sqlUpdate16 = "UPDATE HVACZones set CoilBypass=? where Id=?";
 jdbcTemplate.update(sqlUpdate16,HVACZones.getCoilBypass(),HVACZones.getId());
 
-return "redirect:/";
+return "redirect:/HVACZones";
 }
+*/
 
 
 
@@ -5149,27 +4935,21 @@ public String save28(Model model, DuctSystems DuctSystems) {
     String sqlUpdate = "UPDATE DuctSystems set comments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,DuctSystems.getComments(),DuctSystems.getId());
 
-String sqlUpdate1 = "UPDATE DuctSystems set DesignOption=? where Id=?";
-jdbcTemplate.update(sqlUpdate1,DuctSystems.getDesignOption(),DuctSystems.getId());
-
 String sqlUpdate2 = "UPDATE DuctSystems set SystemName=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,DuctSystems.getSystemName(),DuctSystems.getId());
 
 String sqlUpdate3 = "UPDATE DuctSystems set Flow=? where Id=?";
 jdbcTemplate.update(sqlUpdate3,DuctSystems.getFlow(),DuctSystems.getId());
 
-return "redirect:/";
+return "redirect:/DuctSystems";
 }
 
 
 
 @PostMapping("/admin/saveDuctSystemTypes")
 public String save29(Model model, DuctSystemTypes DuctSystemTypes) {
-    String sqlUpdate = "UPDATE DuctSystemTypes set TypeComments=? where Id=?";
+String sqlUpdate = "UPDATE DuctSystemTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,DuctSystemTypes.getTypeComments(),DuctSystemTypes.getId());
-
-String sqlUpdate1 = "UPDATE DuctSystemTypes set Abbreviation=? where Id=?";
-jdbcTemplate.update(sqlUpdate1,DuctSystemTypes.getAbbreviation(),DuctSystemTypes.getId());
 
 String sqlUpdate2 = "UPDATE DuctSystemTypes set URL=? where Id=?";
 jdbcTemplate.update(sqlUpdate2,DuctSystemTypes.getURL(),DuctSystemTypes.getId());
@@ -5177,7 +4957,10 @@ jdbcTemplate.update(sqlUpdate2,DuctSystemTypes.getURL(),DuctSystemTypes.getId())
 String sqlUpdate3 = "UPDATE DuctSystemTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate3,DuctSystemTypes.getDescription(),DuctSystemTypes.getId());
 
-return "redirect:/";
+String sqlUpdate4 = "UPDATE DuctSystemTypes set Abbreviation=? where Id=?";
+jdbcTemplate.update(sqlUpdate4,DuctSystemTypes.getAbbreviation(),DuctSystemTypes.getId());
+
+return "redirect:/DuctSystemTypes";
 }
 
 
@@ -5202,23 +4985,17 @@ public String save30(Model model, DuctTypes DuctTypes) {
     String sqlUpdate5 = "UPDATE DuctTypes set Description=? where Id=?";
     jdbcTemplate.update(sqlUpdate5,DuctTypes.getDescription(),DuctTypes.getId());	
     
-
-    String sqlUpdate6 = "UPDATE DuctTypes set AssemblyCode=? where Id=?";
-    jdbcTemplate.update(sqlUpdate6,DuctTypes.getAssemblyCode(),DuctTypes.getId());	
-    
-
     String sqlUpdate7 = "UPDATE DuctTypes set TypeMark=? where Id=?";
     jdbcTemplate.update(sqlUpdate7,DuctTypes.getTypeMark(),DuctTypes.getId());	
     
-
     String sqlUpdate8 = "UPDATE DuctTypes set Cost=? where Id=?";
     jdbcTemplate.update(sqlUpdate8,DuctTypes.getCost(),DuctTypes.getId());	
 
-    return "redirect:/";
+    return "redirect:/DuctTypes";
 }
 
 
-
+/*
 @PostMapping("/admin/saveMaterialQuantities")
 public String save31(Model model, MaterialQuantities mq) {
     String sqlUpdate = "UPDATE MaterialQuantities set AsPaint=? where ElementId=?";
@@ -5226,7 +5003,7 @@ public String save31(Model model, MaterialQuantities mq) {
 
     return "redirect:/";
 }
-
+*/
 
 
 /*
@@ -5272,22 +5049,20 @@ public String save33(Model model, Materials Materials) {
         String sqlUpdate5 = "UPDATE Materials set Description=? where Id=?";
         jdbcTemplate.update(sqlUpdate5,Materials.getDescription(),Materials.getId());	
         
-
         String sqlUpdate6 = "UPDATE Materials set Name=? where Id=?";
         jdbcTemplate.update(sqlUpdate6,Materials.getName(),Materials.getId());	
         
-
         String sqlUpdate7 = "UPDATE Materials set Cost=? where Id=?";
         jdbcTemplate.update(sqlUpdate7,Materials.getCost(),Materials.getId());	
 
-        return "redirect:/";
+        return "redirect:/Materials";
     }
 
 
 
 @PostMapping("/admin/saveWireInsulationTypes")
 public String save34(Model model, WireInsulationTypes wit) {
-        String sqlUpdate = "UPDATE WireInsulationTypes set TypeComments=? where Id=?";
+String sqlUpdate = "UPDATE WireInsulationTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,wit.getTypeComments(),wit.getId());
 
 String sqlUpdate1 = "UPDATE WireInsulationTypes set Keynote=? where Id=?";
@@ -5305,19 +5080,13 @@ jdbcTemplate.update(sqlUpdate4,wit.getURL(),wit.getId());
 String sqlUpdate5 = "UPDATE WireInsulationTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,wit.getDescription(),wit.getId());	
 
-
-String sqlUpdate6 = "UPDATE WireInsulationTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,wit.getAssemblyCode(),wit.getId());	
-
-
 String sqlUpdate7 = "UPDATE WireInsulationTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,wit.getTypeMark(),wit.getId());	
-
 
 String sqlUpdate8 = "UPDATE WireInsulationTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,wit.getCost(),wit.getId());	
 
-return "redirect:/";
+return "redirect:/WireInsulationTypes";
 }
 
 
@@ -5342,19 +5111,13 @@ public String save35(Model model, DuctFittingTypes dft) {
     String sqlUpdate5 = "UPDATE DuctFittingTypes set Description=? where Id=?";
     jdbcTemplate.update(sqlUpdate5,dft.getDescription(),dft.getId());	
     
-
-    String sqlUpdate6 = "UPDATE DuctFittingTypes set AssemblyCode=? where Id=?";
-    jdbcTemplate.update(sqlUpdate6,dft.getAssemblyCode(),dft.getId());	
-    
-
     String sqlUpdate7 = "UPDATE DuctFittingTypes set TypeMark=? where Id=?";
     jdbcTemplate.update(sqlUpdate7,dft.getTypeMark(),dft.getId());	
     
-
     String sqlUpdate8 = "UPDATE DuctFittingTypes set Cost=? where Id=?";
     jdbcTemplate.update(sqlUpdate8,dft.getCost(),dft.getId());	
 
-    return "redirect:/";
+    return "redirect:/DuctFittingTypes";
 }
 
 
@@ -5378,38 +5141,117 @@ jdbcTemplate.update(sqlUpdate4,FluidTypes.getURL(),FluidTypes.getId());
 
 String sqlUpdate5 = "UPDATE FluidTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,FluidTypes.getDescription(),FluidTypes.getId());	
-
-
-String sqlUpdate6 = "UPDATE FluidTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,FluidTypes.getAssemblyCode(),FluidTypes.getId());	
-
-
+	
 String sqlUpdate7 = "UPDATE FluidTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,FluidTypes.getTypeMark(),FluidTypes.getId());	
-
 
 String sqlUpdate8 = "UPDATE FluidTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,FluidTypes.getCost(),FluidTypes.getId());	
 
-return "redirect:/";
+return "redirect:/FluidTypes";
 }
 
 
 
 @PostMapping("/admin/savePipingSystemTypes")
 public String save37(Model model, PipingSystemTypes pist) {
-        String sqlUpdate = "UPDATE PipingSystemTypes set TypeComments=? where Id=?";
+String sqlUpdate = "UPDATE PipingSystemTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,pist.getTypeComments(),pist.getId());
 
 String sqlUpdate4 = "UPDATE PipingSystemTypes set URL=? where Id=?";
 jdbcTemplate.update(sqlUpdate4,pist.getURL(),pist.getId());
 
 String sqlUpdate5 = "UPDATE PipingSystemTypes set Description=? where Id=?";
-jdbcTemplate.update(sqlUpdate5,pist.getDescription(),pist.getId());		
+jdbcTemplate.update(sqlUpdate5,pist.getDescription(),pist.getId());	
 
-return "redirect:/";
+String sqlUpdate6 = "UPDATE PipingSystemTypes set Abbreviation=? where Id=?";
+jdbcTemplate.update(sqlUpdate6,pist.getAbbreviation(),pist.getId());
+
+String sqlUpdate7 = "UPDATE PipingSystemTypes set FluidDensity=? where Id=?";
+jdbcTemplate.update(sqlUpdate7,pist.getFluidDensity(),pist.getId());
+
+String sqlUpdate8 = "UPDATE PipingSystemTypes set FluidTemperature=? where Id=?";
+jdbcTemplate.update(sqlUpdate8,pist.getFluidTemperature(),pist.getId());
+
+String sqlUpdate9 = "UPDATE PipingSystemTypes set FluidType=? where Id=?";
+jdbcTemplate.update(sqlUpdate9,pist.getFluidType(),pist.getId());
+
+String sqlUpdate10 = "UPDATE PipingSystemTypes set FluidDynamicViscosity=? where Id=?";
+jdbcTemplate.update(sqlUpdate10,pist.getFluidDynamicViscosity(),pist.getId());
+
+String sqlUpdate11 = "UPDATE PipingSystemTypes set SystemClassification=? where Id=?";
+jdbcTemplate.update(sqlUpdate11,pist.getSystemClassification(),pist.getId());
+
+return "redirect:/PipingSystemTypes";
 }
 
+@PostMapping("/admin/saveLevels")
+public String save100(Model model, Levels Levels) {
+        String sqlUpdate = "UPDATE Levels set Name=? where Id=?";
+jdbcTemplate.update(sqlUpdate,Levels.getName(),Levels.getId());
+
+String sqlUpdate4 = "UPDATE Levels set Elevation=? where Id=?";
+jdbcTemplate.update(sqlUpdate4,Levels.getElevation(),Levels.getId());
+
+return "redirect:/Levels";
+}
+
+
+@PostMapping("/admin/saveRooms")
+public String save101(Model model, Rooms Rooms) {
+String sqlUpdate = "UPDATE Rooms set comments=? where Id=?";
+jdbcTemplate.update(sqlUpdate,Rooms.getComments(),Rooms.getId());
+
+String sqlUpdate4 = "UPDATE Rooms set Volume=? where Id=?";
+jdbcTemplate.update(sqlUpdate4,Rooms.getVolume(),Rooms.getId());
+
+String sqlUpdate5 = "UPDATE Rooms set Perimeter=? where Id=?";
+jdbcTemplate.update(sqlUpdate5,Rooms.getPerimeter(),Rooms.getId());
+
+String sqlUpdate6 = "UPDATE Rooms set Level=? where Id=?";
+jdbcTemplate.update(sqlUpdate6,Rooms.getLevel(),Rooms.getId());
+
+String sqlUpdate7 = "UPDATE Rooms set CeilingFinish=? where Id=?";
+jdbcTemplate.update(sqlUpdate7,Rooms.getCeilingFinish(),Rooms.getId());
+
+String sqlUpdate8 = "UPDATE Rooms set Occupancy=? where Id=?";
+jdbcTemplate.update(sqlUpdate8,Rooms.getOccupancy(),Rooms.getId());
+
+String sqlUpdate9 = "UPDATE Rooms set Department=? where Id=?";
+jdbcTemplate.update(sqlUpdate9,Rooms.getDepartment(),Rooms.getId());
+
+String sqlUpdate10 = "UPDATE Rooms set BaseFinish=? where Id=?";
+jdbcTemplate.update(sqlUpdate10,Rooms.getBaseFinish(),Rooms.getId());
+
+String sqlUpdate11 = "UPDATE Rooms set WallFinish=? where Id=?";
+jdbcTemplate.update(sqlUpdate11,Rooms.getWallFinish(),Rooms.getId());
+
+String sqlUpdate12 = "UPDATE Rooms set FloorFinish=? where Id=?";
+jdbcTemplate.update(sqlUpdate12,Rooms.getFloorFinish(),Rooms.getId());
+
+String sqlUpdate13 = "UPDATE Rooms set Area=? where Id=?";
+jdbcTemplate.update(sqlUpdate13,Rooms.getArea(),Rooms.getId());
+
+String sqlUpdate14 = "UPDATE Rooms set Number=? where Id=?";
+jdbcTemplate.update(sqlUpdate14,Rooms.getNumber(),Rooms.getId());
+
+String sqlUpdate15 = "UPDATE Rooms set Name=? where Id=?";
+jdbcTemplate.update(sqlUpdate15,Rooms.getName(),Rooms.getId());
+
+String sqlUpdate16 = "UPDATE Rooms set UnboundedHeight=? where Id=?";
+jdbcTemplate.update(sqlUpdate16,Rooms.getUnboundedHeight(),Rooms.getId());
+
+String sqlUpdate17 = "UPDATE Rooms set Occupant=? where Id=?";
+jdbcTemplate.update(sqlUpdate17,Rooms.getOccupant(),Rooms.getId());
+
+String sqlUpdate18 = "UPDATE Rooms set ZONE=? where Id=?";
+jdbcTemplate.update(sqlUpdate18,Rooms.getZONE(),Rooms.getId());
+
+String sqlUpdate19 = "UPDATE Rooms set BATIMENT=? where Id=?";
+jdbcTemplate.update(sqlUpdate19,Rooms.getBATIMENT(),Rooms.getId());
+
+return "redirect:/Rooms";
+}
 
 
 @PostMapping("/admin/savePipeScheduleTypes")
@@ -5432,19 +5274,13 @@ jdbcTemplate.update(sqlUpdate4,pst.getURL(),pst.getId());
 String sqlUpdate5 = "UPDATE PipeScheduleTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,pst.getDescription(),pst.getId());	
 
-
-String sqlUpdate6 = "UPDATE PipeScheduleTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,pst.getAssemblyCode(),pst.getId());	
-
-
 String sqlUpdate7 = "UPDATE PipeScheduleTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,pst.getTypeMark(),pst.getId());	
-
 
 String sqlUpdate8 = "UPDATE PipeScheduleTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,pst.getCost(),pst.getId());	
 
-return "redirect:/";
+return "redirect:/PipeScheduleTypes";
 }
 
 
@@ -5469,19 +5305,13 @@ jdbcTemplate.update(sqlUpdate4,Profiles.getURL(),Profiles.getId());
 String sqlUpdate5 = "UPDATE Profiles set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,Profiles.getDescription(),Profiles.getId());	
 
-
-String sqlUpdate6 = "UPDATE Profiles set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,Profiles.getAssemblyCode(),Profiles.getId());	
-
-
 String sqlUpdate7 = "UPDATE Profiles set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,Profiles.getTypeMark(),Profiles.getId());	
-
 
 String sqlUpdate8 = "UPDATE Profiles set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,Profiles.getCost(),Profiles.getId());	
 
-return "redirect:/";
+return "redirect:/Profiles";
 }
 
 
@@ -5506,19 +5336,13 @@ public String save40(Model model, PipeConnectionTypes pct) {
     String sqlUpdate5 = "UPDATE PipeConnectionTypes set Description=? where Id=?";
     jdbcTemplate.update(sqlUpdate5,pct.getDescription(),pct.getId());	
     
-
-    String sqlUpdate6 = "UPDATE PipeConnectionTypes set AssemblyCode=? where Id=?";
-    jdbcTemplate.update(sqlUpdate6,pct.getAssemblyCode(),pct.getId());	
-    
-
     String sqlUpdate7 = "UPDATE PipeConnectionTypes set TypeMark=? where Id=?";
     jdbcTemplate.update(sqlUpdate7,pct.getTypeMark(),pct.getId());	
-    
-
+   
     String sqlUpdate8 = "UPDATE PipeConnectionTypes set Cost=? where Id=?";
     jdbcTemplate.update(sqlUpdate8,pct.getCost(),pct.getId());	
 
-    return "redirect:/";
+    return "redirect:/PipeConnectionTypes";
 }
 
 
@@ -5543,26 +5367,20 @@ jdbcTemplate.update(sqlUpdate4,pft.getURL(),pft.getId());
 String sqlUpdate5 = "UPDATE PipeFittingTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,pft.getDescription(),pft.getId());	
 
-
-String sqlUpdate6 = "UPDATE PipeFittingTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,pft.getAssemblyCode(),pft.getId());	
-
-
 String sqlUpdate7 = "UPDATE PipeFittingTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,pft.getTypeMark(),pft.getId());	
-
 
 String sqlUpdate8 = "UPDATE PipeFittingTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,pft.getCost(),pft.getId());	
 
-return "redirect:/";
+return "redirect:/PipeFittingTypes";
 }
 
 
 
 @PostMapping("/admin/saveDoorTypes")
 public String save42(Model model, DoorTypes DoorTypes) {
-        String sqlUpdate = "UPDATE DoorTypes set TypeComments=? where Id=?";
+String sqlUpdate = "UPDATE DoorTypes set TypeComments=? where Id=?";
 jdbcTemplate.update(sqlUpdate,DoorTypes.getTypeComments(),DoorTypes.getId());
 
 String sqlUpdate1 = "UPDATE DoorTypes set Keynote=? where Id=?";
@@ -5580,19 +5398,28 @@ jdbcTemplate.update(sqlUpdate4,DoorTypes.getURL(),DoorTypes.getId());
 String sqlUpdate5 = "UPDATE DoorTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,DoorTypes.getDescription(),DoorTypes.getId());	
 
-
-String sqlUpdate6 = "UPDATE DoorTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,DoorTypes.getAssemblyCode(),DoorTypes.getId());	
-
-
 String sqlUpdate7 = "UPDATE DoorTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,DoorTypes.getTypeMark(),DoorTypes.getId());	
-
 
 String sqlUpdate8 = "UPDATE DoorTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,DoorTypes.getCost(),DoorTypes.getId());	
 
-return "redirect:/";
+String sqlUpdate10 = "UPDATE DoorTypes set Thickness=? where Id=?";
+jdbcTemplate.update(sqlUpdate10,DoorTypes.getThickness(),DoorTypes.getId());
+
+String sqlUpdate11 = "UPDATE DoorTypes set Width=? where Id=?";
+jdbcTemplate.update(sqlUpdate11,DoorTypes.getWidth(),DoorTypes.getId());
+
+String sqlUpdate12 = "UPDATE DoorTypes set ConstructionType=? where Id=?";
+jdbcTemplate.update(sqlUpdate12,DoorTypes.getConstructionType(),DoorTypes.getId());	
+
+String sqlUpdate13 = "UPDATE DoorTypes set Height=? where Id=?";
+jdbcTemplate.update(sqlUpdate13,DoorTypes.getHeight(),DoorTypes.getId());	
+
+String sqlUpdate14 = "UPDATE DoorTypes set Operation=? where Id=?";
+jdbcTemplate.update(sqlUpdate14,DoorTypes.getOperation(),DoorTypes.getId());	
+
+return "redirect:/DoorTypes";
 }
 
 
@@ -5617,19 +5444,13 @@ public String save43(Model model, DistributionSystemTypes dst) {
     String sqlUpdate5 = "UPDATE DistributionSystemTypes set Description=? where Id=?";
     jdbcTemplate.update(sqlUpdate5,dst.getDescription(),dst.getId());	
     
-
-    String sqlUpdate6 = "UPDATE DistributionSystemTypes set AssemblyCode=? where Id=?";
-    jdbcTemplate.update(sqlUpdate6,dst.getAssemblyCode(),dst.getId());	
-    
-
     String sqlUpdate7 = "UPDATE DistributionSystemTypes set TypeMark=? where Id=?";
     jdbcTemplate.update(sqlUpdate7,dst.getTypeMark(),dst.getId());	
-    
-
+   
     String sqlUpdate8 = "UPDATE DistributionSystemTypes set Cost=? where Id=?";
     jdbcTemplate.update(sqlUpdate8,dst.getCost(),dst.getId());	
 
-    return "redirect:/";
+    return "redirect:/DistributionSystemTypes";
 }
 
 
@@ -5653,15 +5474,9 @@ jdbcTemplate.update(sqlUpdate4,CoverTypes.getURL(),CoverTypes.getId());
 
 String sqlUpdate5 = "UPDATE CoverTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,CoverTypes.getDescription(),CoverTypes.getId());	
-
-
-String sqlUpdate6 = "UPDATE CoverTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,CoverTypes.getAssemblyCode(),CoverTypes.getId());	
-
-
+	
 String sqlUpdate7 = "UPDATE CoverTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,CoverTypes.getTypeMark(),CoverTypes.getId());	
-
 
 String sqlUpdate8 = "UPDATE CoverTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,CoverTypes.getCost(),CoverTypes.getId());	
@@ -5669,7 +5484,7 @@ jdbcTemplate.update(sqlUpdate8,CoverTypes.getCost(),CoverTypes.getId());
 String sqlUpdate9 = "UPDATE CoverTypes set Name=? where Id=?";
 jdbcTemplate.update(sqlUpdate9,CoverTypes.getName(),CoverTypes.getId());
 
-return "redirect:/";
+return "redirect:/CoverTypes";
 }
 
 @PostMapping("/admin/saveCurtainSystemTypes")
@@ -5692,19 +5507,13 @@ jdbcTemplate.update(sqlUpdate4,cst.getURL(),cst.getId());
 String sqlUpdate5 = "UPDATE CurtainSystemTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,cst.getDescription(),cst.getId());	
 
-
-String sqlUpdate6 = "UPDATE CurtainSystemTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,cst.getAssemblyCode(),cst.getId());	
-
-
 String sqlUpdate7 = "UPDATE CurtainSystemTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,cst.getTypeMark(),cst.getId());	
-
 
 String sqlUpdate8 = "UPDATE CurtainSystemTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,cst.getCost(),cst.getId());	
 
-return "redirect:/";
+return "redirect:/CurtainSystemTypes";
 }
 
 @PostMapping("/admin/saveGutterTypes")
@@ -5727,19 +5536,46 @@ public String save46(Model model, GutterTypes GutterTypes) {
     String sqlUpdate5 = "UPDATE GutterTypes set Description=? where Id=?";
     jdbcTemplate.update(sqlUpdate5,GutterTypes.getDescription(),GutterTypes.getId());	
     
-
-    String sqlUpdate6 = "UPDATE GutterTypes set AssemblyCode=? where Id=?";
-    jdbcTemplate.update(sqlUpdate6,GutterTypes.getAssemblyCode(),GutterTypes.getId());	
-    
-
     String sqlUpdate7 = "UPDATE GutterTypes set TypeMark=? where Id=?";
     jdbcTemplate.update(sqlUpdate7,GutterTypes.getTypeMark(),GutterTypes.getId());	
     
-
     String sqlUpdate8 = "UPDATE GutterTypes set Cost=? where Id=?";
     jdbcTemplate.update(sqlUpdate8,GutterTypes.getCost(),GutterTypes.getId());	
 
-    return "redirect:/";
+    return "redirect:/GutterTypes";
+}
+
+
+@PostMapping("/admin/savePipeMaterialTypes")
+public String save45(Model model, PipeMaterialTypes cst) {
+        String sqlUpdate = "UPDATE PipeMaterialTypes set TypeComments=? where Id=?";
+jdbcTemplate.update(sqlUpdate,cst.getTypeComments(),cst.getId());
+
+String sqlUpdate1 = "UPDATE PipeMaterialTypes set Keynote=? where Id=?";
+jdbcTemplate.update(sqlUpdate1,cst.getKeynote(),cst.getId());
+
+String sqlUpdate2 = "UPDATE PipeMaterialTypes set Model=? where Id=?";
+jdbcTemplate.update(sqlUpdate2,cst.getModel(),cst.getId());
+
+String sqlUpdate3 = "UPDATE PipeMaterialTypes set Manufacturer=? where Id=?";
+jdbcTemplate.update(sqlUpdate3,cst.getManufacturer(),cst.getId());
+
+String sqlUpdate4 = "UPDATE PipeMaterialTypes set URL=? where Id=?";
+jdbcTemplate.update(sqlUpdate4,cst.getURL(),cst.getId());
+
+String sqlUpdate5 = "UPDATE PipeMaterialTypes set Description=? where Id=?";
+jdbcTemplate.update(sqlUpdate5,cst.getDescription(),cst.getId());	
+
+String sqlUpdate7 = "UPDATE PipeMaterialTypes set TypeMark=? where Id=?";
+jdbcTemplate.update(sqlUpdate7,cst.getTypeMark(),cst.getId());	
+
+String sqlUpdate8 = "UPDATE PipeMaterialTypes set Cost=? where Id=?";
+jdbcTemplate.update(sqlUpdate8,cst.getCost(),cst.getId());	
+
+String sqlUpdate9 = "UPDATE PipeMaterialTypes set Roughness=? where Id=?";
+jdbcTemplate.update(sqlUpdate9,cst.getRoughness(),cst.getId());	
+
+return "redirect:/PipeMaterialTypes";
 }
 
 
@@ -5764,19 +5600,13 @@ jdbcTemplate.update(sqlUpdate4,FasciaTypes.getURL(),FasciaTypes.getId());
 String sqlUpdate5 = "UPDATE FasciaTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,FasciaTypes.getDescription(),FasciaTypes.getId());	
 
-
-String sqlUpdate6 = "UPDATE FasciaTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,FasciaTypes.getAssemblyCode(),FasciaTypes.getId());	
-
-
 String sqlUpdate7 = "UPDATE FasciaTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,FasciaTypes.getTypeMark(),FasciaTypes.getId());	
-
 
 String sqlUpdate8 = "UPDATE FasciaTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,FasciaTypes.getCost(),FasciaTypes.getId());	
 
-return "redirect:/";
+return "redirect:/FasciaTypes";
 }
 
 
@@ -5801,19 +5631,13 @@ jdbcTemplate.update(sqlUpdate4,RampTypes.getURL(),RampTypes.getId());
 String sqlUpdate5 = "UPDATE RampTypes set Description=? where Id=?";
 jdbcTemplate.update(sqlUpdate5,RampTypes.getDescription(),RampTypes.getId());	
 
-
-String sqlUpdate6 = "UPDATE RampTypes set AssemblyCode=? where Id=?";
-jdbcTemplate.update(sqlUpdate6,RampTypes.getAssemblyCode(),RampTypes.getId());	
-
-
 String sqlUpdate7 = "UPDATE RampTypes set TypeMark=? where Id=?";
 jdbcTemplate.update(sqlUpdate7,RampTypes.getTypeMark(),RampTypes.getId());	
-
 
 String sqlUpdate8 = "UPDATE RampTypes set Cost=? where Id=?";
 jdbcTemplate.update(sqlUpdate8,RampTypes.getCost(),RampTypes.getId());	
 
-return "redirect:/";
+return "redirect:/RampTypes";
 }
 
 
@@ -5836,10 +5660,6 @@ public String save49(Model model,  PropertyLineTypes plt) {
 		
 		String sqlUpdate5 = "UPDATE PropertyLineTypes set Description=? where Id=?";
 		jdbcTemplate.update(sqlUpdate5,plt.getDescription(),plt.getId());	
-		
-
-        String sqlUpdate6 = "UPDATE PropertyLineTypes set AssemblyCode=? where Id=?";
-		jdbcTemplate.update(sqlUpdate6,plt.getAssemblyCode(),plt.getId());
 
         String sqlUpdate7 = "UPDATE PropertyLineTypes set Cost=? where Id=?";
 		jdbcTemplate.update(sqlUpdate7,plt.getCost(),plt.getId());
@@ -5847,7 +5667,7 @@ public String save49(Model model,  PropertyLineTypes plt) {
         String sqlUpdate8 = "UPDATE PropertyLineTypes set TypeMark=? where Id=?";
 		jdbcTemplate.update(sqlUpdate8,plt.getTypeMark(),plt.getId());
 
-		return "redirect:/";
+		return "redirect:/PropertyLineTypes";
 }
 
 
@@ -5871,18 +5691,23 @@ public String save50(Model model,  PipeTypes PipeTypes) {
 		
 		String sqlUpdate5 = "UPDATE PipeTypes set Description=? where Id=?";
 		jdbcTemplate.update(sqlUpdate5,PipeTypes.getDescription(),PipeTypes.getId());	
-		
-
-        String sqlUpdate6 = "UPDATE PipeTypes set AssemblyCode=? where Id=?";
-		jdbcTemplate.update(sqlUpdate6,PipeTypes.getAssemblyCode(),PipeTypes.getId());
 
         String sqlUpdate7 = "UPDATE PipeTypes set Cost=? where Id=?";
 		jdbcTemplate.update(sqlUpdate7,PipeTypes.getCost(),PipeTypes.getId());
 
         String sqlUpdate8 = "UPDATE PipeTypes set TypeMark=? where Id=?";
 		jdbcTemplate.update(sqlUpdate8,PipeTypes.getTypeMark(),PipeTypes.getId());
+		
+		String sqlUpdate9 = "UPDATE PipeTypes set Roughness=? where Id=?";
+		jdbcTemplate.update(sqlUpdate9,PipeTypes.getRoughness(),PipeTypes.getId());	
 
-		return "redirect:/";
+        String sqlUpdate10 = "UPDATE PipeTypes set Material=? where Id=?";
+		jdbcTemplate.update(sqlUpdate10,PipeTypes.getMaterial(),PipeTypes.getId());
+
+        String sqlUpdate11 = "UPDATE PipeTypes set ConnectionType=? where Id=?";
+		jdbcTemplate.update(sqlUpdate11,PipeTypes.getConnectionType(),PipeTypes.getId());
+
+		return "redirect:/PipeTypes";
 }
 
 
@@ -5906,18 +5731,23 @@ public String save51(Model model,  WallSweepTypes WallSweepTypes) {
 		
 		String sqlUpdate5 = "UPDATE WallSweepTypes set Description=? where Id=?";
 		jdbcTemplate.update(sqlUpdate5,WallSweepTypes.getDescription(),WallSweepTypes.getId());	
-		
-
-        String sqlUpdate6 = "UPDATE WallSweepTypes set AssemblyCode=? where Id=?";
-		jdbcTemplate.update(sqlUpdate6,WallSweepTypes.getAssemblyCode(),WallSweepTypes.getId());
 
         String sqlUpdate7 = "UPDATE WallSweepTypes set Cost=? where Id=?";
 		jdbcTemplate.update(sqlUpdate7,WallSweepTypes.getCost(),WallSweepTypes.getId());
 
         String sqlUpdate8 = "UPDATE WallSweepTypes set TypeMark=? where Id=?";
 		jdbcTemplate.update(sqlUpdate8,WallSweepTypes.getTypeMark(),WallSweepTypes.getId());
+		
+		String sqlUpdate9 = "UPDATE WallSweepTypes set SubcategoryofWalls=? where Id=?";
+		jdbcTemplate.update(sqlUpdate9,WallSweepTypes.getSubcategoryofWalls(),WallSweepTypes.getId());	
 
-		return "redirect:/";
+        String sqlUpdate10 = "UPDATE WallSweepTypes set Profile=? where Id=?";
+		jdbcTemplate.update(sqlUpdate10,WallSweepTypes.getProfile(),WallSweepTypes.getId());
+
+        String sqlUpdate11 = "UPDATE WallSweepTypes set Material=? where Id=?";
+		jdbcTemplate.update(sqlUpdate11,WallSweepTypes.getMaterial(),WallSweepTypes.getId());
+
+		return "redirect:/WallSweepTypes";
 }
 
 
@@ -5941,18 +5771,24 @@ public String save52(Model model,  VoltageTypes VoltageTypes) {
 		
 		String sqlUpdate5 = "UPDATE VoltageTypes set Description=? where Id=?";
 		jdbcTemplate.update(sqlUpdate5,VoltageTypes.getDescription(),VoltageTypes.getId());	
-		
-
-        String sqlUpdate6 = "UPDATE VoltageTypes set AssemblyCode=? where Id=?";
-		jdbcTemplate.update(sqlUpdate6,VoltageTypes.getAssemblyCode(),VoltageTypes.getId());
 
         String sqlUpdate7 = "UPDATE VoltageTypes set Cost=? where Id=?";
 		jdbcTemplate.update(sqlUpdate7,VoltageTypes.getCost(),VoltageTypes.getId());
 
         String sqlUpdate8 = "UPDATE VoltageTypes set TypeMark=? where Id=?";
 		jdbcTemplate.update(sqlUpdate8,VoltageTypes.getTypeMark(),VoltageTypes.getId());
+		
+		String sqlUpdate9 = "UPDATE VoltageTypes set ActualVoltage=? where Id=?";
+		jdbcTemplate.update(sqlUpdate9,VoltageTypes.getActualVoltage(),VoltageTypes.getId());	
 
-		return "redirect:/";
+        String sqlUpdate10 = "UPDATE VoltageTypes set MinimumVoltage=? where Id=?";
+		jdbcTemplate.update(sqlUpdate10,VoltageTypes.getMinimumVoltage(),VoltageTypes.getId());
+
+        String sqlUpdate11 = "UPDATE VoltageTypes set MaximumVoltage=? where Id=?";
+		jdbcTemplate.update(sqlUpdate11,VoltageTypes.getMaximumVoltage(),VoltageTypes.getId());
+
+
+		return "redirect:/VoltageTypes";
 }
 
 
@@ -6016,17 +5852,13 @@ public String save52(Model model,  VoltageTypes VoltageTypes) {
 	  String sqlUpdate5 = "UPDATE SlabEdgeTypes set Description=? where Id=?";
 	  jdbcTemplate.update(sqlUpdate5,slet.getDescription(),slet.getId());
 	  
-	  
-	  String sqlUpdate6 = "UPDATE SlabEdgeTypes set AssemblyCode=? where Id=?";
-	  jdbcTemplate.update(sqlUpdate6,slet.getAssemblyCode(),slet.getId());
-	  
 	  String sqlUpdate7 = "UPDATE SlabEdgeTypes set Cost=? where Id=?";
 	  jdbcTemplate.update(sqlUpdate7,slet.getCost(),slet.getId());
 	  
 	  String sqlUpdate8 = "UPDATE SlabEdgeTypes set TypeMark=? where Id=?";
 	  jdbcTemplate.update(sqlUpdate8,slet.getTypeMark(),slet.getId());
 	  
-	  return "redirect:/"; }
+	  return "redirect:/SlabEdgeTypes"; }
 	 
 
 
@@ -6049,10 +5881,6 @@ public String save55(Model model, FlexPipeTypes fpt) {
 		
 		String sqlUpdate5 = "UPDATE FlexPipeTypesset Description=? where Id=?";
 		jdbcTemplate.update(sqlUpdate5,fpt.getDescription(),fpt.getId());	
-		
-
-        String sqlUpdate6 = "UPDATE FlexPipeTypes set AssemblyCode=? where Id=?";
-		jdbcTemplate.update(sqlUpdate6,fpt.getAssemblyCode(),fpt.getId());
 
         String sqlUpdate7 = "UPDATE FlexPipeTypes set Cost=? where Id=?";
 		jdbcTemplate.update(sqlUpdate7,fpt.getCost(),fpt.getId());
@@ -6060,7 +5888,7 @@ public String save55(Model model, FlexPipeTypes fpt) {
         String sqlUpdate8 = "UPDATE FlexPipeTypes set TypeMark=? where Id=?";
 		jdbcTemplate.update(sqlUpdate8,fpt.getTypeMark(),fpt.getId());
 
-		return "redirect:/";
+		return "redirect:/FlexPipeTypes";
 }
 
 
@@ -6084,10 +5912,6 @@ public String save56(Model model, StructuralFoundationTypes sft) {
 		
 		String sqlUpdate5 = "UPDATE StructuralFoundationTypes Description=? where Id=?";
 		jdbcTemplate.update(sqlUpdate5,sft.getDescription(),sft.getId());	
-		
-
-        String sqlUpdate6 = "UPDATE StructuralFoundationTypes set AssemblyCode=? where Id=?";
-		jdbcTemplate.update(sqlUpdate6,sft.getAssemblyCode(),sft.getId());
 
         String sqlUpdate7 = "UPDATE StructuralFoundationTypes set Cost=? where Id=?";
 		jdbcTemplate.update(sqlUpdate7,sft.getCost(),sft.getId());
@@ -6095,7 +5919,7 @@ public String save56(Model model, StructuralFoundationTypes sft) {
         String sqlUpdate8 = "UPDATE StructuralFoundationTypes set TypeMark=? where Id=?";
 		jdbcTemplate.update(sqlUpdate8,sft.getTypeMark(),sft.getId());
 
-		return "redirect:/";
+		return "redirect:/StructuralFoundationTypes";
 }
 
 
@@ -6119,10 +5943,6 @@ public String save57(Model model, WireTypes WireTypes) {
 		
 		String sqlUpdate5 = "UPDATE WireTypes Description=? where Id=?";
 		jdbcTemplate.update(sqlUpdate5,WireTypes.getDescription(),WireTypes.getId());	
-		
-
-        String sqlUpdate6 = "UPDATE WireTypes set AssemblyCode=? where Id=?";
-		jdbcTemplate.update(sqlUpdate6,WireTypes.getAssemblyCode(),WireTypes.getId());
 
         String sqlUpdate7 = "UPDATE WireTypes set Cost=? where Id=?";
 		jdbcTemplate.update(sqlUpdate7,WireTypes.getCost(),WireTypes.getId());
@@ -6130,7 +5950,7 @@ public String save57(Model model, WireTypes WireTypes) {
         String sqlUpdate8 = "UPDATE WireTypes set TypeMark=? where Id=?";
 		jdbcTemplate.update(sqlUpdate8,WireTypes.getTypeMark(),WireTypes.getId());
 
-		return "redirect:/";
+		return "redirect:/ WireTypes";
 }
 
 
@@ -6155,17 +5975,13 @@ public String save58(Model model, RailingTypes RailingTypes) {
 		String sqlUpdate5 = "UPDATE RailingTypes Description=? where Id=?";
 		jdbcTemplate.update(sqlUpdate5,RailingTypes.getDescription(),RailingTypes.getId());	
 		
-
-        String sqlUpdate6 = "UPDATE RailingTypes set AssemblyCode=? where Id=?";
-		jdbcTemplate.update(sqlUpdate6,RailingTypes.getAssemblyCode(),RailingTypes.getId());
-
         String sqlUpdate7 = "UPDATE RailingTypes set Cost=? where Id=?";
 		jdbcTemplate.update(sqlUpdate7,RailingTypes.getCost(),RailingTypes.getId());
 
         String sqlUpdate8 = "UPDATE RailingTypes set TypeMark=? where Id=?";
 		jdbcTemplate.update(sqlUpdate8,RailingTypes.getTypeMark(),RailingTypes.getId());
 
-		return "redirect:/";
+		return "redirect:/RailingTypes";
 }
 
 
@@ -6189,10 +6005,6 @@ public String save59(Model model, GenericModelTypes gmt) {
 		
 		String sqlUpdate5 = "UPDATE GenericModelTypes Description=? where Id=?";
 		jdbcTemplate.update(sqlUpdate5,gmt.getDescription(),gmt.getId());	
-		
-
-        String sqlUpdate6 = "UPDATE GenericModelTypes set AssemblyCode=? where Id=?";
-		jdbcTemplate.update(sqlUpdate6,gmt.getAssemblyCode(),gmt.getId());
 
         String sqlUpdate7 = "UPDATE GenericModelTypes set Cost=? where Id=?";
 		jdbcTemplate.update(sqlUpdate7,gmt.getCost(),gmt.getId());
@@ -6200,7 +6012,7 @@ public String save59(Model model, GenericModelTypes gmt) {
         String sqlUpdate8 = "UPDATE GenericModelTypes set TypeMark=? where Id=?";
 		jdbcTemplate.update(sqlUpdate8,gmt.getTypeMark(),gmt.getId());
 
-		return "redirect:/";
+		return "redirect:/GenericModelTypes";
 }
 
 
@@ -6224,10 +6036,6 @@ public String save60(Model model, FlexDuctTypes fdt) {
 		
 		String sqlUpdate5 = "UPDATE FlexDuctTypes Description=? where Id=?";
 		jdbcTemplate.update(sqlUpdate5,fdt.getDescription(),fdt.getId());	
-		
-
-        String sqlUpdate6 = "UPDATE FlexDuctTypes set AssemblyCode=? where Id=?";
-		jdbcTemplate.update(sqlUpdate6,fdt.getAssemblyCode(),fdt.getId());
 
         String sqlUpdate7 = "UPDATE FlexDuctTypes set Cost=? where Id=?";
 		jdbcTemplate.update(sqlUpdate7,fdt.getCost(),fdt.getId());
@@ -6235,7 +6043,7 @@ public String save60(Model model, FlexDuctTypes fdt) {
         String sqlUpdate8 = "UPDATE FlexDuctTypes set TypeMark=? where Id=?";
 		jdbcTemplate.update(sqlUpdate8,fdt.getTypeMark(),fdt.getId());
 
-		return "redirect:/";
+		return "redirect:/FlexDuctTypes";
 }
 
 
@@ -6259,18 +6067,47 @@ public String save61(Model model, CableTrayTypes ctt) {
 		
 		String sqlUpdate5 = "UPDATE CableTrayTypes Description=? where Id=?";
 		jdbcTemplate.update(sqlUpdate5,ctt.getDescription(),ctt.getId());	
-		
-
-        String sqlUpdate6 = "UPDATE CableTrayTypes set AssemblyCode=? where Id=?";
-		jdbcTemplate.update(sqlUpdate6,ctt.getAssemblyCode(),ctt.getId());
 
         String sqlUpdate7 = "UPDATE CableTrayTypes set Cost=? where Id=?";
 		jdbcTemplate.update(sqlUpdate7,ctt.getCost(),ctt.getId());
 
         String sqlUpdate8 = "UPDATE CableTrayTypes set TypeMark=? where Id=?";
 		jdbcTemplate.update(sqlUpdate8,ctt.getTypeMark(),ctt.getId());
+		
+        String sqlUpdate9 = "UPDATE CableTrayTypes set BendRadiusMultiplier=? where Id=?";
+		jdbcTemplate.update(sqlUpdate9,ctt.getBendRadiusMultiplier(),ctt.getId());
 
-		return "redirect:/";
+		return "redirect:/CableTrayTypes";
+}
+
+
+@PostMapping("/admin/saveSpecialtyEquipementTypes")
+public String save115(Model model, SpecialtyEquipmentTypes ctt) {
+		String sqlUpdate = "UPDATE SpecialtyEquipementTypes set TypeComments=? where Id=?";
+		jdbcTemplate.update(sqlUpdate,ctt.getTypeComments(),ctt.getId());
+		
+		String sqlUpdate1 = "UPDATE SpecialtyEquipmentTypes set Keynote=? where Id=?";
+		jdbcTemplate.update(sqlUpdate1,ctt.getKeynote(),ctt.getId());
+		
+		String sqlUpdate2 = "UPDATE SpecialtyEquipmentTypes set Model=? where Id=?";
+		jdbcTemplate.update(sqlUpdate2,ctt.getModel(),ctt.getId());
+		
+		String sqlUpdate3 = "UPDATE SpecialtyEquipmentTypes set Manufacturer=? where Id=?";
+		jdbcTemplate.update(sqlUpdate3,ctt.getManufacturer(),ctt.getId());
+		
+		String sqlUpdate4 = "UPDATE SpecialtyEquipmentTypes set URL=? where Id=?";
+		jdbcTemplate.update(sqlUpdate4,ctt.getURL(),ctt.getId());
+		
+		String sqlUpdate5 = "UPDATE SpecialtyEquipmentTypes Description=? where Id=?";
+		jdbcTemplate.update(sqlUpdate5,ctt.getDescription(),ctt.getId());	
+
+        String sqlUpdate7 = "UPDATE SpecialtyEquipmentTypes set Cost=? where Id=?";
+		jdbcTemplate.update(sqlUpdate7,ctt.getCost(),ctt.getId());
+
+        String sqlUpdate8 = "UPDATE SpecialtyEquipmentTypes set TypeMark=? where Id=?";
+		jdbcTemplate.update(sqlUpdate8,ctt.getTypeMark(),ctt.getId());
+
+		return "redirect:/CableTrayTypes";
 }
 
 
@@ -6294,18 +6131,17 @@ public String save62(Model model, ConduitTypes ConduitTypes) {
 		
 		String sqlUpdate5 = "UPDATE ConduitTypes Description=? where Id=?";
 		jdbcTemplate.update(sqlUpdate5,ConduitTypes.getDescription(),ConduitTypes.getId());	
-		
-
-        String sqlUpdate6 = "UPDATE ConduitTypes set AssemblyCode=? where Id=?";
-		jdbcTemplate.update(sqlUpdate6,ConduitTypes.getAssemblyCode(),ConduitTypes.getId());
 
         String sqlUpdate7 = "UPDATE ConduitTypes set Cost=? where Id=?";
 		jdbcTemplate.update(sqlUpdate7,ConduitTypes.getCost(),ConduitTypes.getId());
 
         String sqlUpdate8 = "UPDATE ConduitTypes set TypeMark=? where Id=?";
 		jdbcTemplate.update(sqlUpdate8,ConduitTypes.getTypeMark(),ConduitTypes.getId());
+		
+        String sqlUpdate9 = "UPDATE ConduitTypes set Standard=? where Id=?";
+		jdbcTemplate.update(sqlUpdate9,ConduitTypes.getStandard(),ConduitTypes.getId());
 
-		return "redirect:/";
+		return "redirect:/ConduitTypes";
 }
 
 
@@ -6329,22 +6165,21 @@ public String save63(Model model, StairTypes StairTypes) {
 		
 		String sqlUpdate5 = "UPDATE StairTypes Description=? where Id=?";
 		jdbcTemplate.update(sqlUpdate5,StairTypes.getDescription(),StairTypes.getId());	
-		
-
-        String sqlUpdate6 = "UPDATE StairTypes set AssemblyCode=? where Id=?";
-		jdbcTemplate.update(sqlUpdate6,StairTypes.getAssemblyCode(),StairTypes.getId());
 
         String sqlUpdate7 = "UPDATE StairTypes set Cost=? where Id=?";
 		jdbcTemplate.update(sqlUpdate7,StairTypes.getCost(),StairTypes.getId());
 
         String sqlUpdate8 = "UPDATE StairTypes set TypeMark=? where Id=?";
 		jdbcTemplate.update(sqlUpdate8,StairTypes.getTypeMark(),StairTypes.getId());
+		
+        String sqlUpdate9 = "UPDATE StairTypes set TreadThickness=? where Id=?";
+		jdbcTemplate.update(sqlUpdate9,StairTypes.getTreadThickness(),StairTypes.getId());
 
-		return "redirect:/";
+		return "redirect:/StairTypes";
 }
 
 
-
+/*
 @PostMapping("/admin/saveElectricalPhaseEnums")
 public String save64(Model model, ElectricalPhaseEnums epe) {
 		String sqlUpdate = "UPDATE ElectricalPhaseEnums set Name=? where Id=?";
@@ -6582,7 +6417,7 @@ public String save87(Model model, Categories Categories) {
 
 		return "redirect:/";
 }
-
+*/
                             
                             
 	                                                                               

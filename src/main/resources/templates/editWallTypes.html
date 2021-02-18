@@ -31,9 +31,58 @@
 			<div class="form-group">
 				<label class="control-label">ID: </label><label th:text="${WallTypes.id}"> </label>
 				<input class="form-control" type="hidden" name="id" 
-				th:value="${Walls.id}"/>
+				th:value="${WallTypes.id}"/>
 			</div>
-			
+
+			<div class="form-group">
+				<label class="control-label">Keynote: </label>
+				<input class="form-control" type="text" name="Keynote" 
+				th:value="${WallTypes.Keynote}"/>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label">Model:</label> 
+				<input class="form-control" type="text" name="Model"
+				th:value="${WallTypes.Model}"  />
+		   </div>
+
+			<div class="form-group">
+				<label class="control-label">Manufacturer:</label> 
+				<input class="form-control" type="text" name="Manufacturer" 
+				th:value="${WallTypes.Manufacturer}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">TypeComments:</label> 
+				<input class="form-control" type="text" name="TypeComments" 
+				th:value="${WallTypes.TypeComments}"/>
+		  </div>
+		  
+		  <div class="form-group">
+				<label class="control-label">URL:</label> 
+				<input class="form-control" type="text" name="URL" 
+				th:value="${WallTypes.URL}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">Description:</label> 
+				<input class="form-control" type="text" name="Description" 
+				th:value="${WallTypes.Description}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">TypeMark:</label> 
+				<input class="form-control" type="text" name="TypeMark" 
+				th:value="${WallTypes.TypeMark}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">Cost:</label> 
+				<input class="form-control" type="text" name="Cost" 
+				th:value="${WallTypes.Cost}"/>
+		  </div>
+
+		
 			
 		<button type="submit" class="btn btn-primary">Save</button>
 		</form>

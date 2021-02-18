@@ -27,13 +27,30 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">Edit DuctSystemTypes</div>
 		<div class="panel-body">
-		<form th:action="@{/admin/saveWalls}" method="post">
+		<form th:action="@{/admin/saveDuctSystemTypes}" method="post">
 			<div class="form-group">
 				<label class="control-label">ID: </label><label th:text="${DuctSystemTypes.id}"> </label>
 				<input class="form-control" type="hidden" name="id" 
 				th:value="${DuctSystemTypes.id}"/>
 			</div>
-			
+
+			<div class="form-group">
+				<label class="control-label">TypeComments: </label>
+				<input class="form-control" type="text" name="TypeComments" 
+				th:value="${DuctSystemTypes.TypeComments}"/>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label">URL:</label> 
+				<input class="form-control" type="text" name="URL"
+				th:value="${DuctSystemTypes.URL}"  />
+		   </div>
+
+			<div class="form-group">
+				<label class="control-label">Description:</label> 
+				<input class="form-control" type="text" name="Description" 
+				th:value="${DuctSystemTypes.Description}"/>
+		  </div>
 			
 		<button type="submit" class="btn btn-primary">Save</button>
 		</form>

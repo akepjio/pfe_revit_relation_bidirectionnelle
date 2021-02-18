@@ -34,6 +34,58 @@
 				th:value="${PipingSystemTypes.id}"/>
 			</div>
 			
+			<div class="form-group">
+				<label class="control-label">TypeComments: </label>
+				<input class="form-control" type="text" name="TypeComments" 
+				th:value="${PipingSystemTypes.TypeComments}"/>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label">URL:</label> 
+				<input class="form-control" type="text" name="URL"
+				th:value="${PipingSystemTypes.URL}"  />
+		   </div>
+
+			<div class="form-group">
+				<label class="control-label">Description:</label> 
+				<input class="form-control" type="text" name="Description" 
+				th:value="${PipingSystemTypes.Description}"/>
+		  </div>
+		  <div class="form-group">
+			<label class="control-label">Abbreviation: </label>
+			<input class="form-control" type="text" name="Abbreviation" 
+			th:value="${PipingSystemTypes.Abbreviation}"/>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label">FluidDensity:</label> 
+			<input class="form-control" type="text" name="FluidDensity"
+			th:value="${PipingSystemTypes.FluidDensity}"  />
+	   </div>
+
+		<div class="form-group">
+			<label class="control-label">FluidTemperature:</label> 
+			<input class="form-control" type="text" name="FluidTemperature" 
+			th:value="${PipingSystemTypes.FluidTemperature}"/>
+	  </div>
+
+	  <div class="form-group">
+		<label class="control-label">FluidType: </label>
+		<input class="form-control" type="text" name="FluidType" 
+		th:value="${PipingSystemTypes.FluidType}"/>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label">FluidDynamicViscosity:</label> 
+		<input class="form-control" type="text" name="FluidDynamicViscosity"
+		th:value="${PipingSystemTypes.FluidDynamicViscosity}"  />
+   </div>
+
+	<div class="form-group">
+		<label class="control-label">SystemClassification:</label> 
+		<input class="form-control" type="text" name="SystemClassification" 
+		th:value="${PipingSystemTypes.SystemClassification}"/>
+  </div>
 			
 		<button type="submit" class="btn btn-primary">Save</button>
 		</form>

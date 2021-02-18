@@ -34,6 +34,29 @@
 				th:value="${StructuralFraming.id}"/>
 			</div>
 			
+			<div class="form-group">
+				<label class="control-label">Comments: </label>
+				<input class="form-control" type="text" name="Comments" 
+				th:value="${StructuralFraming.Comments}"/>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label">Mark:</label> 
+				<input class="form-control" type="text" name="Mark"
+				th:value="${StructuralFraming.Mark}"  />
+		   </div>
+
+			<div class="form-group">
+				<label class="control-label">ReferenceLevel:</label> 
+				<input class="form-control" type="text" name="ReferenceLevel" 
+				th:value="${StructuralFraming.ReferenceLevel}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">StructuralUsage:</label> 
+				<input class="form-control" type="text" name="StructuralUsage" 
+				th:value="${StructuralFraming.StructuralUsage}"/>
+		  </div>
 			
 		<button type="submit" class="btn btn-primary">Save</button>
 		</form>

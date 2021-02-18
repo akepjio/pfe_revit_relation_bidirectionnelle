@@ -34,6 +34,23 @@
 				th:value="${DuctSystems.id}"/>
 			</div>
 			
+			<div class="form-group">
+				<label class="control-label">Comments: </label> 
+				<input class="form-control" type="text" name="Comments" 
+				th:value="${DuctSystems.Comments}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">SystemName: </label> 
+				<input class="form-control" type="text" name="SystemName" 
+				th:value="${DuctSystems.SystemName}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">Flow: </label> 
+				<input class="form-control" type="text" name="Flow" 
+				th:value="${DuctSystems.Flow}"/>
+		  </div>
 			
 		<button type="submit" class="btn btn-primary">Save</button>
 		</form>

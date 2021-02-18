@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeLeaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layout">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="https://img.icons8.com/bubbles/50/000000/r.png">
+<title> Revit Project Updater </title>
+</head>
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+
+.box {
+  border: 1px solid #333333;
+  width: 80%;
+  height: 650px;
+  overflow: scroll;
+}
+
+  </style>
+<body>
+	<div layout:fragment="content1">
+	<div class="col-md-6"> 
+	<div class="panel panel-default">
+		<div class="panel-heading">Edit Doors</div>
+		<div class="panel-body">
+		<form th:action="@{/admin/saveDoors}" method="post">
+			<div class="form-group">
+				<label class="control-label">ID: </label><label th:text="${Doors.id}"> </label>
+				<input class="form-control" type="hidden" name="id" 
+				th:value="${Doors.id}"/>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label">Comments: </label>
+				<input class="form-control" type="text" name="Comments" 
+				th:value="${Doors.Comments}"/>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label">Mark:</label> 
+				<input class="form-control" type="text" name="Mark"
+				th:value="${Doors.Mark}"  />
+		   </div>
+
+			<div class="form-group">
+				<label class="control-label">HeadHeight:</label> 
+				<input class="form-control" type="text" name="HeadHeight" 
+				th:value="${Doors.HeadHeight}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">SillHeight:</label> 
+				<input class="form-control" type="text" name="SillHeight" 
+				th:value="${Doors.SillHeight}"/>
+		  </div>
+		  
+		  <div class="form-group">
+				<label class="control-label">FrameMaterial:</label> 
+				<input class="form-control" type="text" name="FrameMaterial" 
+				th:value="${Doors.FrameMaterial}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">FrameType:</label> 
+				<input class="form-control" type="text" name="FrameType" 
+				th:value="${Doors.FrameType}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">Finish:</label> 
+				<input class="form-control" type="text" name="Finish" 
+				th:value="${Doors.Finish}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">Service:</label> 
+				<input class="form-control" type="text" name="Service" 
+				th:value="${Doors.Service}"/>
+		  </div>
+
+		  <div class="form-group">
+			<label class="control-label">LOT:</label> 
+			<input class="form-control" type="text" name="LOT" 
+			th:value="${Doors.LOT}"/>
+	  </div>
+			
+		<button type="submit" class="btn btn-primary">Save</button>
+		</form>
+		</div>
+	</div>
+	</div>
+	</div>
+</body>
+</html>

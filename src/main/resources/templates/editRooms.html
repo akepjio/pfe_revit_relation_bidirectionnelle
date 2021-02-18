@@ -27,13 +27,114 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">Edit Rooms</div>
 		<div class="panel-body">
-		<form th:action="@{/admin/saveWalls}" method="post">
+		<form th:action="@{/admin/saveRooms}" method="post">
 			<div class="form-group">
 				<label class="control-label">ID: </label><label th:text="${Rooms.id}"> </label>
 				<input class="form-control" type="hidden" name="id" 
 				th:value="${Rooms.id}"/>
 			</div>
 			
+			<div class="form-group">
+				<label class="control-label">Comments: </label> 
+				<input class="form-control" type="text" name="Comments" 
+				th:value="${Rooms.Comments}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">Volume: </label> 
+				<input class="form-control" type="text" name="Volume" 
+				th:value="${Rooms.Volume}"/>
+		  </div>
+
+		  <div class="form-group">
+				<label class="control-label">Perimeter: </label> 
+				<input class="form-control" type="text" name="Perimeter" 
+				th:value="${Rooms.Perimeter}"/>
+		  </div>
+
+		   <div class="form-group">
+				<label class="control-label">Level: </label> 
+				<input class="form-control" type="text" name="Level" 
+				th:value="${Rooms.Level}"/>
+		  </div>
+		  
+		   <div class="form-group">
+				<label class="control-label">Occupancy: </label> 
+				<input class="form-control" type="text" name="Occupancy" 
+				th:value="${Rooms.Occupancy}"/>
+		  </div>
+		    
+		  <div class="form-group">
+			<label class="control-label">Department: </label> 
+			<input class="form-control" type="text" name="Department" 
+			th:value="${Rooms.Department}"/>
+	  </div>
+
+	  <div class="form-group">
+			<label class="control-label">BaseFinish: </label> 
+			<input class="form-control" type="text" name="BaseFinish" 
+			th:value="${Rooms.BaseFinish}"/>
+	  </div>
+
+	  <div class="form-group">
+			<label class="control-label">CeilingFinish: </label> 
+			<input class="form-control" type="text" name="CeilingFinish" 
+			th:value="${Rooms.CeilingFinish}"/>
+	  </div>
+
+	   <div class="form-group">
+			<label class="control-label">WallFinish: </label> 
+			<input class="form-control" type="text" name="WallFinish" 
+			th:value="${Rooms.WallFinish}"/>
+	  </div>
+	  
+		<div class="form-group">
+				<label class="control-label">FloorFinish: </label> 
+				<input class="form-control" type="text" name="FloorFinish" 
+				th:value="${Rooms.FloorFinish}"/>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label">Area: </label> 
+			<input class="form-control" type="text" name="Area" 
+			th:value="${Rooms.Area}"/>
+	</div>
+
+		<div class="form-group">
+				<label class="control-label">Number: </label> 
+				<input class="form-control" type="text" name="Number" 
+				th:value="${Rooms.Number}"/>
+		</div>
+
+		<div class="form-group">
+				<label class="control-label">Name: </label> 
+				<input class="form-control" type="text" name="Name" 
+				th:value="${Rooms.Name}"/>
+		</div>
+
+		<div class="form-group">
+				<label class="control-label">UnboundedHeight: </label> 
+				<input class="form-control" type="text" name="UnboundedHeight" 
+				th:value="${Rooms.UnboundedHeight}"/>
+		</div>
+  
+		<div class="form-group">
+				<label class="control-label">Occupant: </label> 
+				<input class="form-control" type="text" name="Occupant" 
+				th:value="${Rooms.Occupant}"/>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label">ZONE: </label> 
+			<input class="form-control" type="text" name="ZONE" 
+			th:value="${Rooms.ZONE}"/>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label">BATIMENT: </label> 
+			<input class="form-control" type="text" name="BATIMENT" 
+			th:value="${Rooms.BATIMENT}"/>
+		</div>
 			
 		<button type="submit" class="btn btn-primary">Save</button>
 		</form>

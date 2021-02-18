@@ -27,58 +27,31 @@
 	<div class="panel panel-default">
 		<div class="panel-heading"> Edit AirTerminals </div>
 		<div class="panel-body">
-		<form method="post">
+		<form th:action="@{/admin/saveAirTerminals}" method="post">
 			<div class="form-group">
 				<label class="control-label">ID: </label><label th:text="${AirTerminals.id}"> </label>
 				<input class="form-control" type="hidden" name="id" 
 				th:value="${AirTerminals.id}"/>
 			</div>
-			<div class="form-group">
-				<label class="control-label">TypeId: </label><label th:text="${AirTerminals.TypeId}"> </label>
-				<input class="form-control" type="hidden" name="TypeId" 
-				th:value="${AirTerminals.TypeId}"/>
-			</div>
-			<div class="form-group">
-				<label class="control-label">PhaseCreated:</label> 
-				<input class="form-control" type="hidden" name="PhaseCreated"
-				th:value="${AirTerminals.PhaseCreated}"  />
-		   </div>
-			<div class="form-group">
-				<label class="control-label">PhaseDemolished:</label> 
-				<input class="form-control" type="hidden"type="hidden" name="PhaseDemolished" 
-				th:value="${AirTerminals.PhaseDemolished}"/>
-		  </div>
-		  <div class="form-group">
-				<label class="control-label">DesignOption:</label> 
-				<input class="form-control" type="text" name="DesignOption" 
-				th:value="${AirTerminals.DesignOption}"/>
-		  </div>
-		  
-		  <div class="form-group">
-				<label class="control-label">SystemClassification:</label> 
-				<input class="form-control" type="hidden" name="SystemClassification" 
-				th:value="${AirTerminals.SystemClassification}"/>
-		  </div>
-		  <div class="form-group">
-				<label class="control-label">SystemName:</label> 
-				<input class="form-control" type="hidden" name="SystemName" 
-				th:value="${AirTerminals.SystemName}"/>
-		  </div>
+
 		  <div class="form-group">
 				<label class="control-label">Flow:</label> 
 				<input class="form-control" type="text" name="Flow" 
 				th:value="${AirTerminals.Flow}"/>
 		  </div>
+
 		  <div class="form-group">
 				<label class="control-label">Comments:</label> 
 				<input class="form-control" type="text" name="Comments" 
 				th:value="${AirTerminals.Comments}"/>
 		  </div>
+
 		   <div class="form-group">
 				<label class="control-label">Mark:</label> 
 				<input class="form-control" type="text" name="Mark" 
 				th:value="${AirTerminals.Mark}"/>
 		  </div>			
+		  
 		<button type="submit" class="btn btn-primary">Save</button>
 		</form>
 		</div>

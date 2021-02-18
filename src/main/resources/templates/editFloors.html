@@ -34,6 +34,41 @@
 				th:value="${Floors.id}"/>
 			</div>
 			
+			<div class="form-group">
+				<label class="control-label">Comments: </label>
+				<input class="form-control" type="text" name="Comments" 
+				th:value="${Floors.Comments}"/>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label">Mark:</label> 
+				<input class="form-control" type="text" name="Mark"
+				th:value="${Floors.Mark}"  />
+		   </div>
+
+			<div class="form-group">
+				<label class="control-label">HeightOffsetFromLevel:</label> 
+				<input class="form-control" type="text" name="HeightOffsetFromLevel" 
+				th:value="${Floors.HeightOffsetFromLevel}"/>
+		  </div>
+
+		  <div class="form-group">
+			<label class="control-label">Structural: </label>
+			<input class="form-control" type="text" name="Structural" 
+			th:value="${Floors.Structural}"/>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label">AnalyzeAs:</label> 
+			<input class="form-control" type="text" name="AnalyzeAs"
+			th:value="${Floors.AnalyzeAs}"  />
+	   </div>
+
+		<div class="form-group">
+			<label class="control-label">LOT:</label> 
+			<input class="form-control" type="text" name="LOT" 
+			th:value="${Floors.LOT}"/>
+	  </div>
 			
 		<button type="submit" class="btn btn-primary">Save</button>
 		</form>
